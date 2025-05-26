@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/discuss/2098606/Python3-O(n)-Time-O(1)-Space-Solution-faster-than-95",
+  "python_solutions": "class Solution:\n    def buildTree(self, inorder, postorder):\n        inorderIndexDict = {ch : i for i, ch in enumerate(inorder)}\n        self.rootIndex = len(postorder) - 1\n        \n        def solve(l, r):\n            if l > r: return None\n            \n            root = TreeNode(postorder[self.rootIndex]) \n            self.rootIndex -= 1\n            \n            i = inorderIndexDict[root.val]\n            \n            # As we a approaching from end and all right side nodes of i in inorder are\n            # from right sub-tree so first call solve for right then left.\n            root.right = solve(i+1, r)\n            root.left =  solve(l, i-1)\n            \n            return root\n        \n        return solve(0, len(inorder)-1)\n    \n    \n# Time: O(N)\n# Space: O(1)",
+  "slug": "construct-binary-tree-from-inorder-and-postorder-traversal",
+  "post_title": "[Python3] O(n) Time, O(1) Space Solution faster than 95%",
+  "user": "samirpaul1",
+  "upvotes": 3,
+  "views": 159,
+  "problem_title": "construct binary tree from inorder and postorder traversal",
+  "number": 106,
+  "acceptance": 0.575,
+  "difficulty": "Medium",
+  "__index_level_0__": 707,
+  "question": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and return the binary tree.\n  Example 1:\nInput: inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]\nOutput: [3,9,20,null,null,15,7]\nExample 2:\nInput: inorder = [-1], postorder = [-1]\nOutput: [-1]\n  Constraints:\n1 <= inorder.length <= 3000\npostorder.length == inorder.length\n-3000 <= inorder[i], postorder[i] <= 3000\ninorder and postorder consist of unique values.\nEach value of postorder also appears in inorder.\ninorder is guaranteed to be the inorder traversal of the tree.\npostorder is guaranteed to be the postorder traversal of the tree.",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and return the binary tree.",
+      "0.1": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the )ostorder traversal of the sahe tre3, construct and rerurn the binary tree.",
+      "0.2": "Given two Unfeger qrrwys inodWer and postkrdRr where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, condtruvt and rehurm the fina$y tree.",
+      "0.3": "Given two integer areags iGIrdef and postorder wYer$ 8norSeG is the inorC@5 traversal of a ninAry tree and postorder is the postiFdWr yraversqo of the sWne tree, construct and re4utn the binAr& tree.",
+      "0.4": "GibeM two integer arrays igo3eer and 0ostorFW% wNerF iGorV$r is the inorder ttaverzz> of a binary t3er and (odtord$T is the lIsYoFder t3Zv4rsXl of the QaNe ^rSe, construct and r2HurJ the binary t5Re.",
+      "0.5": "Given two iM$etet A4rayX UJ9rde4 and Oos^Pdd$r where im)5Rer is the lnIgdeF 6eqv4rsql of a biJQ$y Rrse and poxg*Gxer is the )PstorRF# g$sfersa< of the Zxme hr4e, dKmw$ruct and reG7rG the nKnaGy RFee.",
+      "0.6": "Glv3j two kHtsre% afrQ%c kHlrds3 and p)xtKEXed 3GerS &mlrfDr is the *go%CeD %rXB2rsz< of a hiMaD& 5Ee@ and )osHifeWr is the )os69rV$E y$Wvsfsql of the dA<e t#3F, dojQyrkc% and %RYugn the HOnsr6 %Fwe.",
+      "0.7": "n*v@g two &Mt4vSr WgtQyq iBofFDE and o0s$*#XWr EgwrF *mkrved is the jM05dee GrSvFfcWP of a flnXgt Fr4W and L8sf(4Ve5 is the l8E^LrESr Ydzd#rZa. of the EajF HrFw, cihxtdIfY and feFiDG the boGS#t 64eF.",
+      "0.8": "yid$m two UBtRBS5 ZrtZje oJogw4F and LIa$9FxeD 1YRrw 9go$S$d is the jM*rRSG $fqdsgss. of a FigqgH 4ffr and oPzR(rvs# is the pPD5iEEr4 $DAB#$eak of the CwhR 4e#d, VPJZf#6ft and drtIGj the G*BzrU 6E#D.",
+      "0.9": "r*grB two KGYdnW$ X4eW&A 9giEvdt and LiQh8Efwd 1j3e@ UHkGVwG is the 8GK4E@E rexGW5ZS, of a vjJq36 yT3R and oPCY0tvRD is the )iQRpFCw% HEqGrGDW. of the aQHW Y%s2, v(MA^gks4 and tsG64M the VlBAFh r%Rf.",
+      "1.0": "N(CWg two uJy4y3G X#4sjE 9MK$eSD and 9lXrKDxd$ SBD$S lB9tsSd is the UM*tfw% YFxB3gaz: of a h8jAGj 5drw and 00e^ptc$D is the )KZGpDe3# H#SDWTDwI of the CsNF hGR2, V0he%f&vH and fR$jeB the VKMx5t hf#R."
+    },
+    "synonym": {
+      "0.0": "Given two whole number arrays inorder and postorder where inorder be the inorder traversal of a binary sir herbert beerbohm tree and postorder be the postorder traversal of the like tree, construct and return the binary sir herbert beerbohm tree.",
+      "0.1": "Make two whole number arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same sir herbert beerbohm tree, construct and return the binary tree.",
+      "0.2": "Given ii whole number arrays inorder and postorder where inorder be the inorder traversal of a binary tree and postorder be the postorder traversal of the like tree, construct and return the binary tree.",
+      "0.3": "Ease up two whole number arrays inorder and postorder where inorder is the inorder traverse of a binary tree and postorder is the postorder traversal of the like tree, construct and return the binary tree diagram.",
+      "0.4": "Given ii whole number regalia inorder and postorder where inorder be the inorder traversal of a binary sir herbert beerbohm tree and postorder is the postorder traverse of the same tree, conception and take back the binary tree.",
+      "0.5": "Give ii integer array inorder and postorder where inorder is the inorder traverse of a binary tree and postorder be the postorder traversal of the like tree diagram, construct and recall the binary tree diagram.",
+      "0.6": "Turn over deuce whole number array inorder and postorder where inorder is the inorder traversal of a binary tree diagram and postorder cost the postorder traverse of the like sir herbert beerbohm tree, concept and repay the binary tree diagram.",
+      "0.7": "Give 2 whole number array inorder and postorder where inorder be the inorder traverse of a binary tree diagram and postorder be the postorder traverse of the like sir herbert beerbohm tree, conception and pass the binary tree.",
+      "0.8": "Give deuce whole number array inorder and postorder where inorder embody the inorder traverse of a binary sir herbert beerbohm tree and postorder be the postorder traverse of the like sir herbert beerbohm tree, concept and hark back the binary sir herbert beerbohm tree.",
+      "0.9": "Give deuce whole number array inorder and postorder where inorder be the inorder traverse of a binary tree diagram and postorder be the postorder traverse of the like sir herbert beerbohm tree, conception and come back the binary sir herbert beerbohm tree.",
+      "1.0": "Reach ii whole number array inorder and postorder where inorder follow the inorder traverse of a binary tree diagram and postorder be the postorder traverse of the like sir herbert beerbohm tree, concept and deliver the binary sir herbert beerbohm tree."
+    },
+    "random": {
+      "0.0": "Two integer arrays inorder where inorder inorder traversal of a binary tree postorder the postorder of the, construct and return binary tree.",
+      "0.1": "Given two integer arrays inorder and postorder where inorder is the traversal of a binary and postorder is the postorder of the same tree, construct and return binary tree.",
+      "0.2": "Given two integer arrays inorder and postorder where inorder the inorder of a binary tree postorder the postorder traversal of the tree, construct return the binary.",
+      "0.3": "Two integer arrays and postorder inorder inorder traversal of postorder is the postorder traversal of the same tree, and return the binary.",
+      "0.4": "Two arrays inorder postorder where inorder the inorder traversal of tree postorder is the of, construct and return the tree.",
+      "0.5": "Two integer arrays inorder the inorder traversal a tree traversal of same tree, return binary tree.",
+      "0.6": "Two integer inorder where the inorder a postorder traversal of same tree, return.",
+      "0.7": "Two postorder where inorder binary postorder of same tree,.",
+      "0.8": "Two and of same, and.",
+      "0.9": "Two of,.",
+      "1.0": "Two,."
+    },
+    "cut": {
+      "0.0": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and return the binary tree.",
+      "0.1": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and ret",
+      "0.2": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tre",
+      "0.3": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder trave",
+      "0.4": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is",
+      "0.5": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tr",
+      "0.6": "Given two integer arrays inorder and postorder where inorder is the inorder trav",
+      "0.7": "Given two integer arrays inorder and postorder where inorder",
+      "0.8": "Given two integer arrays inorder and pos",
+      "0.9": "Given two integer ar",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "meta": {
+      "keyboard": {
+        "0.0": [
+          "class TreeNode:\n    def __init__(self, x):\n        self.val = x\n        self.left = None\n        self.right = None\n\ndef buildTree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root = TreeNode(postorder[-1])\n    index = inorder.index(postorder[-1])\n\n    root.left = buildTree(inorder[:index], postorder[:index])\n    root.right = buildTree(inorder[index+1:], postorder[index:-1])\n\n    return root\n\ndef printInorder(root):\n    if root:\n        printInorder(root.left)\n        print(root.val, end=\" \")\n        printInorder(root.right)\n\ndef printPostorder(root):\n    if root:\n        printPostorder(root.left)\n        printPostorder(root.right)\n        print(root.val, end=\" \")\n\ninorder = [4, 2, 5, 1, 3]\npostorder = [4, 5, 2, 3, 1]\nroot = buildTree(inorder, postorder)\nprint(\"Inorder traversal of the constructed tree is\")\nprintInorder(root)\nprint(\"\\nPostorder traversal of the constructed tree is\")\nprintPostorder(root)"
+        ],
+        "0.1": [
+          "class TreeNode:\n    def __init__(self, x):\n        self.val = x\n        self.left = None\n        self.right = None\n\ndef buildTree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n    \n    root = TreeNode(postorder[-1])\n    i = inorder.index(postorder[-1])\n    \n    root.left = buildTree(inorder[:i], postorder[:i])\n    root.right = buildTree(inorder[i+1:], postorder[i:-1])\n    \n    return root\n\ndef printTree(root):\n    if root is not None:\n        printTree(root.left)\n        print(root.val, end=' ')\n        printTree(root.right)\n\ndef printPostorder(root):\n    if root is not None:\n        printPostorder(root.left)\n        printPostorder(root.right)\n        print(root.val, end=' ')\n\ninorder = [4, 2, 5, 1, 3]\npostorder = [4, 5, 2, 3, 1]\nroot = buildTree(inorder, postorder)\nprint(\"Inorder traversal of the constructed tree is: \")\nprintTree(root)\nprint(\"\\nPostorder traversal of the constructed tree is: \")\nprintPostorder(root)"
+        ],
+        "0.2": [
+          "def buildTree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root = TreeNode(postorder[-1])\n    mid = inorder.index(postorder[-1])\n\n    root.left = buildTree(inorder[:mid], postorder[:mid])\n    root.right = buildTree(inorder[mid+1:], postorder[mid:-1])\n\n    return root\n\nclass TreeNode:\n    def __init__(self, x):\n        self.val = x\n        self.left = None\n        self.right = None\n\ndef printInorder(root):\n    if root:\n        printInorder(root.left)\n        print(root.val, end=\" \")\n        printInorder(root.right)\n\ndef printPostorder(root):\n    if root:\n        printPostorder(root.left)\n        printPostorder(root.right)\n        print(root.val, end=\" \")\n\ninorder = [4, 2, 5, 1, 3]\npostorder = [4, 5, 2, 3, 1]\nroot = buildTree(inorder, postorder)\nprint(\"Inorder traversal of the constructed tree: \")\nprintInorder(root)\nprint(\"\\nPostorder traversal of the constructed tree: \")\nprintPostorder(root)"
+        ],
+        "0.3": [
+          "class TreeNode:\n    def __init__(self, x):\n        self.val = x\n        self.left = None\n        self.right = None\n\ndef buildTree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root = TreeNode(postorder[-1])\n    index = inorder.index(postorder[-1])\n\n    root.left = buildTree(inorder[:index], postorder[:index])\n    root.right = buildTree(inorder[index+1:], postorder[index:-1])\n\n    return root\n\ndef printInorder(root):\n    if root:\n        printInorder(root.left)\n        print(root.val, end=\" \")\n        printInorder(root.right)\n\ndef printPostorder(root):\n    if root:\n        printPostorder(root.left)\n        printPostorder(root.right)\n        print(root.val, end=\" \")\n\ninorder = [4, 2, 5, 1, 3]\npostorder = [4, 5, 2, 3, 1]\nroot = buildTree(inorder, postorder)\nprint(\"Inorder traversal of the constructed tree is\")\nprintInorder(root)\nprint(\"\\nPostorder traversal of the constructed tree is\")\nprintPostorder(root)"
+        ],
+        "0.4": [
+          "class TreeNode:\n    def __init__(self, x):\n        self.val = x\n        self.left = None\n        self.right = None\n\ndef buildTree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root = TreeNode(postorder[-1])\n    index = inorder.index(postorder[-1])\n\n    root.left = buildTree(inorder[:index], postorder[:index])\n    root.right = buildTree(inorder[index+1:], postorder[index:-1])\n\n    return root\n\ndef printInorder(root):\n    if root:\n        printInorder(root.left)\n        print(root.val, end=\" \")\n        printInorder(root.right)\n\ndef printPostorder(root):\n    if root:\n        printPostorder(root.left)\n        printPostorder(root.right)\n        print(root.val, end=\" \")\n\ndef main():\n    igo3eer = [4, 2, 5, 1, 3]\n    oostorFW = [4, 5, 2, 3, 1]\n    root = buildTree(igo3eer, oostorFW)\n    print(\"Inorder traversal of the constructed tree is:\")\n    printInorder(root)\n    print(\"\\nPostorder traversal of the constructed tree is:\")\n    printPostorder(root)\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.5": [
+          "def calculate_rf_fee(imetet_array, oos_pddr):\n    rf_fee = 0\n    for i in range(len(imetet_array)):\n        rf_fee += imetet_array[i] * oos_pddr[i]\n    return rf_fee\n\nimetet_array = [0.05, 0.03, 0.02, 0.01]\noos_pddr = [1000, 2000, 3000, 4000]\nrf_fee = calculate_rf_fee(imetet_array, oos_pddr)\nprint(rf_fee)"
+        ],
+        "0.6": [
+          "def calculate_glv3j(kHtsre, afrQc, kHlrds3, pxtKEXed, GerS, mlrfDr, goCeD, rXB2rsz, hiMaD, Ee, osHifeWr, os69rV):\n    glv3j = (kHtsre * afrQc * kHlrds3) + (pxtKEXed * GerS * mlrfDr) + (goCeD * rXB2rsz * hiMaD) + (Ee * osHifeWr * os69rV)\n    return glv3j\n\nkHtsre = 1\nafrQc = 2\nkHlrds3 = 3\npxtKEXed = 4\nGerS = 5\nmlrfDr = 6\ngoCeD = 7\nrXB2rsz = 8\nhiMaD = 9\nEe = 10\nosHifeWr = 11\nos69rV = 12\n\nresult = calculate_glv3j(kHtsre, afrQc, kHlrds3, pxtKEXed, GerS, mlrfDr, goCeD, rXB2rsz, hiMaD, Ee, osHifeWr, os69rV)\nprint(result)"
+        ],
+        "0.7": [
+          "class Vehicle:\n    def __init__(self, name, max_speed, mileage):\n        self.name = name\n        self.max_speed = max_speed\n        self.mileage = mileage\n\nclass Car(Vehicle):\n    def __init__(self, name, max_speed, mileage, num_doors):\n        super().__init__(name, max_speed, mileage)\n        self.num_doors = num_doors\n\n    def display_details(self):\n        print(f\"Name: {self.name}\")\n        print(f\"Max Speed: {self.max_speed} mph\")\n        print(f\"Mileage: {self.mileage} miles\")\n        print(f\"Number of Doors: {self.num_doors}\")\n\nclass Truck(Vehicle):\n    def __init__(self, name, max_speed, mileage, towing_capacity):\n        super().__init__(name, max_speed, mileage)\n        self.towing_capacity = towing_capacity\n\n    def display_details(self):\n        print(f\"Name: {self.name}\")\n        print(f\"Max Speed: {self.max_speed} mph\")\n        print(f\"Mileage: {self.mileage} miles\")\n        print(f\"Towing Capacity: {self.towing_capacity} pounds\")\n\nmy_car = Car(\"Toyota Camry\", 120, 30000, 4)\nmy_truck = Truck(\"Ford F-150\", 100, 50000, 10000)\n\nmy_car.display_details()\nprint()\nmy_truck.display_details()"
+        ],
+        "0.8": [
+          "class FigqgH:\n    def __init__(self, name):\n        self.name = name\n\nclass CwhR:\n    def __init__(self, name):\n        self.name = name\n\nclass G_BzrU:\n    def __init__(self, name):\n        self.name = name\n\nclass jM_rRSG:\n    def __init__(self, figqgh, cwhr, g_bzru):\n        self.figqgh = figqgh\n        self.cwhr = cwhr\n        self.g_bzru = g_bzru\n\n    def get_fqdsgss(self):\n        return f\"{self.figqgh.name} {self.cwhr.name} {self.g_bzru.name}\"\n\nclass pPD5iEEr4:\n    def __init__(self, name):\n        self.name = name\n\nclass oPzR_rvs:\n    def __init__(self, pPD5iEEr4):\n        self.pPD5iEEr4 = pPD5iEEr4\n\n    def get_DAB_eak(self):\n        return self.pPD5iEEr4.name\n\nfigqgh = FigqgH(\"4ffr\")\ncwhr = CwhR(\"4e#d\")\ng_bzru = G_BzrU(\"6E#D\")\njM_rRSG_obj = jM_rRSG(figqgh, cwhr, g_bzru)\npPD5iEEr4_obj = pPD5iEEr4(\"VPJZf#6ft\")\noPzR_rvs_obj = oPzR_rvs(pPD5iEEr4_obj)\n\nprint(jM_rRSG_obj.get_fqdsgss())\nprint(oPzR_rvs_obj.get_DAB_eak())"
+        ],
+        "0.9": [
+          "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\n    def display_info(self):\n        print(f\"Name: {self.name}, Age: {self.age}\")\n\nclass Employee(Person):\n    def __init__(self, name, age, employee_id, department):\n        super().__init__(name, age)\n        self.employee_id = employee_id\n        self.department = department\n\n    def display_info(self):\n        super().display_info()\n        print(f\"Employee ID: {self.employee_id}, Department: {self.department}\")\n\nclass Manager(Employee):\n    def __init__(self, name, age, employee_id, department, team_members):\n        super().__init__(name, age, employee_id, department)\n        self.team_members = team_members\n\n    def display_info(self):\n        super().display_info()\n        print(f\"Team Members: {self.team_members}\")\n\nperson = Person(\"John Doe\", 30)\nemployee = Employee(\"Jane Doe\", 25, \"E123\", \"HR\")\nmanager = Manager(\"Bob Smith\", 40, \"E456\", \"IT\", [\"John Doe\", \"Jane Doe\"])\n\nperson.display_info()\nprint()\nemployee.display_info()\nprint()\nmanager.display_info()"
+        ],
+        "1.0": [
+          "class Vehicle:\n    def __init__(self, make, model, year):\n        self.make = make\n        self.model = model\n        self.year = year\n        self.mileage = 0\n\n    def drive(self, miles):\n        self.mileage += miles\n\n    def describe_vehicle(self):\n        print(f\"This vehicle is a {self.year} {self.make} {self.model} with {self.mileage} miles.\")\n\n\nclass Car(Vehicle):\n    def __init__(self, make, model, year, doors):\n        super().__init__(make, model, year)\n        self.doors = doors\n\n    def describe_vehicle(self):\n        super().describe_vehicle()\n        print(f\"It has {self.doors} doors.\")\n\n\nclass Truck(Vehicle):\n    def __init__(self, make, model, year, capacity):\n        super().__init__(make, model, year)\n        self.capacity = capacity\n\n    def describe_vehicle(self):\n        super().describe_vehicle()\n        print(f\"It has a capacity of {self.capacity} tons.\")\n\n\nmy_car = Car('Toyota', 'Corolla', 2015, 4)\nmy_car.drive(100)\nmy_car.describe_vehicle()\n\nmy_truck = Truck('Ford', 'F-150', 2010, 2)\nmy_truck.drive(50)\nmy_truck.describe_vehicle()"
+        ]
+      }
+    }
+  }
+}

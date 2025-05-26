@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/longest-palindromic-substring/discuss/2156659/Python-Easy-O(1)-Space-approach",
+  "python_solutions": "class Solution:\n    def longestPalindrome(self, s: str) -> str:\n        n=len(s)\n        def expand_pallindrome(i,j):            \n            while 0<=i<=j<n and s[i]==s[j]:\n                i-=1\n                j+=1                            \n            return (i+1, j)\n        \n        res=(0,0)\n        for i in range(n):\n            b1 = expand_pallindrome(i,i)\n            b2 = expand_pallindrome(i,i+1)            \n            res=max(res, b1, b2,key=lambda x: x[1]-x[0]+1) # find max based on the length of the pallindrome strings.\n                    \n        return s[res[0]:res[1]]",
+  "slug": "longest-palindromic-substring",
+  "post_title": "\u2705  Python Easy O(1) Space approach",
+  "user": "constantine786",
+  "upvotes": 47,
+  "views": 6600,
+  "problem_title": "longest palindromic substring",
+  "number": 5,
+  "acceptance": 0.324,
+  "difficulty": "Medium",
+  "__index_level_0__": 181,
+  "question": "Given a string s, return the longest\npalindromic\nsubstring\nin s.\n  Example 1:\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\nExample 2:\nInput: s = \"cbbd\"\nOutput: \"bb\"\n  Constraints:\n1 <= s.length <= 1000\ns consist of only digits and English letters.",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given a string s, return the longest palindromic substring in s.",
+      "0.1": "Given a string s, rerurn the longest lalindrojic substring in s.",
+      "0.2": "GivSn a string s, return the iongesH palindromic subst5iBg in s.",
+      "0.3": "Given a string s, r2%urn the O8hgest La?Undrojic suvsGriHg in s.",
+      "0.4": "biveJ a sRGigg s, 4etIrm the :oBgeCt oal8ndFo,7c s*GstEinB in s.",
+      "0.5": "Fifej a st$LHg s, tetjEn the oonBexy pzl&ncroHkX XubsRTijv in s.",
+      "0.6": "yifeG a sygumg s, rft^4m the IobgDXy 9qkknd4Pmlc CubwrTKnV in s.",
+      "0.7": "bLbWn a CG$ibt s, g4tHEB the lKmRSsf OaKKmXTohiF WuHC5#jnR in s.",
+      "0.8": "vkdeJ a s^5jMb s, r#f^fg the /ognRz5 Ox/KMdtlmof wuVa%dkbn in s.",
+      "0.9": "nUCrj a W63lgF s, dS$84J the <(hfdzh oqIoJCrKNJv d7fd6d9Hn in s.",
+      "1.0": "YOFRg a DyGUgT s, frRi%b the K9Mf$eG 0S:OHVT9KOF D^HCH3lGr in s."
+    },
+    "synonym": {
+      "0.0": "Pay a string s, give the longest palindromic substring in s.",
+      "0.1": "Given a string s, return the longest palindromic substring in s.",
+      "0.2": "Given a string atomic number 16, return the longest palindromic substring in s.",
+      "0.3": "Given a string s, pass the long palindromic substring in due south.",
+      "0.4": "Give a string s, return the foresightful palindromic substring in sulfur.",
+      "0.5": "Given a string atomic number 16, riposte the farseeing palindromic substring in sec.",
+      "0.6": "Give a bowed stringed instrument southward, return the tenacious palindromic substring in southward.",
+      "0.7": "Move over a drawstring siemens, fall the recollective palindromic substring in due south.",
+      "0.8": "Give a drawing string southward, hark back the tenacious palindromic substring in randomness.",
+      "0.9": "Afford a twine southward, revert the prospicient palindromic substring in sec.",
+      "1.0": "Give a drawstring randomness, yield the foresighted palindromic substring in siemens."
+    },
+    "random": {
+      "0.0": "A s, the palindromic substring in s.",
+      "0.1": "A string, return the longest palindromic substring in s.",
+      "0.2": "Given a string s, return longest substring in.",
+      "0.3": "Given string s, the longest palindromic in.",
+      "0.4": "A string s, palindromic substring in.",
+      "0.5": "A string, return longest in.",
+      "0.6": "A, the palindromic.",
+      "0.7": "A, the.",
+      "0.8": "A,.",
+      "0.9": "A,.",
+      "1.0": "A,."
+    },
+    "cut": {
+      "0.0": "Given a string s, return the longest\npalindromic\nsubstring\nin s.",
+      "0.1": "Given a string s, return the longest\npalindromic\nsubstring",
+      "0.2": "Given a string s, return the longest\npalindromic\nsu",
+      "0.3": "Given a string s, return the longest\npalindro",
+      "0.4": "Given a string s, return the longest\np",
+      "0.5": "Given a string s, return the lon",
+      "0.6": "Given a string s, return t",
+      "0.7": "Given a string s, r",
+      "0.8": "Given a strin",
+      "0.9": "Given ",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "deepseek": {
+      "cut": {
+        "0.0": [
+          "def longest_palindrome(s):\n    if not s:\n        return \"\"\n    \n    start = 0\n    max_length = 1\n    \n    def expand_around_center(left, right):\n        while left >= 0 and right < len(s) and s[left] == s[right]:\n            left -= 1\n            right += 1\n        return right - left - 1\n    \n    for i in range(len(s)):\n        len1 = expand_around_center(i, i)\n        len2 = expand_around_center(i, i + 1)\n        max_len = max(len1, len2)\n        if max_len > max_length:\n            max_length = max_len\n            start = i - (max_len - 1) // 2\n    \n    return s[start:start + max_length]"
+        ],
+        "0.1": [
+          "def longest_palindromic_substring(s):\n    if not s:\n        return \"\"\n    \n    start = 0\n    max_length = 1\n    \n    def expand_around_center(left, right):\n        while left >= 0 and right < len(s) and s[left] == s[right]:\n            left -= 1\n            right += 1\n        return right - left - 1\n    \n    for i in range(len(s)):\n        len1 = expand_around_center(i, i)\n        len2 = expand_around_center(i, i + 1)\n        current_max = max(len1, len2)\n        if current_max > max_length:\n            max_length = current_max\n            start = i - (current_max - 1) // 2\n    \n    return s[start:start + max_length]"
+        ],
+        "0.2": [
+          "def longest_palindromic_substring(s):\n    if not s:\n        return \"\"\n    \n    n = len(s)\n    start = 0\n    max_len = 1\n    \n    for i in range(n):\n        # Check for odd-length palindromes\n        left, right = i, i\n        while left >= 0 and right < n and s[left] == s[right]:\n            if right - left + 1 > max_len:\n                start = left\n                max_len = right - left + 1\n            left -= 1\n            right += 1\n        \n        # Check for even-length palindromes\n        left, right = i, i + 1\n        while left >= 0 and right < n and s[left] == s[right]:\n            if right - left + 1 > max_len:\n                start = left\n                max_len = right - left + 1\n            left -= 1\n            right += 1\n    \n    return s[start:start + max_len]"
+        ],
+        "0.3": [
+          "def longest_palindrome(s):\n    n = len(s)\n    if n == 0:\n        return \"\"\n    \n    start = 0\n    max_len = 1\n    \n    for i in range(n):\n        # Check for odd length palindromes\n        left, right = i, i\n        while left >= 0 and right < n and s[left] == s[right]:\n            if right - left + 1 > max_len:\n                start = left\n                max_len = right - left + 1\n            left -= 1\n            right += 1\n        \n        # Check for even length palindromes\n        left, right = i, i + 1\n        while left >= 0 and right < n and s[left] == s[right]:\n            if right - left + 1 > max_len:\n                start = left\n                max_len = right - left + 1\n            left -= 1\n            right += 1\n    \n    return s[start:start + max_len]"
+        ],
+        "0.4": [
+          "def longest_palindrome(s):\n    if not s:\n        return \"\"\n    \n    start = 0\n    max_length = 1\n    \n    for i in range(len(s)):\n        # Check for odd-length palindromes\n        left, right = i, i\n        while left >= 0 and right < len(s) and s[left] == s[right]:\n            if right - left + 1 > max_length:\n                start = left\n                max_length = right - left + 1\n            left -= 1\n            right += 1\n        \n        # Check for even-length palindromes\n        left, right = i, i + 1\n        while left >= 0 and right < len(s) and s[left] == s[right]:\n            if right - left + 1 > max_length:\n                start = left\n                max_length = right - left + 1\n            left -= 1\n            right += 1\n    \n    return s[start:start + max_length]"
+        ],
+        "0.5": [
+          "def longest_palindrome(s):\n    if not s:\n        return \"\"\n    \n    start = 0\n    max_len = 1\n    \n    for i in range(len(s)):\n        # Check for odd length palindromes\n        l, r = i, i\n        while l >= 0 and r < len(s) and s[l] == s[r]:\n            if r - l + 1 > max_len:\n                start = l\n                max_len = r - l + 1\n            l -= 1\n            r += 1\n        \n        # Check for even length palindromes\n        l, r = i, i + 1\n        while l >= 0 and r < len(s) and s[l] == s[r]:\n            if r - l + 1 > max_len:\n                start = l\n                max_len = r - l + 1\n            l -= 1\n            r += 1\n    \n    return s[start:start + max_len]"
+        ],
+        "0.6": [
+          "def modify_string(s):\n    t = \"\"\n    for char in s:\n        if char.islower():\n            t += char.upper()\n        elif char.isupper():\n            t += char.lower()\n        else:\n            t += char\n    return t"
+        ],
+        "0.7": [
+          "s = input()\nr = input()\nprint(s + r)"
+        ],
+        "0.8": [
+          "Here's a Python code snippet that takes a string as input and prints it:\n\n```python\ninput_string = input(\"Enter a string: \")\nprint(input_string)"
+        ],
+        "0.9": [
+          "# Example Python code\ndef greet(name):\n    print(f\"Hello, {name}!\")\n\ngreet(\"Alice\")"
+        ],
+        "1.0": [
+          "# Example Python code\ndef greet(name):\n    print(f\"Hello, {name}!\")\n\ndef add_numbers(a, b):\n    return a + b\n\nif __name__ == \"__main__\":\n    greet(\"World\")\n    result = add_numbers(5, 7)\n    print(f\"5 + 7 = {result}\")"
+        ]
+      }
+    }
+  }
+}

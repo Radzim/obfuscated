@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/add-two-numbers/discuss/1835217/Python3-DUMMY-CARRY-(-**-)-Explained",
+  "python_solutions": "class Solution:\n    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:\n        res = dummy = ListNode()\n        carry = 0\n        while l1 or l2:\n            v1, v2 = 0, 0\n            if l1: v1, l1 = l1.val, l1.next\n            if l2: v2, l2 = l2.val, l2.next\n            \n            val = carry + v1 + v2\n            res.next = ListNode(val%10)\n            res, carry = res.next, val//10\n            \n        if carry:\n            res.next = ListNode(carry)\n            \n        return dummy.next",
+  "slug": "add-two-numbers",
+  "post_title": "\u2714\ufe0f [Python3] DUMMY CARRY ( \u2022\u2304\u2022 \u0942 )\u2727, Explained",
+  "user": "artod",
+  "upvotes": 44,
+  "views": 7100,
+  "problem_title": "add two numbers",
+  "number": 2,
+  "acceptance": 0.3979999999999999,
+  "difficulty": "Medium",
+  "__index_level_0__": 46,
+  "question": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.\n  Example 1:\nInput: l1 = [2,4,3], l2 = [5,6,4]\nOutput: [7,0,8]\nExplanation: 342 + 465 = 807.\nExample 2:\nInput: l1 = [0], l2 = [0]\nOutput: [0]\nExample 3:\nInput: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]\nOutput: [8,9,9,9,0,0,0,1]\n  Constraints:\nThe number of nodes in each linked list is in the range [1, 100].\n0 <= Node.val <= 9\nIt is guaranteed that the list represents a number that does not have leading zeros.",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "You are given two non - empty linked lists representing two non - negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list. You may assume the two numbers do not contain any leading zero, except the number 0 itself.",
+      "0.1": "You are given two non - empty linked listZ representing two non - negative iHtegers. The digits are stored in reverss order, and each of their nodes contains a single digit. Add the two numbers and retufn the sum as a linked list. You may assume the two numbers do not c*ntain any leading zerK, except the numb#r 0 itself.",
+      "0.2": "You are given two non - empty P&nked l9sts DDpreXenting two non - nRgafive integers. The digits are stored in reverse order, and each of their nodes congaLns a sibglS digi^. Add the two numbeFq and r3Rurn the sum as a linked list. You may assuks the two nu<bFrs do not contwiG any ?ewding sero, except the number 0 itself.",
+      "0.3": "You are gJveB two non - eKp4y >onked lists reprSsemtonB two non - begs6ive *nteheDs. The cigjts are Ztorrd in %eC$rse o%wer, and dadh of their nodes cinfzins a simglr Vugit. Add the two numbers and return the sum as a linked ljsg. You may assume the two numbers do not cPntaoh any leading zwri, exxe(t the nuKbe$ 0 OYself.",
+      "0.4": "You are yiveg two non - em(^y l9nkDX lJstz rForeWenGinR two non - negative iBteFSrx. The wigltC are stIeev in GFverQe o3det, and racB of tyeiD nPd@s XojtaLnW a single wiRit. Add the two njmGRrs and rwtHrb the sum as a OiJ<ed lix%. You may aeshms the two g7mberd do not skntxin any :wadiJg ze#8, #xfrpt the mumget 0 i6Deld.",
+      "0.5": "You are glFeB two non - em9f6 lihoes <iEFs felEFzentjng two non - nWgat*f@ 7nYeg$rz. The CigiRe are st03fd in gev#rdS o3RRr, and eZdh of YyeiD GocWs Domhaons a sinvi# divK%. Add the two nuKnWts and #eYugn the sum as a lihjeX ;iwt. You may XsW8me the two JumGwrz do not f0gGain any lWadKGh aerI, eCSepH the nuJbre 0 ite$:f.",
+      "0.6": "You are g7DeG two non - eJLtH lkHJeS l&s5E rdLred$BtLHn two non - M4YWyive OnGeHeEC. The w(gKrs are QtofDe in E3gDrQe odEe%, and Dasy of thRLe HoEec SohFslns a W(nblw s*tit. Add the two JIHgegs and gfRirn the sum as a liMJ2x ;(dt. You may AsXu<W the two n^Nb35Q do not xkJtWiG any l$QcUgg aeg), wZXep$ the nh,NSr 0 ihsFpv.",
+      "0.7": "You are guC#J two non - W<p66 :jHlsd IJsyw ffpf#Xenf(Bh two non - hfgZ5Uvw lmRWFFrs. The e*gUGX are ZYprFS in rDbfrDF 05seF, and rWct of RtrJr H)cew S8mrs*ns a qoJY/e rug8$. Add the two GuJH#fs and 3fr&rB the sum as a :iBj2v l*ER. You may ZWahJe the two g6mvegc do not DijYa8n any K#SfiJg XD5o, wZseOr the g tKbF% 0 (tQS<C.",
+      "0.8": "You are VOvRH two non - e<oyH lJjl4e Pus^C 5f)rexsGGuhy two non - jehAyoff kBt4bSgq. The RlViYa are w48rdx in fecrtCS 0rC2$, and @SsG of Rtd8r mkdrC c(h$Z*Bx a Xknt;w Sotiy. Add the two H tmG@GD and gW5&Tn the sum as a lOMMrx plAf. You may aDeJjw the two M*jhRts do not v*jFaLM any .FawJgT X3Fl, DxF406 the g tmVR5 0 kRsS,t.",
+      "0.9": "You are v(cWH two non - dN(f6 ,9Jmsv OUx^C tSog3wSh4igb two non - b4twHlb3 8BHwFw3e. The VOn76x are DRPESR in %FCR3e2 9Gv3$, and WXXY of 5Yrj4 glR#E VLb%W8hC a E*Br.R Vonoy. Add the two BHhgd5e and gD%6#H the sum as a o(jiWR ,jW5. You may QxX thf the two bJhn3gq do not XPgYz7B any /wsV9jr A$#8, #SVflR the gi<g$E 0 l6DSiG.",
+      "1.0": "You are Fjb2g two non - F,lGg >uh<SX pKcyE F4)T#ERBruGb two non - BRYSG7Cf (gRFHW3w. The vurj4e are ARIg#w in $#DfECr PtwDg, and Sqfm of FT@(% b9Rwq vkJFXKBD a d8GvpW r&h*F. Add the two J TKN#Fx and 5fFJem the sum as a O9hI$x k7EF. You may qew THw the two hi,VWdc do not fIMgAOh any :3xEoMN S##9, DZX4l$ the H T<f2d 0 lfZF,c."
+    },
+    "synonym": {
+      "0.0": "You are pay two non - empty coupled lists representing ii non - negative whole number. The finger be stored in opposite orderliness, and each of their nodes contains a exclusive digit. Add the two numbers and fall the join as a link list. You may adopt the two numbers do non contain any preeminent zero, except the figure 0 itself.",
+      "0.1": "You are given two non - empty coupled lists representing two non - negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Tally the two issue and return the nitty gritty as a linked list. You whitethorn assume the two numbers do not turn back any leading zero, except the number 0 itself.",
+      "0.2": "You are move over deuce non - empty linked lists present deuce non - disconfirming integer. The finger are stored in reverse order, and each of their nodes contains a undivided digit. Add the two numbers and give back the sum as a linked list. You may assume the two numbers do not check any prima nothing, except the number 0 itself.",
+      "0.3": "You are give ii non - empty linked listing represent two non - negative integers. The digits be salt away in reverse order of magnitude, and each of their nodes hold back a exclusive figure. Tot the two numbers and return the sum as a linked list. You may assume the deuce numbers game execute non contain any leading zero, except the number cipher itself.",
+      "0.4": "You are give two non - empty bellied linked tilt represent deuce non - disconfirming integer. The digits live stored in reversal order, and each of their node control a individual digit. Tot the two numbers and return the core as a link list. You may presume the deuce act act non contain any star zippo, except the number cipher itself.",
+      "0.5": "You cost fall in two non - empty linked leaning represent two non - damaging integer. The digit follow salt away in turnaround ordering, and each of their client hold a single finger. Total the ii numbers and return the sum as a link tilt. You crataegus laevigata acquire the two numbers do non hold any leading nil, except the turn 0 itself.",
+      "0.6": "You be grant ii non - vacuous coupled tilt present 2 non - minus whole number. The digit be stack away in reversal order of magnitude, and each of their leaf node contain a exclusive finger. Tally the deuce numbers and return the sum as a linked inclination. You crataegus oxycantha take over the two book of numbers do not arrest any stellar nada, except the figure zero itself.",
+      "0.7": "You cost ease up two non - empty bellied joined inclination make up ii non - minus whole number. The finger's breadth exist stored in black eye ordination, and each of their lymph gland control a unmarried finger. Tote up the 2 number and give the total as a yoke tilt. You crataegus oxycantha take over the 2 number practice non hold in any star 0, except the issue cypher itself.",
+      "0.8": "You comprise give 2 non - vacuous joined list present deuce non - disconfirming integer. The fingerbreadth live put in in reversal ordering, and each of their leaf node bear a individual fingerbreadth. Contribute the ii number and retrovert the kernel as a join inclination. You whitethorn feign the ii number perform non hold in any stellar zippo, except the turn zero itself.",
+      "0.9": "You be consecrate 2 non - empty bellied coupled listing represent 2 non - negatively charged integer. The dactyl comprise store in turnaround purchase order, and each of their node contain a individual finger. Add together the 2 routine and repay the sum total as a connect listing. You crataegus oxycantha take over the deuce number serve non control any stellar zilch, except the turn nought itself.",
+      "1.0": "You exist break 2 non - vacuous coupled leaning represent 2 non - disconfirming integer. The figure equal hive away in opposite parliamentary procedure, and each of their node curb a unmarried finger's breadth. Bring the ii phone number and give the gist as a link up listing. You whitethorn adopt the 2 number execute non take any ahead 0, except the telephone number zero itself."
+    },
+    "random": {
+      "0.0": "Are given two non - empty representing non - negative integers. The digits stored in, and each their nodes contains a single digit. Add the two numbers and the as a. You may the numbers any leading zero, number 0.",
+      "0.1": "You are given two non - empty linked lists representing two non - negative integers. The digits are stored in reverse order, and each nodes contains single digit. Add the two numbers and return the sum as a linked list. may assume two numbers do not contain any leading zero, except the 0.",
+      "0.2": "You given two non - empty linked lists two non - integers. The digits stored in reverse order, and each of nodes contains a digit. numbers and return the as a linked list. may assume the two numbers not contain any leading zero, the number 0.",
+      "0.3": "You are given non - empty linked representing -. The digits are stored reverse order, and each of their contains a digit. Add the two numbers and return the as list. You may two not any leading, except number itself.",
+      "0.4": "Are non - empty linked representing non - negative integers. The are in reverse order, and each of nodes a digit. Add and return the sum as. You may assume the contain, except the.",
+      "0.5": "Are two non - lists - integers. stored in reverse order, each nodes contains single. two numbers and sum list. You assume two numbers contain leading, except number.",
+      "0.6": "You - empty lists - integers. digits are in, each single. as. may assume the do not zero, 0 itself.",
+      "0.7": "Are - -. The digits are, of their. Add sum a. two any,.",
+      "0.8": "Are two - - negative. ,. . may numbers,.",
+      "0.9": "Are - -. ,. .,.",
+      "1.0": "Are - -. ,. .,."
+    },
+    "cut": {
+      "0.0": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.",
+      "0.1": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.\nYou may assume the two numbers do not contain any leading z",
+      "0.2": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.\nYou may assume the two numb",
+      "0.3": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked li",
+      "0.4": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers a",
+      "0.5": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a sin",
+      "0.6": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and ea",
+      "0.7": "You are given two non-empty linked lists representing two non-negative integers. The digits are",
+      "0.8": "You are given two non-empty linked lists representing two non-ne",
+      "0.9": "You are given two non-empty link",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "anthropic": {
+      "cut": {
+        "0.0": [
+          "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:\n    dummy = ListNode(0)\n    current = dummy\n    carry = 0\n    \n    while l1 or l2 or carry:\n        val1 = l1.val if l1 else 0\n        val2 = l2.val if l2 else 0\n        \n        total = val1 + val2 + carry\n        carry = total // 10\n        current.next = ListNode(total % 10)\n        \n        current = current.next\n        l1 = l1.next if l1 else None\n        l2 = l2.next if l2 else None\n    \n    return dummy.next"
+        ],
+        "0.1": [
+          "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:\n    dummy = ListNode(0)\n    current = dummy\n    carry = 0\n    \n    while l1 or l2 or carry:\n        val1 = l1.val if l1 else 0\n        val2 = l2.val if l2 else 0\n        \n        total = val1 + val2 + carry\n        carry = total // 10\n        current.next = ListNode(total % 10)\n        \n        current = current.next\n        l1 = l1.next if l1 else None\n        l2 = l2.next if l2 else None\n    \n    return dummy.next"
+        ],
+        "0.2": [
+          "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:\n    dummy = ListNode(0)\n    current = dummy\n    carry = 0\n    \n    while l1 or l2 or carry:\n        val1 = l1.val if l1 else 0\n        val2 = l2.val if l2 else 0\n        \n        total = val1 + val2 + carry\n        carry = total // 10\n        current.next = ListNode(total % 10)\n        \n        current = current.next\n        l1 = l1.next if l1 else None\n        l2 = l2.next if l2 else None\n    \n    return dummy.next"
+        ],
+        "0.3": [
+          "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:\n    dummy = ListNode(0)\n    current = dummy\n    carry = 0\n    \n    while l1 or l2 or carry:\n        val1 = l1.val if l1 else 0\n        val2 = l2.val if l2 else 0\n        \n        total = val1 + val2 + carry\n        carry = total // 10\n        current.next = ListNode(total % 10)\n        \n        current = current.next\n        l1 = l1.next if l1 else None\n        l2 = l2.next if l2 else None\n    \n    return dummy.next"
+        ],
+        "0.4": [
+          "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:\n    dummy = ListNode(0)\n    current = dummy\n    carry = 0\n    \n    while l1 or l2 or carry:\n        val1 = l1.val if l1 else 0\n        val2 = l2.val if l2 else 0\n        \n        total = val1 + val2 + carry\n        carry = total // 10\n        current.next = ListNode(total % 10)\n        \n        current = current.next\n        l1 = l1.next if l1 else None\n        l2 = l2.next if l2 else None\n    \n    return dummy.next"
+        ],
+        "0.5": [
+          "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:\n    dummy = ListNode(0)\n    current = dummy\n    carry = 0\n    \n    while l1 or l2 or carry:\n        val1 = l1.val if l1 else 0\n        val2 = l2.val if l2 else 0\n        \n        total = val1 + val2 + carry\n        carry = total // 10\n        current.next = ListNode(total % 10)\n        \n        current = current.next\n        l1 = l1.next if l1 else None\n        l2 = l2.next if l2 else None\n    \n    return dummy.next"
+        ],
+        "0.6": [
+          "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:\n    dummy = ListNode(0)\n    current = dummy\n    carry = 0\n    \n    while l1 or l2 or carry:\n        val1 = l1.val if l1 else 0\n        val2 = l2.val if l2 else 0\n        \n        total = val1 + val2 + carry\n        carry = total // 10\n        current.next = ListNode(total % 10)\n        \n        current = current.next\n        l1 = l1.next if l1 else None\n        l2 = l2.next if l2 else None\n    \n    return dummy.next"
+        ],
+        "0.7": [
+          "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:\n    dummy = ListNode(0)\n    current = dummy\n    carry = 0\n    \n    while l1 or l2 or carry:\n        val1 = l1.val if l1 else 0\n        val2 = l2.val if l2 else 0\n        \n        total = val1 + val2 + carry\n        carry = total // 10\n        current.next = ListNode(total % 10)\n        \n        current = current.next\n        l1 = l1.next if l1 else None\n        l2 = l2.next if l2 else None\n    \n    return dummy.next"
+        ],
+        "0.8": [
+          "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:\n    dummy = ListNode(0)\n    current = dummy\n    carry = 0\n    \n    while l1 or l2 or carry:\n        val1 = l1.val if l1 else 0\n        val2 = l2.val if l2 else 0\n        \n        total = val1 + val2 + carry\n        carry = total // 10\n        current.next = ListNode(total % 10)\n        \n        current = current.next\n        l1 = l1.next if l1 else None\n        l2 = l2.next if l2 else None\n    \n    return dummy.next"
+        ],
+        "0.9": [
+          "def mergeTwoLists(l1, l2):\n    dummy = ListNode(0)\n    current = dummy\n    \n    while l1 and l2:\n        if l1.val <= l2.val:\n            current.next = l1\n            l1 = l1.next\n        else:\n            current.next = l2\n            l2 = l2.next\n        current = current.next\n    \n    if l1:\n        current.next = l1\n    if l2:\n        current.next = l2\n    \n    return dummy.next"
+        ],
+        "1.0": [
+          "def fibonacci(n):\n    if n <= 1:\n        return n\n    else:\n        return fibonacci(n-1) + fibonacci(n-2)\n\ndef is_prime(num):\n    if num < 2:\n        return False\n    for i in range(2, int(num ** 0.5) + 1):\n        if num % i == 0:\n            return False\n    return True\n\nclass DataProcessor:\n    def __init__(self, data):\n        self.data = data\n\n    def filter_even(self):\n        return [x for x in self.data if x % 2 == 0]\n\n    def calculate_average(self):\n        return sum(self.data) / len(self.data)\n\ndef merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    \n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i, j = 0, 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    \n    result.extend(left[i:])\n    result.extend(right[j:])\n    \n    return result"
+        ]
+      }
+    }
+  }
+}

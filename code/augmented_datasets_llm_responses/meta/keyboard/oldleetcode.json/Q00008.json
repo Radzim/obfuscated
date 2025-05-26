@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/palindrome-number/discuss/2797115/Easy-Python-Solution-with-O(1)-space",
+  "python_solutions": "class Solution:\n    def isPalindrome(self, x: int) -> bool:\n        if x < 0:\n            return False\n        \n        res = 0\n        temp = x\n        \n        while temp:\n            temp, n = divmod(temp, 10)\n            res = (res * 10) + n\n                \n        return res == x",
+  "slug": "palindrome-number",
+  "post_title": "Easy Python Solution with O(1) space",
+  "user": "tragob",
+  "upvotes": 11,
+  "views": 1900,
+  "problem_title": "palindrome number",
+  "number": 9,
+  "acceptance": 0.53,
+  "difficulty": "Easy",
+  "__index_level_0__": 382,
+  "question": "Given an integer x, return true if x is a\npalindrome\n, and false otherwise.\n  Example 1:\nInput: x = 121\nOutput: true\nExplanation: 121 reads as 121 from left to right and from right to left.\nExample 2:\nInput: x = -121\nOutput: false\nExplanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\nExample 3:\nInput: x = 10\nOutput: false\nExplanation: Reads 01 from right to left. Therefore it is not a palindrome.\n  Constraints:\n-231 <= x <= 231 - 1\n  Follow up: Could you solve it without converting the integer to a string?",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given an integer x, return true if x is a palindrome, and false otherwise.",
+      "0.1": "fiven an integer x, return true if x is a palindrome, and false otheTwise.",
+      "0.2": "Given an inRegRr x, rey7rn true if x is a palindrome, and falde )tNerwise.",
+      "0.3": "GivdB an 8n%ege# x, return tr8W if x is a OSlindromf, and fXlee o$JerwisD.",
+      "0.4": "Nivfn an inhfgeF x, De^urh hfue if x is a pa<indr9hF, and talsR oyh2D@ise.",
+      "0.5": "nOgen an 9M5eher x, rRtjrb Rruw if x is a 0w:8ndr)me, and GA;se 0^hwTwuse.",
+      "0.6": "vlveh an ibRRgF$ x, gWtIrB tthD if x is a 9QkinX3oje, and GaPze *tuDD@ose.",
+      "0.7": "Nuv$h an LntdNFE x, dWhugB tehd if x is a OzliBdtphd, and rs?sR L4hD%Duce.",
+      "0.8": "GUFfg an iH%FbWG x, 4$%*5n FDh2 if x is a oq<OJdr*KW, and DSIce 8^YsGw*ZW.",
+      "0.9": "ykGwh an 7b5wV4G x, #F4H5J f#&$ if x is a lw,uhdE0,$, and dSkAD 9hYwGq(A4.",
+      "1.0": "yoDrM an *gYFyDG x, %$hIFG %E6d if x is a 0Z:*Je3Kj3, and dX/cs LYb3F@JCw."
+    },
+    "synonym": {
+      "0.0": "Give an integer ecstasy, rejoin dependable if tenner is a palindrome, and false otherwise.",
+      "0.1": "Apply an integer disco biscuit, return true if x is a palindrome, and false otherwise.",
+      "0.2": "Give an integer x, render true if x comprise a palindrome, and false otherwise.",
+      "0.3": "Founder an integer ten, return lawful if x be a palindrome, and assumed otherwise.",
+      "0.4": "Given an integer hug drug, rejoin rightful if x is a palindrome, and imitation otherwise.",
+      "0.5": "Give an whole number cristal, return straight if x is a palindrome, and put on otherwise.",
+      "0.6": "Give an integer ten, render rightful if hug drug be a palindrome, and put on otherwise.",
+      "0.7": "Kick in an whole number hug drug, bring back rightful if ten be a palindrome, and faux otherwise.",
+      "0.8": "Give an whole number tenner, take back reliable if ten be a palindrome, and fictitious otherwise.",
+      "0.9": "Give an whole number 10, render rightful if go be a palindrome, and fictive otherwise.",
+      "1.0": "Give an whole number disco biscuit, repay reliable if hug drug be a palindrome, and fake otherwise."
+    },
+    "random": {
+      "0.0": "Given x, return x a, and false otherwise.",
+      "0.1": "Given integer x, return true if x is palindrome, and false otherwise.",
+      "0.2": "An x, return true if is a palindrome, and false.",
+      "0.3": "Given integer, return true x is, and false.",
+      "0.4": "Given an integer, return is, and otherwise.",
+      "0.5": "An x, a palindrome, otherwise.",
+      "0.6": "An, return palindrome, otherwise.",
+      "0.7": "An, x palindrome,.",
+      "0.8": "An, ,.",
+      "0.9": "An, ,.",
+      "1.0": "An, ,."
+    },
+    "cut": {
+      "0.0": "Given an integer x, return true if x is a\npalindrome\n, and false otherwise.",
+      "0.1": "Given an integer x, return true if x is a\npalindrome\n, and false oth",
+      "0.2": "Given an integer x, return true if x is a\npalindrome\n, and f",
+      "0.3": "Given an integer x, return true if x is a\npalindrome",
+      "0.4": "Given an integer x, return true if x is a\npal",
+      "0.5": "Given an integer x, return true if x i",
+      "0.6": "Given an integer x, return tru",
+      "0.7": "Given an integer x, re",
+      "0.8": "Given an intege",
+      "0.9": "Given an",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "meta": {
+      "keyboard": {
+        "0.0": [
+          "def is_palindrome(x: int) -> bool:\n    if x < 0:\n        return False\n    else:\n        return str(x) == str(x)[::-1]"
+        ],
+        "0.1": [
+          "def is_palindrome(x: int) -> bool:\n    if x < 0:\n        return False\n    else:\n        return str(x) == str(x)[::-1]"
+        ],
+        "0.2": [
+          "def is_palindrome(x):\n    if x < 0:\n        return False\n    else:\n        return str(x) == str(x)[::-1]"
+        ],
+        "0.3": [
+          "def is_palindrome(x):\n    if x < 0:\n        return False\n    else:\n        return str(x) == str(x)[::-1]\n\ndef check_palindrome(x):\n    if is_palindrome(x):\n        return \"True\"\n    else:\n        return \"False\"\n\nx = 12321\nprint(check_palindrome(x))"
+        ],
+        "0.4": [
+          "def is_perfect_square(n):\n    if n < 0:\n        return False\n    sqrt = n ** 0.5\n    return sqrt.is_integer()\n\ndef reverse_integer(x):\n    sign = -1 if x < 0 else 1\n    x *= sign\n    reversed_num = 0\n    while x > 0:\n        reversed_num = reversed_num * 10 + x % 10\n        x //= 10\n    return sign * reversed_num\n\nx = int(input(\"Enter a number: \"))\nif is_perfect_square(x):\n    print(\"The number is a perfect square.\")\nprint(\"The reverse of the number is:\", reverse_integer(x))"
+        ],
+        "0.5": [
+          "import random\n\ndef generate_random_number():\n    return random.randint(1, 100)\n\ndef check_if_random(x):\n    if x == generate_random_number():\n        print(\"x is a random number\")\n    else:\n        print(\"x is not a random number\")\n\ndef main():\n    x = generate_random_number()\n    print(\"Generated random number: \", x)\n    check_if_random(x)\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.6": [
+          "def check_and_process(x):\n    if isinstance(x, str):\n        print(\"Input is a string\")\n        processed_x = x.upper()\n        return processed_x\n    else:\n        print(\"Input is not a string\")\n        return None\n\nx = \"example string\"\nresult = check_and_process(x)\nprint(result)"
+        ],
+        "0.7": [
+          "def check_type(x):\n    if isinstance(x, bool):\n        return \"Nuv$h an LntdNFE\"\n    else:\n        return \"dWhugB tehd\"\n\ndef reduce_string(s):\n    return s[:4] + \"%\" + s[-4:]\n\nx = True\nprint(check_type(x))\nprint(reduce_string(\"rs?sR L4hD%Duce\"))"
+        ],
+        "0.8": [
+          "def check_input(x):\n    if isinstance(x, str):\n        print(\"Input is a string\")\n    else:\n        print(\"Input is not a string\")"
+        ],
+        "0.9": [
+          "def check_string(x):\n    if x.islower():\n        return x\n    else:\n        return \"Input is not a lowercase string\"\n\ndef check_integer(x):\n    if isinstance(x, int):\n        return x\n    else:\n        return \"Input is not an integer\"\n\ndef check_list(x):\n    if isinstance(x, list):\n        return x\n    else:\n        return \"Input is not a list\"\n\ndef check_tuple(x):\n    if isinstance(x, tuple):\n        return x\n    else:\n        return \"Input is not a tuple\"\n\ndef check_dictionary(x):\n    if isinstance(x, dict):\n        return x\n    else:\n        return \"Input is not a dictionary\"\n\ndef check_set(x):\n    if isinstance(x, set):\n        return x\n    else:\n        return \"Input is not a set\"\n\ndef main():\n    x = input(\"Enter a value: \")\n    print(\"Is lowercase string: \", check_string(x))\n    print(\"Is integer: \", check_integer(x))\n    print(\"Is list: \", check_list(x))\n    print(\"Is tuple: \", check_tuple(x))\n    print(\"Is dictionary: \", check_dictionary(x))\n    print(\"Is set: \", check_set(x))\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "1.0": [
+          "def check_input(x):\n    if isinstance(x, str):\n        print(\"Input is a string\")\n    else:\n        print(\"Input is not a string\")\n\ndef main():\n    x = input(\"Enter a value: \")\n    check_input(x)\n\nif __name__ == \"__main__\":\n    main()"
+        ]
+      }
+    }
+  }
+}

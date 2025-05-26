@@ -1,0 +1,12 @@
+model,method,dataset,task,augmentation_rate,eval_score
+google,keyboard,math.json,Q00011,0.0,1.0
+google,keyboard,math.json,Q00011,0.1,1.0
+google,keyboard,math.json,Q00011,0.2,1.0
+google,keyboard,math.json,Q00011,0.3,1.0
+google,keyboard,math.json,Q00011,0.4,1.0
+google,keyboard,math.json,Q00011,0.5,0.0
+google,keyboard,math.json,Q00011,0.6,0.0
+google,keyboard,math.json,Q00011,0.7,0.0
+google,keyboard,math.json,Q00011,0.8,0.0
+google,keyboard,math.json,Q00011,0.9,1.0
+google,keyboard,math.json,Q00011,1.0,0.0

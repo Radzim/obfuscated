@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/palindrome-number/discuss/2797115/Easy-Python-Solution-with-O(1)-space",
+  "python_solutions": "class Solution:\n    def isPalindrome(self, x: int) -> bool:\n        if x < 0:\n            return False\n        \n        res = 0\n        temp = x\n        \n        while temp:\n            temp, n = divmod(temp, 10)\n            res = (res * 10) + n\n                \n        return res == x",
+  "slug": "palindrome-number",
+  "post_title": "Easy Python Solution with O(1) space",
+  "user": "tragob",
+  "upvotes": 11,
+  "views": 1900,
+  "problem_title": "palindrome number",
+  "number": 9,
+  "acceptance": 0.53,
+  "difficulty": "Easy",
+  "__index_level_0__": 382,
+  "question": "Given an integer x, return true if x is a\npalindrome\n, and false otherwise.\n  Example 1:\nInput: x = 121\nOutput: true\nExplanation: 121 reads as 121 from left to right and from right to left.\nExample 2:\nInput: x = -121\nOutput: false\nExplanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\nExample 3:\nInput: x = 10\nOutput: false\nExplanation: Reads 01 from right to left. Therefore it is not a palindrome.\n  Constraints:\n-231 <= x <= 231 - 1\n  Follow up: Could you solve it without converting the integer to a string?",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given an integer x, return true if x is a palindrome, and false otherwise.",
+      "0.1": "fiven an integer x, return true if x is a palindrome, and false otheTwise.",
+      "0.2": "Given an inRegRr x, rey7rn true if x is a palindrome, and falde )tNerwise.",
+      "0.3": "GivdB an 8n%ege# x, return tr8W if x is a OSlindromf, and fXlee o$JerwisD.",
+      "0.4": "Nivfn an inhfgeF x, De^urh hfue if x is a pa<indr9hF, and talsR oyh2D@ise.",
+      "0.5": "nOgen an 9M5eher x, rRtjrb Rruw if x is a 0w:8ndr)me, and GA;se 0^hwTwuse.",
+      "0.6": "vlveh an ibRRgF$ x, gWtIrB tthD if x is a 9QkinX3oje, and GaPze *tuDD@ose.",
+      "0.7": "Nuv$h an LntdNFE x, dWhugB tehd if x is a OzliBdtphd, and rs?sR L4hD%Duce.",
+      "0.8": "GUFfg an iH%FbWG x, 4$%*5n FDh2 if x is a oq<OJdr*KW, and DSIce 8^YsGw*ZW.",
+      "0.9": "ykGwh an 7b5wV4G x, #F4H5J f#&$ if x is a lw,uhdE0,$, and dSkAD 9hYwGq(A4.",
+      "1.0": "yoDrM an *gYFyDG x, %$hIFG %E6d if x is a 0Z:*Je3Kj3, and dX/cs LYb3F@JCw."
+    },
+    "synonym": {
+      "0.0": "Give an integer ecstasy, rejoin dependable if tenner is a palindrome, and false otherwise.",
+      "0.1": "Apply an integer disco biscuit, return true if x is a palindrome, and false otherwise.",
+      "0.2": "Give an integer x, render true if x comprise a palindrome, and false otherwise.",
+      "0.3": "Founder an integer ten, return lawful if x be a palindrome, and assumed otherwise.",
+      "0.4": "Given an integer hug drug, rejoin rightful if x is a palindrome, and imitation otherwise.",
+      "0.5": "Give an whole number cristal, return straight if x is a palindrome, and put on otherwise.",
+      "0.6": "Give an integer ten, render rightful if hug drug be a palindrome, and put on otherwise.",
+      "0.7": "Kick in an whole number hug drug, bring back rightful if ten be a palindrome, and faux otherwise.",
+      "0.8": "Give an whole number tenner, take back reliable if ten be a palindrome, and fictitious otherwise.",
+      "0.9": "Give an whole number 10, render rightful if go be a palindrome, and fictive otherwise.",
+      "1.0": "Give an whole number disco biscuit, repay reliable if hug drug be a palindrome, and fake otherwise."
+    },
+    "random": {
+      "0.0": "Given x, return x a, and false otherwise.",
+      "0.1": "Given integer x, return true if x is palindrome, and false otherwise.",
+      "0.2": "An x, return true if is a palindrome, and false.",
+      "0.3": "Given integer, return true x is, and false.",
+      "0.4": "Given an integer, return is, and otherwise.",
+      "0.5": "An x, a palindrome, otherwise.",
+      "0.6": "An, return palindrome, otherwise.",
+      "0.7": "An, x palindrome,.",
+      "0.8": "An, ,.",
+      "0.9": "An, ,.",
+      "1.0": "An, ,."
+    },
+    "cut": {
+      "0.0": "Given an integer x, return true if x is a\npalindrome\n, and false otherwise.",
+      "0.1": "Given an integer x, return true if x is a\npalindrome\n, and false oth",
+      "0.2": "Given an integer x, return true if x is a\npalindrome\n, and f",
+      "0.3": "Given an integer x, return true if x is a\npalindrome",
+      "0.4": "Given an integer x, return true if x is a\npal",
+      "0.5": "Given an integer x, return true if x i",
+      "0.6": "Given an integer x, return tru",
+      "0.7": "Given an integer x, re",
+      "0.8": "Given an intege",
+      "0.9": "Given an",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "openai": {
+      "random": {
+        "0.0": [
+          "def check_x(x):\n    if x:\n        return x, True\n    else:\n        return False"
+        ],
+        "0.1": [
+          "def is_palindrome(x: int) -> bool:\n    if x < 0:\n        return False\n    return str(x) == str(x)[::-1]"
+        ],
+        "0.2": [
+          "def is_palindrome(x):\n    s = str(x)\n    return s == s[::-1]"
+        ],
+        "0.3": [
+          "def is_integer(x):\n    return isinstance(x, int)"
+        ],
+        "0.4": [
+          "def check_integer(n):\n    if isinstance(n, int):\n        return \"is\"\n    else:\n        return \"otherwise\""
+        ],
+        "0.5": [
+          "def check_palindrome(s):\n    return s == s[::-1]\n\ninput_string = input(\"Enter a string: \")\nif check_palindrome(input_string):\n    print(\"x\")\nelse:\n    print(\"a\")"
+        ],
+        "0.6": [
+          "def check_palindrome(s):\n    s = s.lower().replace(\" \", \"\")\n    return s == s[::-1]\n\n# Example usage\ninput_string = \"A man a plan a canal Panama\"\nresult = check_palindrome(input_string)\nprint(result)"
+        ],
+        "0.7": [
+          "def is_palindrome(s):\n    s = ''.join(filter(str.isalnum, s)).lower()\n    return s == s[::-1]\n\n# Example usage\nx = \"A man, a plan, a canal, Panama\"\nprint(is_palindrome(x))"
+        ],
+        "0.8": [
+          "def count_vowels(s):\n    vowels = 'aeiouAEIOU'\n    count = 0\n    for char in s:\n        if char in vowels:\n            count += 1\n    return count\n\ninput_string = \"An example string.\"\nvowel_count = count_vowels(input_string)\nprint(vowel_count)"
+        ],
+        "0.9": [
+          "def process_data(data):\n    processed = []\n    for item in data:\n        if item:\n            processed.append(item.strip())\n    return processed\n\ndata = [\"An\", \"\", \".\", \" \", \"Hello\", \"World\", None]\nresult = process_data(data)\nprint(result)"
+        ],
+        "1.0": [
+          "def count_vowels(s):\n    vowels = 'aeiouAEIOU'\n    count = 0\n    for char in s:\n        if char in vowels:\n            count += 1\n    return count\n\ninput_string = \"An example string.\"\nvowel_count = count_vowels(input_string)\nprint(vowel_count)"
+        ]
+      }
+    }
+  }
+}

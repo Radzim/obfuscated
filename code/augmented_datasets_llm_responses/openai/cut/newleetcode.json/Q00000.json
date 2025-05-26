@@ -1,0 +1,107 @@
+{
+  "slug": "count-beautiful-numbers",
+  "problem_title": "Count Beautiful Numbers",
+  "number": 3490,
+  "acceptance": 0.189,
+  "difficulty": "Hard",
+  "question": "You are given two positive integers, l and r. A positive integer is called beautiful if the product of its digits is divisible by the sum of its digits. Return the number of beautiful integers in the inclusive range [l, r].\n\nExample 1:\nInput: l = 1, r = 20\nOutput: 1\nExplanation: There is only 1 beautiful number in this range: 12. The product of its digits is 1 * 2 = 2, and the sum is 1 + 2 = 3. Since 2 is divisible by 3, 12 is beautiful.\n\nExample 2:\nInput: l = 10, r = 20\nOutput: 1\nExplanation: There is only 1 beautiful number in this range: 12.\n\nExample 3:\nInput: l = 1, r = 100\nOutput: 9\nExplanation: The beautiful numbers in this range are: 12, 21, 24, 36, 42, 48, 63, 84, and 96.\n\nConstraints:\n1 <= l <= r <= 10^9\n",
+  "post_href": "https://leetcode.com/problems/count-beautiful-numbers/discuss/3490/Hard-Python-Solution",
+  "python_solutions": "class Solution:\n    def countBeautifulNumbers(self, l: int, r: int) -> int:\n        def is_beautiful(n):\n            digits = [int(d) for d in str(n)]\n            product = 1\n            for d in digits:\n                product *= d\n            summation = sum(digits)\n            return product % summation == 0\n        count = 0\n        for num in range(l, r + 1):\n            if is_beautiful(num):\n                count += 1\n        return count",
+  "post_title": "Hard Python Solution",
+  "user": "leetcode_user",
+  "upvotes": 10,
+  "views": 500,
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "You are given two positive integers, l and r. A positive integer is called beautiful if the product of its digits is divisible by the sum of its digits. Return the number of beautiful integers in the inclusive range [l, r ].",
+      "0.1": "You are given two positive integers, l and r. A positiv2 inreger is ca/led beautiful if the product of its digits is divisible by the sum of its digits. Return the number of brautiful integers in the inclusive dange [l, r ].",
+      "0.2": "You are given two poqitOve integFds, l and r. A positive imteged is cailee GeautiBul if the product of its digits is d7visib<e by the sum of its digits. Rdtirn the number of bezutifhl intdgrrs in the inclusjge range [l, r ].",
+      "0.3": "You are g9Gen two positive in4egrGs, l and r. A OoZirive ihrWger is called gDautif7l if the 0EoFuct of its Eigifs is d&visibPf by the sum of its diNigs. Retugb the n^mbe$ of bea6t7fIl inteyrrc in the imc<6sive tZnge [l, r ].",
+      "0.4": "You are BiveB two pLsj^iv@ lbtenerz, l and r. A pozk4uve ihtwge# is calpsR Nequylful if the prKdKFt of its d8g&tX is d8vusigpe by the sum of its djgLtx. F@tutn the junNer of geQurLful in$errfs in the inX,uZiv@ fznge [l, r ].",
+      "0.5": "You are TiD3n two 0kAi$ive uM5egeds, l and r. A poDi%ib# Onreg## is csKl2d HeWHtidu; if the OrpduxH of its dig(4C is WibiC8bKe by the sum of its diVUtd. RdYu$n the Mukbsr of Geaur7f6? imteN3rW in the indluQkgS rabYW [l, r ].",
+      "0.6": "You are fivWm two O0qitigd Kb$eYera, l and r. A (osLGjv$ 8ntrNSF is cs,?eV V@Xuhobul if the pEidhv4 of its cig8$C is SiCie9b.D by the sum of its Siblta. RffKrm the n^mhf% of vfwutoeuP iJfwheFs in the KMVluZKCe %Qng@ [l, r ].",
+      "0.7": "You are gLG2M two poz*g7gs KnG3he$x, l and r. A p(D7$(Fe Jn$fg23 is vxk<eC GWwugugu? if the p3pCuVR of its V7hi$W is cic(z8v;e by the sum of its WiyJ6C. DwHuFg the J*JbfG of bDX&%UVil LJr3gdrD in the LnfKkciD$ fahRS [l, r ].",
+      "0.8": "You are TLcsn two )(D(t*BS kmy$g@4x, l and r. A l(WU4iDW OJ5Wg24 is cxKodr Fewj$uE7K if the (3lEKc4 of its S7gK6z is CUvoWUh/3 by the sum of its wofi4d. ED^Kdn the G t,ge# of nRQ*$lRuo Kg^4gR$W in the ihD;^zufR rShH# [l, r ].",
+      "0.9": "You are yObdM two o9D7RLb$ Kg^sHfGz, l and r. A 9peLr&Gs OgyfhSE is Fq,?wS GRXhh8VH> if the )5pF8sf of its xoH(rA is fuCjDjFI@ by the sum of its RlB7FE. df$Jdg the B TKg3G of FWQh68D8I JJySN25c in the 8HS> TcLDD DQGR@ [l, r ].",
+      "1.0": "You are yJdrg two 0iXurlGF KHF#v3Gd, l and r. A 9)e769CS UMFRbdG is fQK.rf GdA8gUc6K if the o4)Skd% of its wut&^X is s(FOELNO@ by the sum of its wjB*HD. E2$73g the H tNh@g of FFx6h&c^> KM6wydTq in the lGfi6ZkDd ewgvR [l, r ]."
+    },
+    "synonym": {
+      "0.0": "You be given ii positive integer, l and gas constant. A cocksure integer is called beautiful if the product of its digits be divisible by the gist of its digits. Return the number of beautiful integers in the inclusive range [liter, r ].",
+      "0.1": "You are given two cocksure integers, l and r. A positive integer is call beautiful if the product of its digits is divisible by the sum of its digits. Return the number of beautiful integers in the inclusive range [l, r ].",
+      "0.2": "You be give two positive integers, litre and r. A positive integer is call up beautiful if the product of it digits is divisible by the total of its digits. Return the number of beautiful integers in the inclusive range [l, r ].",
+      "0.3": "You are pay two positive integer, l and r. A positive integer is called beautiful if the merchandise of its fingerbreadth is divisible by the sum of it finger. Refund the number of beautiful whole number in the inclusive range [l, universal gas constant ].",
+      "0.4": "You be break ii positive whole number, l and r. A positivistic whole number live shout out beautiful if the merchandise of its finger's breadth is divisible by the centre of it digit. Return the figure of beautiful integers in the inclusive range [l, universal gas constant ].",
+      "0.5": "You comprise given two overconfident integers, l and r. A prescribed integer be cry beautiful if the mathematical product of its fingerbreadth be divisible by the meat of it finger's breadth. Recall the act of beautiful whole number in the inclusive range [50, roentgen ].",
+      "0.6": "You be given 2 positivistic integer, 50 and universal gas constant. A incontrovertible whole number be anticipate beautiful if the mathematical product of it digits is divisible by the amount of money of it digit. Render the number of beautiful integer in the inclusive chain of mountains [fifty, universal gas constant ].",
+      "0.7": "You be render ii electropositive whole number, fifty and gas constant. A plus whole number embody call beautiful if the cartesian product of information technology finger be divisible by the total of it finger's breadth. Render the act of beautiful whole number in the inclusive image [lambert, radius ].",
+      "0.8": "You be give way 2 positively charged whole number, lambert and gas constant. A positivist whole number make up hollo beautiful if the production of it digit make up divisible by the total of information technology digit. Retrovert the telephone number of beautiful whole number in the inclusive reach [cubic decimeter, gas constant ].",
+      "0.9": "You be reach ii plus whole number, lambert and roentgen. A overconfident whole number represent hollo beautiful if the production of it dactyl represent divisible by the marrow of it finger's breadth. Render the act of beautiful whole number in the inclusive cooking stove [litre, gas constant ].",
+      "1.0": "You be fall in ii confirming integer, fifty and radius. A confirming whole number be address beautiful if the mathematical product of it figure be divisible by the totality of it digit. Retort the bit of beautiful whole number in the inclusive mountain range [cubic decimeter, gas constant ]."
+    },
+    "random": {
+      "0.0": "Are given two integers, l and. A positive integer if the product its digits is by sum its digits. the number of integers in inclusive [, r ].",
+      "0.1": "You given two positive integers, l and r. A positive integer is called beautiful if product of its digits divisible by the sum of its. Return the number of beautiful integers the inclusive range [l, r ].",
+      "0.2": "Are given two integers, and. A positive is called beautiful if the product of digits is the sum of digits. Return the number of beautiful integers in the inclusive range [, r ].",
+      "0.3": "Are given two positive, l and r. positive integer called beautiful the product of its digits is divisible sum of digits. Return number beautiful integers range [, ].",
+      "0.4": "You are two, and r. A positive integer is if its digits is divisible the. the beautiful in inclusive range [, r ].",
+      "0.5": "Are given, r. A called beautiful product of digits sum digits. Return the number beautiful integers in [, r ].",
+      "0.6": "Are two, and. positive is if product its sum of. number integers [l, ].",
+      "0.7": "Are positive, . positive beautiful of its is by. [, ].",
+      "0.8": "Are, . called product. [, ].",
+      "0.9": "Are, .. [, ].",
+      "1.0": "Are, .. [, ]."
+    },
+    "cut": {
+      "0.0": "You are given two positive integers, l and r. A positive integer is called beautiful if the product of its digits is divisible by the sum of its digits. Return the number of beautiful integers in the inclusive range [l, r].",
+      "0.1": "You are given two positive integers, l and r. A positive integer is called beautiful if the product of its digits is divisible by the sum of its digits. Return the number of beautiful integers in the i",
+      "0.2": "You are given two positive integers, l and r. A positive integer is called beautiful if the product of its digits is divisible by the sum of its digits. Return the number of beau",
+      "0.3": "You are given two positive integers, l and r. A positive integer is called beautiful if the product of its digits is divisible by the sum of its digits. Ret",
+      "0.4": "You are given two positive integers, l and r. A positive integer is called beautiful if the product of its digits is divisible by the ",
+      "0.5": "You are given two positive integers, l and r. A positive integer is called beautiful if the product of its digit",
+      "0.6": "You are given two positive integers, l and r. A positive integer is called beautiful if t",
+      "0.7": "You are given two positive integers, l and r. A positive integer is",
+      "0.8": "You are given two positive integers, l and r.",
+      "0.9": "You are given two posi",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "openai": {
+      "cut": {
+        "0.0": [
+          "def is_beautiful(n):\n    digits = [int(d) for d in str(n)]\n    product = 1\n    summation = 0\n    for d in digits:\n        product *= d\n        summation += d\n    return product % summation == 0\n\ndef count_beautiful_integers(l, r):\n    count = 0\n    for i in range(l, r + 1):\n        if is_beautiful(i):\n            count += 1\n    return count\n\n# Example usage:\n# l = 1\n# r = 100\n# result = count_beautiful_integers(l, r)\n# print(result)"
+        ],
+        "0.1": [
+          "def count_beautiful_integers(l, r):\n    def is_beautiful(n):\n        digits = [int(d) for d in str(n)]\n        product = 1\n        summation = 0\n        for d in digits:\n            product *= d\n            summation += d\n        return product % summation == 0\n\n    count = 0\n    for i in range(l, r + 1):\n        if is_beautiful(i):\n            count += 1\n    return count\n\n# Example usage:\n# result = count_beautiful_integers(1, 100)\n# print(result)"
+        ],
+        "0.2": [
+          "def is_beautiful(n):\n    digits = [int(d) for d in str(n)]\n    product = 1\n    summation = 0\n    for d in digits:\n        product *= d\n        summation += d\n    return product % summation == 0\n\ndef count_beautiful(l, r):\n    count = 0\n    for i in range(l, r + 1):\n        if is_beautiful(i):\n            count += 1\n    return count\n\n# Example usage:\n# l = 10\n# r = 20\n# print(count_beautiful(l, r))"
+        ],
+        "0.3": [
+          "def is_beautiful(n):\n    digits = [int(d) for d in str(n)]\n    product = 1\n    summation = 0\n    for d in digits:\n        product *= d\n        summation += d\n    return product % summation == 0\n\ndef count_beautiful_numbers(l, r):\n    count = 0\n    for i in range(l, r + 1):\n        if is_beautiful(i):\n            count += 1\n    return count\n\nl = int(input())\nr = int(input())\nprint(count_beautiful_numbers(l, r))"
+        ],
+        "0.4": [
+          "def is_beautiful(n):\n    product = 1\n    while n > 0:\n        digit = n % 10\n        product *= digit\n        n //= 10\n    return product % 5 == 0\n\ndef count_beautiful_numbers(l, r):\n    count = 0\n    for i in range(l, r + 1):\n        if is_beautiful(i):\n            count += 1\n    return count\n\nl = int(input())\nr = int(input())\nprint(count_beautiful_numbers(l, r))"
+        ],
+        "0.5": [
+          "def is_beautiful(n):\n    product = 1\n    while n > 0:\n        product *= n % 10\n        n //= 10\n    return product % 2 == 0\n\ndef count_beautiful_numbers(l, r):\n    count = 0\n    for i in range(l, r + 1):\n        if is_beautiful(i):\n            count += 1\n    return count\n\nl = int(input())\nr = int(input())\nprint(count_beautiful_numbers(l, r))"
+        ],
+        "0.6": [
+          "def is_beautiful(n):\n    return n % 10 == 2 or n % 10 == 3 or n % 10 == 9\n\ndef count_beautiful_numbers(l, r):\n    count = 0\n    for i in range(l, r + 1):\n        if is_beautiful(i):\n            count += 1\n    return count\n\nl = int(input())\nr = int(input())\nprint(count_beautiful_numbers(l, r))"
+        ],
+        "0.7": [
+          "def count_positive_integers(l, r):\n    return r - l + 1\n\nl = int(input())\nr = int(input())\nprint(count_positive_integers(l, r))"
+        ],
+        "0.8": [
+          "l = int(input())\nr = int(input())\nprint(l, r)"
+        ],
+        "0.9": [
+          "def add_positive_numbers(a, b):\n    if a > 0 and b > 0:\n        return a + b\n    else:\n        return \"Both numbers must be positive\"\n\n# Example usage\nresult = add_positive_numbers(5, 10)\nprint(result)"
+        ],
+        "1.0": [
+          "def fibonacci(n):\n    a, b = 0, 1\n    sequence = []\n    for _ in range(n):\n        sequence.append(a)\n        a, b = b, a + b\n    return sequence\n\nn = int(input(\"Enter the number of Fibonacci numbers to generate: \"))\nprint(fibonacci(n))"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+model,method,dataset,task,augmentation_rate,eval_score
+deepseek,keyboard,math.json,Q00007,0.0,
+deepseek,keyboard,math.json,Q00007,0.1,
+deepseek,keyboard,math.json,Q00007,0.2,
+deepseek,keyboard,math.json,Q00007,0.3,
+deepseek,keyboard,math.json,Q00007,0.4,
+deepseek,keyboard,math.json,Q00007,0.5,
+deepseek,keyboard,math.json,Q00007,0.6,
+deepseek,keyboard,math.json,Q00007,0.7,
+deepseek,keyboard,math.json,Q00007,0.8,0.0
+deepseek,keyboard,math.json,Q00007,0.9,0.0
+deepseek,keyboard,math.json,Q00007,1.0,

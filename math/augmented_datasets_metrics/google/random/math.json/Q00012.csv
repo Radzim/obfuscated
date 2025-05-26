@@ -1,0 +1,12 @@
+model,method,dataset,task,augmentation_rate,eval_score
+google,random,math.json,Q00012,0.0,
+google,random,math.json,Q00012,0.1,0.0
+google,random,math.json,Q00012,0.2,1.0
+google,random,math.json,Q00012,0.3,0.0
+google,random,math.json,Q00012,0.4,0.0
+google,random,math.json,Q00012,0.5,0.0
+google,random,math.json,Q00012,0.6,0.0
+google,random,math.json,Q00012,0.7,
+google,random,math.json,Q00012,0.8,
+google,random,math.json,Q00012,0.9,
+google,random,math.json,Q00012,1.0,

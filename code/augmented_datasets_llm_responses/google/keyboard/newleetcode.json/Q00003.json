@@ -1,0 +1,107 @@
+{
+  "slug": "maximum-unique-subarray-sum-after-deletion",
+  "problem_title": "Maximum Unique Subarray Sum After Deletion",
+  "number": 3487,
+  "acceptance": 0.256,
+  "difficulty": "Medium",
+  "question": "You are given an integer array nums. You can delete any number of elements from nums. After deleting, the remaining elements must be unique. Find the maximum possible sum of the remaining elements.\n\nExample 1:\nInput: nums = [1,2,2,3,4]\nOutput: 10\nExplanation: Delete the second occurrence of 2 to get the array [1,2,3,4], which has a sum of 10.\n\nExample 2:\nInput: nums = [4,3,2,1,1,2,3,4]\nOutput: 10\nExplanation: Delete the repeated occurrences of 1, 2, 3, and 4 to get the array [1,2,3,4], which has a sum of 10.\n\nConstraints:\n- 1 <= nums.length <= 10^5\n- 1 <= nums[i] <= 10^5",
+  "post_href": "https://leetcode.com/problems/maximum-unique-subarray-sum-after-deletion/discuss/3487/Medium-Python-Solution",
+  "python_solutions": "class Solution:\n    def maxUniqueSubarraySum(self, nums: List[int]) -> int:\n        seen = set()\n        current_sum = max_sum = left = 0\n        for right in range(len(nums)):\n            while nums[right] in seen:\n                seen.remove(nums[left])\n                current_sum -= nums[left]\n                left += 1\n            seen.add(nums[right])\n            current_sum += nums[right]\n            max_sum = max(max_sum, current_sum)\n        return max_sum",
+  "post_title": "Medium Python Solution",
+  "user": "leetcode_user",
+  "upvotes": 25,
+  "views": 1200,
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "You are given an integer array nums. You can delete any number of elements from nums. After deleting, the remaining elements must be unique. Find the maximum possible sum of the remaining elements.",
+      "0.1": "You are given an integer array nums. You can dekete any number of elements from nums. After deleting, the remaining elementc must be uBique. Find the maximum possible sum of the remaining elemente.",
+      "0.2": "You are given an in^egef arrqy nums. You can deKeFe any number of elements from nums. sfter deleting, the remaining eI@ments Just be unique. FinV the mXximim possible sum of the remaining elements.",
+      "0.3": "You are given an ibrege# array nums. You can xelWte any nu,Ver of eldNentW RroH nums. Agger R#lWting, the remaining @leKeJts m&Xt be unique. Find the maximum (ossKbIe sum of the #emX8ning eleNFn6s.",
+      "0.4": "You are Fivdn an Jbtefer a4ra% Bumc. You can SsletR any number of ePem2mtD fd(m n8Js. ATt@r xe:e4inF, the %emZinojg elements must be HHiqu@. FknX the maximum pIsAlbke sum of the re,s8niBg slemegyZ.",
+      "0.5": "You are RUCen an onheHfr Af5ay nuND. You can de,eg3 any nuJb$3 of e;FKenta G4om nImE. zCtdr sePetiBb, the EemaJh9Bg e;e,4nta m ts^ be ugLqu$. Find the NQxUnum 9IsQigle sum of the rfmq7niJF eldmrHGs.",
+      "0.6": "You are giFSB an ij$rfe# zT$ay hhmW. You can r3lWtd any MukvFr of eIeK$b$s CgoN JuKW. AeH2r Rf?etigt, the gdmw(jUng WkemrMRs <&Dt be kjUWue. cLnE the mwZU<^m pLAslf,e sum of the rSHs7BiMg wIDmwn$s.",
+      "0.7": "You are g8Fdg an kmyen3r WTrs% H tns. You can X3lSGS any g TJNe4 of F/W,ehFs VfPm huHd. Ab%@f d4;$tlby, the EdmZ7gLBg @kehsnhq Hhs% be 8JKW^e. Runs the naxkNjk L(zs&bOS sum of the fwmXUnlBN W,W,egtA.",
+      "0.8": "You are nuv3G an &nyWYfF AerA% gk,E. You can V3P2tR any B^nb4F of 4<e<$H6Z C$9< J thE. zdRe5 Vd?@HimH, the %#hQiJJJY wpfmDMgq K^zG be um92jf. G9hf the jQzinJj 0isZlh>r sum of the #4nz7n(jH @irjRnHA.",
+      "0.9": "You are fkCdh an Ug54yDT zFTw6 B6nE. You can RWKfYW any m&Jn3T of R,Fj3GhW GfKJ h THw. QC5DT R@<@Y&HR, the Ds<ZoMKjy FK3nDb%z n^xh be 7mU1&4. c7hx the KZC(,hN LldC8hI@ sum of the $4JS&JJGB r?@nRb^c.",
+      "1.0": "You are NJF2H an oGgRRd5 qffXH H tNz. You can Srisf@ any G tjn3t of S/D,#gRW rtPh MJHQ. XCfS% xfkr%&JT, the GWHZohlBH d?DKFMgz jKW$ be iJKw*r. gUms the <AZUKh< lPew9n.w sum of the GshXOG7jR FIwN2MGc."
+    },
+    "synonym": {
+      "0.0": "You be given an integer regalia nums. You tail delete any number of elements from nums. After blue pencil, the remaining element mustiness be unique. Find the maximal possible sum of the remaining elements.",
+      "0.1": "You exist given an integer array nums. You stool cancel any number of component from nums. After deleting, the remaining elements must be unique. Find the maximum possible sum of the remaining elements.",
+      "0.2": "You are given an whole number array nums. You can erase any number of elements from nums. After deleting, the remain elements must be unique. Find the maximum possible kernel of the stay component.",
+      "0.3": "You are given an integer raiment nums. You can delete any number of element from nums. After deleting, the remain elements must be unequalled. Find the maximum possible sum of the stay on constituent.",
+      "0.4": "You embody reach an whole number array nums. You can edit any number of elements from nums. After delete, the remain elements moldiness cost unequaled. Find the maximum potential sum of the remaining elements.",
+      "0.5": "You are render an whole number raiment nums. You buns delete any number of elements from nums. After blue pencil, the remain element must make up unequaled. Find the maximal potential essence of the remaining component.",
+      "0.6": "You be given an whole number raiment nums. You can delete any figure of element from nums. After delete, the stay element must live singular. Find the maximal potential sum of money of the remain constituent.",
+      "0.7": "You be give an whole number raiment nums. You displace erase any turn of element from nums. After blue pencil, the remain constituent moldiness follow unequalled. Find the maximal potential heart and soul of the persist element.",
+      "0.8": "You embody commit an whole number regalia nums. You buttocks edit any routine of element from nums. After erase, the stay on component moldiness comprise unequalled. Find the maximal potential sum total of the remain chemical element.",
+      "0.9": "You be give an whole number regalia nums. You give the axe blue pencil any routine of element from nums. After delete, the persist ingredient moldiness personify singular. Find the maximal potential amount of the stay element.",
+      "1.0": "You be give an whole number regalia nums. You tin can blue pencil any numeral of element from nums. After delete, the stay on constituent moldiness cost unequalled. Find the maximal potential amount of the remain element."
+    },
+    "random": {
+      "0.0": "Are given integer. You can delete number of from nums. deleting, the remaining be unique. the possible of the remaining elements.",
+      "0.1": "You are given an integer array nums. You delete any number of elements from nums. After, the elements must be unique. Find the maximum sum of the remaining elements.",
+      "0.2": "Are given an array nums. You can delete any of elements from nums. After deleting, the remaining elements unique. Find the possible sum of elements.",
+      "0.3": "You are an array. You can delete any number elements from. After deleting, the remaining elements must. maximum possible remaining elements.",
+      "0.4": "You are an integer nums. You can delete any number. After deleting, the. the maximum possible sum.",
+      "0.5": "Are an nums. You can any of elements from. , the remaining elements. the sum.",
+      "0.6": "You are given nums. can delete any. After, elements. remaining.",
+      "0.7": "Are an. any of. , be. remaining elements.",
+      "0.8": "Are. You. , unique..",
+      "0.9": "Are. ., ..",
+      "1.0": "Are. ., .."
+    },
+    "cut": {
+      "0.0": "You are given an integer array nums. You can delete any number of elements from nums. After deleting, the remaining elements must be unique. Find the maximum possible sum of the remaining elements.",
+      "0.1": "You are given an integer array nums. You can delete any number of elements from nums. After deleting, the remaining elements must be unique. Find the maximum possible sum of the",
+      "0.2": "You are given an integer array nums. You can delete any number of elements from nums. After deleting, the remaining elements must be unique. Find the maximum ",
+      "0.3": "You are given an integer array nums. You can delete any number of elements from nums. After deleting, the remaining elements must be uniqu",
+      "0.4": "You are given an integer array nums. You can delete any number of elements from nums. After deleting, the remaining el",
+      "0.5": "You are given an integer array nums. You can delete any number of elements from nums. After deleti",
+      "0.6": "You are given an integer array nums. You can delete any number of elements from",
+      "0.7": "You are given an integer array nums. You can delete any num",
+      "0.8": "You are given an integer array nums. Yo",
+      "0.9": "You are given an int",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "google": {
+      "keyboard": {
+        "0.0": [
+          "def solve():\n    n = int(input())\n    nums = list(map(int, input().split()))\n\n    nums.sort(reverse=True)\n    \n    seen = set()\n    ans = 0\n    \n    for num in nums:\n        if num not in seen:\n            ans += num\n            seen.add(num)\n        else:\n            while num > 0 and num in seen:\n                num -= 1\n            if num > 0:\n                ans += num\n                seen.add(num)\n    \n    print(ans)\n\nsolve()"
+        ],
+        "0.1": [
+          "def solve():\n    n = int(input())\n    nums = list(map(int, input().split()))\n\n    def get_sum(arr):\n        return sum(arr)\n\n    def is_unique(arr):\n        return len(set(arr)) == len(arr)\n\n    max_sum = 0\n    for i in range(1 << n):\n        subset = []\n        for j in range(n):\n            if (i >> j) & 1:\n                subset.append(nums[j])\n\n        if is_unique(subset):\n            max_sum = max(max_sum, get_sum(subset))\n\n    print(max_sum)\n\nif __name__ == \"__main__\":\n    solve()"
+        ],
+        "0.2": [
+          "def solve():\n    n = int(input())\n    nums = list(map(int, input().split()))\n\n    nums.sort()\n    \n    seen = set()\n    total_sum = 0\n    \n    for num in reversed(nums):\n        while num in seen and num > 0:\n            num -= 1\n        \n        if num > 0:\n            seen.add(num)\n            total_sum += num\n            \n    print(total_sum)\n\nsolve()"
+        ],
+        "0.3": [
+          "def max_unique_sum(nums):\n    seen = set()\n    total_sum = 0\n    nums.sort()\n    \n    for num in nums:\n        if num not in seen:\n            seen.add(num)\n            total_sum += num\n        else:\n            while num in seen:\n                num += 1\n            if num <= 20000:\n                seen.add(num)\n                total_sum += num\n            \n    return total_sum"
+        ],
+        "0.4": [
+          "def max_unique_sum(arr):\n    \"\"\"\n    Finds the maximum possible sum of the remaining elements after removing some elements\n    such that the remaining elements are unique.\n\n    Args:\n        arr: A list of integers.\n\n    Returns:\n        The maximum possible sum of the remaining unique elements.\n    \"\"\"\n\n    arr.sort()\n    total_sum = sum(arr)\n    removed_sum = 0\n    seen = set()\n    \n    for num in arr:\n        if num in seen:\n            removed_sum += num\n        else:\n            seen.add(num)\n\n    return total_sum - removed_sum\n\nif __name__ == '__main__':\n    # Example usage:\n    arr1 = [1, 2, 2, 3, 4, 4, 5]\n    print(max_unique_sum(arr1))  # Output: 15 (1+2+3+4+5)\n\n    arr2 = [1, 1, 1, 2, 2, 3]\n    print(max_unique_sum(arr2))  # Output: 6 (1+2+3)\n\n    arr3 = [5, 5, 10, 10, 15, 15]\n    print(max_unique_sum(arr3)) # Output: 30 (5+10+15)"
+        ],
+        "0.5": [
+          "def max_unique_sum(nums):\n    \"\"\"\n    Finds the maximum possible sum of unique elements after removing any number of elements from a list.\n\n    Args:\n        nums: A list of integers.\n\n    Returns:\n        The maximum possible sum of unique elements.\n    \"\"\"\n\n    nums.sort()\n    unique_nums = []\n    total_sum = 0\n\n    for num in nums:\n        if num not in unique_nums:\n            unique_nums.append(num)\n            total_sum += num\n\n    return total_sum\n\nif __name__ == '__main__':\n    nums1 = [1, 2, 2, 3, 4, 4, 5]\n    print(max_unique_sum(nums1))  # Output: 15 (1+2+3+4+5)\n\n    nums2 = [1, 1, 1, 2, 2, 3]\n    print(max_unique_sum(nums2))  # Output: 6 (1+2+3)\n\n    nums3 = [5, 4, 3, 2, 1]\n    print(max_unique_sum(nums3))  # Output: 15 (5+4+3+2+1)\n\n    nums4 = [1, 2, 3, 4, 5, 5, 5]\n    print(max_unique_sum(nums4)) # Output 15\n\n    nums5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    print(max_unique_sum(nums5)) # Output 55\n\n    nums6 = [1, 1, 1, 1, 1]\n    print(max_unique_sum(nums6)) # Output 1\n\n    nums7 = []\n    print(max_unique_sum(nums7)) # Output 0\n\n    nums8 = [1, 2, 3, 1, 2, 3]\n    print(max_unique_sum(nums8)) # Output 6"
+        ],
+        "0.6": [
+          "def solve():\n    s = \"You are giFSB an ij$rfe# zT$ay hhmW. You can r3lWtd any MukvFr of eIeK$b$s CgoN JuKW. AeH2r Rf?etigt, the gdmw(jUng WkemrMRs <&Dt be kjUWue. cLnE the mwZU<^m pLAslf,e sum of the rSHs7BiMg wIDmwn$s.\"\n    \n    numbers = []\n    current_number = \"\"\n    for char in s:\n        if char.isdigit():\n            current_number += char\n        else:\n            if current_number:\n                numbers.append(int(current_number))\n                current_number = \"\"\n    if current_number:\n        numbers.append(int(current_number))\n    \n    print(sum(numbers))\n\nsolve()"
+        ],
+        "0.7": [
+          "def g8Fdg(kmyen3r, WTrs, X3lSGS, TJNe4, VfPm, huHd, EdmZ7gLBg, naxkNjk, fwmXUnlBN):\n    \"\"\"\n    This function performs a calculation based on the input parameters.\n\n    Args:\n        kmyen3r: An input value.\n        WTrs: Another input value.\n        X3lSGS: A third input value.\n        TJNe4: A fourth input value.\n        VfPm: A fifth input value.\n        huHd: A sixth input value.\n        EdmZ7gLBg: A seventh input value.\n        naxkNjk: An eighth input value.\n        fwmXUnlBN: A ninth input value.\n\n    Returns:\n        The sum of the fwmXUnlBN values if EdmZ7gLBg is 8, otherwise 0.\n    \"\"\"\n    if EdmZ7gLBg == 8:\n        return sum(fwmXUnlBN)\n    else:\n        return 0"
+        ],
+        "0.8": [
+          "def sum_of_numbers(numbers):\n    \"\"\"\n    Calculates the sum of a list of numbers.\n\n    Args:\n      numbers: A list of numbers (integers or floats).\n\n    Returns:\n      The sum of the numbers in the input list.  Returns 0 if the list is empty.\n    \"\"\"\n    if not numbers:\n        return 0\n    return sum(numbers)\n\n# Example usage (optional - can be removed for brevity if only the function definition is needed)\nif __name__ == '__main__':\n    numbers1 = [1, 2, 3, 4, 5]\n    sum1 = sum_of_numbers(numbers1)\n    print(f\"The sum of {numbers1} is: {sum1}\")  # Output: The sum of [1, 2, 3, 4, 5] is: 15\n\n    numbers2 = []\n    sum2 = sum_of_numbers(numbers2)\n    print(f\"The sum of {numbers2} is: {sum2}\")  # Output: The sum of [] is: 0\n\n    numbers3 = [1.5, 2.5, 3.5]\n    sum3 = sum_of_numbers(numbers3)\n    print(f\"The sum of {numbers3} is: {sum3}\") # Output: The sum of [1.5, 2.5, 3.5] is: 7.5"
+        ],
+        "0.9": [
+          "def solve():\n    \"\"\"\n    This function calculates the sum of numbers from 1 to 7.\n    \"\"\"\n    total = 0\n    for i in range(1, 8):\n        total += i\n    print(total)\n\nsolve()"
+        ],
+        "1.0": [
+          "def njf2h(oggrrd5_qffxh_h_tnz, srisf_g_tjn3t_of_sd_grw_rtph_mjhq, xcfs_xfkr_jt, gwhzohlbh_ddkfmgz_jkw, gums_the_azukh_lpew9n_w, gshxog7jr_fiwn2mgc):\n    \"\"\"\n    This function simulates the behavior of NJF2H, an oGgRRd5 qffXH H tNz.\n\n    Args:\n        oggrrd5_qffxh_h_tnz:  Represents some initial state or configuration.\n        srisf_g_tjn3t_of_sd_grw_rtph_mjhq: Represents the ability to Srisf@ any G tjn3t of S/D,#gRW rtPh MJHQ.\n        xcfs_xfkr_jt: Represents XCfS% xfkr%&JT.\n        gwhzohlbh_ddkfmgz_jkw: Represents the GWHZohlBH d?DKFMgz jKW$ and must be iJKw*r.\n        gums_the_azukh_lpew9n_w: Represents gums the <AZUKh< lPew9n.w.\n        gshxog7jr_fiwn2mgc: Represents the GshXOG7jR FIwN2MGc.\n\n    Returns:\n        The sum of the GshXOG7jR FIwN2MGc.  The other parameters are used to influence the behavior,\n        but their exact usage is not specified and can be customized.\n    \"\"\"\n\n    # Placeholder for complex logic based on the input parameters.\n    # The actual implementation would depend on the specific meaning\n    # of each parameter and the desired behavior of NJF2H.\n\n    # Example:  Use the parameters to modify the sum.\n    # This is just a demonstration; the real logic would be more complex.\n\n    result = sum(gshxog7jr_fiwn2mgc)\n\n    if gwhzohlbh_ddkfmgz_jkw: # Assuming gwhzohlbh_ddkfmgz_jkw being True means it is iJKw*r\n        result += 1  # Modify the result if GWHZohlBH is iJKw*r\n\n    # Further modifications based on other parameters could be added here.\n\n    return result"
+        ]
+      }
+    }
+  }
+}

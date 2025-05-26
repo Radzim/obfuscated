@@ -1,0 +1,12 @@
+model,method,dataset,task,augmentation_rate,eval_score
+openai,random,math.json,Q00005,0.0,
+openai,random,math.json,Q00005,0.1,1.0
+openai,random,math.json,Q00005,0.2,0.0
+openai,random,math.json,Q00005,0.3,0.0
+openai,random,math.json,Q00005,0.4,
+openai,random,math.json,Q00005,0.5,
+openai,random,math.json,Q00005,0.6,
+openai,random,math.json,Q00005,0.7,
+openai,random,math.json,Q00005,0.8,
+openai,random,math.json,Q00005,0.9,
+openai,random,math.json,Q00005,1.0,

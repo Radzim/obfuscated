@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/2790811/Python-solution",
+  "python_solutions": "class Solution:\n    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:\n        levels = []\n        \n        def order(node, level):\n            if level >= len(levels):\n                levels.append([])\n            \n            if node:\n                levels[level].append(node.val)\n            \n                if node.left:\n                    order(node.left, level + 1)\n                \n                if node.right:\n                    order(node.right, level + 1)\n        \n        if not root:\n            return []\n        \n        order(root, 0)\n        return levels",
+  "slug": "binary-tree-level-order-traversal",
+  "post_title": "Python solution",
+  "user": "maomao1010",
+  "upvotes": 0,
+  "views": 3,
+  "problem_title": "binary tree level order traversal",
+  "number": 102,
+  "acceptance": 0.634,
+  "difficulty": "Medium",
+  "__index_level_0__": 613,
+  "question": "Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).\n  Example 1:\nInput: root = [3,9,20,null,null,15,7]\nOutput: [[3],[9,20],[15,7]]\nExample 2:\nInput: root = [1]\nOutput: [[1]]\nExample 3:\nInput: root = []\nOutput: []\n  Constraints:\nThe number of nodes in the tree is in the range [0, 2000].\n-1000 <= Node.val <= 1000",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given the root of a binary tree, return the level order traversal of its nodes ' values. (i. e. , from left to right, level by level ).",
+      "0.1": "GiFen the root of a binary tree, returh the level order traversal of its nodes ' valu4s. (i. e. , from left to right, level by ievel ).",
+      "0.2": "Given the Eoot of a binary tree, re5urH the level order traversal of its nodes ' val7Fs. (i. e. , Erom left to #ight, lfvel by leBel ).",
+      "0.3": "Given the Go(t of a ninaDy %rwe, re6irn the peBel order trZvWraal of its jodrs ' vw.ues. (i. e. , from Oebt to riRJt, level by ldvei ).",
+      "0.4": "GiDej the riPt of a FiMa4y 4Dee, rstjrg the lrveK order rgaferzal of its n*dRs ' vakkFs. (i. e. , Tro< leb% to figh$, l$vWl by leFep ).",
+      "0.5": "VivwH the 5o8t of a binxET hre$, r3YurB the leb$; 8gfer RfaFersq< of its JoE2s ' vzlkDs. (i. e. , fF*m lDvt to %iytt, legwi by K2veK ).",
+      "0.6": "VjFen the 4o9R of a viHQey hrW$, $et6dh the Krvdl irVeg YFwvsEsa> of its noC$w ' va/HdW. (i. e. , Vr9, lrE6 to rJfgt, lDvR> by ievfk ).",
+      "0.7": "GOC3G the %(o% of a gjmQEy tg$F, $sG6rb the pWbe; *fdF% %rAceeWqk of its n0W4x ' DXiheD. (i. e. , f30n keCR to tLNut, l2crK by OFv$o ).",
+      "0.8": "GlCdM the F)*Y of a b7mX4t ^gdW, 4F4j#n the PFv$p )#S4r $%qgRrqz? of its j*dsE ' fZ.8ws. (i. e. , r%p< idDY to G7gBf, lDbw: by o$dSl ).",
+      "0.9": "b&DdJ the d(I$ of a n8GSej feS4, #DHiTH the /@G2i (4R4T H#ACSFCWK of its MPf2Z ' csOiwZ. (i. e. , G%pN ;3dg to f7rj$, ,WG@; by ;rcwK ).",
+      "1.0": "t7CFH the E*kG of a f*BZf% F444, Gw$ItB the ?SDdP 0TVwg rfAd2$zsp of its Blv3a ' bA.ISw. (i. e. , BTi, ircy to tlFGG, ?sf$? by k$BSk )."
+    },
+    "synonym": {
+      "0.0": "Ease up the root of a binary tree, return the level order traversal of it node ' value. (i. e. , from entrust to compensate, story by level ).",
+      "0.1": "Given the root of a binary tree, return the level order traverse of its nodes ' values. (i. e. , from allow for to right, level by floor ).",
+      "0.2": "Given the root of a binary tree, repay the level parliamentary procedure traversal of its nodes ' values. (1. east. , from provide to right, level by level ).",
+      "0.3": "Given the root of a binary tree diagram, return the level rules of order traversal of information technology node ' value. (ane. tocopherol. , from left to right, layer by level ).",
+      "0.4": "Give the root of a binary tree, render the degree orderliness traverse of information technology node ' value. (1. einsteinium. , from leave to redress, level by level ).",
+      "0.5": "Give the root of a binary sir herbert beerbohm tree, reelect the horizontal surface edict traverse of it node ' values. (one. tocopherol. , from leave to rectify, stage by stage ).",
+      "0.6": "Pass on the theme of a binary sir herbert beerbohm tree, render the spirit level purchase order traverse of information technology thickening ' value. (ane. e. , from leave to compensate, stratum by grade ).",
+      "0.7": "Give the solution of a binary tree diagram, rejoin the stratum ordering traverse of information technology thickening ' value. (1. tocopherol. , from give to redress, storey by grade ).",
+      "0.8": "Pass the stem of a binary sir herbert beerbohm tree, yield the stage purchase order traverse of information technology node ' note value. (ane. vitamin e. , from leave to compensate, storey by storey ).",
+      "0.9": "Throw the solution of a binary sir herbert beerbohm tree, pass the grade order of magnitude traverse of information technology node ' value. (one. east. , from go away to correct, horizontal surface by degree ).",
+      "1.0": "Give the base of a binary tree diagram, turn back the horizontal surface purchase order traverse of information technology thickening ' value. (ane. einsteinium. , from leave alone to correct, point by grade )."
+    },
+    "random": {
+      "0.0": "Given the root, level order traversal of '. (. e. , from left to, level by level ).",
+      "0.1": "The root of a binary tree, return the level order traversal of nodes ' values. (i. e. , from right, level by level ).",
+      "0.2": "The root a tree, return the level order traversal its nodes '. (i. e. , left to right, level level ).",
+      "0.3": "The root of binary tree, return the order traversal of '. (. e. , left right, level ).",
+      "0.4": "Given of tree, the level its ' values. (. ., left to right, level ).",
+      "0.5": "The root a tree, the its '. (. ., from to, ).",
+      "0.6": "The, nodes '. (. ., left right, ).",
+      "0.7": "The, '. (. ., , ).",
+      "0.8": "The, '. (. ., , ).",
+      "0.9": "The, '. (. ., , ).",
+      "1.0": "The, '. (. ., , )."
+    },
+    "cut": {
+      "0.0": "Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).",
+      "0.1": "Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, lev",
+      "0.2": "Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left ",
+      "0.3": "Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e",
+      "0.4": "Given the root of a binary tree, return the level order traversal of its nodes'",
+      "0.5": "Given the root of a binary tree, return the level order traversal ",
+      "0.6": "Given the root of a binary tree, return the level or",
+      "0.7": "Given the root of a binary tree, return",
+      "0.8": "Given the root of a binary",
+      "0.9": "Given the roo",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "anthropic": {
+      "keyboard": {
+        "0.0": [
+          "from collections import deque\n\ndef levelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    \n    while queue:\n        level_size = len(queue)\n        current_level = []\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            current_level.append(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(current_level)\n    \n    return result"
+        ],
+        "0.1": [
+          "from collections import deque\n\ndef levelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    \n    while queue:\n        level_size = len(queue)\n        current_level = []\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            current_level.append(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(current_level)\n    \n    return result"
+        ],
+        "0.2": [
+          "class Solution:\n    def levelOrder(self, root):\n        if not root:\n            return []\n        \n        result = []\n        queue = [root]\n        \n        while queue:\n            level_size = len(queue)\n            current_level = []\n            \n            for _ in range(level_size):\n                node = queue.pop(0)\n                current_level.append(node.val)\n                \n                if node.left:\n                    queue.append(node.left)\n                if node.right:\n                    queue.append(node.right)\n            \n            result.append(current_level)\n        \n        return result"
+        ],
+        "0.3": [
+          "def levelOrderBottom(root):\n    if not root:\n        return []\n    \n    queue = [root]\n    result = []\n    \n    while queue:\n        level_size = len(queue)\n        current_level = []\n        \n        for _ in range(level_size):\n            node = queue.pop(0)\n            current_level.append(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.insert(0, current_level)\n    \n    return result"
+        ],
+        "0.4": [
+          "def reverse_tree(root):\n    if not root:\n        return None\n    \n    root.left, root.right = reverse_tree(root.right), reverse_tree(root.left)\n    return root"
+        ],
+        "0.5": [
+          "def sort_binary_tree(root):\n    if not root:\n        return None\n    \n    def inorder_traversal(node):\n        if not node:\n            return []\n        return (inorder_traversal(node.left) + \n                [node.val] + \n                inorder_traversal(node.right))\n    \n    sorted_values = inorder_traversal(root)\n    sorted_values.sort()\n    \n    def rebuild_tree(values):\n        if not values:\n            return None\n        \n        mid = len(values) // 2\n        node = TreeNode(values[mid])\n        node.left = rebuild_tree(values[:mid])\n        node.right = rebuild_tree(values[mid+1:])\n        \n        return node\n    \n    return rebuild_tree(sorted_values)\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right"
+        ],
+        "0.6": [
+          "def verify_valley_peak(arr):\n    n = len(arr)\n    if n < 3:\n        return False\n    \n    peak_index = -1\n    \n    for i in range(1, n - 1):\n        if arr[i] > arr[i-1] and arr[i] > arr[i+1]:\n            peak_index = i\n            break\n    \n    if peak_index == -1:\n        return False\n    \n    for i in range(peak_index):\n        if arr[i] >= arr[i+1]:\n            return False\n    \n    for i in range(peak_index + 1, n - 1):\n        if arr[i] <= arr[i+1]:\n            return False\n    \n    return True"
+        ],
+        "0.7": [
+          "def goc3g(gjmqey):\n    result = []\n    for char in gjmqey:\n        if char.isalpha():\n            if char.isupper():\n                result.append(char.lower())\n            else:\n                result.append(char.upper())\n        else:\n            result.append(char)\n    return ''.join(result)\n\ninput_string = input(\"Enter a string: \")\noutput = goc3g(input_string)\nprint(output)"
+        ],
+        "0.8": [
+          "def calculate_area(length, width):\n    return length * width\n\ndef calculate_perimeter(length, width):\n    return 2 * (length + width)\n\nlength = float(input(\"Enter the length of the rectangle: \"))\nwidth = float(input(\"Enter the width of the rectangle: \"))\n\narea = calculate_area(length, width)\nperimeter = calculate_perimeter(length, width)\n\nprint(f\"Area of the rectangle: {area}\")\nprint(f\"Perimeter of the rectangle: {perimeter}\")"
+        ],
+        "0.9": [
+          "import random\n\ndef shuffle_string(s):\n    chars = list(s)\n    random.shuffle(chars)\n    return ''.join(chars)\n\ndef generate_random_password(length):\n    characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+'\n    password = ''.join(random.choice(characters) for _ in range(length))\n    return password\n\ndef main():\n    original_text = input(\"Enter the text to shuffle: \")\n    shuffled_text = shuffle_string(original_text)\n    print(\"Shuffled text:\", shuffled_text)\n\n    password_length = int(input(\"Enter desired password length: \"))\n    random_password = generate_random_password(password_length)\n    print(\"Generated password:\", random_password)\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "1.0": [
+          "import random\n\ndef generate_random_string(length):\n    characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'\n    return ''.join(random.choice(characters) for _ in range(length))\n\ndef encrypt_message(message, key):\n    encrypted_message = ''\n    for char in message:\n        if char.isalpha():\n            shift = ord(key[0]) % 26\n            if char.isupper():\n                encrypted_char = chr((ord(char) - ord('A') + shift) % 26 + ord('A'))\n            else:\n                encrypted_char = chr((ord(char) - ord('a') + shift) % 26 + ord('a'))\n            encrypted_message += encrypted_char\n        else:\n            encrypted_message += char\n    return encrypted_message\n\ndef main():\n    message = input(\"Enter the message to encrypt: \")\n    key = generate_random_string(5)\n    encrypted_message = encrypt_message(message, key)\n    print(f\"Encrypted message: {encrypted_message}\")\n    print(f\"Encryption key: {key}\")\n\nif __name__ == \"__main__\":\n    main()"
+        ]
+      }
+    }
+  }
+}

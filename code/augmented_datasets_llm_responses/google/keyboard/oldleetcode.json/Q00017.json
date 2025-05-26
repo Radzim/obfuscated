@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/discuss/689647/Python3-stack-O(N)",
+  "python_solutions": "class Solution:\n    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:\n        loc = {x : i for i, x in enumerate(inorder)}\n        root = None\n        stack = []\n        for x in preorder: \n            if not root: root = node = TreeNode(x)\n            elif loc[x] < loc[node.val]: \n                stack.append(node)\n                node.left = node = TreeNode(x)\n            else: \n                while stack and loc[stack[-1].val] < loc[x]: node = stack.pop() # backtracking\n                node.right = node = TreeNode(x)\n        return root",
+  "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+  "post_title": "[Python3] stack O(N)",
+  "user": "ye15",
+  "upvotes": 7,
+  "views": 371,
+  "problem_title": "construct binary tree from preorder and inorder traversal",
+  "number": 105,
+  "acceptance": 0.609,
+  "difficulty": "Medium",
+  "__index_level_0__": 671,
+  "question": "Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.\n  Example 1:\nInput: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]\nOutput: [3,9,20,null,null,15,7]\nExample 2:\nInput: preorder = [-1], inorder = [-1]\nOutput: [-1]\n  Constraints:\n1 <= preorder.length <= 3000\ninorder.length == preorder.length\n-3000 <= preorder[i], inorder[i] <= 3000\npreorder and inorder consist of unique values.\nEach value of inorder also appears in preorder.\npreorder is guaranteed to be the preorder traversal of the tree.\ninorder is guaranteed to be the inorder traversal of the tree.",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.",
+      "0.1": "Given two integer arrays preordeE and inorder where 0reorder is the preorder traversal of a binary tree and inorder is the ihorder traversal of the same tree, construct and return the binary trer.",
+      "0.2": "Given two integer aGrSys preorder and inorder where p5eorwer is the preorder traversal of a ginarJ t%ee and inorder is the inl$der traversal of the same gree, construct and return the FinQry tree.",
+      "0.3": "Given two integer arrays preorder and inorder wU@re pd3orddr is the preorder tradersWP of a binary tTew and iJ0dder is the inprWrr HrZverWal of the dXme tree, VonstruXy and return the bonqry tFeF.",
+      "0.4": "Given two intefsG qrtaUs preorder and inorder whDTe ptSordF3 is the )f3orCer traGSrsSo of a GinArG H#ee and inorder is the KBorde3 t5avr%sa; of the AZme tGre, construct and rWfu4n the binary t3eW.",
+      "0.5": "G*geJ two &nFev4r arrZUw 9r3oDd4r and 8n8rveE where 0reirdD5 is the 93eodrer t3AvereX< of a ninXrH 5rfe and imked@r is the kn)rdW5 traversal of the qam$ tGeD, VohaRrust and TetudJ the b&nsr% trw4.",
+      "0.6": "fibeh two igHefFT QDeahs l%3orcfr and 7n94W#r dh4%e pFeofVfG is the pfWIgde5 FFaF2#sAl of a NinS$% 53We and &HorCwF is the lJ0rdwd tdavrGqZP of the xaJF YFer, Fpge^ruVt and ewhurH the f(nqr& H4es.",
+      "0.7": "GofWB two KG5#Ter zFDsyx pr2LFssT and uhKrffr 2h$4d 0r2KEve# is the o$WIDVer Grag2Dqw? of a fjBw4y Rfe2 and (G(rSeg is the ihl4d2% tdaFw4EWo of the ssK@ %tWe, D8nz^fuxR and %fr trH the fonsEG y#ed.",
+      "0.8": "biBwH two ujYWFeF s3EAts pTWIgF$G and UhP3Fwr qNdr4 0t3($r3r is the (Tf*rS$% YFSdeEWqo of a HjgQr6 f$FR and lhLrv2e is the ib)FR25 reAGrraW< of the qWNS h3rD, S(gztFjD% and rfr&4G the nigsf% 65rW.",
+      "0.9": "NUc4b two lBf3f3G SFdQ5c )fR8%sR3 and 7M*drS5 qyrD@ O4S(FXsD is the )Fw0fV2E ^ExBWdAw/ of a f(Jxfj R$3r and ObItfwe is the 7J9DRRe G3qGf4cw; of the ew,W 6#sf, SIbArDhxH and dW^jgb the fUjA$6 h5WW.",
+      "1.0": "vLF4b two KmrrV$f z5fWux )g3iGF@F and UhiGc$# eu3f4 oF#93c@F is the lEri#Wre 6FsDdeqSK of a VLmw%T %TrF and Lg*fWdf is the OhpFV@G GFXg$TzXo of the qS,w Rfd3, VkjXrgHVF and 4WyH4b the Hlmwe^ RF4R."
+    },
+    "synonym": {
+      "0.0": "Given two whole number arrays preorder and inorder where preorder is the preorder traversal of a binary tree diagram and inorder is the inorder traversal of the like tree, conception and return the binary tree.",
+      "0.1": "Given two integer array preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.",
+      "0.2": "Given two integer arrays preorder and inorder where preorder be the preorder traversal of a binary sir herbert beerbohm tree and inorder is the inorder traverse of the same tree, construct and return the binary tree.",
+      "0.3": "Give two integer arrays preorder and inorder where preorder be the preorder traversal of a binary tree and inorder be the inorder traversal of the same tree diagram, concept and render the binary tree.",
+      "0.4": "Give 2 whole number arrays preorder and inorder where preorder be the preorder traversal of a binary tree and inorder is the inorder traversal of the like sir herbert beerbohm tree, construct and repay the binary tree.",
+      "0.5": "Impart ii whole number array preorder and inorder where preorder is the preorder traverse of a binary tree and inorder embody the inorder traverse of the same sir herbert beerbohm tree, construct and hark back the binary tree diagram.",
+      "0.6": "Gift 2 integer arrays preorder and inorder where preorder be the preorder traversal of a binary tree diagram and inorder cost the inorder traverse of the like sir herbert beerbohm tree, concept and render the binary sir herbert beerbohm tree.",
+      "0.7": "Given 2 integer regalia preorder and inorder where preorder embody the preorder traverse of a binary sir herbert beerbohm tree and inorder live the inorder traverse of the like sir herbert beerbohm tree, conception and riposte the binary sir herbert beerbohm tree.",
+      "0.8": "Sacrifice 2 whole number array preorder and inorder where preorder be the preorder traverse of a binary sir herbert beerbohm tree and inorder be the inorder traverse of the like tree diagram, concept and generate the binary tree diagram.",
+      "0.9": "Yield ii whole number array preorder and inorder where preorder be the preorder traverse of a binary tree diagram and inorder be the inorder traverse of the like tree diagram, conception and regress the binary sir herbert beerbohm tree.",
+      "1.0": "Give ii whole number regalia preorder and inorder where preorder be the preorder traverse of a binary sir herbert beerbohm tree and inorder follow the inorder traverse of the like tree diagram, concept and give back the binary tree diagram."
+    },
+    "random": {
+      "0.0": "Given integer arrays preorder and where is the preorder traversal of a binary tree and inorder of the tree, construct the tree.",
+      "0.1": "Given two integer arrays preorder and where preorder is the preorder traversal of a binary tree and inorder is the of the same, construct and return the binary tree.",
+      "0.2": "Given two integer preorder inorder where preorder the preorder traversal of a binary tree and inorder traversal of the same tree, construct and return binary tree.",
+      "0.3": "Two integer arrays preorder and inorder where preorder is the preorder of binary tree and inorder is inorder the tree, construct the tree.",
+      "0.4": "Two integer arrays preorder inorder where is traversal a and inorder the traversal the same, construct and return binary tree.",
+      "0.5": "Given arrays preorder and preorder the of is the traversal same tree, return binary tree.",
+      "0.6": "Two preorder the preorder tree and is same tree, construct and binary.",
+      "0.7": "Two integer traversal of binary and inorder the, and.",
+      "0.8": "Two integer inorder the, construct the.",
+      "0.9": "Two preorder,.",
+      "1.0": "Two,."
+    },
+    "cut": {
+      "0.0": "Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.",
+      "0.1": "Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and ret",
+      "0.2": "Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree",
+      "0.3": "Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traver",
+      "0.4": "Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is",
+      "0.5": "Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary",
+      "0.6": "Given two integer arrays preorder and inorder where preorder is the preorder t",
+      "0.7": "Given two integer arrays preorder and inorder where preorde",
+      "0.8": "Given two integer arrays preorder and i",
+      "0.9": "Given two integer ar",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "google": {
+      "keyboard": {
+        "0.0": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(preorder, inorder):\n    if not preorder or not inorder:\n        return None\n\n    root_val = preorder[0]\n    root = TreeNode(root_val)\n\n    root_index_inorder = inorder.index(root_val)\n\n    root.left = buildTree(preorder[1:root_index_inorder + 1], inorder[:root_index_inorder])\n    root.right = buildTree(preorder[root_index_inorder + 1:], inorder[root_index_inorder + 1:])\n\n    return root"
+        ],
+        "0.1": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(preorder, inorder):\n    if not preorder or not inorder:\n        return None\n\n    root_val = preorder[0]\n    root = TreeNode(root_val)\n\n    root_index_inorder = inorder.index(root_val)\n\n    root.left = buildTree(preorder[1:root_index_inorder + 1], inorder[:root_index_inorder])\n    root.right = buildTree(preorder[root_index_inorder + 1:], inorder[root_index_inorder + 1:])\n\n    return root"
+        ],
+        "0.2": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(preorder, inorder):\n    if not preorder or not inorder:\n        return None\n\n    root_val = preorder[0]\n    root = TreeNode(root_val)\n\n    root_index_inorder = inorder.index(root_val)\n\n    root.left = buildTree(preorder[1:root_index_inorder + 1], inorder[:root_index_inorder])\n    root.right = buildTree(preorder[root_index_inorder + 1:], inorder[root_index_inorder + 1:])\n\n    return root"
+        ],
+        "0.3": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(preorder, inorder):\n    if not preorder or not inorder:\n        return None\n\n    root_val = preorder[0]\n    root = TreeNode(root_val)\n\n    root_index_inorder = inorder.index(root_val)\n\n    root.left = buildTree(preorder[1:root_index_inorder + 1], inorder[:root_index_inorder])\n    root.right = buildTree(preorder[root_index_inorder + 1:], inorder[root_index_inorder + 1:])\n\n    return root"
+        ],
+        "0.4": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(preorder, inorder):\n    if not preorder or not inorder:\n        return None\n\n    root_val = preorder[0]\n    root = TreeNode(root_val)\n\n    root_index_inorder = inorder.index(root_val)\n\n    root.left = buildTree(preorder[1:root_index_inorder + 1], inorder[:root_index_inorder])\n    root.right = buildTree(preorder[root_index_inorder + 1:], inorder[root_index_inorder + 1:])\n\n    return root"
+        ],
+        "0.5": [
+          "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.left = None\n        self.right = None\n\ndef build_tree_from_preorder_inorder(preorder, inorder):\n    if not preorder or not inorder:\n        return None\n\n    root_val = preorder[0]\n    root = Node(root_val)\n\n    root_index_in_inorder = inorder.index(root_val)\n\n    root.left = build_tree_from_preorder_inorder(\n        preorder[1:root_index_in_inorder + 1],\n        inorder[:root_index_in_inorder]\n    )\n\n    root.right = build_tree_from_preorder_inorder(\n        preorder[root_index_in_inorder + 1:],\n        inorder[root_index_in_inorder + 1:]\n    )\n\n    return root\n\ndef build_tree_from_inorder_postorder(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root_val = postorder[-1]\n    root = Node(root_val)\n\n    root_index_in_inorder = inorder.index(root_val)\n\n    root.left = build_tree_from_inorder_postorder(\n        inorder[:root_index_in_inorder],\n        postorder[:root_index_in_inorder]\n    )\n\n    root.right = build_tree_from_inorder_postorder(\n        inorder[root_index_in_inorder + 1:],\n        postorder[root_index_in_inorder:-1]\n    )\n\n    return root\n\ndef inorder_traversal(root):\n    if root:\n        inorder_traversal(root.left)\n        print(root.data, end=\" \")\n        inorder_traversal(root.right)\n\ndef preorder_traversal(root):\n    if root:\n        print(root.data, end=\" \")\n        preorder_traversal(root.left)\n        preorder_traversal(root.right)\n\ndef postorder_traversal(root):\n    if root:\n        postorder_traversal(root.left)\n        postorder_traversal(root.right)\n        print(root.data, end=\" \")\n\nif __name__ == '__main__':\n    # Example usage:\n    # Assuming you have the inorder and preorder traversals:\n    inorder = ['D', 'B', 'E', 'A', 'F', 'C']\n    preorder = ['A', 'B', 'D', 'E', 'C', 'F']\n\n    root1 = build_tree_from_preorder_inorder(preorder, inorder)\n    print(\"Inorder traversal of tree 1:\")\n    inorder_traversal(root1)\n    print()\n\n    # Assuming you have the inorder and postorder traversals:\n    inorder2 = [4, 2, 5, 1, 3]\n    postorder2 = [4, 5, 2, 3, 1]\n\n    root2 = build_tree_from_inorder_postorder(inorder2, postorder2)\n    print(\"Inorder traversal of tree 2:\")\n    inorder_traversal(root2)\n    print()"
+        ],
+        "0.6": [
+          "def solve():\n    print(\"The problem statement is unclear and contains gibberish.  It's impossible to determine the intended logic or functionality from the provided text.\")\n\nsolve()"
+        ],
+        "0.7": [
+          "def solve():\n    print(\"The question is nonsensical and does not provide enough information to determine a logical answer.\")\n\nsolve()"
+        ],
+        "0.8": [
+          "def process_string(input_string):\n    \"\"\"\n    This function processes a string based on the provided description.\n    It extracts and processes specific parts of the input string.\n\n    Args:\n        input_string (str): The input string to process.\n\n    Returns:\n        tuple: A tuple containing the processed values.\n               Returns None if the input string does not conform to the expected format.\n    \"\"\"\n\n    parts = input_string.split()\n\n    if len(parts) < 10:\n        return None\n\n    try:\n        ujYWFeF = parts[1]\n        s3EAts = parts[2]\n        pTWIgF_G = parts[3]\n        UhP3Fwr = parts[4]\n        qNdr4 = parts[5]\n        t3_r3r = parts[6]\n        Tf_rS_ = parts[7]\n        YFSdeEWqo = parts[8]\n        HjgQr6 = parts[9]\n        f_FR = parts[10]\n        lhLrv2e = parts[11]\n        ib_FR25 = parts[12]\n        reAGrraW = parts[13]\n        qWNS = parts[14]\n        h3rD = parts[15]\n        S_gztFjD_ = parts[16]\n        rfr_4G = parts[17]\n        nigsf_ = parts[18]\n        rW = parts[19]\n\n        # Placeholder operations based on the description.  Replace with actual logic.\n        # This is just to demonstrate how to access the extracted parts.\n        # The actual operations depend on the specific requirements.\n\n        # Example operations:\n        # value1 = len(ujYWFeF) + len(s3EAts)\n        # value2 = int(qNdr4) * 2\n\n        # Placeholder return values.  Replace with the actual processed values.\n        return (ujYWFeF, s3EAts, pTWIgF_G, UhP3Fwr, qNdr4, t3_r3r, Tf_rS_, YFSdeEWqo, HjgQr6, f_FR, lhLrv2e, ib_FR25, reAGrraW, qWNS, h3rD, S_gztFjD_, rfr_4G, nigsf_, rW)\n\n    except (IndexError, ValueError):\n        return None\n\n# Example usage:\n# input_string = \"biBwH two ujYWFeF s3EAts pTWIgF$G and UhP3Fwr qNdr4 0t3($r3r is the (Tf*rS$% YFSdeEWqo of a HjgQr6 f$FR and lhLrv2e is the ib)FR25 reAGrraW< of the qWNS h3rD, S(gztFjD% and rfr&4G the nigsf% 65rW.\"\n# result = process_string(input_string)\n\n# if result:\n#     print(result)\n# else:\n#     print(\"Invalid input string format.\")"
+        ],
+        "0.9": [
+          "import re\nimport random\n\ndef generate_random_string(length):\n    letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'\n    return ''.join(random.choice(letters) for i in range(length))\n\ndef generate_code():\n    var1 = generate_random_string(5)\n    var2 = generate_random_string(7)\n    var3 = generate_random_string(6)\n    var4 = generate_random_string(8)\n    var5 = generate_random_string(5)\n    var6 = generate_random_string(7)\n    var7 = generate_random_string(8)\n    var8 = generate_random_string(9)\n    var9 = generate_random_string(6)\n    var10 = generate_random_string(5)\n    var11 = generate_random_string(8)\n    var12 = generate_random_string(4)\n    var13 = generate_random_string(7)\n    var14 = generate_random_string(10)\n    var15 = generate_random_string(4)\n    var16 = generate_random_string(4)\n\n    code = f\"\"\"\n{var1} = 2\n{var2} = 10\n{var3} = {var1} + {var2}\n{var4} = {var3} * 2\n{var5} = \"hello\"\n{var6} = \"world\"\n{var7} = {var5} + \" \" + {var6}\n{var8} = len({var7})\n{var9} = [1, 2, 3, 4, 5]\n{var10} = {var9}[2]\n{var11} = {var9}[1:4]\n{var12} = True\n{var13} = False\n{var14} = {var12} and {var13}\n{var15} = 5.5\n{var16} = int({var15})\n\nprint({var3})\nprint({var4})\nprint({var7})\nprint({var8})\nprint({var10})\nprint({var11})\nprint({var14})\nprint({var16})\n\"\"\"\n    return code\n\nprint(generate_code())"
+        ],
+        "1.0": [
+          "def solve():\n    print(\"This problem seems to be about identifying relationships between strings based on some pattern or analogy.\")\n    print(\"Without more information or a clear definition of the relationships, it's impossible to provide a definitive solution.\")\n    print(\"However, I can offer some potential approaches if you can clarify the problem:\")\n    print(\"1. **String Similarity:** Calculate the similarity between the strings using techniques like Levenshtein distance or cosine similarity.  Then, try to find the closest match based on these scores.\")\n    print(\"2. **Pattern Recognition:** Look for common substrings, character frequencies, or other patterns within the strings.  Use these patterns to establish relationships.\")\n    print(\"3. **Rule-Based System:** If there are specific rules governing the relationships, implement a rule-based system to determine the correct answer.\")\n    print(\"4. **Machine Learning:** Train a machine learning model to learn the relationships from a dataset of similar examples.\")\n    print(\"Please provide more details about the problem so I can give you a more specific and helpful solution.\")\n\nsolve()"
+        ]
+      }
+    }
+  }
+}

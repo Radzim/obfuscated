@@ -1,0 +1,12 @@
+model,method,dataset,task,augmentation_rate,eval_score
+openai,keyboard,oldleetcode.json,Q00001,0.0,0
+openai,keyboard,oldleetcode.json,Q00001,0.1,0
+openai,keyboard,oldleetcode.json,Q00001,0.2,0
+openai,keyboard,oldleetcode.json,Q00001,0.3,0
+openai,keyboard,oldleetcode.json,Q00001,0.4,0
+openai,keyboard,oldleetcode.json,Q00001,0.5,0
+openai,keyboard,oldleetcode.json,Q00001,0.6,0
+openai,keyboard,oldleetcode.json,Q00001,0.7,0
+openai,keyboard,oldleetcode.json,Q00001,0.8,0
+openai,keyboard,oldleetcode.json,Q00001,0.9,0
+openai,keyboard,oldleetcode.json,Q00001,1.0,0

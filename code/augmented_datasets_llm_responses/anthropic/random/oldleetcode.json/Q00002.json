@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/742926/Simple-Explanation-or-Concise-or-Thinking-Process-and-Example",
+  "python_solutions": "class Solution(object):\n    def lengthOfLongestSubstring(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int abcabcbb\n        \"\"\"\n        if len(s) == 0:\n            return 0\n        seen = {}\n        left, right = 0, 0\n        longest = 1\n        while right < len(s):\n            if s[right] in seen:\n                left = max(left,seen[s[right]]+1)\n            longest = max(longest, right - left + 1)\n            seen[s[right]] = right\n            right += 1\n            print(left, right, longest)\n        return longest",
+  "slug": "longest-substring-without-repeating-characters",
+  "post_title": "Simple Explanation | Concise | Thinking Process & Example",
+  "user": "ivankatrump",
+  "upvotes": 290,
+  "views": 13100,
+  "problem_title": "longest substring without repeating characters",
+  "number": 3,
+  "acceptance": 0.3379999999999999,
+  "difficulty": "Medium",
+  "__index_level_0__": 77,
+  "question": "Given a string s, find the length of the longest\nsubstring\nwithout repeating characters.\n  Example 1:\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3.\nExample 2:\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\nExample 3:\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n  Constraints:\n0 <= s.length <= 5 * 104\ns consists of English letters, digits, symbols and spaces.",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given a string s, find the length of the longest substring without repeating characters.",
+      "0.1": "Given a st5ing s, find the length of the Oongest substring without repeating characters.",
+      "0.2": "Given a syrigg s, find the length of the longest suvstging !ithlut repeating charadterQ.",
+      "0.3": "Foven a string s, find the lSnvth of the loGgFsr substring without reLdatiBg dhsrXcters.",
+      "0.4": "GivfJ a etrUJg s, rond the lebgGJ of the longest ZubstFunF Dith8Jt 5eLeXhing characters.",
+      "0.5": "G8vSJ a e$Fing s, DinV the lenTrY of the KkMgext sJbsRruJn 3ith)*F r#LeatkBv characters.",
+      "0.6": "y*veG a Et#knF s, BOnS the .eMttj of the lkbg2e$ s tNQtrLJn si6nl tt 4epSX4*mg Sha4Sstw$s.",
+      "0.7": "YiBdH a xhf*nh s, DJnC the i3nFfg of the llnYFqg WugctT&Bn s7^Miut t49eaGLgT XhxTavy@Es.",
+      "0.8": "YiF$m a ar5(nB s, rjJs the ,$JRtt of the ;lMgrzf dHhZ5eijB w*yy8 tR EF)Wa%&jv cMaDqv%dfa.",
+      "0.9": "yUDdH a Df$UGY s, D(je the :3GF$N of the kpJH@CF d&vZr$*JV 19^M8 Th eW(DA^(BV fJxrZFr@EQ.",
+      "1.0": "nKgRg a zgFLgB s, vUmw the Idby6G of the o8mrrZ$ D tVx^%KHr alHYKHf $@LfAYKbH Sns3AS^dTE."
+    },
+    "synonym": {
+      "0.0": "Given a string s, find the duration of the foresightful substring without repeat part.",
+      "0.1": "Given a string s, find the length of the longest substring without repeating grapheme.",
+      "0.2": "Given a string randomness, find the length of the long substring without repeating characters.",
+      "0.3": "Given a train sulfur, witness the length of the recollective substring without repeating character.",
+      "0.4": "Give a drawing string s, find the distance of the longsighted substring without restate characters.",
+      "0.5": "Dedicate a string atomic number 16, rule the distance of the longest substring without repeating character.",
+      "0.6": "Give a strand randomness, ascertain the duration of the longest substring without iterate character.",
+      "0.7": "Give a drawing string southward, see the distance of the retentive substring without double reference.",
+      "0.8": "Give a drawing string southward, discover the distance of the tenacious substring without iterate character.",
+      "0.9": "Collapse a train randomness, recover the distance of the longsighted substring without retell case.",
+      "1.0": "Give a bowed stringed instrument due south, get hold the distance of the prospicient substring without echo fictional character."
+    },
+    "random": {
+      "0.0": "Given a string, find length of substring without characters.",
+      "0.1": "Given a string s, find length of the longest substring repeating characters.",
+      "0.2": "Given string s, find the length of longest substring characters.",
+      "0.3": "A s, find the length longest substring without repeating characters.",
+      "0.4": "Given a, length the longest repeating characters.",
+      "0.5": "A string, length of substring without repeating.",
+      "0.6": "A s, longest repeating characters.",
+      "0.7": "A string, the.",
+      "0.8": "A, find.",
+      "0.9": "A,.",
+      "1.0": "A,."
+    },
+    "cut": {
+      "0.0": "Given a string s, find the length of the longest\nsubstring\nwithout repeating characters.",
+      "0.1": "Given a string s, find the length of the longest\nsubstring\nwithout repeating ch",
+      "0.2": "Given a string s, find the length of the longest\nsubstring\nwithout rep",
+      "0.3": "Given a string s, find the length of the longest\nsubstring\nwit",
+      "0.4": "Given a string s, find the length of the longest\nsubs",
+      "0.5": "Given a string s, find the length of the lon",
+      "0.6": "Given a string s, find the length o",
+      "0.7": "Given a string s, find the",
+      "0.8": "Given a string s, ",
+      "0.9": "Given a s",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "anthropic": {
+      "random": {
+        "0.0": [
+          "def length_substring_without_chars(s):\n    char_set = set()\n    max_length = 0\n    start = 0\n    \n    for end in range(len(s)):\n        while s[end] in char_set:\n            char_set.remove(s[start])\n            start += 1\n        \n        char_set.add(s[end])\n        max_length = max(max_length, end - start + 1)\n    \n    return max_length"
+        ],
+        "0.1": [
+          "def longest_repeating_substring(s):\n    if not s:\n        return 0\n    \n    max_length = 1\n    current_length = 1\n    \n    for i in range(1, len(s)):\n        if s[i] == s[i-1]:\n            current_length += 1\n            max_length = max(max_length, current_length)\n        else:\n            current_length = 1\n    \n    return max_length"
+        ],
+        "0.2": [
+          "def lengthOfLongestSubstring(s):\n    char_set = set()\n    max_length = 0\n    left = 0\n    \n    for right in range(len(s)):\n        while s[right] in char_set:\n            char_set.remove(s[left])\n            left += 1\n        \n        char_set.add(s[right])\n        max_length = max(max_length, right - left + 1)\n    \n    return max_length"
+        ],
+        "0.3": [
+          "def lengthOfLongestSubstring(s):\n    char_set = set()\n    max_length = 0\n    left = 0\n    \n    for right in range(len(s)):\n        while s[right] in char_set:\n            char_set.remove(s[left])\n            left += 1\n        \n        char_set.add(s[right])\n        max_length = max(max_length, right - left + 1)\n    \n    return max_length"
+        ],
+        "0.4": [
+          "def lengthOfLongestRepeatingCharacter(s):\n    if not s:\n        return 0\n    \n    char_count = {}\n    max_length = 0\n    start = 0\n    max_freq = 0\n    \n    for end in range(len(s)):\n        char_count[s[end]] = char_count.get(s[end], 0) + 1\n        max_freq = max(max_freq, char_count[s[end]])\n        \n        if (end - start + 1) - max_freq > 1:\n            char_count[s[start]] -= 1\n            start += 1\n        \n        max_length = max(max_length, end - start + 1)\n    \n    return max_length"
+        ],
+        "0.5": [
+          "def lengthOfLongestSubstring(s):\n    char_set = set()\n    max_length = 0\n    left = 0\n    \n    for right in range(len(s)):\n        while s[right] in char_set:\n            char_set.remove(s[left])\n            left += 1\n        \n        char_set.add(s[right])\n        max_length = max(max_length, right - left + 1)\n    \n    return max_length"
+        ],
+        "0.6": [
+          "def longest_repeating_chars(s):\n    if not s:\n        return 0\n    \n    max_length = 1\n    current_length = 1\n    \n    for i in range(1, len(s)):\n        if s[i] == s[i-1]:\n            current_length += 1\n            max_length = max(max_length, current_length)\n        else:\n            current_length = 1\n    \n    return max_length"
+        ],
+        "0.7": [
+          "def process_string(s):\n    return s\n\nresult = process_string(\"the\")\nprint(result)"
+        ],
+        "0.8": [
+          "def find_a(string):\n    count = 0\n    for char in string:\n        if char.lower() == 'a':\n            count += 1\n    return count\n\ndef main():\n    input_string = input(\"Enter a string: \")\n    result = find_a(input_string)\n    print(f\"Number of 'a' characters: {result}\")\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.9": [
+          "def calculate_area(length, width):\n    return length * width\n\ndef calculate_perimeter(length, width):\n    return 2 * (length + width)\n\ndef main():\n    length = float(input(\"Enter length: \"))\n    width = float(input(\"Enter width: \"))\n    \n    area = calculate_area(length, width)\n    perimeter = calculate_perimeter(length, width)\n    \n    print(f\"Area: {area}\")\n    print(f\"Perimeter: {perimeter}\")\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "1.0": [
+          "def calculate_area(length, width):\n    return length * width\n\ndef calculate_perimeter(length, width):\n    return 2 * (length + width)\n\ndef main():\n    length = float(input(\"Enter length: \"))\n    width = float(input(\"Enter width: \"))\n    \n    area = calculate_area(length, width)\n    perimeter = calculate_perimeter(length, width)\n    \n    print(f\"Area: {area}\")\n    print(f\"Perimeter: {perimeter}\")\n\nif __name__ == \"__main__\":\n    main()"
+        ]
+      }
+    }
+  }
+}

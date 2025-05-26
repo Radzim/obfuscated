@@ -1,0 +1,12 @@
+model,method,dataset,task,augmentation_rate,eval_score
+deepseek,synonym,newleetcode.json,Q00019,0.0,0
+deepseek,synonym,newleetcode.json,Q00019,0.1,1
+deepseek,synonym,newleetcode.json,Q00019,0.2,1
+deepseek,synonym,newleetcode.json,Q00019,0.3,0
+deepseek,synonym,newleetcode.json,Q00019,0.4,0
+deepseek,synonym,newleetcode.json,Q00019,0.5,1
+deepseek,synonym,newleetcode.json,Q00019,0.6,0
+deepseek,synonym,newleetcode.json,Q00019,0.7,0
+deepseek,synonym,newleetcode.json,Q00019,0.8,0
+deepseek,synonym,newleetcode.json,Q00019,0.9,0
+deepseek,synonym,newleetcode.json,Q00019,1.0,1

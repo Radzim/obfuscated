@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/palindrome-number/discuss/2797115/Easy-Python-Solution-with-O(1)-space",
+  "python_solutions": "class Solution:\n    def isPalindrome(self, x: int) -> bool:\n        if x < 0:\n            return False\n        \n        res = 0\n        temp = x\n        \n        while temp:\n            temp, n = divmod(temp, 10)\n            res = (res * 10) + n\n                \n        return res == x",
+  "slug": "palindrome-number",
+  "post_title": "Easy Python Solution with O(1) space",
+  "user": "tragob",
+  "upvotes": 11,
+  "views": 1900,
+  "problem_title": "palindrome number",
+  "number": 9,
+  "acceptance": 0.53,
+  "difficulty": "Easy",
+  "__index_level_0__": 382,
+  "question": "Given an integer x, return true if x is a\npalindrome\n, and false otherwise.\n  Example 1:\nInput: x = 121\nOutput: true\nExplanation: 121 reads as 121 from left to right and from right to left.\nExample 2:\nInput: x = -121\nOutput: false\nExplanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\nExample 3:\nInput: x = 10\nOutput: false\nExplanation: Reads 01 from right to left. Therefore it is not a palindrome.\n  Constraints:\n-231 <= x <= 231 - 1\n  Follow up: Could you solve it without converting the integer to a string?",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given an integer x, return true if x is a palindrome, and false otherwise.",
+      "0.1": "fiven an integer x, return true if x is a palindrome, and false otheTwise.",
+      "0.2": "Given an inRegRr x, rey7rn true if x is a palindrome, and falde )tNerwise.",
+      "0.3": "GivdB an 8n%ege# x, return tr8W if x is a OSlindromf, and fXlee o$JerwisD.",
+      "0.4": "Nivfn an inhfgeF x, De^urh hfue if x is a pa<indr9hF, and talsR oyh2D@ise.",
+      "0.5": "nOgen an 9M5eher x, rRtjrb Rruw if x is a 0w:8ndr)me, and GA;se 0^hwTwuse.",
+      "0.6": "vlveh an ibRRgF$ x, gWtIrB tthD if x is a 9QkinX3oje, and GaPze *tuDD@ose.",
+      "0.7": "Nuv$h an LntdNFE x, dWhugB tehd if x is a OzliBdtphd, and rs?sR L4hD%Duce.",
+      "0.8": "GUFfg an iH%FbWG x, 4$%*5n FDh2 if x is a oq<OJdr*KW, and DSIce 8^YsGw*ZW.",
+      "0.9": "ykGwh an 7b5wV4G x, #F4H5J f#&$ if x is a lw,uhdE0,$, and dSkAD 9hYwGq(A4.",
+      "1.0": "yoDrM an *gYFyDG x, %$hIFG %E6d if x is a 0Z:*Je3Kj3, and dX/cs LYb3F@JCw."
+    },
+    "synonym": {
+      "0.0": "Give an integer ecstasy, rejoin dependable if tenner is a palindrome, and false otherwise.",
+      "0.1": "Apply an integer disco biscuit, return true if x is a palindrome, and false otherwise.",
+      "0.2": "Give an integer x, render true if x comprise a palindrome, and false otherwise.",
+      "0.3": "Founder an integer ten, return lawful if x be a palindrome, and assumed otherwise.",
+      "0.4": "Given an integer hug drug, rejoin rightful if x is a palindrome, and imitation otherwise.",
+      "0.5": "Give an whole number cristal, return straight if x is a palindrome, and put on otherwise.",
+      "0.6": "Give an integer ten, render rightful if hug drug be a palindrome, and put on otherwise.",
+      "0.7": "Kick in an whole number hug drug, bring back rightful if ten be a palindrome, and faux otherwise.",
+      "0.8": "Give an whole number tenner, take back reliable if ten be a palindrome, and fictitious otherwise.",
+      "0.9": "Give an whole number 10, render rightful if go be a palindrome, and fictive otherwise.",
+      "1.0": "Give an whole number disco biscuit, repay reliable if hug drug be a palindrome, and fake otherwise."
+    },
+    "random": {
+      "0.0": "Given x, return x a, and false otherwise.",
+      "0.1": "Given integer x, return true if x is palindrome, and false otherwise.",
+      "0.2": "An x, return true if is a palindrome, and false.",
+      "0.3": "Given integer, return true x is, and false.",
+      "0.4": "Given an integer, return is, and otherwise.",
+      "0.5": "An x, a palindrome, otherwise.",
+      "0.6": "An, return palindrome, otherwise.",
+      "0.7": "An, x palindrome,.",
+      "0.8": "An, ,.",
+      "0.9": "An, ,.",
+      "1.0": "An, ,."
+    },
+    "cut": {
+      "0.0": "Given an integer x, return true if x is a\npalindrome\n, and false otherwise.",
+      "0.1": "Given an integer x, return true if x is a\npalindrome\n, and false oth",
+      "0.2": "Given an integer x, return true if x is a\npalindrome\n, and f",
+      "0.3": "Given an integer x, return true if x is a\npalindrome",
+      "0.4": "Given an integer x, return true if x is a\npal",
+      "0.5": "Given an integer x, return true if x i",
+      "0.6": "Given an integer x, return tru",
+      "0.7": "Given an integer x, re",
+      "0.8": "Given an intege",
+      "0.9": "Given an",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "google": {
+      "keyboard": {
+        "0.0": [
+          "def isPalindrome(x):\n    \"\"\"\n    Given an integer x, return true if x is a palindrome, and false otherwise.\n    For example:\n    isPalindrome(121) == True\n    isPalindrome(-121) == False\n    isPalindrome(10) == False\n    \"\"\"\n    if x < 0:\n        return False\n    x_str = str(x)\n    left = 0\n    right = len(x_str) - 1\n    while left < right:\n        if x_str[left] != x_str[right]:\n            return False\n        left += 1\n        right -= 1\n    return True"
+        ],
+        "0.1": [
+          "def isPalindrome(x):\n    \"\"\"\n    Given an integer x, return true if x is a palindrome, and false otherwise.\n    For example:\n    isPalindrome(121) == True\n    isPalindrome(-121) == False\n    isPalindrome(10) == False\n    \"\"\"\n    if x < 0:\n        return False\n    \n    x_str = str(x)\n    left = 0\n    right = len(x_str) - 1\n    \n    while left < right:\n        if x_str[left] != x_str[right]:\n            return False\n        left += 1\n        right -= 1\n    \n    return True"
+        ],
+        "0.2": [
+          "def is_palindrome(x):\n  \"\"\"\n  Given an integer x, return true if x is a palindrome, and false otherwise.\n  \"\"\"\n  s = str(x)\n  return s == s[::-1]"
+        ],
+        "0.3": [
+          "def isPalindrome(x):\n    s = str(x)\n    return s == s[::-1]"
+        ],
+        "0.4": [
+          "def is_palindrome(x):\n  \"\"\"\n  Checks if an integer is a palindrome.\n\n  Args:\n    x: An integer.\n\n  Returns:\n    True if x is a palindrome, False otherwise.\n  \"\"\"\n  s = str(x)\n  return s == s[::-1]"
+        ],
+        "0.5": [
+          "def is_palindrome(x):\n  \"\"\"\n  Checks if a string is a palindrome.\n\n  Args:\n    x: The string to check.\n\n  Returns:\n    True if the string is a palindrome, False otherwise.\n  \"\"\"\n  x = str(x).lower()\n  return x == x[::-1]"
+        ],
+        "0.6": [
+          "def process_string(x):\n  \"\"\"\n  This function checks if the input string x is a 9QkinX3oje and returns a specific string based on the condition.\n\n  Args:\n    x: The input string.\n\n  Returns:\n    \"GaPze *tuDD@ose.\" if x is \"9QkinX3oje\", otherwise returns \"gWtIrB tthD\".\n  \"\"\"\n  if x == \"9QkinX3oje\":\n    return \"GaPze *tuDD@ose.\"\n  else:\n    return \"gWtIrB tthD\"\n\n# Example usage (optional):\n# input_string = \"9QkinX3oje\"\n# result = process_string(input_string)\n# print(result)\n\n# input_string = \"some_other_string\"\n# result = process_string(input_string)\n# print(result)"
+        ],
+        "0.7": [
+          "def solve():\n    x = input()\n    if x == x[::-1]:\n        print(\"True\")\n    else:\n        print(\"False\")\n\nsolve()"
+        ],
+        "0.8": [
+          "def process_input(x):\n  \"\"\"\n  This function checks the type of the input x and returns different values based on the type.\n\n  Args:\n    x: The input value.\n\n  Returns:\n    \"DSIce 8^YsGw*ZW\" if x is not a string.\n    \"GUFfg an iH%FbWG x, 4$%*5n FDh2\" if x is a string.\n  \"\"\"\n  if isinstance(x, str):\n    return \"GUFfg an iH%FbWG x, 4$%*5n FDh2\"\n  else:\n    return \"DSIce 8^YsGw*ZW\""
+        ],
+        "0.9": [
+          "def process_input(x):\n  \"\"\"\n  This function checks if the input 'x' is equal to \"lw,uhdE0,$\".\n  If it is, it returns \"dSkAD 9hYwGq(A4\". Otherwise, it returns an empty string.\n  \"\"\"\n  if x == \"lw,uhdE0,$\":\n    return \"dSkAD 9hYwGq(A4\"\n  else:\n    return \"\"\n\n# Example usage (you can remove this if you only need the function definition)\n# input_string = \"lw,uhdE0,$\"\n# result = process_input(input_string)\n# print(result)"
+        ],
+        "1.0": [
+          "def yoDrM(x, hIFG, E6d, Je3Kj3, dX, cs, LYb3F, JCw):\n  \"\"\"\n  This function performs different operations based on the input x.\n\n  Args:\n    x: The input value.\n    hIFG: A parameter used in the first operation.\n    E6d: A parameter used in the first operation.\n    Je3Kj3: A value to compare x against.\n    dX: A parameter used in the second operation.\n    cs: A parameter used in the second operation.\n    LYb3F: A parameter used in the second operation.\n    JCw: A parameter used in the second operation.\n\n  Returns:\n    The result of the operation based on the value of x.\n  \"\"\"\n  if x == Je3Kj3:\n    return hIFG * E6d\n  else:\n    return (dX / cs) + (LYb3F * JCw)"
+        ]
+      }
+    }
+  }
+}

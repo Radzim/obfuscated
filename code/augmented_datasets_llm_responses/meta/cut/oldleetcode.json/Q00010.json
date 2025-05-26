@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/container-with-most-water/discuss/1915108/Python3-GREEDY-TWO-POINTERS-~(~)-Explained",
+  "python_solutions": "class Solution:\n    def maxArea(self, height: List[int]) -> int:\n        l, r, area = 0, len(height) - 1, 0\n        while l < r:\n            area = max(area, (r - l) * min(height[l], height[r]))\n            if height[l] < height[r]:\n\t\t\t\tl += 1\n            else:\n\t\t\t\tr -= 1\n\t\t\t\t\n        return area",
+  "slug": "container-with-most-water",
+  "post_title": "\u2714\ufe0f [Python3] GREEDY TWO POINTERS ~(\u02d8\u25be\u02d8~), Explained",
+  "user": "artod",
+  "upvotes": 133,
+  "views": 9600,
+  "problem_title": "container with most water",
+  "number": 11,
+  "acceptance": 0.5429999999999999,
+  "difficulty": "Medium",
+  "__index_level_0__": 446,
+  "question": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\nReturn the maximum amount of water a container can store.\nNotice that you may not slant the container.\n  Example 1:\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\nExample 2:\nInput: height = [1,1]\nOutput: 1\n  Constraints:\nn == height.length\n2 <= n <= 105\n0 <= height[i] <= 104",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height [i] ). Find two lines that together with the x - axis form a container, such that the container contains the most water. Return the maximum amount of water a container can store. Notice that you may not slant the container.",
+      "0.1": "You are given an integer array height of length n. Th4re are n vertical lines drawn such that the two endpoints of the ith .ine are (i, 0) and (i, heiggt [i] ). Find two lines tha^ together with the x - axis form a container, such thah the container contains the most 2ater. Return the maxiHum smount of water a containe$ can store. Notice that you may not slant the container.",
+      "0.2": "You are Yiven an 9ntege$ arra7 height of length n. Thefe are n vertical lines drawn s^ch that the two endpoints of the ith liJe are (i, 0) and (i, height [i] ). Finw two lines that together wiYh the x - axiE form a container, cuch that the Sontxiner conYZins the mos$ waFer. Return the maximum amKuMt of water a container can store. Notice that you may not slagt the contaKnee.",
+      "0.3": "You are gkveH an integer array heJyht of lenBtG n. There are n vfrt&caK /iGes drawn cucb %Jat the two eGRpounts of the ith liJ2 are (i, 0) and (i, height [i] ). F(nE two pineQ thsH 5ogs6her AiRh the x - aaiW Vlrm a SPntsiner, sudM fhay the container VohtaLns the Hosr water. R$yurn the maxuJuH amount of water a c*ntw8ner can s6Pre. Notice that you may not slant the coJtajneg.",
+      "0.4": "You are gkveh an Omt2ger aerXy GeiRh^ of lwnHtn n. Th4Te are n v23f(cal lin2D dFawB sKDh ghwt the two enWp0(bts of the ith IiMe are (i, 0) and (i, hwKggt [i] ). FOHd two K9nes that RIgSHher ei6h the x - aCiz form a cln5Sjner, such thzG the con^aOMeg FonRaUnw the moAf water. D3tu%n the ,qximim amp^bt of watdf a c(ntaKnsd can stoF#. j0Hice thQr you may not sOaJt the fpntaihe#.",
+      "0.5": "You are hOveh an knReYe3 zr$Sy ueiyYt of l3ngfu n. 5hFFe are n geEf*cal lLn#d Crx@n sudM GhWt the two enr)oij5q of the ith piBe are (i, 0) and (i, Be*gjt [i] ). F7Gd two <in@d Rhxt 5(y$ther wi$j the x - xSis fprK a sonRwUneG, suVm tmwt the Dom^aind# F0ntAijs the koAt 2SteD. R#RIrn the maAi<iJ a,ouHy of wStd4 a Sogtz&nFr can s^lTe. Nlt(fe ttxt you may not ZlznY the c(jtaiM23.",
+      "0.6": "You are gJdeH an lMY$Ter zT3ay jS&gUt of ?eggFT n. TUwr3 are n CdrG(cSl /unRs dtXwM sJXY tBXh the two @Ms0oiGYs of the ith .iMW are (i, 0) and (i, beiyug [i] ). d9nf two >9neA tuzy t9ge5B#d si%U the x - ac7c Girh a D8ntAOged, X7Dh HGaG the cohrsjheF cpb6q8ns the m(zG Qa6Sr. Tet TDh the JzxjJuK XmohB% of wXt2d a cLMtqJJet can ctoE@. jotLsS ttSg you may not skqHt the VIntA&nSD.",
+      "0.7": "You are f*Bej an ij4rHeg W#$Qy h4uhMh of <whttJ n. RjeD@ are n v4rHkFX< i(GeX rDa@M s tdu hywt the two sMdll(Mtc of the ith oUnF are (i, 0) and (i, Jelngy [i] ). F7gS two OiGWZ tYw% gLgR%Ysr QiFm the x - qCiA tof, a cKMyWig4G, euVB tyAg the d9gta9bd# fon^qlHW the <Pct 1aRsf. RFY t%m the ,Xdim&j qJo8m4 of 3Qtrg a ckM4q8ndg can Wg8rS. N8fJDw hmaH you may not cOaJg the cPn%x(M4T.",
+      "0.8": "You are fiB#b an OH$ey$G x4TQy ydifb$ of l#MTYj n. TNF$$ are n cw$F8Va? >ijSq S%Xan Zjvu HjZh the two FhVpP*m4a of the ith ;lbD are (i, 0) and (i, JR(tMt [i] ). VuMS two .ihSa Ybq5 t)bS$N3f aURy the x - ZC9A b*GH a FKM6xigF3, Cixy RUzh the D0MYSUb#r SoJ4zJjC the hkzy aQ$e#. tDHHrh the jxx8kik ZJLujr of 3A6eG a SIjGSimRd can Wt9tF. mKgifR FmSg you may not Q:xn$ the s)btX*BsD.",
+      "0.9": "You are tUf4g an 7br@rdd W5tZU YWjhyR of I2jt4y n. fb4GW are n GdFg&ds; ojHFC WdX#j ZIfU $Gsr the two rGXlikb$z of the ith IOj@ are (i, 0) and (i, jsjyy% [i] ). RJJx two <lb3Z ytAf 5Kv2HjrD !(Ry the x - wzkE RlGK a xpM$s7J3T, a7Sj HNsy the XKHyA(H#F v9hhW(jz the HlzF 1Z%2t. 44rieM the HWZU< T, Xn0hgy of eq^wF a dIB4s9B#% can e6If3. gLy(V@ 4BZH you may not Q,Qm6 the XLmgq7gr3.",
+      "1.0": "You are tJd#M an jjf$H4D X53X6 b#9TJH of IsHY4J n. fUW%F are n F2g6osQO i8j#A v3ssH Q TSJ RbZh the two WJEL*jm^z of the ith <9gF are (i, 0) and (i, nWKYN^ [i] ). tJhf two KUG2q YBS6 y(T$$T3t !uFu the x - Ws8C Ri%< a f(mfz*g$D, Z^XU YgQg the S0BFw8JF4 fig%sKJA the ,9w5 SWH44. #dr&Dg the JSSon^< XNi TJf of #XGR% a S*BFX8b$4 can EhLt#. gKguv$ 6bQF you may not Z:ZMR the vlh^XuGw%."
+    },
+    "synonym": {
+      "0.0": "You be generate an integer array meridian of duration n. There are n vertical lines draw such that the two endpoints of the ith line comprise (ane, 0) and (i, height [i] ). Find 2 note that together with the ecstasy - axis form a container, such that the container curb the most urine. Return the maximal amount of water a container pot lay in. Notice that you whitethorn non slant the container.",
+      "0.1": "You are given an integer array meridian of length n. There be n vertical lines trace such that the two endpoints of the ith demarcation are (i, 0) and (i, height [i] ). Observe two lines that unitedly with the x - axis form a container, such that the container contains the most urine. Return the maximum amount of water a container can store. Notice that you may not slant the container.",
+      "0.2": "You are have an integer array top of length n. There are n vertical lines withdraw such that the two endpoints of the ith agate line are (i, zero) and (i, height [i] ). Uncovering two lines that together with the x - axis manikin a container, such that the container contain the most water supply. Return the maximum amount of water a container tin store. Poster that you may not slant the container.",
+      "0.3": "You are give an whole number regalia altitude of length atomic number 7. There are n vertical lines draw such that the two terminus of the ith line are (i, 0) and (atomic number 53, height [ace] ). Find out two seam that together with the x - axis form a container, such that the container contains the most piddle. Return the maximum sum of piss a container can salt away. Card that you may not tilt the container.",
+      "0.4": "You are give an whole number raiment elevation of length n. There are n perpendicular line of work drawn such that the ii end point of the ith line are (i, zero) and (1, height [i] ). Breakthrough 2 line that in concert with the tenner - axis form a container, such that the container contain the most water. Deliver the maximal quantity of h2o a container nates hive away. Bill that you may not slant the container.",
+      "0.5": "You are give an whole number raiment height of length due north. Thither exist n erect lines drawn such that the deuce endpoints of the ith pedigree represent (one, cipher) and (i, height [unity] ). Notice two lines that unitedly with the cristal - axis bod a container, such that the container contains the near water system. Bring back the maximal amount of body of water a container can hive away. Notice that you crataegus laevigata non slant the container.",
+      "0.6": "You be yield an whole number regalia altitude of distance northward. In that location be n upright course eviscerate such that the deuce endpoints of the ith wrinkle constitute (i, cypher) and (iodine, height [one] ). Determine ii line that together with the ecstasy - axis kind a container, such that the container hold back the nigh pee. Retrovert the maximal sum of body of water a container can store. Observance that you crataegus oxycantha non lean the container.",
+      "0.7": "You personify give an whole number regalia elevation of distance atomic number 7. At that place constitute n erect line take out such that the ii terminus of the ith crinkle be (1, cipher) and (single, height [ace] ). Line up deuce job that unitedly with the go - axis pattern a container, such that the container contain the well nigh water system. Reelect the maximal amount of money of urine a container buns stack away. Posting that you english hawthorn non weight the container.",
+      "0.8": "You comprise give an whole number raiment tiptop of duration due north. In that location be n perpendicular course draw off such that the deuce endpoint of the ith business be (ane, cypher) and (one, height [iodine] ). Feel ii line that unitedly with the disco biscuit - axis anatomy a container, such that the container contain the nigh urine. Render the maximal amount of money of weewee a container throne put in. Observance that you crataegus oxycantha non angle the container.",
+      "0.9": "You be give an whole number raiment peak of duration atomic number 7. Thither be n upright line of descent draw such that the 2 termination of the ith blood line live (ane, cypher) and (1, height [single] ). Detect 2 line that unitedly with the 10 - axis shape a container, such that the container hold the to the highest degree pee. Take back the maximal measure of water supply a container prat lay in. Placard that you crataegus laevigata non tip the container.",
+      "1.0": "You follow yield an whole number regalia tallness of duration due north. Thither comprise n perpendicular argumentation draw such that the ii endpoint of the ith subscriber line be (one, zero) and (iodin, height [iodine] ). Regain ii line of work that unitedly with the 10 - axis kind a container, such that the container hold the nearly pee. Give back the maximal amount of money of urine a container privy stack away. Poster that you english hawthorn non weight the container."
+    },
+    "random": {
+      "0.0": "You are given an integer array height of length n. are n vertical such the the ith line (i,) and (, height [] ). lines together with x - a container, such that the container contains. maximum of a container can store. Notice you may not slant the.",
+      "0.1": "You are given an integer height of length n. are n vertical lines such that the two endpoints of the ith line are (i, 0) and (i, height [i] ). Find two that with the x - axis container, such that the container contains the most water. Return the maximum amount of water a container can store. that you may not the container.",
+      "0.2": "You are an integer array height of length n. n vertical lines such the two endpoints of the line are (i,) (, height [] ). Find two lines with the x - axis form a container, such that container contains the water. Return the maximum amount of water container can store. that you may slant the container.",
+      "0.3": "Are array of length. There are n vertical lines drawn such that endpoints of the ith line (,) and (i, height [] ). that together with - axis form a, such that the most. the amount of water a can store. Notice that you not slant the container.",
+      "0.4": "You given an array height of length. There n such that the endpoints of (i,) and (i, height [] ). Find lines that with the - axis, such that the water. the maximum water container. you not the container.",
+      "0.5": "You height length. vertical that the of the are (,) and (i, height [] ). Find the - a, that the the most. the amount of. Notice may slant the container.",
+      "0.6": "Are height of. such the two endpoints are (,) and (i, [] ). two lines together the x -, such the water. a store..",
+      "0.7": "Are given height. vertical lines (,) (, [] ). Find -, contains. can. that not container.",
+      "0.8": "Are. (,) (, [] ). -, . a. container.",
+      "0.9": "Are. (,) (, [] ). -, ...",
+      "1.0": "Are. (,) (, [] ). -, ..."
+    },
+    "cut": {
+      "0.0": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\nReturn the maximum amount of water a container can store.\nNotice that you may not slant the container.",
+      "0.1": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\nReturn the maximum amount of water a container can store.\nNotice ",
+      "0.2": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\nReturn the maximum amount o",
+      "0.3": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\nFind two lines that together with the x-axis form a container, such that the container contains the mo",
+      "0.4": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\nFind two lines that together with the x-axis form a container, su",
+      "0.5": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\nFind two lines that togethe",
+      "0.6": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, he",
+      "0.7": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints ",
+      "0.8": "You are given an integer array height of length n. There are n vertical lin",
+      "0.9": "You are given an integer array height",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "meta": {
+      "cut": {
+        "0.0": [
+          "def maxArea(height):\n    max_area = 0\n    left = 0\n    right = len(height) - 1\n    while left < right:\n        area = min(height[left], height[right]) * (right - left)\n        max_area = max(max_area, area)\n        if height[left] < height[right]:\n            left += 1\n        else:\n            right -= 1\n    return max_area\n\nprint(maxArea([1,8,6,2,5,4,8,3,7]))\nprint(maxArea([1,1]))"
+        ],
+        "0.1": [
+          "def maxArea(height):\n    max_area = 0\n    left = 0\n    right = len(height) - 1\n    while left < right:\n        area = min(height[left], height[right]) * (right - left)\n        max_area = max(max_area, area)\n        if height[left] < height[right]:\n            left += 1\n        else:\n            right -= 1\n    return max_area"
+        ],
+        "0.2": [
+          "def maxArea(height):\n    max_area = 0\n    left = 0\n    right = len(height) - 1\n    while left < right:\n        area = min(height[left], height[right]) * (right - left)\n        max_area = max(max_area, area)\n        if height[left] < height[right]:\n            left += 1\n        else:\n            right -= 1\n    return max_area\n\ndef main():\n    height = [1,8,6,2,5,4,8,3,7]\n    print(maxArea(height))\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.3": [
+          "def maxArea(height):\n    max_area = 0\n    left = 0\n    right = len(height) - 1\n    while left < right:\n        area = min(height[left], height[right]) * (right - left)\n        max_area = max(max_area, area)\n        if height[left] < height[right]:\n            left += 1\n        else:\n            right -= 1\n    return max_area\n\ndef main():\n    height = [1,8,6,2,5,4,8,3,7]\n    print(maxArea(height))\n\nmain()"
+        ],
+        "0.4": [
+          "def maxArea(height):\n    max_area = 0\n    left = 0\n    right = len(height) - 1\n    while left < right:\n        area = min(height[left], height[right]) * (right - left)\n        max_area = max(max_area, area)\n        if height[left] < height[right]:\n            left += 1\n        else:\n            right -= 1\n    return max_area"
+        ],
+        "0.5": [
+          "def maxArea(height):\n    max_area = 0\n    left = 0\n    right = len(height) - 1\n    while left < right:\n        area = min(height[left], height[right]) * (right - left)\n        max_area = max(max_area, area)\n        if height[left] < height[right]:\n            left += 1\n        else:\n            right -= 1\n    return max_area\n\ndef main():\n    height = [1,8,6,2,5,4,8,3,7]\n    print(maxArea(height))\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.6": [
+          "def maxArea(height):\n    max_area = 0\n    left = 0\n    right = len(height) - 1\n    while left < right:\n        area = min(height[left], height[right]) * (right - left)\n        max_area = max(max_area, area)\n        if height[left] < height[right]:\n            left += 1\n        else:\n            right -= 1\n    return max_area\n\ndef main():\n    height = [1,8,6,2,5,4,8,3,7]\n    print(maxArea(height))\n\nmain()"
+        ],
+        "0.7": [
+          "def maxArea(height):\n    max_area = 0\n    left = 0\n    right = len(height) - 1\n    while left < right:\n        area = min(height[left], height[right]) * (right - left)\n        max_area = max(max_area, area)\n        if height[left] < height[right]:\n            left += 1\n        else:\n            right -= 1\n    return max_area\n\ndef main():\n    height = [1,8,6,2,5,4,8,3,7]\n    print(maxArea(height))\n\nmain()"
+        ],
+        "0.8": [
+          "def maxArea(height):\n    max_area = 0\n    left = 0\n    right = len(height) - 1\n    while left < right:\n        area = min(height[left], height[right]) * (right - left)\n        max_area = max(max_area, area)\n        if height[left] < height[right]:\n            left += 1\n        else:\n            right -= 1\n    return max_area"
+        ],
+        "0.9": [
+          "def trap(height):\n    if not height:\n        return 0\n\n    water = 0\n    left, right = 0, len(height) - 1\n    max_left, max_right = height[left], height[right]\n\n    while left <= right:\n        max_left = max(max_left, height[left])\n        max_right = max(max_right, height[right])\n\n        if max_left < max_right:\n            water += max_left - height[left]\n            left += 1\n        else:\n            water += max_right - height[right]\n            right -= 1\n\n    return water\n\ndef main():\n    height = [0,1,0,2,1,0,1,3,2,1,2,1]\n    print(trap(height))\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "1.0": [
+          "import os\nimport sys\n\ndef main():\n    print(\"Hello, World!\")\n    name = input(\"What is your name? \")\n    print(f\"Hello, {name}!\")\n\nif __name__ == \"__main__\":\n    main()"
+        ]
+      }
+    }
+  }
+}

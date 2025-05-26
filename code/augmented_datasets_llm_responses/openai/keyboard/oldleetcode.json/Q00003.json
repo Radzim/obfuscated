@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/949705/Python3-two-pointer-greater9621-runtime-commented",
+  "python_solutions": "class Solution:\n    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:\n\t    # Get the lengths of both lists\n        l1,l2 = len(nums1), len(nums2)\n\t\t# Determine the middle\n        middle = (l1 + l2) / 2\n\t\t\n\t\t# EDGE CASE:\n\t\t# If we only have 1 value (e.g. [1], []), return nums1[0] if the length of\n\t\t# that list is greater than the length of l2, otherwise return nums2[1]\n\t\tif middle == 0.5: return float(nums1[0]) if l1 > l2 else float(nums2[0])\n\n\t\t# Initialize 2 pointers\n        x =  y = 0\n\t\t# Initialize 2 values to store the previous and current value (in case of an even\n\t\t# amount of values, we need to average 2 values)\n        cur = prev = 0\n\t\t# Determine the amount of loops we need. If the middle is even, loop that amount + 1:\n\t\t# eg: [1, 2, 3, 4, 5, 6]        6 values, middle = 3, loops = 3+1\n\t\t#            ^  ^ \n\t\t#            |  +-- cur\n\t\t#            +----- prev\n \t\t# If the middle is odd, loop that amount + 0.5\n\t\t# eg: [1, 2, 3, 4, 5]           5 values, middle = 2.5, loops = 2.5+0.5\n\t\t#            ^\n        #            +--- cur\n        loops = middle+1 if middle % 1 == 0 else middle+0.5\n\n\t\t# Walk forward the amount of loops\n        for _ in range(int(loops)):\n            # Store the value of cur in prev\n\t\t\tprev = cur\n\t\t\t# If the x pointer is equal to the amount of elements of nums1 (l1 == len(nums1))\n            if x == l1:\n\t\t\t    # Store nums2[y] in cur, 'cause we hit the end of nums1\n                cur =  nums2[y]\n\t\t\t\t# Move the y pointer one ahead\n                y += 1\n\t\t    # If the y pointer is equal to the amount of elements of nums2 (l2 == len(nums2))\n            elif y == l2:\n\t\t\t    # Store nums1[x] in cur, 'cause we hit the end of nums2\n                cur =  nums1[x]\n\t\t\t\t# Move the x pointer one ahead\n                x += 1\n\t\t    # If the value in nums1 is bigger than the value in nums2\n            elif nums1[x] > nums2[y]:\n\t\t\t    # Store nums2[y] in cur, because it's the lowest value\n                cur =  nums2[y]\n\t\t\t\t# Move the y pointer one ahead\n                y += 1\n\t\t\t# If the value in nums2 is bigger than the value in nums1\n            else:\n\t\t\t\t# Store nums1[x] in, because it's the lowest value\n                cur =  nums1[x]\n\t\t\t\t# Move the x pointer one ahead\n                x += 1\n        \n\t\t# If middle is even\n        if middle % 1 == 0.0:\n\t\t\t# Return the average of the cur + prev values (which will return a float)\n            return (cur+prev)/2\n\t\t# If middle is odd\n        else:\n\t\t\t# Return the cur value, as a float\n            return float(cur)",
+  "slug": "median-of-two-sorted-arrays",
+  "post_title": "Python3 two pointer >96,21% runtime [commented]",
+  "user": "tomhagen",
+  "upvotes": 32,
+  "views": 5100,
+  "problem_title": "median of two sorted arrays",
+  "number": 4,
+  "acceptance": 0.353,
+  "difficulty": "Hard",
+  "__index_level_0__": 133,
+  "question": "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.\nThe overall run time complexity should be O(log (m+n)).\n  Example 1:\nInput: nums1 = [1,3], nums2 = [2]\nOutput: 2.00000\nExplanation: merged array = [1,2,3] and median is 2.\nExample 2:\nInput: nums1 = [1,2], nums2 = [3,4]\nOutput: 2.50000\nExplanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.\n  Constraints:\nnums1.length == m\nnums2.length == n\n0 <= m <= 1000\n0 <= n <= 1000\n1 <= m + n <= 2000\n-106 <= nums1[i], nums2[i] <= 106",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays. The overall run time complexity should be O (log (m + n) ).",
+      "0.1": "GiveM two soDted arrays nums1 and nums2 of sOze m and n respectively, return the Jedian of the two sorted arrays. The overall run time complexity should be O (log (m + n) ).",
+      "0.2": "Giv2n two sItted arrays nums1 and nHms2 of size m and n respectively, re6urM the medkag of the two sorted arrZ7s. The ocera<l run time Somp/exity should be O (log (m + n) ).",
+      "0.3": "Given two so$ged xrrayd n T<s1 and nums2 of siXW m and n DeEp2ctivel&, retu$G the h@dian of the two cirted aFrqys. The Pvdfall run tik4 complexity syoulw be O (log (m + n) ).",
+      "0.4": "ViveG two so3yeR qdrayz n6ns1 and nINs2 of Zlze m and n 3es0eFt8gely, rStkrh the mddLsn of the two Zot6ed arDXyq. The 9vera:? run 5imw com0?ediry shohKe be O (log (m + n) ).",
+      "0.5": "BivWb two s)etew zrrQyx n7mX! and GJmx2 of WizD m and n Dec9fctic#ly, #etH5n the <eXiaJ of the two sLr%eS a3rs7s. The 8derAl? run $ume comp;eZ7Ht shkjlV be O (log (m + n) ).",
+      "0.6": "yiv4B two spTR#d wGTahs n*Hs@ and J8ms3 of suAw m and n r#A0eF5kvF>y, degHrJ the N$d*ag of the two xL5tev at$atA. The oGR5a;/ run y7mD S0N9:eDity WBou:F be O (log (m + n) ).",
+      "0.7": "t9c2n two XI#$eC srgxuq n7<A! and MuhxW of sOsw m and n T$cleVFiD@lh, erHu#G the nWd*xG of the two W9rfwC wrfsUa. The iG4$al? run Gum$ Foml?fZjtJ qUiu<r be O (log (m + n) ).",
+      "0.8": "viD#h two CprF@f a5EA&Q nHhz! and guKx1 of wKxf m and n rsD)Sf^*ce?H, g3th$m the <ddJWb of the two DpfGew ad%q6w. The )DW3aI: run gjJd vo<9/dAJth Dh) TOS be O (log (m + n) ).",
+      "0.9": "HoG#h two Q0%^ds z43WGq Bhncq and MKnWE of WJXF m and n FDso3dR8B$o7, 4wFiGm the hdEoQm of the two Z(ggwf Sdts5c. The 9dsTQKO run 48HR Fpj)<ezu^j EupHoX be O (log (m + n) ).",
+      "1.0": "tjFrm two CieHwx Q3TzTx MINE2 and mikqE of d7sW m and n edC02sYjGf<5, D#h*Dj the n4f8QH of the two d)$FRw Sfezgx. The 0BwTw,, run y*J@ dlk)i2d9H5 wT(jPR be O (log (m + n) )."
+    },
+    "synonym": {
+      "0.0": "Return deuce sorted array nums1 and nums2 of sizing m and northward respectively, return the median of the ii sort out arrays. The overall run time complexness should be Group o (log (m + due north) ).",
+      "0.1": "Given two sorted array nums1 and nums2 of size m and n respectively, return the median value of the two sorted arrays. The overall run time complexity should be O (log (m + n) ).",
+      "0.2": "Fall in two grouped arrays nums1 and nums2 of size megabyte and north respectively, return the median value of the two sorted arrays. The overall run time complexity should be O (log (one thousand + newton) ).",
+      "0.3": "Given two grouped arrays nums1 and nums2 of size k and n respectively, render the median of the two sort out arrays. The overall foot race time complexity should be O (logarithm (thousand + nitrogen) ).",
+      "0.4": "Given two sorted arrays nums1 and nums2 of size molarity and north severally, refund the median value of the two screen regalia. The overall run meter complexness should be Group o (log (m + n) ).",
+      "0.5": "Reach two grouped array nums1 and nums2 of sizing metre and northward severally, come back the median value of the 2 sorted regalia. The overall running time complexness should comprise O (log (thousand + due north) ).",
+      "0.6": "Given ii grouped array nums1 and nums2 of sizing mib and n severally, repay the median value of the two sort array. The overall ladder prison term complexity should live Type o (logarithm (1000 + nitrogen) ).",
+      "0.7": "Give ii grouped array nums1 and nums2 of size of it m and northward severally, come back the median value of the deuce screen raiment. The overall outpouring clock time complexness should personify Type o (logarithm (thousand + north) ).",
+      "0.8": "Give deuce grouped raiment nums1 and nums2 of sizing megabyte and newton severally, generate the median value of the 2 class regalia. The overall foot race prison term complexness should cost Atomic number 8 (logarithm (one thousand + north) ).",
+      "0.9": "Give deuce grouped regalia nums1 and nums2 of sizing one thousand and newton severally, render the median value of the ii sieve array. The overall running sentence complexness should exist Atomic number 8 (logarithm (one thousand + normality) ).",
+      "1.0": "Give 2 grouped array nums1 and nums2 of size of it metre and due north severally, turn back the median value of the 2 assort array. The overall runnel meter complexness should make up Oxygen (logarithm (1000 + northward) )."
+    },
+    "random": {
+      "0.0": "Two sorted arrays of size m n, the of the sorted arrays. overall run time complexity should O (log (m +) ).",
+      "0.1": "Given two sorted arrays nums1 nums2 of size m and respectively, return the median of the two sorted arrays. The overall run complexity should be (log (m + n) ).",
+      "0.2": "Two sorted arrays nums1 and nums2 of m and n respectively, return the of the two sorted arrays. The time should O (log (m +) ).",
+      "0.3": "Given arrays nums1 m and n respectively, the of the two sorted. overall time complexity should O (log (m + n) ).",
+      "0.4": "Two arrays nums2 of size m respectively, return of the sorted arrays. run time complexity be (( +) ).",
+      "0.5": "Two sorted nums1 of m n respectively, the two sorted arrays. run complexity (( +) ).",
+      "0.6": "Given sorted nums1 nums2 and, of. overall (( m +) ).",
+      "0.7": "Two sorted, of. time (( + n) ).",
+      "0.8": "Two, . (( +) ).",
+      "0.9": "Two, . (( +) ).",
+      "1.0": "Two, . (( +) )."
+    },
+    "cut": {
+      "0.0": "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.\nThe overall run time complexity should be O(log (m+n)).",
+      "0.1": "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.\nThe overall run time complexity should",
+      "0.2": "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.\nThe overall run time ",
+      "0.3": "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.\nThe ",
+      "0.4": "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two so",
+      "0.5": "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the med",
+      "0.6": "Given two sorted arrays nums1 and nums2 of size m and n respectively",
+      "0.7": "Given two sorted arrays nums1 and nums2 of size m a",
+      "0.8": "Given two sorted arrays nums1 and ",
+      "0.9": "Given two sorted ",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "openai": {
+      "keyboard": {
+        "0.0": [
+          "def findMedianSortedArrays(nums1, nums2):\n    if len(nums1) > len(nums2):\n        nums1, nums2 = nums2, nums1\n        \n    x, y = len(nums1), len(nums2)\n    low, high = 0, x\n    \n    while low <= high:\n        partitionX = (low + high) // 2\n        partitionY = (x + y + 1) // 2 - partitionX\n        \n        maxX = float('-inf') if partitionX == 0 else nums1[partitionX - 1]\n        minX = float('inf') if partitionX == x else nums1[partitionX]\n        \n        maxY = float('-inf') if partitionY == 0 else nums2[partitionY - 1]\n        minY = float('inf') if partitionY == y else nums2[partitionY]\n        \n        if maxX <= minY and maxY <= minX:\n            if (x + y) % 2 == 0:\n                return (max(maxX, maxY) + min(minX, minY)) / 2\n            else:\n                return max(maxX, maxY)\n        elif maxX > minY:\n            high = partitionX - 1\n        else:\n            low = partitionX + 1\n            \n    raise ValueError(\"Input arrays are not sorted\")"
+        ],
+        "0.1": [
+          "def findMedianSortedArrays(nums1, nums2):\n    if len(nums1) > len(nums2):\n        nums1, nums2 = nums2, nums1\n        \n    x, y = len(nums1), len(nums2)\n    low, high = 0, x\n    \n    while low <= high:\n        partitionX = (low + high) // 2\n        partitionY = (x + y + 1) // 2 - partitionX\n        \n        maxX = float('-inf') if partitionX == 0 else nums1[partitionX - 1]\n        minX = float('inf') if partitionX == x else nums1[partitionX]\n        \n        maxY = float('-inf') if partitionY == 0 else nums2[partitionY - 1]\n        minY = float('inf') if partitionY == y else nums2[partitionY]\n        \n        if maxX <= minY and maxY <= minX:\n            if (x + y) % 2 == 0:\n                return (max(maxX, maxY) + min(minX, minY)) / 2\n            else:\n                return max(maxX, maxY)\n        elif maxX > minY:\n            high = partitionX - 1\n        else:\n            low = partitionX + 1\n            \n    raise ValueError(\"Input arrays are not sorted\")"
+        ],
+        "0.2": [
+          "def findMedianSortedArrays(nums1, nums2):\n    m, n = len(nums1), len(nums2)\n    if m > n:\n        nums1, nums2, m, n = nums2, nums1, n, m\n\n    imin, imax, half_len = 0, m, (m + n + 1) // 2\n    while imin <= imax:\n        i = (imin + imax) // 2\n        j = half_len - i\n        if i < m and nums2[j-1] > nums1[i]:\n            imin = i + 1\n        elif i > 0 and nums1[i-1] > nums2[j]:\n            imax = i - 1\n        else:\n            if i == 0: max_of_left = nums2[j-1]\n            elif j == 0: max_of_left = nums1[i-1]\n            else: max_of_left = max(nums1[i-1], nums2[j-1])\n\n            if (m + n) % 2 == 1:\n                return max_of_left\n\n            if i == m: min_of_right = nums2[j]\n            elif j == n: min_of_right = nums1[i]\n            else: min_of_right = min(nums1[i], nums2[j])\n\n            return (max_of_left + min_of_right) / 2.0"
+        ],
+        "0.3": [
+          "def findMedianSortedArrays(nums1, nums2):\n    m, n = len(nums1), len(nums2)\n    if m > n:\n        nums1, nums2, m, n = nums2, nums1, n, m\n\n    imin, imax, half_len = 0, m, (m + n + 1) // 2\n    while imin <= imax:\n        i = (imin + imax) // 2\n        j = half_len - i\n        if i < m and nums2[j-1] > nums1[i]:\n            imin = i + 1\n        elif i > 0 and nums1[i-1] > nums2[j]:\n            imax = i - 1\n        else:\n            if i == 0: max_of_left = nums2[j-1]\n            elif j == 0: max_of_left = nums1[i-1]\n            else: max_of_left = max(nums1[i-1], nums2[j-1])\n\n            if (m + n) % 2 == 1:\n                return max_of_left\n\n            if i == m: min_of_right = nums2[j]\n            elif j == n: min_of_right = nums1[i]\n            else: min_of_right = min(nums1[i], nums2[j])\n\n            return (max_of_left + min_of_right) / 2.0"
+        ],
+        "0.4": [
+          "def findMedianSortedArrays(nums1, nums2):\n    m, n = len(nums1), len(nums2)\n    if m > n:\n        nums1, nums2, m, n = nums2, nums1, n, m\n\n    low, high = 0, m\n    while low <= high:\n        partition1 = (low + high) // 2\n        partition2 = (m + n + 1) // 2 - partition1\n\n        maxLeft1 = float('-inf') if partition1 == 0 else nums1[partition1 - 1]\n        minRight1 = float('inf') if partition1 == m else nums1[partition1]\n\n        maxLeft2 = float('-inf') if partition2 == 0 else nums2[partition2 - 1]\n        minRight2 = float('inf') if partition2 == n else nums2[partition2]\n\n        if maxLeft1 <= minRight2 and maxLeft2 <= minRight1:\n            if (m + n) % 2 == 0:\n                return (max(maxLeft1, maxLeft2) + min(minRight1, minRight2)) / 2\n            else:\n                return max(maxLeft1, maxLeft2)\n        elif maxLeft1 > minRight2:\n            high = partition1 - 1\n        else:\n            low = partition1 + 1\n\n    raise ValueError(\"Input arrays are not sorted\")"
+        ],
+        "0.5": [
+          "def find_median_sorted_arrays(nums1, nums2):\n    if len(nums1) > len(nums2):\n        nums1, nums2 = nums2, nums1\n\n    x, y = len(nums1), len(nums2)\n    low, high = 0, x\n\n    while low <= high:\n        partitionX = (low + high) // 2\n        partitionY = (x + y + 1) // 2 - partitionX\n\n        maxX = float('-inf') if partitionX == 0 else nums1[partitionX - 1]\n        minX = float('inf') if partitionX == x else nums1[partitionX]\n\n        maxY = float('-inf') if partitionY == 0 else nums2[partitionY - 1]\n        minY = float('inf') if partitionY == y else nums2[partitionY]\n\n        if maxX <= minY and maxY <= minX:\n            if (x + y) % 2 == 0:\n                return (max(maxX, maxY) + min(minX, minY)) / 2\n            else:\n                return max(maxX, maxY)\n        elif maxX > minY:\n            high = partitionX - 1\n        else:\n            low = partitionX + 1\n\n    raise ValueError(\"Input arrays are not sorted\")"
+        ],
+        "0.6": [
+          "def findMedianSortedArrays(nums1, nums2):\n    if len(nums1) > len(nums2):\n        nums1, nums2 = nums2, nums1\n\n    x, y = len(nums1), len(nums2)\n    low, high = 0, x\n\n    while low <= high:\n        partitionX = (low + high) // 2\n        partitionY = (x + y + 1) // 2 - partitionX\n\n        maxX = float('-inf') if partitionX == 0 else nums1[partitionX - 1]\n        minX = float('inf') if partitionX == x else nums1[partitionX]\n\n        maxY = float('-inf') if partitionY == 0 else nums2[partitionY - 1]\n        minY = float('inf') if partitionY == y else nums2[partitionY]\n\n        if maxX <= minY and maxY <= minX:\n            if (x + y) % 2 == 0:\n                return (max(maxX, maxY) + min(minX, minY)) / 2\n            else:\n                return max(maxX, maxY)\n        elif maxX > minY:\n            high = partitionX - 1\n        else:\n            low = partitionX + 1\n\n    raise ValueError(\"Input arrays are not sorted\")"
+        ],
+        "0.7": [
+          "def merge_sorted_arrays(arr1, arr2):\n    m, n = len(arr1), len(arr2)\n    if m > n:\n        arr1, arr2, m, n = arr2, arr1, n, m\n\n    low, high = 0, m\n    while low <= high:\n        partition1 = (low + high) // 2\n        partition2 = (m + n + 1) // 2 - partition1\n\n        max1 = float('-inf') if partition1 == 0 else arr1[partition1 - 1]\n        min1 = float('inf') if partition1 == m else arr1[partition1]\n\n        max2 = float('-inf') if partition2 == 0 else arr2[partition2 - 1]\n        min2 = float('inf') if partition2 == n else arr2[partition2]\n\n        if max1 <= min2 and max2 <= min1:\n            if (m + n) % 2 == 0:\n                return (max(max1, max2) + min(min1, min2)) / 2\n            else:\n                return max(max1, max2)\n        elif max1 > min2:\n            high = partition1 - 1\n        else:\n            low = partition1 + 1\n\n    raise ValueError(\"Input arrays are not sorted\")"
+        ],
+        "0.8": [
+          "def findMedianSortedArrays(nums1, nums2):\n    if len(nums1) > len(nums2):\n        nums1, nums2 = nums2, nums1\n\n    x, y = len(nums1), len(nums2)\n    low, high = 0, x\n\n    while low <= high:\n        partitionX = (low + high) // 2\n        partitionY = (x + y + 1) // 2 - partitionX\n\n        maxX = float('-inf') if partitionX == 0 else nums1[partitionX - 1]\n        minX = float('inf') if partitionX == x else nums1[partitionX]\n\n        maxY = float('-inf') if partitionY == 0 else nums2[partitionY - 1]\n        minY = float('inf') if partitionY == y else nums2[partitionY]\n\n        if maxX <= minY and maxY <= minX:\n            if (x + y) % 2 == 0:\n                return (max(maxX, maxY) + min(minX, minY)) / 2\n            else:\n                return max(maxX, maxY)\n        elif maxX > minY:\n            high = partitionX - 1\n        else:\n            low = partitionX + 1\n\n    raise ValueError(\"Input arrays are not sorted.\")"
+        ],
+        "0.9": [
+          "def findMedianSortedArrays(nums1, nums2):\n    m, n = len(nums1), len(nums2)\n    if m > n:\n        nums1, nums2, m, n = nums2, nums1, n, m\n\n    low, high = 0, m\n    while low <= high:\n        partitionX = (low + high) // 2\n        partitionY = (m + n + 1) // 2 - partitionX\n\n        maxX = float('-inf') if partitionX == 0 else nums1[partitionX - 1]\n        minX = float('inf') if partitionX == m else nums1[partitionX]\n\n        maxY = float('-inf') if partitionY == 0 else nums2[partitionY - 1]\n        minY = float('inf') if partitionY == n else nums2[partitionY]\n\n        if maxX <= minY and maxY <= minX:\n            if (m + n) % 2 == 0:\n                return (max(maxX, maxY) + min(minX, minY)) / 2\n            else:\n                return max(maxX, maxY)\n        elif maxX > minY:\n            high = partitionX - 1\n        else:\n            low = partitionX + 1\n\n    raise ValueError(\"Input arrays are not sorted\")"
+        ],
+        "1.0": [
+          "def merge_sorted_arrays(arr1, arr2):\n    m, n = len(arr1), len(arr2)\n    if m > n:\n        arr1, arr2, m, n = arr2, arr1, n, m\n\n    low, high = 0, m\n    while low <= high:\n        partition1 = (low + high) // 2\n        partition2 = (m + n + 1) // 2 - partition1\n\n        max1 = float('-inf') if partition1 == 0 else arr1[partition1 - 1]\n        min1 = float('inf') if partition1 == m else arr1[partition1]\n\n        max2 = float('-inf') if partition2 == 0 else arr2[partition2 - 1]\n        min2 = float('inf') if partition2 == n else arr2[partition2]\n\n        if max1 <= min2 and max2 <= min1:\n            if (m + n) % 2 == 0:\n                return (max(max1, max2) + min(min1, min2)) / 2\n            else:\n                return max(max1, max2)\n        elif max1 > min2:\n            high = partition1 - 1\n        else:\n            low = partition1 + 1\n\n    raise ValueError(\"Input arrays are not sorted\")"
+        ]
+      }
+    }
+  }
+}

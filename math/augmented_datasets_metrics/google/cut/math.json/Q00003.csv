@@ -1,0 +1,12 @@
+model,method,dataset,task,augmentation_rate,eval_score
+google,cut,math.json,Q00003,0.0,0.0
+google,cut,math.json,Q00003,0.1,0.0
+google,cut,math.json,Q00003,0.2,0.0
+google,cut,math.json,Q00003,0.3,0.0
+google,cut,math.json,Q00003,0.4,
+google,cut,math.json,Q00003,0.5,0.0
+google,cut,math.json,Q00003,0.6,0.0
+google,cut,math.json,Q00003,0.7,0.0
+google,cut,math.json,Q00003,0.8,
+google,cut,math.json,Q00003,0.9,
+google,cut,math.json,Q00003,1.0,0.0

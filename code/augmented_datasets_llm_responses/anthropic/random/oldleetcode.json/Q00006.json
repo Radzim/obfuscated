@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/reverse-integer/discuss/1061403/Clean-pythonic-solution",
+  "python_solutions": "class Solution:\n    def reverse(self, x: int) -> int:\n        retval = int(str(abs(x))[::-1])\n        \n        if(retval.bit_length()>31):\n            return 0\n    \n        if x<0:\n            return -1*retval\n        else:\n            return retval",
+  "slug": "reverse-integer",
+  "post_title": "Clean pythonic solution",
+  "user": "njain07",
+  "upvotes": 20,
+  "views": 3300,
+  "problem_title": "reverse integer",
+  "number": 7,
+  "acceptance": 0.273,
+  "difficulty": "Medium",
+  "__index_level_0__": 277,
+  "question": "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.\nAssume the environment does not allow you to store 64-bit integers (signed or unsigned).\n  Example 1:\nInput: x = 123\nOutput: 321\nExample 2:\nInput: x = -123\nOutput: -321\nExample 3:\nInput: x = 120\nOutput: 21\n  Constraints:\n-231 <= x <= 231 - 1",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given a signed 32 - bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32 - bit integer range [- 231, 231 - 1 ], then return 0. Assume the environment does not allow you to store 64 - bit integers (signed or unsigned ).",
+      "0.1": "G9ven a signed 32 - bit integer x, re$urn x with its digits reversed. If reversing x causrs the value to go outside the signed 32 - bit integer range [- 231, 231 - 1 ], th4n return 0. Assume the environmFnR does not allow you to store 64 - bit integers (sigJed or uHsigned ).",
+      "0.2": "GivDn a signed 32 - bit integer x, re^ufn x woth its digits geversDd. If reversing x ca&s3s the valKe to go outsie# the s(gneE 32 - bit igteHer range [- 231, 231 - 1 ], then return 0. Assukf the environment coes not aloow you to store 64 - bit integers (siVjed or unsigned ).",
+      "0.3": "Given a sign#x 32 - bit intRtSr x, retutG x !i4h its digihc revefceC. If rwvefsinY x DausFs the va<6e to go oHYsude the sigJer 32 - bit ujtegRr EanBe [- 231, 231 - 1 ], th2M return 0. aEsume the $nvieoHmenY dosq not allow you to store 64 - bit inFeBwrs (airned or uGcign$d ).",
+      "0.4": "viGen a sufndd 32 - bit knteg24 x, reHKrM x woYh its Fig95s $FverQef. If Gev25sibg x ca TEfs the vAiue to go outs(vS the zigMfd 32 - bit ontSgee rxng$ [- 231, 231 - 1 ], tMdn $3tu$n 0. AsCJmS the eBvjEoHkent d(2s not a>lpw you to wtoEe 64 - bit intRBwGs (A7gneR or InQLgjed ).",
+      "0.5": "GiG4h a cifnec 32 - bit in%db$r x, %etkrj x w7tn its XjVits reCeedwd. If refwrslJf x cWkseX the vzl8D to go luRs*Ee the eiRnsd 32 - bit *bt4gef #ZngD [- 231, 231 - 1 ], th2g 5@%urn 0. SzEume the dnvuDohm@nH do4a not Zl?oQ you to XtoD4 64 - bit iHt@gd$s (s(ghSd or HnqiNneV ).",
+      "0.6": "G(feB a Dkvn4d 32 - bit ubtDHe# x, r3rIen x #ltJ its x(giFZ 3eG3rdeV. If dwverauhr x Vx Txes the fa>He to go i8fxids the s*TMec 32 - bit JBt$Fe% rajBD [- 231, 231 - 1 ], 6yeh #3tuTm 0. sQs7je the enGir8Bk@MG d0Fd not a?.(w you to zto4F 64 - bit Jnr2g3rz (WURneX or ujqlTnec ).",
+      "0.7": "nid4b a C(BnRE 32 - bit uGtdg#5 x, r$h7eg x w(hm its x7Yi4w D4vRrd4c. If d#CerdOhv x xa TCFw the Ga?J4 to go pu6Q*fe the Z(Ynsf 32 - bit UhfevDr fqnR@ [- 231, 231 - 1 ], gG2n eStHdB 0. Wxe8mD the #JFurPnhFjt V0Ws not z?;oD you to E$oTS 64 - bit *n$fr4Ds (s(rgSc or uBQurn3x ).",
+      "0.8": "T*Grn a slRGWF 32 - bit ljrWg3d x, Ee485h x EJhG its dOvJHX f2fDTZsd. If d4ffds*HH x Va Tzwq the Cw.us to go 9*Gs7WW the c&HGeE 32 - bit khhRTWr rWgnD [- 231, 231 - 1 ], RBsM 3dt*GJ 0. Zzqkmf the eBC9rKGH3MR r9DZ not W;O0w you to ER0r@ 64 - bit 8GrFY@rZ (cOBgsd or IbdJnger ).",
+      "0.9": "B7GfG a W9Yj4f 32 - bit JJh#NWE x, $#^h3g x @(FN its Fot*^Q 5@ddeWDr. If F@Gstw*Jh x SAkZSa the Fx.JS to go P^6CuEW the dUFJRw 32 - bit UhrFyD3 DXhN$ [- 231, 231 - 1 ], Rm#J $WRkdj 0. aeDh<S the $Bf(r)J,fj$ fL3z not Z:,(1 you to dF(e@ 64 - bit &H62hr4w (e&TG$e or &HZOTGrw ).",
+      "1.0": "NKGSM a xkRh$E 32 - bit ohrDh3d x, 4D6ITj x 2u4y its EuHUhW FSg@Gwwc. If %wCWGcjgv x sAjz@X the ds:jw to go kIfwJxr the QJvM3s 32 - bit jg$wBdG EQGr4 [- 231, 231 - 1 ], 4Nfb e2%kgb 0. ZWaJ,D the 2bCO5kHJ2B$ r*fa not S.pPd you to eY8gW 64 - bit ughDNDFW (Aobmrc or JGe(ybsr )."
+    },
+    "synonym": {
+      "0.0": "Pay a signed xxxii - second integer x, return disco biscuit with its digit reversed. If turn back 10 causes the value to go outside the signed xxxii - scrap integer range [- 231, 231 - ace ], then return 0. Don the environment make not allow you to stash away 64 - scrap integers (signed beaver state unsigned ).",
+      "0.1": "Given a signed 32 - bit integer x, return x with its digits reversed. If reversing x cause the economic value to go outside the signed 32 - piece integer range [- 231, 231 - 1 ], then return 0. Assume the surroundings does non allow you to store 64 - bit integers (signed or unsigned ).",
+      "0.2": "Given a signed 32 - bit integer x, return x with its digits reversed. If reversing x causes the economic value to go remote the sign 32 - bit integer range [- 231, 231 - 1 ], then revert 0. Assume the environment execute not allow you to salt away 64 - bit integer (signed or unsigned ).",
+      "0.3": "Given a signed 32 - snatch integer x, take decade with its fingerbreadth reversed. If overturn x causes the note value to work outside the sign 32 - bit integer range [- 231, 231 - 1 ], and so devolve zero. Usurp the environment do not admit you to store sixty four - chip integer (sign or unsigned ).",
+      "0.4": "Given a sign language 32 - bit integer xtc, tax return x with information technology digits lift. If turn back ten cause the time value to go extraneous the signed 32 - snatch integer range [- 231, 231 - unity ], and then return cypher. Assume the environment does non allow you to hive away 64 - act whole number (signalise operating room unsigned ).",
+      "0.5": "Give a gestural xxxii - bit integer decade, counter x with information technology digits turn. If reversing 10 cause the value to extend extraneous the sign thirty two - flake integer range [- 231, 231 - i ], and then deliver cypher. Usurp the environs does non allow you to hive away 64 - flake integers (sign or unsigned ).",
+      "0.6": "Present a sign language 32 - second integer x, yield disco biscuit with information technology fingerbreadth overturn. If overturn x causes the note value to go extraneous the sign xxxii - scrap integer grasp [- 231, 231 - single ], so generate nought. Assume the surroundings serve non earmark you to stash away sixty four - turn integer (sign on beaver state unsigned ).",
+      "0.7": "Grant a gestural thirty two - snatch integer decade, restoration tenner with it digit overturn. If revoke 10 get the economic value to perish international the gestural thirty two - moment integer mountain range [- 231, 231 - one ], and then render zero. Take up the surround do non reserve you to salt away lxiv - second integer (sign on oregon unsigned ).",
+      "0.8": "Open a sign thirty two - second integer ex, counter ten with it fingerbreadth reverse. If reverse 10 get the time value to live on outdoor the gestural thirty two - scrap integer chain [- 231, 231 - one ], and so render cypher. Usurp the surroundings do non admit you to hive away lxiv - piece whole number (subscribe oregon unsigned ).",
+      "0.9": "Yield a gestural xxxii - scrap integer hug drug, regaining tenner with it digit override. If overturn 10 make the economic value to lead extraneous the gestural thirty two - morsel integer image [- 231, 231 - ane ], and then revert zero. Take the surround exercise non appropriate you to salt away lxiv - routine whole number (sign on surgery unsigned ).",
+      "1.0": "Hold a gestural thirty two - piece integer ecstasy, getting even disco biscuit with it fingerbreadth reverse. If annul ten make the economic value to hold out external the sign thirty two - routine integer mountain range [- 231, 231 - ace ], and so render zero. Strike the surroundings do non appropriate you to put in sixty four - bite integer (sign operating theatre unsigned )."
+    },
+    "random": {
+      "0.0": "A 32 - bit, x with its reversed. If reversing value the signed 32 - integer range [-, 231 - 1 ], return. Assume the allow you to store 64 - bit integers (signed or unsigned ).",
+      "0.1": "Given a 32 - bit integer x, x with its digits reversed. If reversing the value go outside signed 32 - bit integer range [- 231, 231 - 1 ], then return 0. Assume the environment not allow you to store 64 - bit integers (signed or unsigned ).",
+      "0.2": "Given a 32 - bit integer x, x with its digits. If x the value to go outside the signed 32 - bit integer range [-, 231 - 1 ], return. Assume the environment you to 64 - bit integers (signed or ).",
+      "0.3": "A - integer, . x causes the value go the signed 32 - bit integer range [- 231, - ], then return 0. the environment does not allow you to 64 - bit integers (signed or unsigned ).",
+      "0.4": "Given a - bit integer, digits reversed. If value signed 32 - bit integer range [-, 231 - 1 ], return 0. Assume environment not you 64 - bit ().",
+      "0.5": "A 32 - bit, with. x 32 - integer range [-, 231 - ], return. the not store - integers (signed or unsigned ).",
+      "0.6": "A 32 -, . If the value to outside 32 - [-, 231 - ], . does to - ().",
+      "0.7": "Given -, return reversed. - integer [-, - ], . - ().",
+      "0.8": "A -, . - [-, - ], . - ().",
+      "0.9": "A -, . - [-, - ], . - ().",
+      "1.0": "A -, . - [-, - ], . - ()."
+    },
+    "cut": {
+      "0.0": "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.\nAssume the environment does not allow you to store 64-bit integers (signed or unsigned).",
+      "0.1": "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.\nAssume the environment does not allow you to store 64-bit int",
+      "0.2": "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.\nAssume the environment does not all",
+      "0.3": "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.\nAssume t",
+      "0.4": "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1",
+      "0.5": "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit i",
+      "0.6": "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go ",
+      "0.7": "Given a signed 32-bit integer x, return x with its digits reversed. If reversing",
+      "0.8": "Given a signed 32-bit integer x, return x with its di",
+      "0.9": "Given a signed 32-bit integ",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "anthropic": {
+      "random": {
+        "0.0": [
+          "def reverse(x):\n    sign = 1 if x >= 0 else -1\n    x = abs(x)\n    reversed_num = int(str(x)[::-1])\n    result = sign * reversed_num\n    \n    if result < -2**31 or result > 2**31 - 1:\n        return 0\n    \n    return result"
+        ],
+        "0.1": [
+          "def reverse(x):\n    sign = 1 if x >= 0 else -1\n    x = abs(x)\n    reversed_num = 0\n    \n    while x > 0:\n        digit = x % 10\n        reversed_num = reversed_num * 10 + digit\n        x //= 10\n    \n    reversed_num *= sign\n    \n    if reversed_num < -2**31 or reversed_num > 2**31 - 1:\n        return 0\n    \n    return reversed_num"
+        ],
+        "0.2": [
+          "def reverse(x):\n    sign = 1 if x >= 0 else -1\n    x = abs(x)\n    reversed_num = 0\n    \n    while x > 0:\n        digit = x % 10\n        reversed_num = reversed_num * 10 + digit\n        x //= 10\n    \n    reversed_num *= sign\n    \n    if reversed_num < -2**31 or reversed_num > 2**31 - 1:\n        return 0\n    \n    return reversed_num"
+        ],
+        "0.3": [
+          "def reverse(x):\n    sign = 1 if x >= 0 else -1\n    x = abs(x)\n    reversed_num = int(str(x)[::-1]) * sign\n    \n    if reversed_num < -2**31 or reversed_num > 2**31 - 1:\n        return 0\n    \n    return reversed_num"
+        ],
+        "0.4": [
+          "def reverse(x):\n    sign = 1 if x >= 0 else -1\n    x = abs(x)\n    reversed_num = int(str(x)[::-1]) * sign\n    \n    if reversed_num < -2**31 or reversed_num > 2**31 - 1:\n        return 0\n    \n    return reversed_num"
+        ],
+        "0.5": [
+          "def reverse_bits(n):\n    result = 0\n    for i in range(32):\n        result = (result << 1) | (n & 1)\n        n >>= 1\n    return result"
+        ],
+        "0.6": [
+          "def solution(num):\n    if num < -2**31 or num > 2**31 - 1:\n        return 0\n    return num"
+        ],
+        "0.7": [
+          "def reverse_integer(x):\n    if x < 0:\n        return -int(str(abs(x))[::-1])\n    return int(str(x)[::-1])"
+        ],
+        "0.8": [
+          "class Shape:\n    def __init__(self, name):\n        self.name = name\n\n    def calculate_area(self):\n        pass\n\nclass Rectangle(Shape):\n    def __init__(self, width, height):\n        super().__init__(\"Rectangle\")\n        self.width = width\n        self.height = height\n\n    def calculate_area(self):\n        return self.width * self.height\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        super().__init__(\"Circle\")\n        self.radius = radius\n\n    def calculate_area(self):\n        return 3.14 * self.radius ** 2\n\ndef main():\n    rect = Rectangle(5, 10)\n    circle = Circle(7)\n\n    print(f\"{rect.name} area: {rect.calculate_area()}\")\n    print(f\"{circle.name} area: {circle.calculate_area()}\")\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.9": [
+          "class Shape:\n    def __init__(self, name):\n        self.name = name\n\n    def calculate_area(self):\n        pass\n\nclass Rectangle(Shape):\n    def __init__(self, width, height):\n        super().__init__(\"Rectangle\")\n        self.width = width\n        self.height = height\n\n    def calculate_area(self):\n        return self.width * self.height\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        super().__init__(\"Circle\")\n        self.radius = radius\n\n    def calculate_area(self):\n        return 3.14 * self.radius ** 2\n\ndef main():\n    rect = Rectangle(5, 10)\n    circle = Circle(7)\n\n    print(f\"{rect.name} area: {rect.calculate_area()}\")\n    print(f\"{circle.name} area: {circle.calculate_area()}\")\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "1.0": [
+          "class Shape:\n    def __init__(self, name):\n        self.name = name\n\n    def calculate_area(self):\n        pass\n\nclass Rectangle(Shape):\n    def __init__(self, width, height):\n        super().__init__(\"Rectangle\")\n        self.width = width\n        self.height = height\n\n    def calculate_area(self):\n        return self.width * self.height\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        super().__init__(\"Circle\")\n        self.radius = radius\n\n    def calculate_area(self):\n        return 3.14 * self.radius ** 2\n\ndef main():\n    rect = Rectangle(5, 10)\n    circle = Circle(7)\n\n    print(f\"{rect.name} area: {rect.calculate_area()}\")\n    print(f\"{circle.name} area: {circle.calculate_area()}\")\n\nif __name__ == \"__main__\":\n    main()"
+        ]
+      }
+    }
+  }
+}

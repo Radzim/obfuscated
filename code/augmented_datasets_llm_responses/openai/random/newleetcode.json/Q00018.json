@@ -1,0 +1,107 @@
+{
+  "slug": "permutations-iv",
+  "problem_title": "Permutations IV",
+  "number": 3470,
+  "acceptance": 0.258,
+  "difficulty": "Hard",
+  "question": "Given an array of distinct integers nums, return all the possible permutations. You can return the answer in any order.\n\n**Example 1:**\n\n```\nInput: nums = [1,2,3]\nOutput: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]\n```\n\n**Example 2:**\n\n```\nInput: nums = [0,1]\nOutput: [[0,1],[1,0]]\n```\n\n**Example 3:**\n\n```\nInput: nums = [1]\nOutput: [[1]]\n```\n\n**Constraints:**\n\n- 1 <= nums.length <= 6\n- -10 <= nums[i] <= 10\n- All the integers of nums are unique.",
+  "post_href": "https://leetcode.com/problems/permutations-iv/discuss/3470/Hard-Python-Solution",
+  "python_solutions": "class Solution:\n    def permute(self, nums: List[int]) -> List[List[int]]:\n        def backtrack(start=0):\n            if start == len(nums):\n                res.append(nums[:])\n            for i in range(start, len(nums)):\n                nums[start], nums[i] = nums[i], nums[start]\n                backtrack(start + 1)\n                nums[start], nums[i] = nums[i], nums[start]\n        res = []\n        backtrack()\n        return res",
+  "post_title": "Hard Python Solution",
+  "user": "leetcode_user",
+  "upvotes": 50,
+  "views": 2000,
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given an array of distinct integers nums, return all the possible permutations. You can return the answer in any order.",
+      "0.1": "Given an array of distinct inteners nums, return all the possib.e permutations. You can return the answer in any ordeE.",
+      "0.2": "Given an arrqy of diCtjnct integers nums, return all the 0*ssible petm&tatJons. You can return the answer in any ordeG.",
+      "0.3": "Given an aErzy of Sistijst iByegFrs nums, ret6rm all the poseUNle permutations. You can D3turn the ans#eT in any order.",
+      "0.4": "fuven an arfXy of distinct intFfefE nhmx, EeRu$n all the 0ocs(gle LerK*tAti0ns. You can Eet&rm the qnseRr in any ordW#.",
+      "0.5": "GiBRm an Areqy of eKsgibct 9nrwBers GumD, r$tIDn all the poszug<e pDrm8GXtioBw. You can DetjGn the xnawet in any oTxe3.",
+      "0.6": "GidFb an ArfSy of dusROJcH &jtWHfrs JuNQ, 3WtuFH all the 9ossONKf Oe5JitaF8kne. You can 4RruDn the Wbsw#e in any o%F$r.",
+      "0.7": "fUdeh an ZT3aU of s9w^infh igfsgsdx n&<A, E@^K4n all the ((XqivlW O@%<7tXy(ohs. You can F$Y83n the aGd3f# in any kDV$r.",
+      "0.8": "nlCSn an Q#3aj of Ekehohvt *hrdfe#a m T<e, r44hdj all the lpZclHlD O3FmJGSG(8nd. You can rS$6EM the xHAwFt in any P4dWF.",
+      "0.9": "NLd2M an X4EZh of sUCRLGsr JGhdrFEA h*kQ, T44 tGJ all the ((dQJFow (@E<jGSy*Pnx. You can 445hfm the Ajd1sD in any IfRwF.",
+      "1.0": "h7bWH an xF4Q^ of f&wGubF6 lB$RnS$e B*<D, %@hJeB all the (kaxkN.s owgn65Zy7phD. You can 5fF8fg the QMA22D in any KtcfF."
+    },
+    "synonym": {
+      "0.0": "Given an regalia of distinct integers nums, render entirely the possible permutations. You prat recall the answer in any order.",
+      "0.1": "Pass on an array of distinct whole number nums, return all the possible permutations. You can recall the answer in any order.",
+      "0.2": "Given an regalia of distinct whole number nums, return all the possible permutations. You can return the response in any order.",
+      "0.3": "Consecrate an array of distinct integers nums, return all the potential permutations. You can deliver the solvent in any monastic order.",
+      "0.4": "Given an array of distinct whole number nums, pass wholly the potential permutations. You hind end retrovert the reply in any gild.",
+      "0.5": "Hold an raiment of distinguishable integers nums, reelect altogether the potential permutations. You give the axe hark back the answer in any holy order.",
+      "0.6": "Pass on an regalia of discrete integer nums, yield all the possible switch. You tooshie revert the reply in any rescript.",
+      "0.7": "Give an raiment of clear cut integer nums, retort entirely the potential permutation. You can buoy repay the result in any social club.",
+      "0.8": "Give way an regalia of distinguishable integer nums, render altogether the potential transposition. You tail come back the response in any orderliness.",
+      "0.9": "Fall in an regalia of discrete whole number nums, pass completely the potential transposition. You rump rejoin the response in any ordering.",
+      "1.0": "Commit an regalia of distinguishable whole number nums, come back totally the potential substitution. You fire take back the solvent in any club."
+    },
+    "random": {
+      "0.0": "Given an array integers, return the permutations. You can return the answer any.",
+      "0.1": "Given an array of distinct integers nums, return all possible permutations. You can return the in any.",
+      "0.2": "Given an integers nums, return all the possible permutations. can return the answer in any.",
+      "0.3": "An array of distinct integers, all the permutations. can answer in any order.",
+      "0.4": "Given nums, return all the possible. You return the order.",
+      "0.5": "An array integers, return all possible. can return any.",
+      "0.6": "An of integers, return the. any.",
+      "0.7": "An integers nums, possible..",
+      "0.8": "An, . return.",
+      "0.9": "An, ..",
+      "1.0": "An, .."
+    },
+    "cut": {
+      "0.0": "Given an array of distinct integers nums, return all the possible permutations. You can return the answer in any order.",
+      "0.1": "Given an array of distinct integers nums, return all the possible permutations. You can return the answer i",
+      "0.2": "Given an array of distinct integers nums, return all the possible permutations. You can return ",
+      "0.3": "Given an array of distinct integers nums, return all the possible permutations. You",
+      "0.4": "Given an array of distinct integers nums, return all the possible permu",
+      "0.5": "Given an array of distinct integers nums, return all the pos",
+      "0.6": "Given an array of distinct integers nums, return",
+      "0.7": "Given an array of distinct integers ",
+      "0.8": "Given an array of distin",
+      "0.9": "Given an arr",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "openai": {
+      "random": {
+        "0.0": [
+          "from itertools import permutations\n\ndef get_permutations(arr):\n    return list(permutations(arr))\n\n# Example usage:\n# integers = [1, 2, 3]\n# print(get_permutations(integers))"
+        ],
+        "0.1": [
+          "def permute(nums):\n    result = []\n    \n    def backtrack(path, remaining):\n        if not remaining:\n            result.append(path)\n            return\n        for i in range(len(remaining)):\n            backtrack(path + [remaining[i]], remaining[:i] + remaining[i+1:])\n    \n    backtrack([], nums)\n    return result\n\n# Example usage:\n# nums = [1, 2, 3]\n# print(permute(nums))"
+        ],
+        "0.2": [
+          "from itertools import permutations\n\ndef permute(nums):\n    return list(permutations(nums))\n\n# Example usage:\n# result = permute([1, 2, 3])\n# print(result)"
+        ],
+        "0.3": [
+          "from itertools import permutations\n\ndef get_permutations(arr):\n    return list(permutations(arr))\n\n# Example usage\narr = [1, 2, 3]\nresult = get_permutations(arr)\nprint(result)"
+        ],
+        "0.4": [
+          "def permute(nums):\n    result = []\n    \n    def backtrack(path, remaining):\n        if not remaining:\n            result.append(path)\n            return\n        for i in range(len(remaining)):\n            backtrack(path + [remaining[i]], remaining[:i] + remaining[i+1:])\n    \n    backtrack([], nums)\n    return result"
+        ],
+        "0.5": [
+          "def generate_subsets(nums):\n    result = []\n    n = len(nums)\n    \n    def backtrack(start, path):\n        result.append(path)\n        for i in range(start, n):\n            backtrack(i + 1, path + [nums[i]])\n    \n    backtrack(0, [])\n    return result\n\n# Example usage\nnums = [1, 2, 3]\nprint(generate_subsets(nums))"
+        ],
+        "0.6": [
+          "def return_any_integer(integers):\n    if integers:\n        return integers[0]\n    return None"
+        ],
+        "0.7": [
+          "def is_possible(nums):\n    total_sum = sum(nums)\n    if total_sum % 2 != 0:\n        return False\n    \n    target = total_sum // 2\n    dp = [False] * (target + 1)\n    dp[0] = True\n    \n    for num in nums:\n        for j in range(target, num - 1, -1):\n            dp[j] = dp[j] or dp[j - num]\n    \n    return dp[target]\n\n# Example usage\nnums = [1, 5, 11, 5]\nprint(is_possible(nums))  # Output: True"
+        ],
+        "0.8": [
+          "def return_an():\n    return \"An\""
+        ],
+        "0.9": [
+          "def fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n):\n        print(a, end=' ')\n        a, b = b, a + b\n\nfibonacci(10)"
+        ],
+        "1.0": [
+          "def an_function(n):\n    if n <= 0:\n        return []\n    return [i for i in range(1, n + 1)]"
+        ]
+      }
+    }
+  }
+}

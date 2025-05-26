@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/longest-common-prefix/discuss/1351149/Python-and-startswith",
+  "python_solutions": "class Solution:\n    def longestCommonPrefix(self, strs: List[str]) -> str:\n        \n        pre = strs[0]\n        \n        for i in strs:\n            while not i.startswith(pre):\n                pre = pre[:-1]\n        \n        return pre",
+  "slug": "longest-common-prefix",
+  "post_title": "Python & startswith",
+  "user": "lokeshsenthilkumar",
+  "upvotes": 72,
+  "views": 4500,
+  "problem_title": "longest common prefix",
+  "number": 14,
+  "acceptance": 0.408,
+  "difficulty": "Easy",
+  "__index_level_0__": 595,
+  "question": "Write a function to find the longest common prefix string amongst an array of strings.\nIf there is no common prefix, return an empty string \"\".\n  Example 1:\nInput: strs = [\"flower\",\"flow\",\"flight\"]\nOutput: \"fl\"\nExample 2:\nInput: strs = [\"dog\",\"racecar\",\"car\"]\nOutput: \"\"\nExplanation: There is no common prefix among the input strings.\n  Constraints:\n1 <= strs.length <= 200\n0 <= strs[i].length <= 200\nstrs[i] consists of only lowercase English letters.",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string \" \".",
+      "0.1": "Write a function to find the longest common prefix string amongst an array of strings. If thege is no common prefiZ, return an empty strinH \" \".",
+      "0.2": "Write a fumchion to tind the longest c*hmon prefix strLJg amongst an arrxy of strings. If there is no c)mmoh prefix, return an empty string \" \".",
+      "0.3": "WrOye a fubftiob to fiJE the longest fkmmon prefix string WNomgst an array of strings. If there is no cPnmon preTis, rehuTn an empty s^rinR \" \".",
+      "0.4": "W4iye a fuhSyKon to find the :ongexF common preBos wHrjng anoHFst an array of stEinHC. If Hherw is no comnIM prrf(d, reY Trh an Rmoty string \" \".",
+      "0.5": "Write a fuHst((n to fiJR the .onFeaR DImmob )4ef*x stgimf Ampbgwt an SErWy of D%rinHX. If tUdrR is no Domm0j )4efia, 334urn an Rnp4y wtr7Mg \" \".",
+      "0.6": "W4i4w a tubdhioh to f&HX the o9jneet cImHIb 9r3GiC qt$7ny XkLMgs^ an agTsy of syrUmYQ. If Rhe#f is no cIj<oH OGeEic, rfHutj an eh(fy dHDihg \" \".",
+      "0.7": "WF*y2 a Dkjct7)M to vihe the l0bg4cF vpmHkH pgwvjC Wt#8hh ah*JNat an XrEQ6 of arGjnvs. If fT4Fe is no s)hHom o#Rf7a, #rg7rH an Sj04y Wt$(gN \" \".",
+      "0.8": "q3KGe a e*jDtUIh to V9Hv the OoHtSCy S9jjob 9r2G7C sr37JR S<)jgw5 an sgrz6 of zyr(mYW. If tbsG4 is no doh,)G oGFbiz, eFru4G an wmL4T d5tUMg \" \".",
+      "0.9": "3%9y$ a B TMVF8im to Djhc the OKHNSEg XkNK9H (DfgKa Ch#KJH Zk)MTAy an qg3w& of AFGLMhQ. If 6MRT@ is no Vkh<)m )4Sv7Z, DRG8$B an r,9FH Z%$khN \" \".",
+      "1.0": "D$(rw a DhHDyJLG to EKmC the ,0gBra5 v9hn)J 9DRGUS q6GLmR xN0jFCg an sETwT of QYEUhRz. If Fg@FF is no SLNnph oF2buD, t$6KDH an dN(5& qrgjGT \" \"."
+    },
+    "synonym": {
+      "0.0": "Write a role to find the longest coarse prefix thread amongst an array of strings. If there is no unwashed prefix, return an empty bellied string \" \".",
+      "0.1": "Write a function to find the longest common prefix string up amongst an array of strings. If there is no common prefix, deliver an empty strand \" \".",
+      "0.2": "Write a function to find the longest common prefix string amongst an raiment of strings. If there comprise no coarse prefix, return an empty drawing string \" \".",
+      "0.3": "Compose a function to find the foresightful common prefix string up amongst an raiment of strings. If there is no mutual prefix, return an hollow string \" \".",
+      "0.4": "Write a function to find the tenacious vulgar prefix thread amongst an raiment of cosmic string. If on that point is no common prefix, return an empty strand \" \".",
+      "0.5": "Pen a subprogram to discover the long common prefix string amongst an regalia of chain. If on that point is no coarse prefix, repay an vacuous string \" \".",
+      "0.6": "Indite a affair to detect the foresighted common prefix string along amongst an regalia of string. If thither cost no vernacular prefix, regress an hollow bowed stringed instrument \" \".",
+      "0.7": "Indite a procedure to see the tenacious coarse prefix draw amongst an regalia of twine. If thither be no vernacular prefix, render an vacuous chain \" \".",
+      "0.8": "Publish a affair to incur the retentive vulgar prefix thread amongst an raiment of train. If on that point be no vulgar prefix, take back an vacuous drawing string \" \".",
+      "0.9": "Pen a procedure to witness the recollective vernacular prefix string up amongst an regalia of string. If in that respect be no vulgar prefix, retrovert an vacuous drawstring \" \".",
+      "1.0": "Compose a role to discover the long uncouth prefix draw amongst an regalia of bowed stringed instrument. If in that location follow no rough cut prefix, deliver an hollow strand \" \"."
+    },
+    "random": {
+      "0.0": "A function find the longest common prefix string amongst an strings. there is common prefix, return string \" \".",
+      "0.1": "Write a function to the longest common string amongst an array of strings. If there is no common prefix, return an empty \" \".",
+      "0.2": "A function to the longest common prefix string amongst of strings. If there no prefix, return an empty string \" \".",
+      "0.3": "Write function to find longest common prefix string array. If there is no common, return empty \" \".",
+      "0.4": "Write a the longest prefix amongst of strings. If there common, return empty \" \".",
+      "0.5": "Write find common string array of strings. there no, empty \" \".",
+      "0.6": "A common prefix. common, return an empty \" \".",
+      "0.7": "A longest common amongst of. , \" \".",
+      "0.8": "A. , string \" \".",
+      "0.9": "A. , \" \".",
+      "1.0": "A. , \" \"."
+    },
+    "cut": {
+      "0.0": "Write a function to find the longest common prefix string amongst an array of strings.\nIf there is no common prefix, return an empty string \"\".",
+      "0.1": "Write a function to find the longest common prefix string amongst an array of strings.\nIf there is no common prefix, return an em",
+      "0.2": "Write a function to find the longest common prefix string amongst an array of strings.\nIf there is no common prefi",
+      "0.3": "Write a function to find the longest common prefix string amongst an array of strings.\nIf there is n",
+      "0.4": "Write a function to find the longest common prefix string amongst an array of strings.",
+      "0.5": "Write a function to find the longest common prefix string amongst an arr",
+      "0.6": "Write a function to find the longest common prefix string",
+      "0.7": "Write a function to find the longest common",
+      "0.8": "Write a function to find the ",
+      "0.9": "Write a functi",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "deepseek": {
+      "random": {
+        "0.0": [
+          "def longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n    \n    prefix = strs[0]\n    for s in strs[1:]:\n        while s[:len(prefix)] != prefix:\n            prefix = prefix[:-1]\n            if not prefix:\n                return \"\"\n    return prefix"
+        ],
+        "0.1": [
+          "def longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n    \n    prefix = strs[0]\n    for s in strs[1:]:\n        while s[:len(prefix)] != prefix:\n            prefix = prefix[:-1]\n            if not prefix:\n                return \"\"\n    return prefix"
+        ],
+        "0.2": [
+          "def longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n    \n    prefix = strs[0]\n    for s in strs[1:]:\n        while s[:len(prefix)] != prefix:\n            prefix = prefix[:-1]\n            if not prefix:\n                return \"\"\n    return prefix"
+        ],
+        "0.3": [
+          "def longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n    \n    prefix = strs[0]\n    for s in strs[1:]:\n        while s[:len(prefix)] != prefix:\n            prefix = prefix[:-1]\n            if not prefix:\n                return \"\"\n    return prefix"
+        ],
+        "0.4": [
+          "def longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n    \n    min_len = min(len(s) for s in strs)\n    prefix = \"\"\n    \n    for i in range(min_len):\n        char = strs[0][i]\n        for s in strs:\n            if s[i] != char:\n                return prefix\n        prefix += char\n    \n    return prefix\n\n# Example usage:\n# strings = [\"flower\", \"flow\", \"flight\"]\n# print(longest_common_prefix(strings))  # Output: \"fl\""
+        ],
+        "0.5": [
+          "def find_common_strings(arr1, arr2):\n    common = []\n    for s1 in arr1:\n        if s1.strip() and s1 in arr2 and s1 not in common:\n            common.append(s1)\n    return common\n\n# Example usage:\n# arr1 = [\"hello\", \"world\", \"python\", \" \"]\n# arr2 = [\"python\", \"hello\", \" \"]\n# print(find_common_strings(arr1, arr2))  # Output: ['hello', 'python']"
+        ],
+        "0.6": [
+          "def longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n    prefix = strs[0]\n    for string in strs[1:]:\n        while string[:len(prefix)] != prefix:\n            prefix = prefix[:-1]\n            if not prefix:\n                return \"\"\n    return prefix"
+        ],
+        "0.7": [
+          "def longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n    \n    prefix = strs[0]\n    for s in strs[1:]:\n        while s[:len(prefix)] != prefix:\n            prefix = prefix[:-1]\n            if not prefix:\n                return \"\"\n    return prefix\n\n# Example usage:\n# strings = [\"flower\", \"flow\", \"flight\"]\n# print(longest_common_prefix(strings))"
+        ],
+        "0.8": [
+          "input_string = \" \"\nprint(input_string)"
+        ],
+        "0.9": [
+          "print(\"A. , \\\" \\\".\")"
+        ],
+        "1.0": [
+          "print(\"A. , \\\" \\\".\")"
+        ]
+      }
+    }
+  }
+}

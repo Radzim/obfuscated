@@ -1,0 +1,12 @@
+model,method,dataset,task,augmentation_rate,eval_score
+anthropic,synonym,oldleetcode.json,Q00000,0.0,1
+anthropic,synonym,oldleetcode.json,Q00000,0.1,1
+anthropic,synonym,oldleetcode.json,Q00000,0.2,1
+anthropic,synonym,oldleetcode.json,Q00000,0.3,1
+anthropic,synonym,oldleetcode.json,Q00000,0.4,1
+anthropic,synonym,oldleetcode.json,Q00000,0.5,1
+anthropic,synonym,oldleetcode.json,Q00000,0.6,1
+anthropic,synonym,oldleetcode.json,Q00000,0.7,1
+anthropic,synonym,oldleetcode.json,Q00000,0.8,1
+anthropic,synonym,oldleetcode.json,Q00000,0.9,1
+anthropic,synonym,oldleetcode.json,Q00000,1.0,1

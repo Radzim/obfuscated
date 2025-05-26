@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/longest-palindromic-substring/discuss/2156659/Python-Easy-O(1)-Space-approach",
+  "python_solutions": "class Solution:\n    def longestPalindrome(self, s: str) -> str:\n        n=len(s)\n        def expand_pallindrome(i,j):            \n            while 0<=i<=j<n and s[i]==s[j]:\n                i-=1\n                j+=1                            \n            return (i+1, j)\n        \n        res=(0,0)\n        for i in range(n):\n            b1 = expand_pallindrome(i,i)\n            b2 = expand_pallindrome(i,i+1)            \n            res=max(res, b1, b2,key=lambda x: x[1]-x[0]+1) # find max based on the length of the pallindrome strings.\n                    \n        return s[res[0]:res[1]]",
+  "slug": "longest-palindromic-substring",
+  "post_title": "\u2705  Python Easy O(1) Space approach",
+  "user": "constantine786",
+  "upvotes": 47,
+  "views": 6600,
+  "problem_title": "longest palindromic substring",
+  "number": 5,
+  "acceptance": 0.324,
+  "difficulty": "Medium",
+  "__index_level_0__": 181,
+  "question": "Given a string s, return the longest\npalindromic\nsubstring\nin s.\n  Example 1:\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\nExample 2:\nInput: s = \"cbbd\"\nOutput: \"bb\"\n  Constraints:\n1 <= s.length <= 1000\ns consist of only digits and English letters.",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given a string s, return the longest palindromic substring in s.",
+      "0.1": "Given a string s, rerurn the longest lalindrojic substring in s.",
+      "0.2": "GivSn a string s, return the iongesH palindromic subst5iBg in s.",
+      "0.3": "Given a string s, r2%urn the O8hgest La?Undrojic suvsGriHg in s.",
+      "0.4": "biveJ a sRGigg s, 4etIrm the :oBgeCt oal8ndFo,7c s*GstEinB in s.",
+      "0.5": "Fifej a st$LHg s, tetjEn the oonBexy pzl&ncroHkX XubsRTijv in s.",
+      "0.6": "yifeG a sygumg s, rft^4m the IobgDXy 9qkknd4Pmlc CubwrTKnV in s.",
+      "0.7": "bLbWn a CG$ibt s, g4tHEB the lKmRSsf OaKKmXTohiF WuHC5#jnR in s.",
+      "0.8": "vkdeJ a s^5jMb s, r#f^fg the /ognRz5 Ox/KMdtlmof wuVa%dkbn in s.",
+      "0.9": "nUCrj a W63lgF s, dS$84J the <(hfdzh oqIoJCrKNJv d7fd6d9Hn in s.",
+      "1.0": "YOFRg a DyGUgT s, frRi%b the K9Mf$eG 0S:OHVT9KOF D^HCH3lGr in s."
+    },
+    "synonym": {
+      "0.0": "Pay a string s, give the longest palindromic substring in s.",
+      "0.1": "Given a string s, return the longest palindromic substring in s.",
+      "0.2": "Given a string atomic number 16, return the longest palindromic substring in s.",
+      "0.3": "Given a string s, pass the long palindromic substring in due south.",
+      "0.4": "Give a string s, return the foresightful palindromic substring in sulfur.",
+      "0.5": "Given a string atomic number 16, riposte the farseeing palindromic substring in sec.",
+      "0.6": "Give a bowed stringed instrument southward, return the tenacious palindromic substring in southward.",
+      "0.7": "Move over a drawstring siemens, fall the recollective palindromic substring in due south.",
+      "0.8": "Give a drawing string southward, hark back the tenacious palindromic substring in randomness.",
+      "0.9": "Afford a twine southward, revert the prospicient palindromic substring in sec.",
+      "1.0": "Give a drawstring randomness, yield the foresighted palindromic substring in siemens."
+    },
+    "random": {
+      "0.0": "A s, the palindromic substring in s.",
+      "0.1": "A string, return the longest palindromic substring in s.",
+      "0.2": "Given a string s, return longest substring in.",
+      "0.3": "Given string s, the longest palindromic in.",
+      "0.4": "A string s, palindromic substring in.",
+      "0.5": "A string, return longest in.",
+      "0.6": "A, the palindromic.",
+      "0.7": "A, the.",
+      "0.8": "A,.",
+      "0.9": "A,.",
+      "1.0": "A,."
+    },
+    "cut": {
+      "0.0": "Given a string s, return the longest\npalindromic\nsubstring\nin s.",
+      "0.1": "Given a string s, return the longest\npalindromic\nsubstring",
+      "0.2": "Given a string s, return the longest\npalindromic\nsu",
+      "0.3": "Given a string s, return the longest\npalindro",
+      "0.4": "Given a string s, return the longest\np",
+      "0.5": "Given a string s, return the lon",
+      "0.6": "Given a string s, return t",
+      "0.7": "Given a string s, r",
+      "0.8": "Given a strin",
+      "0.9": "Given ",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "google": {
+      "keyboard": {
+        "0.0": [
+          "def longestPalindrome(s: str) -> str:\n    n = len(s)\n    if n < 2:\n        return s\n\n    dp = [[False] * n for _ in range(n)]\n    start = 0\n    max_len = 1\n\n    for i in range(n):\n        dp[i][i] = True\n\n    for i in range(n - 1):\n        if s[i] == s[i + 1]:\n            dp[i][i + 1] = True\n            start = i\n            max_len = 2\n\n    for k in range(3, n + 1):\n        for i in range(n - k + 1):\n            j = i + k - 1\n            if s[i] == s[j] and dp[i + 1][j - 1]:\n                dp[i][j] = True\n                if k > max_len:\n                    start = i\n                    max_len = k\n\n    return s[start:start + max_len]"
+        ],
+        "0.1": [
+          "def longestPalindrome(s):\n    n = len(s)\n    if n < 2:\n        return s\n\n    dp = [[False] * n for _ in range(n)]\n    start = 0\n    max_len = 1\n\n    for i in range(n):\n        dp[i][i] = True\n\n    for i in range(n - 1):\n        if s[i] == s[i + 1]:\n            dp[i][i + 1] = True\n            start = i\n            max_len = 2\n\n    for k in range(3, n + 1):\n        for i in range(n - k + 1):\n            j = i + k - 1\n            if s[i] == s[j] and dp[i + 1][j - 1]:\n                dp[i][j] = True\n                if k > max_len:\n                    start = i\n                    max_len = k\n\n    return s[start:start + max_len]"
+        ],
+        "0.2": [
+          "def longest_palindrome(s):\n    n = len(s)\n    if n < 2:\n        return s\n\n    dp = [[False] * n for _ in range(n)]\n    start = 0\n    max_len = 1\n\n    for i in range(n):\n        dp[i][i] = True\n\n    for i in range(n - 1):\n        if s[i] == s[i + 1]:\n            dp[i][i + 1] = True\n            start = i\n            max_len = 2\n\n    for k in range(3, n + 1):\n        for i in range(n - k + 1):\n            j = i + k - 1\n            if s[i] == s[j] and dp[i + 1][j - 1]:\n                dp[i][j] = True\n                if k > max_len:\n                    start = i\n                    max_len = k\n\n    return s[start:start + max_len]"
+        ],
+        "0.3": [
+          "def longest_palindrome(s):\n    if not s:\n        return \"\"\n\n    n = len(s)\n    dp = [[False] * n for _ in range(n)]\n    start = 0\n    max_len = 1\n\n    for i in range(n):\n        dp[i][i] = True\n\n    for i in range(n - 1):\n        if s[i] == s[i + 1]:\n            dp[i][i + 1] = True\n            start = i\n            max_len = 2\n\n    for k in range(3, n + 1):\n        for i in range(n - k + 1):\n            j = i + k - 1\n            if s[i] == s[j] and dp[i + 1][j - 1]:\n                dp[i][j] = True\n                if k > max_len:\n                    start = i\n                    max_len = k\n\n    return s[start:start + max_len]"
+        ],
+        "0.4": [
+          "def longest_palindrome(s):\n    \"\"\"\n    Finds the longest palindromic substring in s.\n\n    Args:\n        s: The input string.\n\n    Returns:\n        The longest palindromic substring in s.\n    \"\"\"\n    if not s:\n        return \"\"\n\n    n = len(s)\n    longest_palindrome = \"\"\n\n    for i in range(n):\n        # Odd length palindromes\n        l, r = i, i\n        while l >= 0 and r < n and s[l] == s[r]:\n            if (r - l + 1) > len(longest_palindrome):\n                longest_palindrome = s[l:r+1]\n            l -= 1\n            r += 1\n\n        # Even length palindromes\n        l, r = i, i + 1\n        while l >= 0 and r < n and s[l] == s[r]:\n            if (r - l + 1) > len(longest_palindrome):\n                longest_palindrome = s[l:r+1]\n            l -= 1\n            r += 1\n\n    return longest_palindrome"
+        ],
+        "0.5": [
+          "def longest_palindrome(s):\n    \"\"\"\n    Given a string s, return the longest palindromic substring in s.\n    \"\"\"\n    n = len(s)\n    if n < 2:\n        return s\n\n    dp = [[False] * n for _ in range(n)]\n    start = 0\n    max_len = 1\n\n    for i in range(n):\n        dp[i][i] = True\n\n    for i in range(n - 1):\n        if s[i] == s[i + 1]:\n            dp[i][i + 1] = True\n            start = i\n            max_len = 2\n\n    for k in range(3, n + 1):\n        for i in range(n - k + 1):\n            j = i + k - 1\n            if s[i] == s[j] and dp[i + 1][j - 1]:\n                dp[i][j] = True\n                if k > max_len:\n                    start = i\n                    max_len = k\n\n    return s[start:start + max_len]"
+        ],
+        "0.6": [
+          "import re\n\ndef decode_string(encoded_string):\n    \"\"\"\n    Decodes a string that has been encoded with a simple substitution cipher and\n    some added noise.\n\n    Args:\n        encoded_string: The encoded string.\n\n    Returns:\n        The decoded string.\n    \"\"\"\n\n    # Remove non-alphabetic characters and convert to lowercase\n    cleaned_string = re.sub(r'[^a-zA-Z\\s]', '', encoded_string).lower()\n\n    # Simple substitution cipher (reverse alphabet)\n    alphabet = 'abcdefghijklmnopqrstuvwxyz'\n    reversed_alphabet = alphabet[::-1]\n    translation_table = str.maketrans(reversed_alphabet, alphabet)\n\n    decoded_string = cleaned_string.translate(translation_table)\n\n    return decoded_string\n\n# Example usage (replace with your actual encoded string)\nencoded_string = \"yifeG a sygumg s, rft^4m the IobgDXy 9qkknd4Pmlc CubwrTKnV in s.\"\ndecoded_string = decode_string(encoded_string)\nprint(decoded_string)"
+        ],
+        "0.7": [
+          "def solve():\n    s = \"bLbWn a CG$ibt s, g4tHEB the lKmRSsf OaKKmXTohiF WuHC5#jnR in s.\"\n    \n    result = \"\"\n    for char in s:\n        if 'a' <= char <= 'z' or 'A' <= char <= 'Z':\n            result += char\n    print(result)\n\nsolve()"
+        ],
+        "0.8": [
+          "def process_string(s):\n  \"\"\"\n  This function processes a string and extracts specific information.\n\n  Args:\n    s: The input string.\n\n  Returns:\n    A string containing the extracted information.\n  \"\"\"\n  result = \"\"\n  words = s.split()\n  if len(words) > 6:\n      result = words[6]\n  return result\n\n# Example usage (replace with your actual string)\ninput_string = \"vkdeJ a s^5jMb s, r#f^fg the /ognRz5 Ox/KMdtlmof wuVa%dkbn in s.\"\noutput_string = process_string(input_string)\nprint(output_string)"
+        ],
+        "0.9": [
+          "def solve():\n    s = \"nUCrj a W63lgF s, dS$84J the <(hfdzh oqIoJCrKNJv d7fd6d9Hn in s.\"\n    print(s)\n\nsolve()"
+        ],
+        "1.0": [
+          "def solve():\n    s = \"YOFRg a DyGUgT s, frRi%b the K9Mf$eG 0S:OHVT9KOF D^HCH3lGr in s.\"\n    result = \"\"\n    for char in s:\n        if char.isalpha() and char.islower():\n            result += char\n    print(result)\n\nsolve()"
+        ]
+      }
+    }
+  }
+}

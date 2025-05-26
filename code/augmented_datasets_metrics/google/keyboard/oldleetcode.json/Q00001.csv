@@ -1,0 +1,12 @@
+model,method,dataset,task,augmentation_rate,eval_score
+google,keyboard,oldleetcode.json,Q00001,0.0,0
+google,keyboard,oldleetcode.json,Q00001,0.1,0
+google,keyboard,oldleetcode.json,Q00001,0.2,0
+google,keyboard,oldleetcode.json,Q00001,0.3,0
+google,keyboard,oldleetcode.json,Q00001,0.4,0
+google,keyboard,oldleetcode.json,Q00001,0.5,1
+google,keyboard,oldleetcode.json,Q00001,0.6,0
+google,keyboard,oldleetcode.json,Q00001,0.7,0
+google,keyboard,oldleetcode.json,Q00001,0.8,0
+google,keyboard,oldleetcode.json,Q00001,0.9,0
+google,keyboard,oldleetcode.json,Q00001,1.0,0

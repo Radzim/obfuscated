@@ -1,0 +1,107 @@
+{
+  "slug": "permutations-iv",
+  "problem_title": "Permutations IV",
+  "number": 3470,
+  "acceptance": 0.258,
+  "difficulty": "Hard",
+  "question": "Given an array of distinct integers nums, return all the possible permutations. You can return the answer in any order.\n\n**Example 1:**\n\n```\nInput: nums = [1,2,3]\nOutput: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]\n```\n\n**Example 2:**\n\n```\nInput: nums = [0,1]\nOutput: [[0,1],[1,0]]\n```\n\n**Example 3:**\n\n```\nInput: nums = [1]\nOutput: [[1]]\n```\n\n**Constraints:**\n\n- 1 <= nums.length <= 6\n- -10 <= nums[i] <= 10\n- All the integers of nums are unique.",
+  "post_href": "https://leetcode.com/problems/permutations-iv/discuss/3470/Hard-Python-Solution",
+  "python_solutions": "class Solution:\n    def permute(self, nums: List[int]) -> List[List[int]]:\n        def backtrack(start=0):\n            if start == len(nums):\n                res.append(nums[:])\n            for i in range(start, len(nums)):\n                nums[start], nums[i] = nums[i], nums[start]\n                backtrack(start + 1)\n                nums[start], nums[i] = nums[i], nums[start]\n        res = []\n        backtrack()\n        return res",
+  "post_title": "Hard Python Solution",
+  "user": "leetcode_user",
+  "upvotes": 50,
+  "views": 2000,
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given an array of distinct integers nums, return all the possible permutations. You can return the answer in any order.",
+      "0.1": "Given an array of distinct inteners nums, return all the possib.e permutations. You can return the answer in any ordeE.",
+      "0.2": "Given an arrqy of diCtjnct integers nums, return all the 0*ssible petm&tatJons. You can return the answer in any ordeG.",
+      "0.3": "Given an aErzy of Sistijst iByegFrs nums, ret6rm all the poseUNle permutations. You can D3turn the ans#eT in any order.",
+      "0.4": "fuven an arfXy of distinct intFfefE nhmx, EeRu$n all the 0ocs(gle LerK*tAti0ns. You can Eet&rm the qnseRr in any ordW#.",
+      "0.5": "GiBRm an Areqy of eKsgibct 9nrwBers GumD, r$tIDn all the poszug<e pDrm8GXtioBw. You can DetjGn the xnawet in any oTxe3.",
+      "0.6": "GidFb an ArfSy of dusROJcH &jtWHfrs JuNQ, 3WtuFH all the 9ossONKf Oe5JitaF8kne. You can 4RruDn the Wbsw#e in any o%F$r.",
+      "0.7": "fUdeh an ZT3aU of s9w^infh igfsgsdx n&<A, E@^K4n all the ((XqivlW O@%<7tXy(ohs. You can F$Y83n the aGd3f# in any kDV$r.",
+      "0.8": "nlCSn an Q#3aj of Ekehohvt *hrdfe#a m T<e, r44hdj all the lpZclHlD O3FmJGSG(8nd. You can rS$6EM the xHAwFt in any P4dWF.",
+      "0.9": "NLd2M an X4EZh of sUCRLGsr JGhdrFEA h*kQ, T44 tGJ all the ((dQJFow (@E<jGSy*Pnx. You can 445hfm the Ajd1sD in any IfRwF.",
+      "1.0": "h7bWH an xF4Q^ of f&wGubF6 lB$RnS$e B*<D, %@hJeB all the (kaxkN.s owgn65Zy7phD. You can 5fF8fg the QMA22D in any KtcfF."
+    },
+    "synonym": {
+      "0.0": "Given an regalia of distinct integers nums, render entirely the possible permutations. You prat recall the answer in any order.",
+      "0.1": "Pass on an array of distinct whole number nums, return all the possible permutations. You can recall the answer in any order.",
+      "0.2": "Given an regalia of distinct whole number nums, return all the possible permutations. You can return the response in any order.",
+      "0.3": "Consecrate an array of distinct integers nums, return all the potential permutations. You can deliver the solvent in any monastic order.",
+      "0.4": "Given an array of distinct whole number nums, pass wholly the potential permutations. You hind end retrovert the reply in any gild.",
+      "0.5": "Hold an raiment of distinguishable integers nums, reelect altogether the potential permutations. You give the axe hark back the answer in any holy order.",
+      "0.6": "Pass on an regalia of discrete integer nums, yield all the possible switch. You tooshie revert the reply in any rescript.",
+      "0.7": "Give an raiment of clear cut integer nums, retort entirely the potential permutation. You can buoy repay the result in any social club.",
+      "0.8": "Give way an regalia of distinguishable integer nums, render altogether the potential transposition. You tail come back the response in any orderliness.",
+      "0.9": "Fall in an regalia of discrete whole number nums, pass completely the potential transposition. You rump rejoin the response in any ordering.",
+      "1.0": "Commit an regalia of distinguishable whole number nums, come back totally the potential substitution. You fire take back the solvent in any club."
+    },
+    "random": {
+      "0.0": "Given an array integers, return the permutations. You can return the answer any.",
+      "0.1": "Given an array of distinct integers nums, return all possible permutations. You can return the in any.",
+      "0.2": "Given an integers nums, return all the possible permutations. can return the answer in any.",
+      "0.3": "An array of distinct integers, all the permutations. can answer in any order.",
+      "0.4": "Given nums, return all the possible. You return the order.",
+      "0.5": "An array integers, return all possible. can return any.",
+      "0.6": "An of integers, return the. any.",
+      "0.7": "An integers nums, possible..",
+      "0.8": "An, . return.",
+      "0.9": "An, ..",
+      "1.0": "An, .."
+    },
+    "cut": {
+      "0.0": "Given an array of distinct integers nums, return all the possible permutations. You can return the answer in any order.",
+      "0.1": "Given an array of distinct integers nums, return all the possible permutations. You can return the answer i",
+      "0.2": "Given an array of distinct integers nums, return all the possible permutations. You can return ",
+      "0.3": "Given an array of distinct integers nums, return all the possible permutations. You",
+      "0.4": "Given an array of distinct integers nums, return all the possible permu",
+      "0.5": "Given an array of distinct integers nums, return all the pos",
+      "0.6": "Given an array of distinct integers nums, return",
+      "0.7": "Given an array of distinct integers ",
+      "0.8": "Given an array of distin",
+      "0.9": "Given an arr",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "anthropic": {
+      "keyboard": {
+        "0.0": [
+          "def permute(nums):\n    def backtrack(start):\n        if start == len(nums):\n            result.append(nums[:])\n            return\n        \n        for i in range(start, len(nums)):\n            nums[start], nums[i] = nums[i], nums[start]\n            backtrack(start + 1)\n            nums[start], nums[i] = nums[i], nums[start]\n    \n    result = []\n    backtrack(0)\n    return result"
+        ],
+        "0.1": [
+          "def permute(nums):\n    def backtrack(start):\n        if start == len(nums):\n            result.append(nums[:])\n            return\n        \n        for i in range(start, len(nums)):\n            nums[start], nums[i] = nums[i], nums[start]\n            backtrack(start + 1)\n            nums[start], nums[i] = nums[i], nums[start]\n    \n    result = []\n    backtrack(0)\n    return result"
+        ],
+        "0.2": [
+          "def permute(nums):\n    def backtrack(start):\n        if start == len(nums):\n            result.append(nums[:])\n            return\n        \n        for i in range(start, len(nums)):\n            nums[start], nums[i] = nums[i], nums[start]\n            backtrack(start + 1)\n            nums[start], nums[i] = nums[i], nums[start]\n    \n    result = []\n    backtrack(0)\n    return result"
+        ],
+        "0.3": [
+          "def permute(nums):\n    def backtrack(start):\n        if start == len(nums):\n            result.append(nums[:])\n            return\n        \n        for i in range(start, len(nums)):\n            nums[start], nums[i] = nums[i], nums[start]\n            backtrack(start + 1)\n            nums[start], nums[i] = nums[i], nums[start]\n    \n    result = []\n    backtrack(0)\n    return result"
+        ],
+        "0.4": [
+          "def permute(nums):\n    def backtrack(start):\n        if start == len(nums):\n            result.append(nums[:])\n        \n        for i in range(start, len(nums)):\n            nums[start], nums[i] = nums[i], nums[start]\n            backtrack(start + 1)\n            nums[start], nums[i] = nums[i], nums[start]\n    \n    result = []\n    backtrack(0)\n    return result"
+        ],
+        "0.5": [
+          "def permutations(nums):\n    def backtrack(start):\n        if start == len(nums):\n            result.append(nums.copy())\n            return\n        \n        for i in range(start, len(nums)):\n            nums[start], nums[i] = nums[i], nums[start]\n            backtrack(start + 1)\n            nums[start], nums[i] = nums[i], nums[start]\n    \n    result = []\n    backtrack(0)\n    return result\n\ndef generate_permutations(arr):\n    return permutations(arr)\n\nnums = [1, 2, 3]\nprint(generate_permutations(nums))"
+        ],
+        "0.6": [
+          "def generate_permutations(arr):\n    def backtrack(start):\n        if start == len(arr):\n            result.append(arr.copy())\n        \n        for i in range(start, len(arr)):\n            arr[start], arr[i] = arr[i], arr[start]\n            backtrack(start + 1)\n            arr[start], arr[i] = arr[i], arr[start]\n    \n    result = []\n    backtrack(0)\n    return result\n\narr = [1, 2, 3]\npermutations = generate_permutations(arr)\nprint(permutations)"
+        ],
+        "0.7": [
+          "import re\n\ndef decrypt_message(text):\n    decrypted = re.sub(r'[^\\w\\s]', '', text)\n    return decrypted.lower()\n\ndef process_text(text):\n    cleaned_text = decrypt_message(text)\n    return cleaned_text\n\ninput_text = \"fUdeh an ZT3aU of s9w^infh igfsgsdx n&<A, E@^K4n all the ((XqivlW O@%<7tXy(ohs. You can F$Y83n the aGd3f# in any kDV$r.\"\nresult = process_text(input_text)\nprint(result)"
+        ],
+        "0.8": [
+          "def solve_puzzle(arr):\n    result = []\n    for num in arr:\n        if num % 2 == 0:\n            result.append(num * 2)\n        else:\n            result.append(num + 1)\n    return result\n\ndef main():\n    input_array = [1, 4, 7, 10, 3, 6, 9]\n    output = solve_puzzle(input_array)\n    print(output)\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.9": [
+          "import random\n\ndef shuffle_string(s):\n    chars = list(s)\n    random.shuffle(chars)\n    return ''.join(chars)\n\noriginal_string = \"Hello World\"\nshuffled_string = shuffle_string(original_string)\nprint(shuffled_string)"
+        ],
+        "1.0": [
+          "import random\n\ndef generate_random_data(length):\n    characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'\n    return ''.join(random.choice(characters) for _ in range(length))\n\ndef process_data(data):\n    processed_data = []\n    for item in data:\n        if len(item) > 5:\n            processed_data.append(item.upper())\n        else:\n            processed_data.append(item.lower())\n    return processed_data\n\ndef main():\n    data_list = [generate_random_data(random.randint(3, 8)) for _ in range(10)]\n    print(\"Original data:\", data_list)\n    \n    result = process_data(data_list)\n    print(\"Processed data:\", result)\n\nif __name__ == \"__main__\":\n    main()"
+        ]
+      }
+    }
+  }
+}

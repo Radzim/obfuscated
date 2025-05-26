@@ -1,0 +1,12 @@
+model,method,dataset,task,augmentation_rate,eval_score
+meta,synonym,oldleetcode.json,Q00010,0.0,1
+meta,synonym,oldleetcode.json,Q00010,0.1,1
+meta,synonym,oldleetcode.json,Q00010,0.2,1
+meta,synonym,oldleetcode.json,Q00010,0.3,1
+meta,synonym,oldleetcode.json,Q00010,0.4,1
+meta,synonym,oldleetcode.json,Q00010,0.5,1
+meta,synonym,oldleetcode.json,Q00010,0.6,1
+meta,synonym,oldleetcode.json,Q00010,0.7,0
+meta,synonym,oldleetcode.json,Q00010,0.8,0
+meta,synonym,oldleetcode.json,Q00010,0.9,0
+meta,synonym,oldleetcode.json,Q00010,1.0,1

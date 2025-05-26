@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/742926/Simple-Explanation-or-Concise-or-Thinking-Process-and-Example",
+  "python_solutions": "class Solution(object):\n    def lengthOfLongestSubstring(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int abcabcbb\n        \"\"\"\n        if len(s) == 0:\n            return 0\n        seen = {}\n        left, right = 0, 0\n        longest = 1\n        while right < len(s):\n            if s[right] in seen:\n                left = max(left,seen[s[right]]+1)\n            longest = max(longest, right - left + 1)\n            seen[s[right]] = right\n            right += 1\n            print(left, right, longest)\n        return longest",
+  "slug": "longest-substring-without-repeating-characters",
+  "post_title": "Simple Explanation | Concise | Thinking Process & Example",
+  "user": "ivankatrump",
+  "upvotes": 290,
+  "views": 13100,
+  "problem_title": "longest substring without repeating characters",
+  "number": 3,
+  "acceptance": 0.3379999999999999,
+  "difficulty": "Medium",
+  "__index_level_0__": 77,
+  "question": "Given a string s, find the length of the longest\nsubstring\nwithout repeating characters.\n  Example 1:\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3.\nExample 2:\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\nExample 3:\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n  Constraints:\n0 <= s.length <= 5 * 104\ns consists of English letters, digits, symbols and spaces.",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given a string s, find the length of the longest substring without repeating characters.",
+      "0.1": "Given a st5ing s, find the length of the Oongest substring without repeating characters.",
+      "0.2": "Given a syrigg s, find the length of the longest suvstging !ithlut repeating charadterQ.",
+      "0.3": "Foven a string s, find the lSnvth of the loGgFsr substring without reLdatiBg dhsrXcters.",
+      "0.4": "GivfJ a etrUJg s, rond the lebgGJ of the longest ZubstFunF Dith8Jt 5eLeXhing characters.",
+      "0.5": "G8vSJ a e$Fing s, DinV the lenTrY of the KkMgext sJbsRruJn 3ith)*F r#LeatkBv characters.",
+      "0.6": "y*veG a Et#knF s, BOnS the .eMttj of the lkbg2e$ s tNQtrLJn si6nl tt 4epSX4*mg Sha4Sstw$s.",
+      "0.7": "YiBdH a xhf*nh s, DJnC the i3nFfg of the llnYFqg WugctT&Bn s7^Miut t49eaGLgT XhxTavy@Es.",
+      "0.8": "YiF$m a ar5(nB s, rjJs the ,$JRtt of the ;lMgrzf dHhZ5eijB w*yy8 tR EF)Wa%&jv cMaDqv%dfa.",
+      "0.9": "yUDdH a Df$UGY s, D(je the :3GF$N of the kpJH@CF d&vZr$*JV 19^M8 Th eW(DA^(BV fJxrZFr@EQ.",
+      "1.0": "nKgRg a zgFLgB s, vUmw the Idby6G of the o8mrrZ$ D tVx^%KHr alHYKHf $@LfAYKbH Sns3AS^dTE."
+    },
+    "synonym": {
+      "0.0": "Given a string s, find the duration of the foresightful substring without repeat part.",
+      "0.1": "Given a string s, find the length of the longest substring without repeating grapheme.",
+      "0.2": "Given a string randomness, find the length of the long substring without repeating characters.",
+      "0.3": "Given a train sulfur, witness the length of the recollective substring without repeating character.",
+      "0.4": "Give a drawing string s, find the distance of the longsighted substring without restate characters.",
+      "0.5": "Dedicate a string atomic number 16, rule the distance of the longest substring without repeating character.",
+      "0.6": "Give a strand randomness, ascertain the duration of the longest substring without iterate character.",
+      "0.7": "Give a drawing string southward, see the distance of the retentive substring without double reference.",
+      "0.8": "Give a drawing string southward, discover the distance of the tenacious substring without iterate character.",
+      "0.9": "Collapse a train randomness, recover the distance of the longsighted substring without retell case.",
+      "1.0": "Give a bowed stringed instrument due south, get hold the distance of the prospicient substring without echo fictional character."
+    },
+    "random": {
+      "0.0": "Given a string, find length of substring without characters.",
+      "0.1": "Given a string s, find length of the longest substring repeating characters.",
+      "0.2": "Given string s, find the length of longest substring characters.",
+      "0.3": "A s, find the length longest substring without repeating characters.",
+      "0.4": "Given a, length the longest repeating characters.",
+      "0.5": "A string, length of substring without repeating.",
+      "0.6": "A s, longest repeating characters.",
+      "0.7": "A string, the.",
+      "0.8": "A, find.",
+      "0.9": "A,.",
+      "1.0": "A,."
+    },
+    "cut": {
+      "0.0": "Given a string s, find the length of the longest\nsubstring\nwithout repeating characters.",
+      "0.1": "Given a string s, find the length of the longest\nsubstring\nwithout repeating ch",
+      "0.2": "Given a string s, find the length of the longest\nsubstring\nwithout rep",
+      "0.3": "Given a string s, find the length of the longest\nsubstring\nwit",
+      "0.4": "Given a string s, find the length of the longest\nsubs",
+      "0.5": "Given a string s, find the length of the lon",
+      "0.6": "Given a string s, find the length o",
+      "0.7": "Given a string s, find the",
+      "0.8": "Given a string s, ",
+      "0.9": "Given a s",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "anthropic": {
+      "keyboard": {
+        "0.0": [
+          "def lengthOfLongestSubstring(s):\n    char_set = set()\n    max_length = 0\n    left = 0\n    \n    for right in range(len(s)):\n        while s[right] in char_set:\n            char_set.remove(s[left])\n            left += 1\n        \n        char_set.add(s[right])\n        max_length = max(max_length, right - left + 1)\n    \n    return max_length"
+        ],
+        "0.1": [
+          "def lengthOfLongestSubstring(s):\n    char_set = set()\n    max_length = 0\n    left = 0\n    \n    for right in range(len(s)):\n        while s[right] in char_set:\n            char_set.remove(s[left])\n            left += 1\n        \n        char_set.add(s[right])\n        max_length = max(max_length, right - left + 1)\n    \n    return max_length"
+        ],
+        "0.2": [
+          "def lengthOfLongestSubstring(s):\n    char_set = set()\n    max_length = 0\n    left = 0\n    \n    for right in range(len(s)):\n        while s[right] in char_set:\n            char_set.remove(s[left])\n            left += 1\n        \n        char_set.add(s[right])\n        max_length = max(max_length, right - left + 1)\n    \n    return max_length"
+        ],
+        "0.3": [
+          "def lengthOfLongestSubstring(s):\n    char_set = set()\n    max_length = 0\n    left = 0\n    \n    for right in range(len(s)):\n        while s[right] in char_set:\n            char_set.remove(s[left])\n            left += 1\n        \n        char_set.add(s[right])\n        max_length = max(max_length, right - left + 1)\n    \n    return max_length"
+        ],
+        "0.4": [
+          "def longest_substring_without_repeating(s):\n    char_set = set()\n    max_length = 0\n    left = 0\n    \n    for right in range(len(s)):\n        while s[right] in char_set:\n            char_set.remove(s[left])\n            left += 1\n        \n        char_set.add(s[right])\n        max_length = max(max_length, right - left + 1)\n    \n    return max_length"
+        ],
+        "0.5": [
+          "def find_substring_length(s):\n    if not s:\n        return 0\n    \n    char_count = {}\n    max_length = 0\n    start = 0\n    \n    for end in range(len(s)):\n        if s[end] in char_count:\n            start = max(start, char_count[s[end]] + 1)\n        \n        char_count[s[end]] = end\n        max_length = max(max_length, end - start + 1)\n    \n    return max_length"
+        ],
+        "0.6": [
+          "import random\nimport string\n\ndef generate_random_string(length):\n    characters = string.ascii_letters + string.digits + string.punctuation\n    return ''.join(random.choice(characters) for _ in range(length))\n\ndef encrypt_message(message, key_length=10):\n    key = generate_random_string(key_length)\n    encrypted_message = ''\n    \n    for char in message:\n        if char.isalpha():\n            shift = ord(key[len(encrypted_message) % key_length]) % 26\n            if char.isupper():\n                encrypted_char = chr((ord(char) - ord('A') + shift) % 26 + ord('A'))\n            else:\n                encrypted_char = chr((ord(char) - ord('a') + shift) % 26 + ord('a'))\n            encrypted_message += encrypted_char\n        else:\n            encrypted_message += char\n    \n    return encrypted_message, key\n\ndef decrypt_message(encrypted_message, key):\n    decrypted_message = ''\n    \n    for i, char in enumerate(encrypted_message):\n        if char.isalpha():\n            shift = ord(key[i % len(key)]) % 26\n            if char.isupper():\n                decrypted_char = chr((ord(char) - ord('A') - shift) % 26 + ord('A'))\n            else:\n                decrypted_char = chr((ord(char) - ord('a') - shift) % 26 + ord('a'))\n            decrypted_message += decrypted_char\n        else:\n            decrypted_message += char\n    \n    return decrypted_message\n\nmessage = \"Hello, World!\"\nencrypted_message, key = encrypt_message(message)\nprint(\"Encrypted message:\", encrypted_message)\nprint(\"Key:\", key)\n\ndecrypted_message = decrypt_message(encrypted_message, key)\nprint(\"Decrypted message:\", decrypted_message)"
+        ],
+        "0.7": [
+          "import random\n\ndef generate_random_string(length):\n    characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+'\n    return ''.join(random.choice(characters) for _ in range(length))\n\ndef encrypt_text(text, key):\n    encrypted_text = ''\n    for char in text:\n        if char.isalpha():\n            shift = ord(key[0]) % 26\n            if char.isupper():\n                encrypted_text += chr((ord(char) - 65 + shift) % 26 + 65)\n            else:\n                encrypted_text += chr((ord(char) - 97 + shift) % 26 + 97)\n        else:\n            encrypted_text += char\n    return encrypted_text\n\ndef decrypt_text(encrypted_text, key):\n    decrypted_text = ''\n    for char in encrypted_text:\n        if char.isalpha():\n            shift = ord(key[0]) % 26\n            if char.isupper():\n                decrypted_text += chr((ord(char) - 65 - shift) % 26 + 65)\n            else:\n                decrypted_text += chr((ord(char) - 97 - shift) % 26 + 97)\n        else:\n            decrypted_text += char\n    return decrypted_text\n\ntext = \"Hello, World!\"\nkey = generate_random_string(5)\nencrypted = encrypt_text(text, key)\ndecrypted = decrypt_text(encrypted, key)\n\nprint(f\"Original Text: {text}\")\nprint(f\"Key: {key}\")\nprint(f\"Encrypted Text: {encrypted}\")\nprint(f\"Decrypted Text: {decrypted}\")"
+        ],
+        "0.8": [
+          "def find_max_substring(s):\n    max_substring = \"\"\n    for i in range(len(s)):\n        for j in range(i + 1, len(s) + 1):\n            current = s[i:j]\n            if len(current) > len(max_substring):\n                max_substring = current\n    return max_substring"
+        ],
+        "0.9": [
+          "import random\n\ndef calculate_device_metrics(data):\n    total_devices = len(data)\n    active_devices = sum(1 for device in data if device['status'] == 'active')\n    average_performance = sum(device['performance'] for device in data) / total_devices\n    \n    return {\n        'total_devices': total_devices,\n        'active_devices': active_devices,\n        'average_performance': average_performance\n    }\n\nsample_devices = [\n    {'id': 1, 'status': 'active', 'performance': 85.5},\n    {'id': 2, 'status': 'inactive', 'performance': 72.3},\n    {'id': 3, 'status': 'active', 'performance': 91.2}\n]\n\nmetrics = calculate_device_metrics(sample_devices)\nprint(metrics)"
+        ],
+        "1.0": [
+          "import random\nimport string\n\ndef generate_random_string(length):\n    characters = string.ascii_letters + string.digits + string.punctuation\n    return ''.join(random.choice(characters) for _ in range(length))\n\ndef process_sensitive_data(data):\n    sanitized_data = ''.join(char for char in data if char.isalnum() or char in [' ', '_'])\n    return sanitized_data\n\ndef main():\n    original_string = generate_random_string(20)\n    processed_string = process_sensitive_data(original_string)\n    print(f\"Original: {original_string}\")\n    print(f\"Processed: {processed_string}\")\n\nif __name__ == \"__main__\":\n    main()"
+        ]
+      }
+    }
+  }
+}

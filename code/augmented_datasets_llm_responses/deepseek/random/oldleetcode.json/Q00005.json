@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/zigzag-conversion/discuss/817306/Very-simple-and-intuitive-O(n)-python-solution-with-explanation",
+  "python_solutions": "class Solution:\n    def convert(self, s: str, numRows: int) -> str:\n        if numRows == 1:\n            return s\n            \n        row_arr = [\"\"] * numRows\n        row_idx = 1\n        going_up = True\n\n        for ch in s:\n            row_arr[row_idx-1] += ch\n            if row_idx == numRows:\n                going_up = False\n            elif row_idx == 1:\n                going_up = True\n            \n            if going_up:\n                row_idx += 1\n            else:\n                row_idx -= 1\n        \n        return \"\".join(row_arr)",
+  "slug": "zigzag-conversion",
+  "post_title": "Very simple and intuitive O(n) python solution with explanation",
+  "user": "wmv3317",
+  "upvotes": 96,
+  "views": 3000,
+  "problem_title": "zigzag conversion",
+  "number": 6,
+  "acceptance": 0.432,
+  "difficulty": "Medium",
+  "__index_level_0__": 230,
+  "question": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)\nP   A   H   N\nA P L S I I G\nY   I   R\nAnd then read line by line: \"PAHNAPLSIIGYIR\"\nWrite the code that will take a string and make this conversion given a number of rows:\nstring convert(string s, int numRows);\n  Example 1:\nInput: s = \"PAYPALISHIRING\", numRows = 3\nOutput: \"PAHNAPLSIIGYIR\"\nExample 2:\nInput: s = \"PAYPALISHIRING\", numRows = 4\nOutput: \"PINALSIGYAHRPI\"\nExplanation:\nP     I    N\nA   L S  I G\nY A   H R\nP     I\nExample 3:\nInput: s = \"A\", numRows = 1\nOutput: \"A\"\n  Constraints:\n1 <= s.length <= 1000\ns consists of English letters (lower-case and upper-case), ',' and '.'.\n1 <= numRows <= 1000",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "The string \" PAYPALISHIRING \" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility) P A H N A P L S I I G Y I R And then read line by line: \" PAHNAPLSIIGYIR \" Write the code that will take a string and make this conversion given a number of rows: string convert (string s, int numRows );",
+      "0.1": "The string \" PAhPALISbIRING \" is written in a zigzqg pattern on a given number of tows like thLs: (you may want to display this pat^ern in a fixed font for better legibility) P A H N A P L S I I G Y I R And then reac line by line: \" oAmNAPLSIIGYIR \" Wrlte the code that will take a string and make this donversion given a number of rows: string convert (string s, int numRows );",
+      "0.2": "The string \" PAYPALISHIRING \" is written in a zigzag lattwrn on a giv#n nuHbDr of r9ws like this: (you may Aant to display this pQftern in a fixed fonR for bet^eg legibility) P A H N A P L S I I G Y I R And theJ #ead lime by line: \" PAnNAPLSlIGYlR \" Write the code that will 4ake a string and make thie convwrsiog given a J8mber of rows: st#inv convert (string s, int numRoaA );",
+      "0.3": "The s%rinb \" PAGPZ>IqHIRINy \" is wri$t2J in a zigzWf pat^DrH on a given numheG of 3owc /(ke tnic: (you may wWht to display thUe pattern in a VixeE font for b2tyer ,ehiHility) P A H N A P L S I I G Y I R And $hrn read lihD by l9nF: \" PWHNALpSIIG5I3 \" Write the code that wul; take a st48ng and make thlw convFrwi8n goveJ a nimbe3 of rows: Dtrinr cinvfrr (string s, int hum$owQ );",
+      "0.4": "The str7hf \" 0AYPA.7DHIToNG \" is wTigt#n in a XiTzSg (aYGern on a Yiveb numfwT of tlws Oik2 tNls: (you may AanF to d9Ellay tyJs patFWrh in a rixSd Bonf for vet^e% ?egkfilitH) P A H N A P L S I I G Y I R And th@B geas ligw by l*n$: \" lQHhAPLeIInYI3 \" W3itf the ckdS Ruat will ^Zke a XtgJng and ma,W %Tis ckjdersiog gic3n a nHmbST of rows: attinV convert (st5knb s, int JumRL3s );",
+      "0.5": "The shrOgg \" PQYPzLIejJdoNG \" is Dr(ytwn in a zigxzt 9q6t4rn on a rigeH MHmbef of ro2C :9ke Ghiq: (you may 2Xnt to diAolX& 5hls LQrtdrn in a fiS2w tonY for Vwttfr ley7nliity) P A H N A P L S I I G Y I R And ^uen t$ad lKnS by lon@: \" PwgmA(LZIJGYkR \" 3rj$e the cKd@ YUat wu:l Fqke a zy#ing and <zke hhiX v(nveDakon rkveB a MumNe$ of rLwd: syr&nY c)mF4rt (XYr9ng s, int n tmeosA );",
+      "0.6": "The z4tiny \" PqY0AL7ZguFIjn \" is qfu5teg in a ziyswF (a$RDTn on a Y&veh HuHb43 of r(aD o8k2 tG*a: (you may wxmG to SjsOPah tmUE pztfS$m in a flSes G0Gt for GfY$er l@giHiKu45) P A H N A P L S I I G Y I R And tTsb 52qd lOM2 by lJG$: \" OAnNS9?SJ8GYUt \" #rK4e the cpe$ fhZ4 3i<O $zk3 a agrUHg and mwod Rh7D dobvW%E8on giG2G a juNgRr of rKDw: xF#ijg vonDdtg (ZtD8hg s, int mH,%owE );",
+      "0.7": "The sHgjBy \" lQJosLOSmI$KNh \" is Df9t6@n in a sjVsSg 9A$tefJ on a g7Fdj nk<V3g of rkEC o9ue tg*Q: (you may 3Wmt to wicpOAT Gtiz pAtgF5M in a f8c@v fib6 for v35y4r >egonji85y) P A H N A P L S I I G Y I R And $Yeg r$ZE KLn# by lkmw: \" )AHHZLPSkIR%*% \" AroH# the cPsS fhQH w&>K FaUR a Wtg&Hy and mxJd tN*w Vpnv$Ds8Lm r&g#n a H*,GeD of 50wA: ErgUgg F0GDerG (aYr*Mv s, int GuN%o3D );",
+      "0.8": "The dFDjBg \" (QY0X:lwtIG*HY \" is w3j^4dG in a zjyXAv 0a663fh on a g&gSH BhKnSr of 501c kO>D ^UuC: (you may EWgR to ROE(lZ6 Ymuq Lxg%##n in a f*dWW rlmF for N#rt2D ldbiN(,9f&) P A H N A P L S I I G Y I R And Hb2m %2Qf Pkjr by P&b$: \" )qbgWP/SL*TuJ3 \" Q4J$e the v)fs gBx$ dl,< 5sm# a q53OHg and kx<f FTld cLgFFrA*)m rOgfn a bjNHe% of Tl3a: Ct#OBn XiGvDTY (X$GknB s, int MKN#8wX );",
+      "0.9": "The QYF*Mn \" PWJ0X>kZuUflBF \" is QdJG^3B in a AJnxqf 0W^RR%g on a b8b4b j8<NWT of f03X ,J<3 rJ&E: (you may !qbF to RoZO>Sh 4tJZ 0Wrgwtm in a bkS3F eKGh for N@FY@# ;Rv&H8llf&) P A H N A P L S I I G Y I R And 4g4g 4rqx /Ohw by iLHr: \" Pqgmqo:ZlOf6*e \" 2tOYd the xLc3 5bQG 3j;k 4w.D a CR%KHh and JXmS YG7z s*JC$tsJKB HLBwH a b6,NS% of EIEe: erT&HV VIBGrdH (q4EJHT s, int h^<$pqz );",
+      "1.0": "The c%DkHt \" lWgOakUwgjgKmt \" is @5l5YsG in a xJFXwY )srYWgG on a nLBrb B7khR3 of %)Sz ioid ^J(a: (you may eZbH to f7Ql?Wt ^BlC LWGHrgH in a Gudfs b)MH for nd$FRd <FnLH&P*H&) P A H N A P L S I I G Y I R And Hn4H $$Wc Ougw by Ojj@: \" (anmWo/E(7T^oT \" s$j4$ the flR$ GbS6 D*pk Fzl@ a aRG9jb and ,X>R gB7Q SKGg@tc89M V(DdH a h8hHFD of Dksc: Zy3ogt sIhcS35 (DF3KmY s, int mi,F*1X );"
+    },
+    "synonym": {
+      "0.0": "The string \" PAYPALISHIRING \" is write in a zig normal on a gift number of rows like this: (you may desire to display this pattern in a set case for better discernability) P A H N A P Litre S I 1 G Wye I Universal gas constant And then read line by line: \" PAHNAPLSIIGYIR \" Write the code that volition take aim a string and make this rebirth given a number of rows: string convert (string s, int numRows );",
+      "0.1": "The string \" PAYPALISHIRING \" is written in a zigzag pattern on a given number of rows like this: (you whitethorn want to display this pattern in a fixed baptistry for good legibility) P A H Newton A P L S I I G Y I Universal gas constant And then read line by line: \" PAHNAPLSIIGYIR \" Write the code that will take a string and make this rebirth given a number of rows: string convert (string s, int numRows );",
+      "0.2": "The chain \" PAYPALISHIRING \" is written in a zigzag shape on a given number of rowing like this: (you may want to exhibit this figure in a fixed font for better legibility) P A H Atomic number 7 A P L S I I G Y Iodine R And then study bank line by line: \" PAHNAPLSIIGYIR \" Write the code that will get hold of a string and make this conversion give a number of row: string convert (string s, int numRows );",
+      "0.3": "The string \" PAYPALISHIRING \" be write in a zig blueprint on a given number of row like this: (you may want to exhibit this pattern in a set case for better legibility) P A H N Angstrom unit Atomic number 15 L Sec I I G Y I R And then read demarcation by line: \" PAHNAPLSIIGYIR \" Write the code that will take up a string and make this conversion give a number of quarrel: string convert (draw s, int numRows );",
+      "0.4": "The chain \" PAYPALISHIRING \" be write in a zag pattern on a given routine of wrangle comparable this: (you may need to display this traffic pattern in a frozen font for better legibility) P A H Atomic number 7 Type a Phosphorus Litre S 1 1 G Y I Roentgen And then record line by occupation: \" PAHNAPLSIIGYIR \" Write the computer code that will take a string and arrive at this conversion give a phone number of rows: string convert (string up second, int numRows );",
+      "0.5": "The string \" PAYPALISHIRING \" embody written in a zig pattern on a given turn of rows similar this: (you english hawthorn want to exhibit this rule in a rigid case for better readability) P A Atomic number 1 Northward Axerophthol Atomic number 15 Cubic decimetre Sulfur Atomic number 53 Iodin G Y 1 R And then understand melodic phrase by line: \" PAHNAPLSIIGYIR \" Write the codification that testament pick out a chain and ready this spiritual rebirth leave a bit of wrangle: string convert (string along s, int numRows );",
+      "0.6": "The train \" PAYPALISHIRING \" is write in a zag design on a give number of rows like this: (you crataegus laevigata desire to exhibit this radiation pattern in a frozen face for better readability) P A Atomic number 1 Newton Angstrom unit Phosphorus Cubic decimetre Randomness 1 One G Atomic number 39 One Universal gas constant And so understand line by argumentation: \" PAHNAPLSIIGYIR \" Write the computer code that testament call for a string and take this transition give a numeral of rows: chain convert (string s, int numRows );",
+      "0.7": "The chain \" PAYPALISHIRING \" embody publish in a zig design on a pass issue of course alike this: (you crataegus oxycantha want to expose this shape in a rigid fount for unspoilt readability) P A Hydrogen Normality Axerophthol Atomic number 15 Fifty Siemens Ane 1 G Yttrium 1 Roentgen And so say pipeline by argumentation: \" PAHNAPLSIIGYIR \" Write the codification that will deal a drawing string and create this spiritual rebirth pass on a issue of run in: twine convert (string along randomness, int numRows );",
+      "0.8": "The drawstring \" PAYPALISHIRING \" personify compose in a zig figure on a throw act of rowing same this: (you whitethorn desire to exhibit this form in a frozen baptistry for good readability) P A Heat content North Antiophthalmic factor Atomic number 15 Liter Atomic number 16 1 One G Yttrium Unity Universal gas constant And so translate lineage by line of reasoning: \" PAHNAPLSIIGYIR \" Write the computer code that testament assume a train and realise this changeover pay a numeral of row: train convert (string along siemens, int numRows );",
+      "0.9": "The strand \" PAYPALISHIRING \" follow write in a zag traffic pattern on a founder turn of course alike this: (you english hawthorn require to exhibit this rule in a frozen baptismal font for right discernability) P A Henry Atomic number 7 Angstrom unit Phosphorus Litre Southward Iodine 1 G Yttrium Single Roentgen And so take melody by telephone circuit: \" PAHNAPLSIIGYIR \" Write the codification that leave carry a strand and wee this transition leave a issue of rowing: train convert (thread due south, int numRows );",
+      "1.0": "The strand \" PAYPALISHIRING \" be write in a zig form on a pay phone number of row same this: (you whitethorn need to exhibit this shape in a frozen case for good readability) P A Planck's constant Normality Ampere Phosphorus Litre Entropy One 1 G Wye Iodine Gas constant And so record demarcation by personal credit line: \" PAHNAPLSIIGYIR \" Write the codification that testament guide a twine and take a shit this rebirth give a act of row: drawing string convert (draw reciprocal ohm, int numRows );"
+    },
+    "random": {
+      "0.0": "The string \" PAYPALISHIRING \" is in zigzag pattern on a given number this: (this in a fixed font for) A H N P L S I G Y R then read line: \" PAHNAPLSIIGYIR \" Write the code that a string and make conversion given a of rows: (string s, numRows );",
+      "0.1": "The string \" PAYPALISHIRING \" is written a zigzag pattern on a given number of rows like this: (you may want to display this pattern in fixed font legibility) P A H N A L S I G Y I R And then read line by line: \" PAHNAPLSIIGYIR \" Write the that will take a string and make this conversion given a number of rows: convert (s, int numRows );",
+      "0.2": "String \" \" is in a zigzag pattern on number of rows like this: (want to display this in a font for better legibility) P A N A P L S I I G I R And then read line by line: \" PAHNAPLSIIGYIR \" Write the code that will take string and make this conversion a number of rows: string (string, );",
+      "0.3": "The \" \" is written in a zigzag on a of this: (to display this pattern a fixed font for better) H N A P L I Y R then read line by line: \" \" Write code that will take and make given a number of: string convert (string s, int );",
+      "0.4": "The \" \" is in a zigzag on given rows like: (you may want to display fixed font for) P S I I G Y And read by line: \" \" the that a string and this conversion a rows: convert (string, numRows );",
+      "0.5": "The string \" \" is in zigzag on a number of: (may display pattern in a fixed legibility) P H N I Y R: \" PAHNAPLSIIGYIR \" a given number of rows: string (s, numRows );",
+      "0.6": "The \" \" is written pattern a of like: (may want to this pattern in a) A L And: \" \" the and of: (, int numRows );",
+      "0.7": "The \" PAYPALISHIRING \" is pattern on: () A S I R: \" PAHNAPLSIIGYIR \" a string make: (, );",
+      "0.8": "String \" \": (in) I: \" \" of rows: (, );",
+      "0.9": "String \" \": (): \" \": (, );",
+      "1.0": "String \" \": (): \" \": (, );"
+    },
+    "cut": {
+      "0.0": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)\nP   A   H   N\nA P L S I I G\nY   I   R\nAnd then read line by line: \"PAHNAPLSIIGYIR\"\nWrite the code that will take a string and make this conversion given a number of rows:\nstring convert(string s, int numRows);",
+      "0.1": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)\nP   A   H   N\nA P L S I I G\nY   I   R\nAnd then read line by line: \"PAHNAPLSIIGYIR\"\nWrite the code that will take a string and make this conversion given a number of rows:\n",
+      "0.2": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)\nP   A   H   N\nA P L S I I G\nY   I   R\nAnd then read line by line: \"PAHNAPLSIIGYIR\"\nWrite the code that will take a string and make th",
+      "0.3": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)\nP   A   H   N\nA P L S I I G\nY   I   R\nAnd then read line by line: \"PAHNAPLSIIGYIR\"\nWrite the c",
+      "0.4": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)\nP   A   H   N\nA P L S I I G\nY   I   R\nAnd then read line",
+      "0.5": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)\nP   A   H   N\nA P ",
+      "0.6": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for",
+      "0.7": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to di",
+      "0.8": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number",
+      "0.9": "The string \"PAYPALISHIRING\" is written",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "deepseek": {
+      "random": {
+        "0.0": [
+          "def convert(s, numRows):\n    if numRows == 1 or numRows >= len(s):\n        return s\n    res = [''] * numRows\n    index, step = 0, 1\n    for char in s:\n        res[index] += char\n        if index == 0:\n            step = 1\n        elif index == numRows - 1:\n            step = -1\n        index += step\n    return ''.join(res)"
+        ],
+        "0.1": [
+          "def convert(s, numRows):\n    if numRows == 1 or numRows >= len(s):\n        return s\n    \n    rows = [''] * numRows\n    current_row = 0\n    going_down = False\n    \n    for char in s:\n        rows[current_row] += char\n        if current_row == 0 or current_row == numRows - 1:\n            going_down = not going_down\n        current_row += 1 if going_down else -1\n    \n    return ''.join(rows)"
+        ],
+        "0.2": [
+          "def convert(s: str, num_rows: int) -> str:\n    if num_rows == 1 or num_rows >= len(s):\n        return s\n    \n    rows = [\"\"] * num_rows\n    current_row = 0\n    going_down = False\n    \n    for char in s:\n        rows[current_row] += char\n        if current_row == 0 or current_row == num_rows - 1:\n            going_down = not going_down\n        current_row += 1 if going_down else -1\n    \n    return \"\".join(rows)"
+        ],
+        "0.3": [
+          "def convert(s, num_rows):\n    if num_rows == 1 or num_rows >= len(s):\n        return s\n    \n    rows = [[] for _ in range(num_rows)]\n    current_row = 0\n    direction = -1  # 1 for down, -1 for up\n    \n    for char in s:\n        rows[current_row].append(char)\n        if current_row == 0 or current_row == num_rows - 1:\n            direction *= -1\n        current_row += direction\n    \n    result = []\n    for row in rows:\n        result.extend(row)\n    return ''.join(result)"
+        ],
+        "0.4": [
+          "def convert(s, numRows):\n    if numRows == 1 or numRows >= len(s):\n        return s\n    \n    rows = [''] * numRows\n    current_row = 0\n    going_down = False\n    \n    for char in s:\n        rows[current_row] += char\n        if current_row == 0 or current_row == numRows - 1:\n            going_down = not going_down\n        current_row += 1 if going_down else -1\n    \n    return ''.join(rows)"
+        ],
+        "0.5": [
+          "def convert(s, numRows):\n    if numRows == 1 or numRows >= len(s):\n        return s\n    \n    rows = [''] * numRows\n    current_row = 0\n    going_down = False\n    \n    for char in s:\n        rows[current_row] += char\n        if current_row == 0 or current_row == numRows - 1:\n            going_down = not going_down\n        current_row += 1 if going_down else -1\n    \n    return ''.join(rows)"
+        ],
+        "0.6": [
+          "def convert(s, numRows):\n    if numRows == 1 or numRows >= len(s):\n        return s\n    \n    rows = [''] * numRows\n    current_row = 0\n    going_down = False\n    \n    for char in s:\n        rows[current_row] += char\n        if current_row == 0 or current_row == numRows - 1:\n            going_down = not going_down\n        current_row += 1 if going_down else -1\n    \n    return ''.join(rows)"
+        ],
+        "0.7": [
+          "def convert(s, numRows):\n    if numRows == 1 or numRows >= len(s):\n        return s\n    \n    rows = [[] for _ in range(numRows)]\n    current_row = 0\n    direction = 1  # 1 for down, -1 for up\n    \n    for char in s:\n        rows[current_row].append(char)\n        current_row += direction\n        \n        if current_row == 0 or current_row == numRows - 1:\n            direction *= -1\n    \n    result = []\n    for row in rows:\n        result.extend(row)\n    \n    return ''.join(result)\n\ns = \"PAYPALISHIRING\"\nnumRows = 3\nprint(convert(s, numRows))"
+        ],
+        "0.8": [
+          "def print_spaces(rows):\n    for i in range(rows):\n        print(\" \")"
+        ],
+        "0.9": [
+          "def process_string(s):\n    return s.strip(), len(s.split())\n\ninput_string = \" \"\nresult = process_string(input_string)\nprint(result)"
+        ],
+        "1.0": [
+          "def process_string(s):\n    return s.strip(), len(s.split())\n\ninput_string = \" \"\nresult = process_string(input_string)\nprint(result)"
+        ]
+      }
+    }
+  }
+}

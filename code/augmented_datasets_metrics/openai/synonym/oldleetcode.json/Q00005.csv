@@ -1,0 +1,12 @@
+model,method,dataset,task,augmentation_rate,eval_score
+openai,synonym,oldleetcode.json,Q00005,0.0,1
+openai,synonym,oldleetcode.json,Q00005,0.1,1
+openai,synonym,oldleetcode.json,Q00005,0.2,1
+openai,synonym,oldleetcode.json,Q00005,0.3,1
+openai,synonym,oldleetcode.json,Q00005,0.4,1
+openai,synonym,oldleetcode.json,Q00005,0.5,1
+openai,synonym,oldleetcode.json,Q00005,0.6,1
+openai,synonym,oldleetcode.json,Q00005,0.7,1
+openai,synonym,oldleetcode.json,Q00005,0.8,1
+openai,synonym,oldleetcode.json,Q00005,0.9,1
+openai,synonym,oldleetcode.json,Q00005,1.0,1

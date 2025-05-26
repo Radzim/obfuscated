@@ -1,0 +1,107 @@
+{
+  "slug": "find-the-largest-almost-missing-integer",
+  "problem_title": "Find the Largest Almost Missing Integer",
+  "number": 3471,
+  "acceptance": 0.364,
+  "difficulty": "Easy",
+  "question": "You are given an integer array nums and an integer k.\n\nAn integer x is almost missing from nums if x appears in exactly one subarray of size k within nums.\n\nReturn the largest almost missing integer from nums. If no such integer exists, return -1.\n\nA subarray is a contiguous sequence of elements within an array.\n\n**Example 1:**\n\n```\nInput: nums = [3,9,2,1,7], k = 3\nOutput: 7\nExplanation:\n- 1 appears in 2 subarrays of size 3: [9, 2, 1] and [2, 1, 7].\n- 2 appears in 3 subarrays of size 3: [3, 9, 2], [9, 2, 1], [2, 1, 7].\n- 3 appears in 1 subarray of size 3: [3, 9, 2].\n- 7 appears in 1 subarray of size 3: [2, 1, 7].\n- 9 appears in 2 subarrays of size 3: [3, 9, 2], and [9, 2, 1].\nWe return 7 since it is the largest integer that appears in exactly one subarray of size k.\n```\n\n**Example 2:**\n\n```\nInput: nums = [3,9,7,2,1,7], k = 4\nOutput: 3\nExplanation:\n- 1 appears in 2 subarrays of size 4: [9, 7, 2, 1] and [7, 2, 1, 7].\n- 2 appears in 3 subarrays of size 4: [3, 9, 7, 2], [9, 7, 2, 1], [7, 2, 1, 7].\n- 3 appears in 1 subarray of size 4: [3, 9, 7, 2].\n- 7 appears in 3 subarrays of size 4: [3, 9, 7, 2], [9, 7, 2, 1], [7, 2, 1, 7].\n- 9 appears in 2 subarrays of size 4: [3, 9, 7, 2], [9, 7, 2, 1].\nWe return 3 since it is the largest and only integer that appears in exactly one subarray of size k.\n```\n\n**Example 3:**\n\n```\nInput: nums = [0,0], k = 1\nOutput: -1\nExplanation:\nThere is no integer that appears in only one subarray of size 1.\n```\n\n**Constraints:**\n\n- 1 <= nums.length <= 50\n- 0 <= nums[i] <= 50\n- 1 <= k <= nums.length",
+  "post_href": "https://leetcode.com/problems/find-the-largest-almost-missing-integer/discuss/3471/Easy-Python-Solution",
+  "python_solutions": "class Solution:\n    def findLargestAlmostMissing(self, nums: List[int], k: int) -> int:\n        from collections import defaultdict\n        count = defaultdict(int)\n        for i in range(len(nums) - k + 1):\n            subarray = nums[i:i + k]\n            unique_elements = set(subarray)\n            for elem in unique_elements:\n                count[elem] += 1\n        candidates = [num for num, cnt in count.items() if cnt == 1]\n        return max(candidates) if candidates else -1",
+  "post_title": "Easy Python Solution",
+  "user": "leetcode_user",
+  "upvotes": 50,
+  "views": 2000,
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "You are given an integer array nums and an integer k. An integer x is almost missing from nums if x appears in exactly one subarray of size k within nums. Return the largest almost missing integer from nums. If no such integer exists, return - 1. A subarray is a contiguous sequence of elements within an array.",
+      "0.1": "You are givsn an intFger array nums and an integer k. An integer x is alm0st missing from nuJs if x appears in exactly one subarray of size k within nums. Return the ?argest almost missing integer from nums. If no such igteger ex(sts, return - 1. A subarray is a contiguous sequence of elements within an array.",
+      "0.2": "You are given an iBtegFr array nuJs and an integer k. An integer x is almPsg m&ss&ng from nums if x appears in ezsctly one cKbarray of size k within n Tms. Retkgn the largest almost missing integer ftom numX. If no such integer exists, return - 1. A s TbaGray is a contiguous sequeGxe of elements wirtin an array.",
+      "0.3": "You are tivWn an UnGeg@r wrrah nums and an integer k. An *mteher x is al<pst missing from nums if x aLpeaFQ in exactly one diFarray of sJxe k within nukC. Ret T3n the largest a>moQt miwsiGR ihtebwr fgon nums. If no QuSh (ntFgFr exists, return - 1. A subarray is a contiguous Eeq Tenc4 of Flem$ntq wituiM an zrTay.",
+      "0.4": "You are giFeH an inr#g2r afrSy nums and an igg4ger k. An iMterwr x is a:moey missing trpm nuNq if x appears in dxaxt:y one subarray of s&z3 k wirhJM JumQ. Re% TrJ the oarg$sH almost mlsCjng lHtege4 v%om MumE. If no s^Sh inReHe5 2a*sts, FetuEM - 1. A EhbaDrZy is a contiguous cRsuenc4 of Slemsn$d within an Z5ray.",
+      "0.5": "You are giD@h an int#Fwd ag%sy guKs and an (hteTe5 k. An iB6dNer x is almPEr <isZiht fDoJ hJms if x SOpesrW in $xqXt.y one zugaerXy of AizS k witm*h Ju,s. ferugn the lSegeqg xlHPst mOEsiHR OnrefSr fGIm B&ms. If no AucY *ntSBDr esOs%s, return - 1. A cuNaGgay is a doJ6irupus awAuenxe of e.emeGFD wi%Gih an a$ea%.",
+      "0.6": "You are giC2g an OBteBwF wrfAy MhNs and an iHhfTeF k. An *m4eg3% x is zlnpDt mjsXJBN R3*m G&js if x q0peXGW in $xXcg:J one Wkbargzj of ZiSd k 2iht&n h7hs. R$tj5g the KarHsxY ZOm*at kiZaLbg LBtDBeE Er)J nj<q. If no s8DY 7htRv4r 4x7sYX, %4YurM - 1. A s*ba#eS% is a Xpmtkn8ous s#!u3JVe of e.emdJ%E 2kghOn an SrrQu.",
+      "0.7": "You are tUb3n an ijHDref S#rS& mu,w and an 8JtRg#G k. An ljteT3$ x is qohoQh niAeibt gr9h GjmX if x AlOfWrs in dAwStlU one eHbqErAU of s7xW k 2*^hlH Hu<Z. $WRkrG the ?Srh$et a?HiEH JiqQoGg kgR2gwr ffLk nijz. If no skDB 9jfRgWr Wc&xHs, f#RhGn - 1. A QkNwtEay is a slh57guKJs AraH3mce of D,dNeMtC Aj^Mij an w4Taj.",
+      "0.8": "You are BiF@G an 7G43g@T a5Exu J Tjc and an oB6dgdG k. An OmyWFe$ x is q/<Ps^ kixDlHN tT0< MIkE if x ALpWX5X in #AZxtot one W^NS#gqy of qox3 k AK$nOn B^<Q. %e$6fG the PqFRFsr Q/m8cr ,8exknb LJ$2ReD dDIJ m tnE. If no WIxY knGFy#e 3xoW6q, F$tJDm - 1. A EHHSrtZu is a s(nYJT&i&s zrAIeJs# of F/WKSmtZ siGgOB an WE5xy.",
+      "0.9": "You are RLF$j an ujfDf2g zDTQ5 gjnC and an kG6SFdg k. An *G43r#d x is z>hke5 hJqZjbn BTl, G TJw if x z()#z3C in SZzShiU one c&VwgGAJ of z*S3 k #LhGKm b&Kq. Gw%kej the ?S3T@X% x?<kX5 hlxX(mR 7hhDTRt gd8h b6hq. If no eIvM JH^DFRD rAJCyE, t$5^$J - 1. A qJNq55z7 is a VInFJTh86Q X#W*sgdD of DIwNfBfx !*%uoG an W$Gw^.",
+      "1.0": "You are rUG#G an jJyFF3e AgTqj j&<a and an 8G%3f$T k. An 7BHFV4f x is QIkIzR HuqqJmT Td(K B thc if x qL9$x5W in SswFHPt one c7GQ3fXg of Z7x@ k S8YbLH B&nw. fRF7eB the iS5VwQ% Q/JpCy juzz7Mr (br#n@3 vEIh B tKW. If no wkxn JJyFyDF Sa9zYc, T3Y8%B - 1. A E thzt$wj is a xkbR7T8* TX z2!84gV2 of 3;fNSbHZ a($yob an ze$QJ."
+    },
+    "synonym": {
+      "0.0": "You be given an whole number array nums and an whole number k. An integer x is almost missing from nums if x appears in on the dot i subarray of sizing k within nums. Return the largest almost miss whole number from nums. If no such whole number exists, return - i. A subarray is a conterminous succession of elements within an array.",
+      "0.1": "You are given an integer array nums and an integer k. An integer x is almost missing from nums if x appears in exactly one subarray of size potassium within nums. Return the largest almost missing integer from nums. If no such whole number exists, return - 1. A subarray is a contiguous sequence of elements within an array.",
+      "0.2": "You are given an integer array nums and an integer k. An integer x is almost missing from nums if x appears in exactly one subarray of size of it k within nums. Return the largest almost missing integer from nums. If no such whole number exists, bring back - i. A subarray is a conterminous sequence of elements within an array.",
+      "0.3": "You are given an whole number regalia nums and an whole number k. An whole number 10 is almost miss from nums if 10 seem in exactly one subarray of sizing k within nums. Devolve the magnanimous well nigh missing whole number from nums. If no such whole number exists, return - 1. A subarray be a immediate sequence of component within an array.",
+      "0.4": "You equal contribute an integer array nums and an whole number k. An whole number go be nigh missing from nums if x appear in exactly unrivalled subarray of sizing atomic number 19 within nums. Give back the largest well nigh miss integer from nums. If no such whole number exists, render - ace. A subarray be a contiguous sequence of elements within an raiment.",
+      "0.5": "You be devote an whole number raiment nums and an integer k. An integer hug drug be near lose from nums if x appears in on the nose unity subarray of size k within nums. Riposte the orotund almost missing integer from nums. If no such integer exists, return - ace. A subarray be a immediate episode of element within an array.",
+      "0.6": "You be give an whole number array nums and an integer kb. An whole number cristal be virtually omit from nums if 10 look in on the dot unrivaled subarray of size of it grand within nums. Retort the large nigh drop whole number from nums. If no such whole number exists, devolve - 1. A subarray be a contiguous sequence of component within an array.",
+      "0.7": "You be give an whole number regalia nums and an whole number kilobyte. An whole number ecstasy personify about miss from nums if x appear in on the nose one subarray of size of it kb within nums. Bring back the big nigh miss whole number from nums. If no such whole number exists, repay - unity. A subarray live a neighboring episode of element within an regalia.",
+      "0.8": "You be grant an whole number raiment nums and an whole number kb. An whole number ten be nigh miss from nums if ten seem in just unmatchable subarray of sizing kelvin within nums. Fall the heavy about pretermit whole number from nums. If no such whole number exists, turn back - i. A subarray be a adjacent chronological sequence of element within an regalia.",
+      "0.9": "You be turn over an whole number regalia nums and an whole number kib. An whole number hug drug live most escape from nums if 10 appear in on the nose matchless subarray of sizing honey oil within nums. Bring back the big well nigh miss whole number from nums. If no such whole number exists, render - i. A subarray make up a neighboring chronological sequence of element within an regalia.",
+      "1.0": "You be give an whole number raiment nums and an whole number kilobyte. An whole number tenner be most miss from nums if 10 seem in precisely 1 subarray of size of it chiliad within nums. Retrovert the heavy most miss whole number from nums. If no such whole number exists, hark back - one. A subarray be a immediate succession of factor within an raiment."
+    },
+    "random": {
+      "0.0": "You given integer nums an. is almost missing from nums x appears in exactly one subarray of size k within nums. Return the largest almost missing integer from. such, return -. subarray is contiguous sequence elements within array.",
+      "0.1": "You are given an integer array nums and an integer k. An integer x is missing from nums if x appears in exactly one of size k within nums. Return the largest almost missing integer from nums. If no integer exists, return - 1. subarray is contiguous sequence of elements array.",
+      "0.2": "You are given nums and an integer. integer x is almost missing from nums if x appears one subarray of size k within nums. Return largest almost missing integer from. If no such integer exists, return - 1. subarray is a contiguous sequence elements within.",
+      "0.3": "You are given an integer array and an k. An integer is missing nums if x appears one subarray of. largest integer from. If no such integer, return -. A subarray a contiguous sequence of elements within an.",
+      "0.4": "Are given array and an. An integer is almost from if x in subarray of within. Return missing integer. If such integer exists, -. A is contiguous sequence of elements an array.",
+      "0.5": "You are array nums k. integer x almost nums if appears in exactly one. the almost integer from nums. exists, - 1. A is a within.",
+      "0.6": "Are given integer an. integer x is of size k nums. the. such, - 1. A subarray contiguous of array.",
+      "0.7": "Are. x nums exactly of k. integer. If, -. A is a within.",
+      "0.8": "Are an. . integer. integer, -. sequence array.",
+      "0.9": "Are. .. , -..",
+      "1.0": "Are. .. , -.."
+    },
+    "cut": {
+      "0.0": "You are given an integer array nums and an integer k.\n\nAn integer x is almost missing from nums if x appears in exactly one subarray of size k within nums.\n\nReturn the largest almost missing integer from nums. If no such integer exists, return -1.\n\nA subarray is a contiguous sequence of elements within an array.",
+      "0.1": "You are given an integer array nums and an integer k.\n\nAn integer x is almost missing from nums if x appears in exactly one subarray of size k within nums.\n\nReturn the largest almost missing integer from nums. If no such integer exists, return -1.\n\nA subarray is a contiguous sequen",
+      "0.2": "You are given an integer array nums and an integer k.\n\nAn integer x is almost missing from nums if x appears in exactly one subarray of size k within nums.\n\nReturn the largest almost missing integer from nums. If no such integer exists, return -1.\n\nA",
+      "0.3": "You are given an integer array nums and an integer k.\n\nAn integer x is almost missing from nums if x appears in exactly one subarray of size k within nums.\n\nReturn the largest almost missing integer from nums. If no suc",
+      "0.4": "You are given an integer array nums and an integer k.\n\nAn integer x is almost missing from nums if x appears in exactly one subarray of size k within nums.\n\nReturn the largest almost missi",
+      "0.5": "You are given an integer array nums and an integer k.\n\nAn integer x is almost missing from nums if x appears in exactly one subarray of size k within nums.\n",
+      "0.6": "You are given an integer array nums and an integer k.\n\nAn integer x is almost missing from nums if x appears in exactly one s",
+      "0.7": "You are given an integer array nums and an integer k.\n\nAn integer x is almost missing from num",
+      "0.8": "You are given an integer array nums and an integer k.\n\nAn integ",
+      "0.9": "You are given an integer array ",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "openai": {
+      "keyboard": {
+        "0.0": [
+          "def largest_almost_missing(nums, k):\n    from collections import defaultdict\n\n    count_map = defaultdict(int)\n    n = len(nums)\n\n    for i in range(n - k + 1):\n        subarray = tuple(nums[i:i + k])\n        unique_elements = set(subarray)\n        for elem in unique_elements:\n            count_map[elem] += 1\n\n    almost_missing = [num for num, count in count_map.items() if count == 1]\n\n    return max(almost_missing) if almost_missing else -1"
+        ],
+        "0.1": [
+          "def largest_almost_missing(nums, k):\n    from collections import defaultdict\n\n    count = defaultdict(int)\n    n = len(nums)\n\n    for i in range(n - k + 1):\n        subarray = tuple(nums[i:i + k])\n        for num in subarray:\n            count[num] += 1\n\n    almost_missing = [num for num, cnt in count.items() if cnt == 1]\n\n    return max(almost_missing) if almost_missing else -1"
+        ],
+        "0.2": [
+          "def largest_almost_missing(nums, k):\n    from collections import defaultdict\n\n    count = defaultdict(int)\n    n = len(nums)\n\n    for i in range(n - k + 1):\n        subarray = set(nums[i:i + k])\n        for num in subarray:\n            count[num] += 1\n\n    almost_missing = [num for num, cnt in count.items() if cnt == 1]\n\n    return max(almost_missing) if almost_missing else -1"
+        ],
+        "0.3": [
+          "def largest_almost_missing(nums, k):\n    from collections import defaultdict\n\n    count = defaultdict(int)\n    n = len(nums)\n\n    for i in range(n - k + 1):\n        subarray = nums[i:i + k]\n        unique_elements = set(subarray)\n        for num in unique_elements:\n            count[num] += 1\n\n    almost_missing = [num for num, c in count.items() if c == 1]\n\n    return max(almost_missing) if almost_missing else -1"
+        ],
+        "0.4": [
+          "def find_almost_missing(nums, k):\n    n = len(nums)\n    seen = set()\n    \n    for i in range(n):\n        current_set = set()\n        for j in range(i, min(i + k, n)):\n            current_set.add(nums[j])\n        \n        for num in current_set:\n            seen.add(num)\n    \n    for num in range(1, max(seen) + 2):\n        if num not in seen:\n            return num\n    \n    return -1"
+        ],
+        "0.5": [
+          "def find_subsequence(arr, k):\n    n = len(arr)\n    for i in range(n):\n        for j in range(i + 1, n + 1):\n            if arr[i:j] == k:\n                return arr[i:j]\n    return -1"
+        ],
+        "0.6": [
+          "def find_substring(s, k):\n    n = len(s)\n    for i in range(n - k + 1):\n        substring = s[i:i + k]\n        if substring == substring[::-1]:  # Check if the substring is a palindrome\n            return i\n    return -1\n\n# Example usage\ns = \"abacdfgdcaba\"\nk = 3\nresult = find_substring(s, k)\nprint(result)"
+        ],
+        "0.7": [
+          "def is_valid(x, k):\n    if x % (2 ** k) == 0:\n        return True\n    return False\n\ndef find_valid_numbers(arr, k):\n    valid_numbers = [x for x in arr if is_valid(x, k)]\n    return valid_numbers if valid_numbers else -1\n\n# Example usage\narr = [8, 16, 3, 5, 32]\nk = 2\nresult = find_valid_numbers(arr, k)\nprint(result)"
+        ],
+        "0.8": [
+          "def process_data(x):\n    if x in some_condition:\n        return perform_action(x)\n    else:\n        return -1\n\ndef perform_action(x):\n    # Perform some operations\n    return result\n\ndef main():\n    x = get_input()\n    result = process_data(x)\n    print(result)\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.9": [
+          "def process_input(x):\n    if isinstance(x, str) and len(x) > 0:\n        return x[::-1]  # Reverse the string\n    return -1\n\ndef main():\n    x = \"example_input\"\n    result = process_input(x)\n    print(result)\n\nmain()"
+        ],
+        "1.0": [
+          "def process_input(x):\n    if x in [\"option1\", \"option2\", \"option3\"]:\n        return \"Valid input\"\n    else:\n        return \"Invalid input\"\n\ndef main():\n    user_input = input(\"Enter your choice: \")\n    result = process_input(user_input)\n    print(result)\n\nif __name__ == \"__main__\":\n    main()"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1002 @@
+[
+  {
+    "problem": "Let $z$ be a complex number such that\n\\[|z^2 + 4| = |z(z + 2i)|.\\]Find the smallest possible value of $|z + i|.$",
+    "solution": "## Problem Statement\nFind the smallest possible value of $|z + i|$ where $z$ is a complex number satisfying the condition $|z^2 + 4| = |z(z + 2i)|.$\n\nKey variables:\n- $z$: a complex number\n- $|z + i|$: the value to minimize\nConstraint:\n- $|z^2 + 4| = |z(z + 2i)|$\n\n## Solution Strategy\nWe will first simplify the given condition $|z^2 + 4| = |z(z + 2i)|$.\nLet $z = x + yi$, where $x, y \\in \\mathbb{R}$. We will substitute this into the condition and convert it into an equation in terms of $x$ and $y$.\nThen we will express $|z + i|$ in terms of $x$ and $y$ and use the condition to minimize $|z + i|$.\n\nRelevant formulas:\n- For a complex number $w = a + bi$, $|w| = \\sqrt{a^2 + b^2}$ and $|w|^2 = a^2 + b^2 = w \\bar{w}$.\n- Properties of modulus: $|w_1 w_2| = |w_1| |w_2|$, $|w_1 / w_2| = |w_1| / |w_2|$.\n\n## Step-by-Step Solution\n1. **Rewrite the condition:**\n   $|z^2 + 4| = |z(z + 2i)|$\n   Using the property $|w_1 w_2| = |w_1| |w_2|$, we have $|z(z + 2i)| = |z| |z + 2i|$.\n   So the condition is $|z^2 + 4| = |z| |z + 2i|$.\n   Square both sides to eliminate square roots:\n   $|z^2 + 4|^2 = |z|^2 |z + 2i|^2$.\n\n2. **Substitute $z = x + yi$:**\n   $z^2 + 4 = (x + yi)^2 + 4 = x^2 + 2xyi - y^2 + 4 = (x^2 - y^2 + 4) + 2xyi$.\n   $|z^2 + 4|^2 = (x^2 - y^2 + 4)^2 + (2xy)^2$.\n   $|z|^2 = x^2 + y^2$.\n   $z + 2i = x + yi + 2i = x + (y + 2)i$.\n   $|z + 2i|^2 = x^2 + (y + 2)^2$.\n   The condition becomes $(x^2 - y^2 + 4)^2 + 4x^2y^2 = (x^2 + y^2) (x^2 + (y + 2)^2)$.\n\n3. **Expand and simplify:**\n   $(x^2 - y^2 + 4)^2 + 4x^2y^2 = (x^2 + y^2) (x^2 + y^2 + 4y + 4)$\n   $(x^2 - y^2)^2 + 8(x^2 - y^2) + 16 + 4x^2y^2 = (x^2 + y^2)^2 + 4(y + 1)(x^2 + y^2)$\n   $(x^2 + y^2)^2 - 4x^2y^2 + 8(x^2 - y^2) + 16 + 4x^2y^2 = (x^2 + y^2)^2 + 4(y + 1)(x^2 + y^2)$\n   $(x^2 + y^2)^2 + 8(x^2 - y^2) + 16 = (x^2 + y^2)^2 + 4(y + 1)(x^2 + y^2)$\n   Subtract $(x^2 + y^2)^2$ from both sides:\n   $8(x^2 - y^2) + 16 = 4(y + 1)(x^2 + y^2)$\n   Divide by 4:\n   $2(x^2 - y^2) + 4 = (y + 1)(x^2 + y^2)$\n   $2x^2 - 2y^2 + 4 = x^2y + x^2 + y^3 + y^2$\n   $x^2 - x^2y - 3y^2 - y^3 + 4 = 0$\n   $x^2(1 - y) = y^3 + 3y^2 - 4$\n   $x^2(1 - y) = (y - 1)(y + 2)^2 = -(1 - y)(y + 2)^2$\n\n4. **Solve for $x^2$:**\n   If $1 - y \\neq 0$, then $x^2 = \\frac{-(1 - y)(y + 2)^2}{1 - y} = -(y + 2)^2$.\n   Since $x^2 \\ge 0$ and $-(y + 2)^2 \\le 0$, we must have $x^2 = 0$ and $-(y + 2)^2 = 0$.\n   This implies $x = 0$ and $y + 2 = 0$, so $y = -2$.\n   In this case, $z = x + yi = 0 - 2i = -2i$.\n   $|z + i| = |-2i + i| = |-i| = 1$.\n\n5. **Consider the case $1 - y = 0$, i.e., $y = 1$:**\n   If $y = 1$, the equation becomes $x^2(1 - 1) = 1^3 + 3(1)^2 - 4$, which is $0 = 1 + 3 - 4 = 0$.\n   This means when $y = 1$, the equation holds for any real $x$.\n   In this case, $z = x + i$.\n   $|z + i| = |x + i + i| = |x + 2i| = \\sqrt{x^2 + 2^2} = \\sqrt{x^2 + 4}$.\n   To minimize $|z + i|$, we need to minimize $\\sqrt{x^2 + 4}$, which is minimized when $x = 0$.\n   When $x = 0$ and $y = 1$, $z = i$.\n   $|z + i| = |i + i| = |2i| = 2$.\n\n6. **Compare the values:**\n   We have found two possible values for $|z + i|$: $1$ (when $z = -2i$) and $2$ (when $z = i$).\n   The smallest possible value is $1$.\n\n7. **Verify the solutions:**\n   For $z = -2i$:\n   $|z^2 + 4| = |(-2i)^2 + 4| = |-4 + 4| = 0$.\n   $|z(z + 2i)| = |(-2i)(-2i + 2i)| = |(-2i)(0)| = 0$.\n   So $|z^2 + 4| = |z(z + 2i)|$ holds. $|z + i| = |-2i + i| = |-i| = 1$.\n\n   For $z = i$:\n   $|z^2 + 4| = |i^2 + 4| = |-1 + 4| = |3| = 3$.\n   $|z(z + 2i)| = |i(i + 2i)| = |i(3i)| = |3i^2| = |-3| = 3$.\n   So $|z^2 + 4| = |z(z + 2i)|$ holds. $|z + i| = |i + i| = |2i| = 2$.\n\n## Final Answer\n**1. Problem Statement**\nFind the smallest possible value of $|z + i|$ for a complex number $z$ satisfying $|z^2 + 4| = |z(z + 2i)|.$\n\n**2. Solution Strategy**\nWe simplify the equation $|z^2 + 4| = |z(z + 2i)|$ by substituting $z = x + yi$ and converting it into a real equation in $x$ and $y$. We then express $|z + i|$ in terms of $x$ and $y$ and minimize it under the derived constraint.\n\n**3. Step-by-Step Solution**\nLet $z = x + yi$. The given condition is $|z^2 + 4| = |z(z + 2i)|$.\nSquaring both sides, we get $|z^2 + 4|^2 = |z|^2 |z + 2i|^2$.\nSubstituting $z = x + yi$, we have:\n$(x^2 - y^2 + 4)^2 + (2xy)^2 = (x^2 + y^2)(x^2 + (y+2)^2)$.\nExpanding and simplifying this equation, we arrive at:\n$x^2(1 - y) = (y - 1)(y + 2)^2$.\nIf $y \\neq 1$, we have $x^2 = -(y + 2)^2$. Since $x^2 \\ge 0$ and $-(y+2)^2 \\le 0$, we must have $x^2 = 0$ and $-(y+2)^2 = 0$. This gives $x = 0$ and $y = -2$. Thus $z = -2i$.\nIf $y = 1$, the equation $x^2(1 - y) = (y - 1)(y + 2)^2$ becomes $0 = 0$, which holds for any $x$. In this case, $z = x + i$.\nWe want to minimize $|z + i|$.\nFor $z = -2i$, $|z + i| = |-2i + i| = |-i| = 1$.\nFor $z = x + i$, $|z + i| = |x + i + i| = |x + 2i| = \\sqrt{x^2 + 4}$. The minimum value is when $x = 0$, and the minimum value is $\\sqrt{0^2 + 4} = 2$.\nComparing the two minimum values $1$ and $2$, the smallest possible value of $|z + i|$ is $1$.\n\n**4. Final Answer**\nFinal Answer: The final answer is $\\boxed{1}$",
+    "metrics": {
+      "length": 4998,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "Let $ z $ be a complex number such that \\ [| z ^ 2 + 4 | = | z (z + 2i) |. \\] Find the smallest possible value of $ | z + i |. $",
+        "0.1": "Let $ z $ be a Vomplex n8mber s Tch tgat \\ [| z ^ 2 + 4 | = | z (z + 2i) |. \\] Find the smallest possible valu4 of $ | z + i |. $",
+        "0.2": "Let $ z $ be a complsC numbS% duch ghat \\ [| z ^ 2 + 4 | = | z (z + 2i) |. \\] Cind the smwIlest poseihle vwlue of $ | z + i |. $",
+        "0.3": "Let $ z $ be a com)lds nihber ZucY yYat \\ [| z ^ 2 + 4 | = | z (z + 2i) |. \\] VinE the amal,rst pPes9ble vaOuR of $ | z + i |. $",
+        "0.4": "Let $ z $ be a Xonplrx gkmbed suxm thA5 \\ [| z ^ 2 + 4 | = | z (z + 2i) |. \\] RLnd the xmzOles5 ooAsUbl$ vx,ue of $ | z + i |. $",
+        "0.5": "Let $ z $ be a fLm)leD M^Kber e tch ^Jat \\ [| z ^ 2 + 4 | = | z (z + 2i) |. \\] e&nd the cnallsXt OPss(bIe dzl*e of $ | z + i |. $",
+        "0.6": "Let $ z $ be a DpmO;#x BkmVeF Ahct gMZt \\ [| z ^ 2 + 4 | = | z (z + 2i) |. \\] ruJd the zJsll2sr 9IcsibiW va>j@ of $ | z + i |. $",
+        "0.7": "Let $ z $ be a Soh(.#x GjHnrr dufg ynwt \\ [| z ^ 2 + 4 | = | z (z + 2i) |. \\] tlBd the shX:?Rs^ oPsqJfpe cwiuf of $ | z + i |. $",
+        "0.8": "Let $ z $ be a D0n9lWC ghJbSg A Tdg ^Jwr \\ [| z ^ 2 + 4 | = | z (z + 2i) |. \\] D9GR the ENq>oDsh L*cskVo# ca:KR of $ | z + i |. $",
+        "0.9": "Let $ z $ be a S*hOO@a M TKnfg WJdb Fbsh \\ [| z ^ 2 + 4 | = | z (z + 2i) |. \\] RJHs the aJs<?sX$ (pQzOh.3 fS/hr of $ | z + i |. $",
+        "1.0": "Let $ z $ be a Skhl>2d h7jh@% c6Fy ^Bqr \\ [| z ^ 2 + 4 | = | z (z + 2i) |. \\] bkMw the EhWI:RDG Okca9vI# BxP^$ of $ | z + i |. $"
+      },
+      "random": {
+        "0.0": "Let $ z $ such \\ [| ^ + | = | (z +) |. \\] smallest possible of $ | z + |. $",
+        "0.1": "Let $ z $ be a complex number such that \\ [| z ^ 2 + 4 | = | z (z + 2i) |. \\] the value $ | z + |. $",
+        "0.2": "Let $ z $ be a number \\ [| ^ 2 + 4 | = | z (z + 2i) |. \\] Find the possible $ | + |. $",
+        "0.3": "Let $ $ such \\ [| z ^ 2 + | = | z (z +) |. \\] the $ | z + |. $",
+        "0.4": "$ $ that \\ [| ^ + | = | z (z +) |. \\] Find $ | + |. $",
+        "0.5": "$ $ \\ [| ^ + | = | (+) |. \\] $ | + |. $",
+        "0.6": "$ $ \\ [| ^ + | = | (+) |. \\] $ | + |. $",
+        "0.7": "$ $ \\ [| ^ + | = | (+) |. \\] $ | + |. $",
+        "0.8": "$ $ \\ [| ^ + | = | (+) |. \\] $ | + |. $",
+        "0.9": "$ $ \\ [| ^ + | = | (+) |. \\] $ | + |. $",
+        "1.0": "$ $ \\ [| ^ + | = | (+) |. \\] $ | + |. $"
+      },
+      "cut": {
+        "0.0": "Let $z$ be a complex number such that\n\\[|z^2 + 4| = |z(z + 2i)|.\\]Find the smallest possible value of $|z + i|.$",
+        "0.1": "Let $z$ be a complex number such that\n\\[|z^2 + 4| = |z(z + 2i)|.\\]Find the smallest possible value of",
+        "0.2": "Let $z$ be a complex number such that\n\\[|z^2 + 4| = |z(z + 2i)|.\\]Find the smallest possib",
+        "0.3": "Let $z$ be a complex number such that\n\\[|z^2 + 4| = |z(z + 2i)|.\\]Find the sma",
+        "0.4": "Let $z$ be a complex number such that\n\\[|z^2 + 4| = |z(z + 2i)|.\\]F",
+        "0.5": "Let $z$ be a complex number such that\n\\[|z^2 + 4| = |z(z",
+        "0.6": "Let $z$ be a complex number such that\n\\[|z^2 ",
+        "0.7": "Let $z$ be a complex number such t",
+        "0.8": "Let $z$ be a complex n",
+        "0.9": "Let $z$ be ",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "Compute $\\sqrt{(31)(30)(29)(28)+1}.$",
+    "solution": "## Problem Solution\n\n**1. Problem Statement**\n\nCompute the square root of the expression formed by the product of four consecutive integers starting from 28, plus one.\nIn mathematical terms, evaluate $\\sqrt{(31)(30)(29)(28)+1}$.\n\nKey variables:\n- We are asked to compute the square root of an expression.\n- The expression is formed by the product of four consecutive integers: 28, 29, 30, and 31, plus 1.\n\n**2. Solution Strategy**\n\nWe will try to find a pattern by considering similar expressions with smaller consecutive integers. We hypothesize that the expression inside the square root is a perfect square. We will then generalize the pattern algebraically to derive a formula for the square root of the product of four consecutive integers plus one. Finally, we will apply this formula to the given problem.\n\nRelevant formulas/theorems:\n- Algebraic manipulation\n- Recognizing perfect square trinomials, i.e., $(a+b)^2 = a^2+2ab+b^2$.\n\n**3. Step-by-Step Solution**\n\nLet's denote the expression inside the square root as $E = (31)(30)(29)(28)+1$.\nWe can rearrange the terms to identify a pattern:\n$E = (31 \\times 28) \\times (30 \\times 29) + 1$\n$E = (30+1)(30-2) \\times (30)(30-1) + 1$\n$E = (30^2 - 2 \\times 30 + 30 - 2) \\times (30^2 - 30) + 1$\n$E = (30^2 - 30 - 2) \\times (30^2 - 30) + 1$\n\nLet $x = 30^2 - 30$. Then $E = (x-2)x + 1 = x^2 - 2x + 1$.\nWe recognize that $x^2 - 2x + 1$ is a perfect square trinomial, which can be factored as $(x-1)^2$.\nSo, $E = (x-1)^2 = (30^2 - 30 - 1)^2$.\nNow we substitute back $x = 30^2 - 30 = 900 - 30 = 870$.\n$E = (870 - 1)^2 = (869)^2$.\n\nTherefore, $\\sqrt{E} = \\sqrt{(869)^2} = |869|$.\nSince 869 is positive, $\\sqrt{E} = 869$.\n\nAlternatively, let's generalize for four consecutive integers $n, n+1, n+2, n+3$.\nConsider the product $P = n(n+1)(n+2)(n+3)$.\nRearrange the terms: $P = [n(n+3)][(n+1)(n+2)] = (n^2+3n)(n^2+3n+2)$.\nLet $y = n^2+3n$. Then $P = y(y+2) = y^2+2y$.\nSo $P+1 = y^2+2y+1 = (y+1)^2 = (n^2+3n+1)^2$.\nThus, $\\sqrt{n(n+1)(n+2)(n+3)+1} = \\sqrt{(n^2+3n+1)^2} = |n^2+3n+1|$.\nIn our problem, the four consecutive integers are $28, 29, 30, 31$. Let $n=28$.\nThen $n^2+3n+1 = 28^2 + 3(28) + 1 = 784 + 84 + 1 = 869$.\n\nLet's verify the calculation:\n$28^2 = 784$\n$3 \\times 28 = 84$\n$784 + 84 + 1 = 869$\n\nWe can also use the middle numbers approach.\nLet the integers be $n-1, n, n+1, n+2$. Let $n=29$.\nThen the integers are $28, 29, 30, 31$.\n$(n-1)n(n+1)(n+2)+1 = [n(n+1)][(n-1)(n+2)]+1 = (n^2+n)(n^2+n-2)+1$.\nLet $z = n^2+n$. Then $(z)(z-2)+1 = z^2-2z+1 = (z-1)^2 = (n^2+n-1)^2$.\nFor $n=29$, $n^2+n-1 = 29^2+29-1 = 841+29-1 = 841+28 = 869$.\n\nFinal verification:\n$869^2 = 755161$.\n$(31)(30)(29)(28)+1 = 31 \\times 30 \\times 29 \\times 28 + 1 = 930 \\times 29 \\times 28 + 1 = 26970 \\times 28 + 1 = 755160 + 1 = 755161$.\nThus, $\\sqrt{(31)(30)(29)(28)+1} = \\sqrt{755161} = 869$.\n\n**4. Final Answer**\n\nFinal Answer: The final answer is $\\boxed{869}$",
+    "metrics": {
+      "length": 2886,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "Compute $ \\ sqrt {( 31) (30) (29) (28) + 1 }. $",
+        "0.1": "Compjte $ \\ sqrF {( 31) (30) (29) (28) + 1 }. $",
+        "0.2": "Com0Ite $ \\ sqFt {( 31) (30) (29) (28) + 1 }. $",
+        "0.3": "Co,)utR $ \\ Cqry {( 31) (30) (29) (28) + 1 }. $",
+        "0.4": "Dkmp7te $ \\ aqFt {( 31) (30) (29) (28) + 1 }. $",
+        "0.5": "fLmpHt$ $ \\ wqr6 {( 31) (30) (29) (28) + 1 }. $",
+        "0.6": "Cimo*HD $ \\ C@r^ {( 31) (30) (29) (28) + 1 }. $",
+        "0.7": "skml*4e $ \\ ssE5 {( 31) (30) (29) (28) + 1 }. $",
+        "0.8": "C9Hoh5F $ \\ xSF% {( 31) (30) (29) (28) + 1 }. $",
+        "0.9": "fkK9jy4 $ \\ EW#^ {( 31) (30) (29) (28) + 1 }. $",
+        "1.0": "F*N) Tyw $ \\ aa4F {( 31) (30) (29) (28) + 1 }. $"
+      },
+      "random": {
+        "0.0": "$ \\ {() () () () + }. $",
+        "0.1": "$ \\ sqrt {() (30) () (28) + 1 }. $",
+        "0.2": "$ \\ sqrt {() () (29) () + }. $",
+        "0.3": "$ \\ {() () () () + }. $",
+        "0.4": "$ \\ {() () () () + }. $",
+        "0.5": "$ \\ {() () () () + }. $",
+        "0.6": "$ \\ {() () () () + }. $",
+        "0.7": "$ \\ {() () () () + }. $",
+        "0.8": "$ \\ {() () () () + }. $",
+        "0.9": "$ \\ {() () () () + }. $",
+        "1.0": "$ \\ {() () () () + }. $"
+      },
+      "cut": {
+        "0.0": "Compute $\\sqrt{(31)(30)(29)(28)+1}.$",
+        "0.1": "Compute $\\sqrt{(31)(30)(29)(28)+",
+        "0.2": "Compute $\\sqrt{(31)(30)(29)(2",
+        "0.3": "Compute $\\sqrt{(31)(30)(2",
+        "0.4": "Compute $\\sqrt{(31)(30",
+        "0.5": "Compute $\\sqrt{(31",
+        "0.6": "Compute $\\sqrt",
+        "0.7": "Compute $\\s",
+        "0.8": "Compute",
+        "0.9": "Comp",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "Let $x,$ $y,$ $z$ be nonzero real numbers such that $x + y + z = 0,$ and $xy + xz + yz \\neq 0.$  Find all possible values of\n\\[\\frac{x^5 + y^5 + z^5}{xyz (xy + xz + yz)}.\\]Enter all possible values, separated by commas.",
+    "solution": "## Problem Statement\nLet $x,$ $y,$ $z$ be nonzero real numbers such that $x + y + z = 0,$ and $xy + xz + yz \\neq 0.$  Find all possible values of\n\\[\\frac{x^5 + y^5 + z^5}{xyz (xy + xz + yz)}.\\]\n\nKey variables and constraints:\n- $x, y, z$ are nonzero real numbers\n- $x + y + z = 0$\n- $xy + xz + yz \\neq 0$\n\nWe want to find the possible values of the given expression.\n\n## Solution Strategy\nWe will use the condition $x + y + z = 0$ to simplify the numerator $x^5 + y^5 + z^5.$ We can use Newton's sums or direct substitution to express $x^5 + y^5 + z^5$ in terms of elementary symmetric polynomials. In particular, since $x + y + z = 0,$ we have the first elementary symmetric polynomial $e_1 = x + y + z = 0.$ The second elementary symmetric polynomial is $e_2 = xy + xz + yz,$ and the third elementary symmetric polynomial is $e_3 = xyz.$ We will express $x^5 + y^5 + z^5$ using $e_2$ and $e_3.$\n\nAlternatively, we can use the substitution $z = -(x+y)$ to express the numerator and denominator in terms of $x$ and $y.$\n\nUsing Newton's sums is more systematic and efficient. Let $p_k = x^k + y^k + z^k.$\nWe have the relations:\n$p_1 = e_1$\n$p_2 = e_1 p_1 - 2e_2$\n$p_3 = e_1 p_2 - e_2 p_1 + 3e_3$\n$p_4 = e_1 p_3 - e_2 p_2 + e_3 p_1$\n$p_5 = e_1 p_4 - e_2 p_3 + e_3 p_2$\nSince $e_1 = x + y + z = 0,$ these formulas simplify to:\n$p_1 = 0$\n$p_2 = -2e_2$\n$p_3 = 3e_3$\n$p_4 = -e_2 p_2 = -e_2 (-2e_2) = 2e_2^2$\n$p_5 = -e_2 p_3 + e_3 p_2 = -e_2 (3e_3) + e_3 (-2e_2) = -3e_2 e_3 - 2e_2 e_3 = -5e_2 e_3$\n\nThus, $x^5 + y^5 + z^5 = -5 e_2 e_3 = -5 (xy + xz + yz) (xyz).$\nThe given expression is $\\frac{x^5 + y^5 + z^5}{xyz (xy + xz + yz)} = \\frac{-5 (xy + xz + yz) (xyz)}{xyz (xy + xz + yz)}.$\nSince $xy + xz + yz \\neq 0$ and $xyz \\neq 0,$ we can cancel the terms $xyz (xy + xz + yz)$ from numerator and denominator.\nThe expression simplifies to $-5.$\n\n## Step-by-Step Solution\n1. **Use Newton's Sums to express $x^5 + y^5 + z^5$ in terms of elementary symmetric polynomials.**\n   Let $e_1 = x + y + z,$ $e_2 = xy + xz + yz,$ $e_3 = xyz,$ and $p_k = x^k + y^k + z^k.$\n   Given $e_1 = x + y + z = 0.$\n   The Newton's sums are:\n   $p_1 = e_1$\n   $p_2 = e_1 p_1 - 2e_2$\n   $p_3 = e_1 p_2 - e_2 p_1 + 3e_3$\n   $p_4 = e_1 p_3 - e_2 p_2 + e_3 p_1$\n   $p_5 = e_1 p_4 - e_2 p_3 + e_3 p_2$\n\n2. **Substitute $e_1 = 0$ into Newton's sums.**\n   $p_1 = 0$\n   $p_2 = 0 \\cdot p_1 - 2e_2 = -2e_2$\n   $p_3 = 0 \\cdot p_2 - e_2 \\cdot p_1 + 3e_3 = 3e_3$\n   $p_4 = 0 \\cdot p_3 - e_2 \\cdot p_2 + e_3 \\cdot p_1 = -e_2 p_2 = -e_2 (-2e_2) = 2e_2^2$\n   $p_5 = 0 \\cdot p_4 - e_2 \\cdot p_3 + e_3 \\cdot p_2 = -e_2 p_3 + e_3 p_2 = -e_2 (3e_3) + e_3 (-2e_2) = -3e_2 e_3 - 2e_2 e_3 = -5e_2 e_3$\n\n3. **Substitute back the expressions for $e_2$ and $e_3.$**\n   $x^5 + y^5 + z^5 = p_5 = -5e_2 e_3 = -5 (xy + xz + yz) (xyz).$\n\n4. **Substitute $x^5 + y^5 + z^5$ into the given expression.**\n   \\[\\frac{x^5 + y^5 + z^5}{xyz (xy + xz + yz)} = \\frac{-5 (xy + xz + yz) (xyz)}{xyz (xy + xz + yz)}.\\]\n\n5. **Simplify the expression.**\n   Since $xyz \\neq 0$ and $xy + xz + yz \\neq 0,$ we can cancel the common factors in the numerator and denominator.\n   \\[\\frac{-5 (xy + xz + yz) (xyz)}{xyz (xy + xz + yz)} = -5.\\]\n\n6. **Verify the conditions are satisfiable and the denominator is nonzero.**\n   We need to check if there exist nonzero real numbers $x, y, z$ such that $x + y + z = 0$ and $xy + xz + yz \\neq 0.$\n   Let $x = 1, y = 1, z = -2.$ Then $x + y + z = 1 + 1 - 2 = 0.$\n   $x, y, z$ are nonzero.\n   $xy + xz + yz = 1 \\cdot 1 + 1 \\cdot (-2) + 1 \\cdot (-2) = 1 - 2 - 2 = -3 \\neq 0.$\n   $xyz = 1 \\cdot 1 \\cdot (-2) = -2 \\neq 0.$\n   The denominator $xyz (xy + xz + yz) = (-2) (-3) = 6 \\neq 0.$\n   The conditions are satisfiable, and the denominator is nonzero.\n\n7. **The value is constant.**\n   Since the simplification led to a constant value $-5,$ and the conditions ensure the denominator is nonzero, the only possible value is $-5.$\n\n## Final Answer\nFinal Answer: The final answer is $\\boxed{-5}$",
+    "metrics": {
+      "length": 3945,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "Let $ x, $ $ y, $ $ z $ be nonzero real numbers such that $ x + y + z = 0, $ and $ xy + xz + yz \\ neq 0. $ Find all possible values of \\ [\\ frac {x ^ 5 + y ^ 5 + z ^ 5} {xyz (xy + xz + yz) }. \\] Enter all possible values, separated by commas.",
+        "0.1": "Let $ x, $ $ y, $ $ z $ be nonzerk rdal numbers s6ch thwt $ x + y + z = 0, $ and $ xy + xz + yz \\ neq 0. $ Find all oossible valueW of \\ [\\ frac {x ^ 5 + y ^ 5 + z ^ 5} {xyz (xy + xz + yz) }. \\] $nter all possible values, sepaTated by commWs.",
+        "0.2": "Let $ x, $ $ y, $ $ z $ be JoBzero rea, numVe$s sucB thAt $ x + y + z = 0, $ and $ xy + xz + yz \\ neq 0. $ Gind all Oossibie vap8es of \\ [\\ fras {x ^ 5 + y ^ 5 + z ^ 5} {xyz (xy + xz + yz) }. \\] Ent3r all pPssibl# GalueQ, ZeparateF by c*mmSs.",
+        "0.3": "Let $ x, $ $ y, $ $ z $ be monaedo TeWl n8mbeeA Z7ch GJat $ x + y + z = 0, $ and $ xy + xz + yz \\ neq 0. $ FiBc all p8ssoFle vaIueD of \\ [\\ fgwc {x ^ 5 + y ^ 5 + z ^ 5} {xyz (xy + xz + yz) }. \\] EnGee all posdib<W DalueC, xepa5aGed by c8mmZs.",
+        "0.4": "Let $ x, $ $ y, $ $ z $ be ninaer) r$Zl G^mbeEs s8cb tMzt $ x + y + z = 0, $ and $ xy + xz + yz \\ neq 0. $ F&Gd all pIssinP4 vql8eq of \\ [\\ GrXc {x ^ 5 + y ^ 5 + z ^ 5} {xyz (xy + xz + yz) }. \\] 4nteF all 9oss7noe vW:hes, sepZDaYeV by xomKax.",
+        "0.5": "Let $ x, $ $ y, $ $ z $ be bonsetk rfa: nuJGe4e sKcj Fgat $ x + y + z = 0, $ and $ xy + xz + yz \\ neq 0. $ Fons all oodsibpf cAlueC of \\ [\\ f4sc {x ^ 5 + y ^ 5 + z ^ 5} {xyz (xy + xz + yz) }. \\] Eh6eD all pIsWObke DakueZ, Qelarq4Fd by xoJmac.",
+        "0.6": "Let $ x, $ $ y, $ $ z $ be G)jaer9 geZI mumVrtQ ZuSu GUSt $ x + y + z = 0, $ and $ xy + xz + yz \\ neq 0. $ bLbd all pldsjbKF CxO8es of \\ [\\ drqX {x ^ 5 + y ^ 5 + z ^ 5} {xyz (xy + xz + yz) }. \\] $n^Dr all lkssLbkf gAlu#W, EdOZra6sd by Xo<hqs.",
+        "0.7": "Let $ x, $ $ y, $ $ z $ be M8bAerp %ez> b&Hb3es zudG YhA6 $ x + y + z = 0, $ and $ xy + xz + yz \\ neq 0. $ DKGd all o9WW8bld CqpuWQ of \\ [\\ brzs {x ^ 5 + y ^ 5 + z ^ 5} {xyz (xy + xz + yz) }. \\] SnG3E all pPQs8f<2 cz.uWc, XrpQdwr#d by D*jNaQ.",
+        "0.8": "Let $ x, $ $ y, $ $ z $ be h)Gxrr( 4fxI g^mV@TW z*FT 4Gs$ $ x + y + z = 0, $ and $ xy + xz + yz \\ neq 0. $ DJBE all 99dsLVpw vZi*Sa of \\ [\\ GtwS {x ^ 5 + y ^ 5 + z ^ 5} {xyz (xy + xz + yz) }. \\] RBH@r all 9)Zs9f,W dX>kws, aR)QrxH#R by xo<HWW.",
+        "0.9": "Let $ x, $ $ y, $ $ z $ be JpJaD%* $sWp ghNFd%W XJdJ fbs6 $ x + y + z = 0, $ and $ xy + xz + yz \\ neq 0. $ D&hs all )LXc9H:d Bqk^SZ of \\ [\\ b%xs {x ^ 5 + y ^ 5 + z ^ 5} {xyz (xy + xz + yz) }. \\] #GR@D all 9)XwjV;s FQPhfd, c2OAtwR@R by D8,KZc.",
+        "1.0": "Let $ x, $ $ y, $ $ z $ be HIGX$TK edWp M^kH44X X7xU yMqf $ x + y + z = 0, $ and $ xy + xz + yz \\ neq 0. $ gJJc all (LDZ(f,f gzp7@X of \\ [\\ CGxs {x ^ 5 + y ^ 5 + z ^ 5} {xyz (xy + xz + yz) }. \\] rHR$3 all 0lcEofp2 gx<7@D, d@OZ#s4rs by fkNnZx."
+      },
+      "random": {
+        "0.0": "$, $ $ y, $ $ z $ real $ + y + z =, $ $ xy + xz + \\ neq. $ of \\ [\\ {^ + y ^ 5 + ^} {xyz (xy + xz +) }. \\] Enter possible, commas.",
+        "0.1": "Let $ x, $ $ y, $ $ $ be real numbers such that $ x + y + z = 0, $ and $ xy + xz + yz \\ 0. $ Find all values \\ [\\ frac {^ 5 + y ^ + z ^} {xyz (xy + xz + yz) }. \\] Enter all possible, separated by commas.",
+        "0.2": "Let $, $ $ y, $ $ z $ be real numbers such that $ x + y + z =, $ and $ + xz + yz \\ 0. $ Find all of \\ [\\ frac {^ + y ^ 5 + z ^ 5} {xyz (+ + yz) }. \\ ], commas.",
+        "0.3": "$ x, $ $, $ $ $ such $ + + =, $ $ xy + + yz \\. $ all values \\ [\\ frac {x ^ 5 + y ^ 5 + z ^} {( xy + +) }. \\] Enter all values, by.",
+        "0.4": "$, $ $, $ $ $ real that $ + + =, $ and $ + xz + yz \\. $ Find possible values \\ [\\ {^ + ^ + ^} {( + +) }. \\ ], separated.",
+        "0.5": "$, $ $, $ $ $ $ + + =, $ $ + + \\. $ \\ [\\ {^ + ^ + ^ 5} {( + +) }. \\ ],.",
+        "0.6": "$, $ $, $ $ $ $ + + =, $ $ + + \\. $ \\ [\\ {^ + ^ + ^} {( + +) }. \\ ],.",
+        "0.7": "$, $ $, $ $ $ $ + + =, $ $ + + \\. $ \\ [\\ {^ + ^ + ^} {( + +) }. \\ ],.",
+        "0.8": "$, $ $, $ $ $ $ + + =, $ $ + + \\. $ \\ [\\ {^ + ^ + ^} {( + +) }. \\ ],.",
+        "0.9": "$, $ $, $ $ $ $ + + =, $ $ + + \\. $ \\ [\\ {^ + ^ + ^} {( + +) }. \\ ],.",
+        "1.0": "$, $ $, $ $ $ $ + + =, $ $ + + \\. $ \\ [\\ {^ + ^ + ^} {( + +) }. \\ ],."
+      },
+      "cut": {
+        "0.0": "Let $x,$ $y,$ $z$ be nonzero real numbers such that $x + y + z = 0,$ and $xy + xz + yz \\neq 0.$  Find all possible values of\n\\[\\frac{x^5 + y^5 + z^5}{xyz (xy + xz + yz)}.\\]Enter all possible values, separated by commas.",
+        "0.1": "Let $x,$ $y,$ $z$ be nonzero real numbers such that $x + y + z = 0,$ and $xy + xz + yz \\neq 0.$  Find all possible values of\n\\[\\frac{x^5 + y^5 + z^5}{xyz (xy + xz + yz)}.\\]Enter all possible values",
+        "0.2": "Let $x,$ $y,$ $z$ be nonzero real numbers such that $x + y + z = 0,$ and $xy + xz + yz \\neq 0.$  Find all possible values of\n\\[\\frac{x^5 + y^5 + z^5}{xyz (xy + xz + yz)}.\\]Ent",
+        "0.3": "Let $x,$ $y,$ $z$ be nonzero real numbers such that $x + y + z = 0,$ and $xy + xz + yz \\neq 0.$  Find all possible values of\n\\[\\frac{x^5 + y^5 + z^5}{xyz",
+        "0.4": "Let $x,$ $y,$ $z$ be nonzero real numbers such that $x + y + z = 0,$ and $xy + xz + yz \\neq 0.$  Find all possible values of\n\\[\\fra",
+        "0.5": "Let $x,$ $y,$ $z$ be nonzero real numbers such that $x + y + z = 0,$ and $xy + xz + yz \\neq 0.$  Find all poss",
+        "0.6": "Let $x,$ $y,$ $z$ be nonzero real numbers such that $x + y + z = 0,$ and $xy + xz + yz \\",
+        "0.7": "Let $x,$ $y,$ $z$ be nonzero real numbers such that $x + y + z = 0",
+        "0.8": "Let $x,$ $y,$ $z$ be nonzero real numbers su",
+        "0.9": "Let $x,$ $y,$ $z$ be n",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "Determine if the graph of the equation below is a parabola, circle, ellipse, hyperbola, point, line, two lines, or empty.\n\n$x^2 - 50y^2 - 10x + 25 = 0$",
+    "solution": "```latex\n\\documentclass{article}\n\\usepackage{amsmath}\n\\usepackage{amssymb}\n\\usepackage{boxedminipage}\n\n\\begin{document}\n\n\\textbf{Problem:}\n\n\\begin{enumerate}\n    \\item \\textbf{Problem Statement}\n        Determine if the graph of the equation $x^2 - 50y^2 - 10x + 25 = 0$ is a parabola, circle, ellipse, hyperbola, point, line, two lines, or empty.\n\\end{enumerate}\n\n\\textbf{Solution:}\n\n\\begin{enumerate}\n    \\item \\textbf{Solution Strategy}\n        We will rewrite the given equation by completing the square for the $x$ terms to identify the type of conic section it represents.\n        The general form of a second-degree equation is $Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0$.\n        We will compare the given equation with this general form and analyze the coefficients to classify the graph.\n        We will also attempt to factor the equation to see if it represents degenerate cases like two lines, a point, or an empty set.\n\n    \\item \\textbf{Step-by-Step Solution}\n        The given equation is $x^2 - 50y^2 - 10x + 25 = 0$.\n        Rearrange the terms to group the $x$ terms together:\n        $(x^2 - 10x) - 50y^2 + 25 = 0$\n        To complete the square for the $x$ terms $(x^2 - 10x)$, we take half of the coefficient of $x$, which is $-10/2 = -5$, and square it, which is $(-5)^2 = 25$.\n        Add and subtract 25 within the parenthesis (though in this case, we already have a +25 term outside):\n        $(x^2 - 10x + 25) - 25 - 50y^2 + 25 = 0$\n        Notice that we already have a $+25$ term in the original equation, and we needed $+25$ to complete the square for $x^2 - 10x$. So, we can rewrite the equation as:\n        $(x^2 - 10x + 25) - 50y^2 = 0$\n        The first three terms form a perfect square: $(x - 5)^2$.\n        So the equation becomes:\n        $(x - 5)^2 - 50y^2 = 0$\n        This equation is in the form $X^2 - Y^2 = 0$, where $X = (x - 5)$ and $Y = \\sqrt{50}y$.\n        We can factor this equation as a difference of squares:\n        $[(x - 5) - \\sqrt{50}y][(x - 5) + \\sqrt{50}y] = 0$\n        This means either $(x - 5) - \\sqrt{50}y = 0$ or $(x - 5) + \\sqrt{50}y = 0$.\n        These are the equations of two lines:\n        Line 1: $(x - 5) - \\sqrt{50}y = 0 \\implies \\sqrt{50}y = (x - 5) \\implies y = \\frac{1}{\\sqrt{50}}(x - 5) = \\frac{1}{5\\sqrt{2}}(x - 5) = \\frac{\\sqrt{2}}{10}(x - 5)$\n        Line 2: $(x - 5) + \\sqrt{50}y = 0 \\implies -\\sqrt{50}y = (x - 5) \\implies y = -\\frac{1}{\\sqrt{50}}(x - 5) = -\\frac{1}{5\\sqrt{2}}(x - 5) = -\\frac{\\sqrt{2}}{10}(x - 5)$\n        These are two distinct lines passing through the point $(5, 0)$ with slopes $\\frac{\\sqrt{2}}{10}$ and $-\\frac{\\sqrt{2}}{10}$.\n        Therefore, the graph of the equation is two lines.\n\n    \\item \\textbf{Final Answer}\n        \\boxed{\\text{two lines}}\n\\end{enumerate}\n\n\\end{document}\n```",
+    "metrics": {
+      "length": 2399,
+      "has_latex": false
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "Determine if the graph of the equation below is a parabola, circle, ellipse, hyperbola, point, line, two lines, or empty. $ x ^ 2 - 50y ^ 2 - 10x + 25 = 0 $",
+        "0.1": "Deterhine if the graph of the eauation bwlow is a pXrabola, circle, ellipse, hyperbola, point, line, two lines, or dmpty. $ x ^ 2 - 50y ^ 2 - 10x + 25 = 0 $",
+        "0.2": "Dete#m9ne if the graph of the equatK8n brlow is a parabola, Fi5cle, eIlUpse, hypervo?a, pKint, liBe, two lines, or Rmpty. $ x ^ 2 - 50y ^ 2 - 10x + 25 = 0 $",
+        "0.3": "XeteGmiHe if the grzpt of the FquwtioM bSloD is a Oarzvola, ViGcle, eIl*pze, hyoerholA, Loing, pin4, two ljjes, or rm(ty. $ x ^ 2 - 50y ^ 2 - 10x + 25 = 0 $",
+        "0.4": "D4F#rminS if the gra0T of the e@uqH*on bel(e is a (afAbolW, F9Ecle, ep.*pse, hyp@rbL?x, poiJ%, <lne, two lij2s, or eNp5y. $ x ^ 2 - 50y ^ 2 - 10x + 25 = 0 $",
+        "0.5": "DetfTm8Gw if the RGSph of the eSIZ$ion HekKw is a Larafp<a, dirsld, ellL(eF, Gy0e4bKKa, o)imt, liJr, two oljes, or eHOtT. $ x ^ 2 - 50y ^ 2 - 10x + 25 = 0 $",
+        "0.6": "We^2rhihd if the grz0t of the e2uw6*9n bFl8D is a lagsNIla, Xl3c:e, e,>o9sW, Myp3tgklQ, p(7nr, l(B#, two .jn$s, or #mp%6. $ x ^ 2 - 50y ^ 2 - 10x + 25 = 0 $",
+        "0.7": "XWFeEJ*je if the f%Q(h of the es taFKlh b$,(q is a (w3AFo?a, FiTs?#, sl;*(sW, T%lwrb)pX, oKib6, luB4, two l(gwE, or eH9g7. $ x ^ 2 - 50y ^ 2 - 10x + 25 = 0 $",
+        "0.8": "D#F#4j*jW if the HGWOh of the RW8zYO)n gRlk2 is a pqEShPOX, V*#Slw, e;;o9aF, NH(DtbKPZ, oKjJt, .lBD, two <9nDZ, or eK9Fu. $ x ^ 2 - 50y ^ 2 - 10x + 25 = 0 $",
+        "0.9": "vD$sDkKBw if the F5WOn of the FaIzfKIm NwO*s is a LQ#wNIkw, fkgFO#, S;?LLA@, tJOSdfPKw, )Pkm%, ,OM2, two ,LBWW, or 3j9Fj. $ x ^ 2 - 50y ^ 2 - 10x + 25 = 0 $",
+        "1.0": "S@Gd$hoMr if the r3QOB of the s1JWGl9M H@Ila is a (wdqHK>A, v&FSi3, wkoo0QR, T%l$gh0;X, 0LOG%, <kBf, two >jgDq, or 4n9FH. $ x ^ 2 - 50y ^ 2 - 10x + 25 = 0 $"
+      },
+      "random": {
+        "0.0": "Determine if the the equation is parabola, circle, ellipse, , point, line, ,. $ ^ 2 - 50y ^ - + 25 = $",
+        "0.1": "Determine if the graph of equation below is a parabola, , ellipse, hyperbola, point, line, lines, empty. $ x ^ 2 - 50y ^ 2 - 10x + 25 = $",
+        "0.2": "Determine if the graph of equation below is a, ,, hyperbola, point, line, lines, or. $ ^ 2 - 50y ^ 2 - + = 0 $",
+        "0.3": "If the of the equation below parabola, circle, ,, ,, two lines, empty. $ ^ - ^ - 10x + 25 = 0 $",
+        "0.4": "If the of below is, , ellipse, hyperbola, ,, , empty. $ ^ - ^ 2 - + = 0 $",
+        "0.5": "If the, , ellipse, ,, ,, . $ ^ 2 - 50y ^ - + = 0 $",
+        "0.6": "If, ,, ,, ,, or. $ ^ - ^ - + = $",
+        "0.7": "If, ,, ,, ,, . $ ^ - ^ - + = $",
+        "0.8": "If, ,, ,, ,, . $ ^ - ^ - + = $",
+        "0.9": "If, ,, ,, ,, . $ ^ - ^ - + = $",
+        "1.0": "If, ,, ,, ,, . $ ^ - ^ - + = $"
+      },
+      "cut": {
+        "0.0": "Determine if the graph of the equation below is a parabola, circle, ellipse, hyperbola, point, line, two lines, or empty.\n\n$x^2 - 50y^2 - 10x + 25 = 0$",
+        "0.1": "Determine if the graph of the equation below is a parabola, circle, ellipse, hyperbola, point, line, two lines, or empty.\n\n$x^2 - 50y^2 ",
+        "0.2": "Determine if the graph of the equation below is a parabola, circle, ellipse, hyperbola, point, line, two lines, or empty.",
+        "0.3": "Determine if the graph of the equation below is a parabola, circle, ellipse, hyperbola, point, line, two l",
+        "0.4": "Determine if the graph of the equation below is a parabola, circle, ellipse, hyperbola, poi",
+        "0.5": "Determine if the graph of the equation below is a parabola, circle, ellipse,",
+        "0.6": "Determine if the graph of the equation below is a parabola, ",
+        "0.7": "Determine if the graph of the equation below ",
+        "0.8": "Determine if the graph of the ",
+        "0.9": "Determine if th",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "Find the quadratic polynomial, with real coefficients, which has $3 + i$ as a root, and where the coefficient of $x^2$ is 2.",
+    "solution": "## Problem Solution\n\n**1. Problem Statement**\n\nFind a quadratic polynomial $P(x) = ax^2 + bx + c$ with real coefficients $a, b, c \\in \\mathbb{R}$, such that:\n- One root of the polynomial is $3 + i$.\n- The coefficient of $x^2$ is 2, i.e., $a = 2$.\n\n**Key Variables and Constraints:**\n- Quadratic polynomial: $P(x) = ax^2 + bx + c$\n- Real coefficients: $a, b, c \\in \\mathbb{R}$\n- Root: $r_1 = 3 + i$\n- Coefficient of $x^2$: $a = 2$\n\n**2. Solution Strategy**\n\nSince the quadratic polynomial has real coefficients, if a complex number is a root, then its complex conjugate must also be a root.\nGiven that $3 + i$ is a root, the other root must be its complex conjugate, $3 - i$.\nLet the roots be $r_1 = 3 + i$ and $r_2 = 3 - i$.\nA quadratic polynomial with roots $r_1$ and $r_2$ and leading coefficient $a$ can be written as $P(x) = a(x - r_1)(x - r_2)$.\nWe are given that $a = 2$. We will substitute the roots and $a$ into this form and expand to get the polynomial in the form $ax^2 + bx + c$.\n\n**Relevant Formulas/Theorems:**\n- **Complex Conjugate Root Theorem:** If a polynomial with real coefficients has a complex root $z = a + bi$, then its complex conjugate $\\bar{z} = a - bi$ is also a root.\n- **Quadratic Polynomial from Roots:** A quadratic polynomial with roots $r_1$ and $r_2$ and leading coefficient $a$ can be expressed as $P(x) = a(x - r_1)(x - r_2)$.\n\n**3. Step-by-Step Solution**\n\n**Step 1:** Identify the second root using the Complex Conjugate Root Theorem.\nSince the polynomial has real coefficients and $3 + i$ is a root, its complex conjugate $3 - i$ must also be a root.\nThus, the two roots are $r_1 = 3 + i$ and $r_2 = 3 - i$.\n\n**Step 2:** Use the roots and the leading coefficient to form the quadratic polynomial.\nThe quadratic polynomial can be written as $P(x) = a(x - r_1)(x - r_2)$.\nWe are given $a = 2$, $r_1 = 3 + i$, and $r_2 = 3 - i$.\nSubstituting these values, we get:\n$P(x) = 2(x - (3 + i))(x - (3 - i))$\n\n**Step 3:** Expand and simplify the expression for $P(x)$.\n$P(x) = 2((x - 3) - i)((x - 3) + i)$\nThis is in the form of $(A - B)(A + B) = A^2 - B^2$, where $A = (x - 3)$ and $B = i$.\n$P(x) = 2((x - 3)^2 - (i)^2)$\nWe know that $i^2 = -1$, so:\n$P(x) = 2((x - 3)^2 - (-1))$\n$P(x) = 2((x - 3)^2 + 1)$\nExpand $(x - 3)^2$:\n$(x - 3)^2 = x^2 - 2(3)x + 3^2 = x^2 - 6x + 9$\nSubstitute this back into the expression for $P(x)$:\n$P(x) = 2((x^2 - 6x + 9) + 1)$\n$P(x) = 2(x^2 - 6x + 10)$\nDistribute the 2:\n$P(x) = 2x^2 - 12x + 20$\n\n**Step 4:** Verify the conditions.\n- The coefficient of $x^2$ is 2, which is given.\n- The coefficients are $2, -12, 20$, which are all real numbers.\n- Let's check if $3 + i$ is a root of $P(x) = 2x^2 - 12x + 20$.\n$P(3 + i) = 2(3 + i)^2 - 12(3 + i) + 20$\n$P(3 + i) = 2(9 + 6i + i^2) - 36 - 12i + 20$\n$P(3 + i) = 2(9 + 6i - 1) - 36 - 12i + 20$\n$P(3 + i) = 2(8 + 6i) - 36 - 12i + 20$\n$P(3 + i) = 16 + 12i - 36 - 12i + 20$\n$P(3 + i) = (16 - 36 + 20) + (12i - 12i)$\n$P(3 + i) = 0 + 0i = 0$\nSo, $3 + i$ is indeed a root.\n\n**4. Final Answer**\n\nThe quadratic polynomial is $\\boxed{2x^2 - 12x + 20}$.\n\n**Verification:**\n- The polynomial is quadratic.\n- The coefficients $2, -12, 20$ are real numbers.\n- The coefficient of $x^2$ is 2.\n- $3 + i$ is a root (verified in Step 4).\n- The other root is $3 - i$. We can check this:\n$P(3 - i) = 2(3 - i)^2 - 12(3 - i) + 20$\n$P(3 - i) = 2(9 - 6i + i^2) - 36 + 12i + 20$\n$P(3 - i) = 2(9 - 6i - 1) - 36 + 12i + 20$\n$P(3 - i) = 2(8 - 6i) - 36 + 12i + 20$\n$P(3 - i) = 16 - 12i - 36 + 12i + 20$\n$P(3 - i) = (16 - 36 + 20) + (-12i + 12i)$\n$P(3 - i) = 0 + 0i = 0$\nSo, $3 - i$ is also a root. All conditions are satisfied.",
+    "metrics": {
+      "length": 2919,
+      "has_latex": false
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "Find the quadratic polynomial, with real coefficients, which has $ 3 + i $ as a root, and where the coefficient of $ x ^ 2 $ is 2.",
+        "0.1": "Find the quXdratic polyJomial, with real coefficients, whkch has $ 3 + i $ as a root, and where the coefficuegt of $ x ^ 2 $ is 2.",
+        "0.2": "Find the q&adrXtic polynomial, @ith rewl cosffisieJts, whiSh has $ 3 + i $ as a root, and whdre the coeDfifoent of $ x ^ 2 $ is 2.",
+        "0.3": "FlMd the WuaCra%ic polyG0miWl, wO6h Gea> c94fcicientA, whocG has $ 3 + i $ as a roIR, and wnerR the f9eff*ci@nt of $ x ^ 2 $ is 2.",
+        "0.4": "rinV the !uXXratix oLljnomia<, wktB rSak ci4fflc(en$s, whOFh has $ 3 + i $ as a r*oy, and whsTe the x(4ffici@nh of $ x ^ 2 $ is 2.",
+        "0.5": "FjnV the qhSWra6iv polhbomkS/, SiRh feZl fo#vficJehtq, whlFu has $ 3 + i $ as a 4o)t, and wjr4e the coefT(vi$j$ of $ x ^ 2 $ is 2.",
+        "0.6": "EOnX the quzcrARLs (KlThoJKal, 1kRh tez> DodRClciSGfs, ajiXh has $ 3 + i $ as a DKoY, and wUsrf the FpefTiX(3ht of $ x ^ 2 $ is 2.",
+        "0.7": "F(Mx the 2HXEragKV poIymknjZ?, w9yJ $@aP xlFDVivi2BtZ, sh&Fj has $ 3 + i $ as a rikF, and eMdrR the SPFtbocUeht of $ x ^ 2 $ is 2.",
+        "0.8": "gJHV the 2uASFX$jd L8P6MiKiwl, @oHm 4rs. fKDgr8fJSngs, #josh has $ 3 + i $ as a 38i%, and Su@rw the cp#gt*x*rnr of $ x ^ 2 $ is 2.",
+        "0.9": "RlJW the 1jZvfZ6uD (i/tGohkZi, q&Yg fSsI D8SRr8VUeBgX, 2G&Xu has $ 3 + i $ as a EL)4, and #Uw3@ the v02rDks*eb5 of $ x ^ 2 $ is 2.",
+        "1.0": "TJjc the w8SWtZGoD (P,7gK<kZi, EkrJ e$QK s(SrcKdksG6q, eY7vm has $ 3 + i $ as a fLKy, and Qmwg3 the XPWeDLx&@g^ of $ x ^ 2 $ is 2."
+      },
+      "random": {
+        "0.0": "Find quadratic polynomial, real, which has $ + $ as a root, and of $ x ^ 2 $.",
+        "0.1": "Find quadratic polynomial, with coefficients, which has $ 3 + i $ as a root, and where the coefficient of $ x ^ $ 2.",
+        "0.2": "Find the polynomial, coefficients, $ 3 + $ as a root, and where the coefficient $ x ^ 2 $ is 2.",
+        "0.3": "Find the quadratic, with coefficients, has $ + $ a root, and where coefficient $ x ^ $ 2.",
+        "0.4": "The, coefficients, which $ + i $ as a, and where the $ x ^ $.",
+        "0.5": "Find, coefficients, $ + $ root, and of $ ^ $ is.",
+        "0.6": "The, , $ + $ a, of $ x ^ $.",
+        "0.7": "The, , $ + $, $ ^ $.",
+        "0.8": "The, , $ + $, $ ^ $.",
+        "0.9": "The, , $ + $, $ ^ $.",
+        "1.0": "The, , $ + $, $ ^ $."
+      },
+      "cut": {
+        "0.0": "Find the quadratic polynomial, with real coefficients, which has $3 + i$ as a root, and where the coefficient of $x^2$ is 2.",
+        "0.1": "Find the quadratic polynomial, with real coefficients, which has $3 + i$ as a root, and where the coefficient of",
+        "0.2": "Find the quadratic polynomial, with real coefficients, which has $3 + i$ as a root, and where the c",
+        "0.3": "Find the quadratic polynomial, with real coefficients, which has $3 + i$ as a root, and",
+        "0.4": "Find the quadratic polynomial, with real coefficients, which has $3 + i$ a",
+        "0.5": "Find the quadratic polynomial, with real coefficients, which h",
+        "0.6": "Find the quadratic polynomial, with real coefficie",
+        "0.7": "Find the quadratic polynomial, with r",
+        "0.8": "Find the quadratic polyno",
+        "0.9": "Find the qua",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "If the integer $k^{}_{}$ is added to each of the numbers $36^{}_{}$, $300^{}_{}$, and $596^{}_{}$, one obtains the squares of three consecutive terms of an arithmetic series. Find $k^{}_{}$.",
+    "solution": "## Problem Solution\n\n**1. Problem Statement**\n\nGiven the numbers $36$, $300$, and $596$, we need to find an integer $k$ such that when $k$ is added to each of these numbers, the results are the squares of three consecutive terms of an arithmetic series. We need to determine the value of $k$.\n\nKey variables and constraints:\n- $k$: integer to be found\n- $36, 300, 596$: given numbers\n- Arithmetic series: three consecutive terms\n- Squares: of the terms in the arithmetic series\n\n**2. Solution Strategy**\n\nLet the three consecutive terms of an arithmetic series be $a-d$, $a$, and $a+d$, where $a$ is the middle term and $d$ is the common difference. Their squares are $(a-d)^2$, $a^2$, and $(a+d)^2$.\nAccording to the problem statement, we have the following equations:\n1. $36 + k = (a-d)^2$\n2. $300 + k = a^2$\n3. $596 + k = (a+d)^2$\n\nWe can eliminate $k$ by subtracting the first equation from the second and the second equation from the third. This will give us two equations in terms of $a$ and $d$, which we can solve to find $a$ and $d$. Once we have $a$, we can substitute it back into the second equation to find $k$.\n\nRelevant formulas:\n- Square of binomial: $(x \\pm y)^2 = x^2 \\pm 2xy + y^2$\n- Arithmetic series definition: consecutive terms with a constant difference\n\n**3. Step-by-Step Solution**\n\nSubtract equation (1) from equation (2):\n$(300 + k) - (36 + k) = a^2 - (a-d)^2$\n$300 - 36 = a^2 - (a^2 - 2ad + d^2)$\n$264 = a^2 - a^2 + 2ad - d^2$\n$264 = 2ad - d^2$  (Equation 4)\n\nSubtract equation (2) from equation (3):\n$(596 + k) - (300 + k) = (a+d)^2 - a^2$\n$596 - 300 = (a^2 + 2ad + d^2) - a^2$\n$296 = a^2 + 2ad + d^2 - a^2$\n$296 = 2ad + d^2$  (Equation 5)\n\nNow we have a system of two linear equations in terms of $ad$ and $d^2$:\n$2ad - d^2 = 264$  (Equation 4)\n$2ad + d^2 = 296$  (Equation 5)\n\nAdd Equation 4 and Equation 5:\n$(2ad - d^2) + (2ad + d^2) = 264 + 296$\n$4ad = 560$\n$ad = \\frac{560}{4}$\n$ad = 140$  (Equation 6)\n\nSubtract Equation 4 from Equation 5:\n$(2ad + d^2) - (2ad - d^2) = 296 - 264$\n$2d^2 = 32$\n$d^2 = \\frac{32}{2}$\n$d^2 = 16$\n$d = \\pm \\sqrt{16}$\n$d = \\pm 4$\n\nWe can choose $d = 4$ (or $d = -4$, which would lead to the same result for $k$).\nSubstitute $d = 4$ into Equation 6:\n$a(4) = 140$\n$a = \\frac{140}{4}$\n$a = 35$\n\nNow substitute $a = 35$ into Equation 2:\n$300 + k = a^2$\n$300 + k = 35^2$\n$300 + k = 1225$\n$k = 1225 - 300$\n$k = 925$\n\n**4. Final Answer**\n\nFinal Answer: The final answer is $\\boxed{925}$\n\nVerification:\nIf $k = 925$, then:\n$36 + k = 36 + 925 = 961 = 31^2$\n$300 + k = 300 + 925 = 1225 = 35^2$\n$596 + k = 596 + 925 = 1521 = 39^2$\nThe numbers $31, 35, 39$ form an arithmetic series with a common difference of $4$. Thus, the conditions are satisfied.",
+    "metrics": {
+      "length": 2701,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "If the integer $ k ^ {} _ {} $ is added to each of the numbers $ 36 ^ {} _ {} $, $ 300 ^ {} _ {} $, and $ 596 ^ {} _ {} $, one obtains the squares of three consecutive terms of an arithmetic series. Find $ k ^ {} _ {} $.",
+        "0.1": "If the integer $ k ^ {} _ {} $ is addDd to eaSh of the numbers $ 36 ^ {} _ {} $, $ 300 ^ {} _ {} $, and $ 596 ^ {} _ {} $, one obtains the Zquares of three donsechtive termc of an xrithmetic Aeries. Fund $ k ^ {} _ {} $.",
+        "0.2": "If the in%eher $ k ^ {} _ {} $ is addeF to eaXh of the numne4s $ 36 ^ {} _ {} $, $ 300 ^ {} _ {} $, and $ 596 ^ {} _ {} $, one Pbtaine the zquQres of thtee c9nW@cutive termd of an arithm4tuc serLFs. Finx $ k ^ {} _ {} $.",
+        "0.3": "If the jntebe5 $ k ^ {} _ {} $ is Sdsed to eavJ of the GumbeGc $ 36 ^ {} _ {} $, $ 300 ^ {} _ {} $, and $ 596 ^ {} _ {} $, one obtaugc the eqhZres of FhrSe coBsec7tjvw tSrHs of an ariHhKetLc Qeried. Eijd $ k ^ {} _ {} $.",
+        "0.4": "If the iMtefeG $ k ^ {} _ {} $ is sddeV to wadh of the BumbeFD $ 36 ^ {} _ {} $, $ 300 ^ {} _ {} $, and $ 596 ^ {} _ {} $, one KftainD the AqhaEes of YhreW cohsscu4jvf t$Gms of an ar94hmegoc XeFiew. Fknw $ k ^ {} _ {} $.",
+        "0.5": "If the JhYeher $ k ^ {} _ {} $ is Sdrwd to 3zch of the n6,g3rs $ 36 ^ {} _ {} $, $ 300 ^ {} _ {} $, and $ 596 ^ {} _ {} $, one 9bysigs the DquArWd of thfSf c8nWdXu$Jve re4mD of an XG&fumetic qDrKes. RinS $ k ^ {} _ {} $.",
+        "0.6": "If the ihtFfRD $ k ^ {} _ {} $ is zVSed to swcG of the M t,b2es $ 36 ^ {} _ {} $, $ 300 ^ {} _ {} $, and $ 596 ^ {} _ {} $, one 0f4Zine the saJaf$X of 6hr@@ cPgseSItUcR hSrmD of an ariRYhWyif s$rl2a. Fojv $ k ^ {} _ {} $.",
+        "0.7": "If the *n%Rgf5 $ k ^ {} _ {} $ is Zecee to exdt of the Mjmh@rW $ 36 ^ {} _ {} $, $ 300 ^ {} _ {} $, and $ 596 ^ {} _ {} $, one oGraLJe the sAuXEFd of ^GrfW DoGs$FKt8FS 5R#<s of an aglhh,Dt7v swFjse. rkjd $ k ^ {} _ {} $.",
+        "0.8": "If the 9j$sve4 $ k ^ {} _ {} $ is qWEer to sWfM of the B tNhrrC $ 36 ^ {} _ {} $, $ 300 ^ {} _ {} $, and $ 596 ^ {} _ {} $, one Ln$zlBs the DwuA54E of tUtsw xPHxSV^tuvf ^e4,x of an sD9tbmSROf a3rKda. BKJE $ k ^ {} _ {} $.",
+        "0.9": "If the Jb44H3# $ k ^ {} _ {} $ is zCC3F to FQsg of the b8NHDgd $ 36 ^ {} _ {} $, $ 300 ^ {} _ {} $, and $ 596 ^ {} _ {} $, one PVgZuBa the cs tS43w of GmT@D Dljxrxug7F$ G@GhQ of an xE&YY<eY*s Z$4JwW. E9jE $ k ^ {} _ {} $.",
+        "1.0": "If the jByWYFT $ k ^ {} _ {} $ is XFX$R to 3WfU of the B8,n$dx $ 36 ^ {} _ {} $, $ 300 ^ {} _ {} $, and $ 596 ^ {} _ {} $, one KNfwUHx the d!kxF4d of 6bgW3 dPmx$XI4lDW fDFhE of an s47$YNdyLf W3tJWA. G&bR $ k ^ {} _ {} $."
+      },
+      "random": {
+        "0.0": "If $ k ^ {} _ {} $ to numbers $ ^ {} _ {} $, $ ^ {} _ {} $, $ ^ {} _ {} $, squares arithmetic. $ ^ {} _ {} $.",
+        "0.1": "The $ k ^ {} _ {} $ is added to each of the numbers $ 36 ^ {} _ {} $, $ 300 ^ {} _ {} $, $ 596 ^ {} _ {} $, one obtains squares of consecutive terms arithmetic. Find $ k ^ {} _ {} $.",
+        "0.2": "If the $ k ^ {} _ {} $ added of the $ ^ {} _ {} $, $ 300 ^ {} _ {} $, and $ ^ {} _ {} $, obtains consecutive arithmetic series. Find $ k ^ {} _ {} $.",
+        "0.3": "The $ k ^ {} _ {} $ the $ ^ {} _ {} $, $ 300 ^ {} _ {} $, $ ^ {} _ {} $, squares of series. $ ^ {} _ {} $.",
+        "0.4": "The $ ^ {} _ {} $ $ ^ {} _ {} $, $ ^ {} _ {} $, $ ^ {} _ {} $, . $ ^ {} _ {} $.",
+        "0.5": "The $ ^ {} _ {} $ $ ^ {} _ {} $, $ ^ {} _ {} $, $ ^ {} _ {} $, . $ ^ {} _ {} $.",
+        "0.6": "The $ ^ {} _ {} $ $ ^ {} _ {} $, $ ^ {} _ {} $, $ ^ {} _ {} $, . $ ^ {} _ {} $.",
+        "0.7": "The $ ^ {} _ {} $ $ ^ {} _ {} $, $ ^ {} _ {} $, $ ^ {} _ {} $, . $ ^ {} _ {} $.",
+        "0.8": "The $ ^ {} _ {} $ $ ^ {} _ {} $, $ ^ {} _ {} $, $ ^ {} _ {} $, . $ ^ {} _ {} $.",
+        "0.9": "The $ ^ {} _ {} $ $ ^ {} _ {} $, $ ^ {} _ {} $, $ ^ {} _ {} $, . $ ^ {} _ {} $.",
+        "1.0": "The $ ^ {} _ {} $ $ ^ {} _ {} $, $ ^ {} _ {} $, $ ^ {} _ {} $, . $ ^ {} _ {} $."
+      },
+      "cut": {
+        "0.0": "If the integer $k^{}_{}$ is added to each of the numbers $36^{}_{}$, $300^{}_{}$, and $596^{}_{}$, one obtains the squares of three consecutive terms of an arithmetic series. Find $k^{}_{}$.",
+        "0.1": "If the integer $k^{}_{}$ is added to each of the numbers $36^{}_{}$, $300^{}_{}$, and $596^{}_{}$, one obtains the squares of three consecutive terms of an arithmetic seri",
+        "0.2": "If the integer $k^{}_{}$ is added to each of the numbers $36^{}_{}$, $300^{}_{}$, and $596^{}_{}$, one obtains the squares of three consecutive terms of",
+        "0.3": "If the integer $k^{}_{}$ is added to each of the numbers $36^{}_{}$, $300^{}_{}$, and $596^{}_{}$, one obtains the squares of three c",
+        "0.4": "If the integer $k^{}_{}$ is added to each of the numbers $36^{}_{}$, $300^{}_{}$, and $596^{}_{}$, one obtains the",
+        "0.5": "If the integer $k^{}_{}$ is added to each of the numbers $36^{}_{}$, $300^{}_{}$, and $596^{}_{",
+        "0.6": "If the integer $k^{}_{}$ is added to each of the numbers $36^{}_{}$, $300^{}",
+        "0.7": "If the integer $k^{}_{}$ is added to each of the numbers ",
+        "0.8": "If the integer $k^{}_{}$ is added to e",
+        "0.9": "If the integer $k^{",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "What is the remainder when $6x^3-15x^2+21x-23$ is divided by $3x-6$?",
+    "solution": "### Problem:\n1. **Problem Statement**\nFind the remainder when the polynomial $P(x) = 6x^3-15x^2+21x-23$ is divided by the polynomial $D(x) = 3x-6$.\nHere, the dividend is $P(x) = 6x^3-15x^2+21x-23$ and the divisor is $D(x) = 3x-6$. We need to find the remainder of the division.\n\n2. **Solution Strategy**\nWe can solve this problem using two methods:\nMethod 1: Polynomial Remainder Theorem\nMethod 2: Polynomial Long Division\n\nMethod 1: Polynomial Remainder Theorem\nTo use the Polynomial Remainder Theorem, we need to find the value of $x$ that makes the divisor $3x-6$ equal to zero.\nSet $3x-6 = 0$, which gives $3x = 6$, so $x = 2$.\nAccording to the Polynomial Remainder Theorem, the remainder when $P(x)$ is divided by $x-c$ is $P(c)$. In our case, we consider the divisor to be effectively in the form of $x-2$ since $3x-6 = 3(x-2)$.  We evaluate $P(2)$ to find the remainder.\n\nMethod 2: Polynomial Long Division\nWe perform polynomial long division to divide $6x^3-15x^2+21x-23$ by $3x-6$. The remainder will be the constant term left after the division process.\n\n3. **Step-by-Step Solution**\n\n**Method 1: Polynomial Remainder Theorem**\n- Set the divisor $3x-6$ to zero and solve for $x$:\n  $3x-6 = 0$\n  $3x = 6$\n  $x = 2$\n\n- Substitute $x=2$ into the polynomial $P(x) = 6x^3-15x^2+21x-23$:\n  $P(2) = 6(2)^3 - 15(2)^2 + 21(2) - 23$\n  $P(2) = 6(8) - 15(4) + 42 - 23$\n  $P(2) = 48 - 60 + 42 - 23$\n  $P(2) = (48 + 42) - (60 + 23)$\n  $P(2) = 90 - 83$\n  $P(2) = 7$\n  Thus, the remainder is $7$.\n\n**Method 2: Polynomial Long Division**\n```\n        2x^2   -x    +5\n      ___________________\n3x-6 |  6x^3  -15x^2  +21x  -23\n      -(6x^3  -12x^2)\n      ___________________\n             -3x^2   +21x\n             -(-3x^2  +6x)\n             ___________________\n                    15x  -23\n                    -(15x  -30)\n                    ___________________\n                           7\n```\n- Divide the first term of the dividend ($6x^3$) by the first term of the divisor ($3x$) to get the first term of the quotient: $6x^3 / 3x = 2x^2$.\n- Multiply the divisor ($3x-6$) by $2x^2$ to get $2x^2(3x-6) = 6x^3 - 12x^2$.\n- Subtract this from the dividend: $(6x^3-15x^2+21x-23) - (6x^3 - 12x^2) = -3x^2 + 21x - 23$.\n- Divide the first term of the new dividend ($-3x^2$) by the first term of the divisor ($3x$) to get the next term of the quotient: $-3x^2 / 3x = -x$.\n- Multiply the divisor ($3x-6$) by $-x$ to get $-x(3x-6) = -3x^2 + 6x$.\n- Subtract this from the new dividend: $(-3x^2 + 21x - 23) - (-3x^2 + 6x) = 15x - 23$.\n- Divide the first term of the new dividend ($15x$) by the first term of the divisor ($3x$) to get the next term of the quotient: $15x / 3x = 5$.\n- Multiply the divisor ($3x-6$) by $5$ to get $5(3x-6) = 15x - 30$.\n- Subtract this from the new dividend: $(15x - 23) - (15x - 30) = 7$.\n- The remainder is $7$.\n\n4. **Final Answer**\nThe remainder when $6x^3-15x^2+21x-23$ is divided by $3x-6$ is $7$.\n\nFinal Answer: The final answer is $\\boxed{7}$",
+    "metrics": {
+      "length": 2958,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "What is the remainder when $ 6x ^ 3 - 15x ^ 2 + 21x - 23 $ is divided by $ 3x - 6 $?",
+        "0.1": "Whwt is the remainder 1hen $ 6x ^ 3 - 15x ^ 2 + 21x - 23 $ is difided by $ 3x - 6 $?",
+        "0.2": "Wha% is the remqind$r whwn $ 6x ^ 3 - 15x ^ 2 + 21x - 23 $ is diviSee by $ 3x - 6 $?",
+        "0.3": "WUa5 is the remajnxdr wMem $ 6x ^ 3 - 15x ^ 2 + 21x - 23 $ is dKv8drd by $ 3x - 6 $?",
+        "0.4": "Wnst is the rrmWjndDr wMRn $ 6x ^ 3 - 15x ^ 2 + 21x - 23 $ is x7viFed by $ 3x - 6 $?",
+        "0.5": "@tat is the g#mQihd$r @heG $ 6x ^ 3 - 15x ^ 2 + 21x - 23 $ is EivUvew by $ 3x - 6 $?",
+        "0.6": "sBZt is the %dNZinwe4 wYsJ $ 6x ^ 3 - 15x ^ 2 + 21x - 23 $ is d7CJdFw by $ 3x - 6 $?",
+        "0.7": "eBXt is the %ehWLnx3e 3h4m $ 6x ^ 3 - 15x ^ 2 + 21x - 23 $ is V*Fiwrd by $ 3x - 6 $?",
+        "0.8": "SmWf is the 3wmxUjfWf #Jwb $ 6x ^ 3 - 15x ^ 2 + 21x - 23 $ is W(Fir#r by $ 3x - 6 $?",
+        "0.9": "3gS^ is the f@,xJhs2g sm2j $ 6x ^ 3 - 15x ^ 2 + 21x - 23 $ is xJB9R@s by $ 3x - 6 $?",
+        "1.0": "aGsG is the FfKWogefE DjSb $ 6x ^ 3 - 15x ^ 2 + 21x - 23 $ is r&DLxWC by $ 3x - 6 $?"
+      },
+      "random": {
+        "0.0": "Is the $ ^ - 15x ^ + 21x - 23 $ is divided $ - 6 $?",
+        "0.1": "What is the when $ 6x ^ 3 - 15x ^ + 21x - 23 $ is divided $ 3x - 6 $?",
+        "0.2": "What is remainder $ 6x ^ 3 - ^ 2 + 21x - $ is by $ - 6 $?",
+        "0.3": "Is remainder when $ ^ 3 - ^ 2 + - 23 $ by $ 3x - $?",
+        "0.4": "What $ 6x ^ - ^ + 21x - $ is $ - 6 $?",
+        "0.5": "Is when $ ^ - ^ + - $ divided $ - $?",
+        "0.6": "Is $ ^ - ^ + - $ $ - $?",
+        "0.7": "Is $ ^ - ^ + - $ $ - $?",
+        "0.8": "Is $ ^ - ^ + - $ $ - $?",
+        "0.9": "Is $ ^ - ^ + - $ $ - $?",
+        "1.0": "Is $ ^ - ^ + - $ $ - $?"
+      },
+      "cut": {
+        "0.0": "What is the remainder when $6x^3-15x^2+21x-23$ is divided by $3x-6$?",
+        "0.1": "What is the remainder when $6x^3-15x^2+21x-23$ is divided by ",
+        "0.2": "What is the remainder when $6x^3-15x^2+21x-23$ is divi",
+        "0.3": "What is the remainder when $6x^3-15x^2+21x-23$ i",
+        "0.4": "What is the remainder when $6x^3-15x^2+21",
+        "0.5": "What is the remainder when $6x^3-1",
+        "0.6": "What is the remainder when ",
+        "0.7": "What is the remainde",
+        "0.8": "What is the re",
+        "0.9": "What is",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "Find all real solutions to $x^4+(2-x)^4=34$.  Enter all the solutions, separated by commas.",
+    "solution": "### 1. Problem Statement\nFind all real numbers $x$ that satisfy the equation $x^4+(2-x)^4=34$.\n\nKey variables: $x$\nConstraint: $x$ must be a real number.\nEquation: $x^4+(2-x)^4=34$\n\n### 2. Solution Strategy\nWe will use a substitution to simplify the equation.\nLet $y = x-1$. Then $x = y+1$, and $2-x = 2-(y+1) = 1-y$.\nSubstituting these into the equation, we get $(y+1)^4 + (1-y)^4 = 34$.\nExpanding $(y+1)^4$ and $(1-y)^4$ using the binomial theorem and simplifying will lead to a simpler equation in terms of $y$. Then we solve for $y$ and then for $x$.\n\nRelevant formulas:\n- Binomial Theorem: $(a+b)^n = \\sum_{k=0}^n \\binom{n}{k} a^{n-k} b^k$\n\n### 3. Step-by-Step Solution\nLet $y = x-1$. Then $x = y+1$, and $2-x = 2-(y+1) = 1-y$.\nThe equation becomes:\n$(y+1)^4 + (1-y)^4 = 34$\n\nExpand $(y+1)^4$ using the binomial theorem:\n$(y+1)^4 = \\binom{4}{0} y^4 1^0 + \\binom{4}{1} y^3 1^1 + \\binom{4}{2} y^2 1^2 + \\binom{4}{3} y^1 1^3 + \\binom{4}{4} y^0 1^4$\n$(y+1)^4 = 1 \\cdot y^4 + 4 \\cdot y^3 + 6 \\cdot y^2 + 4 \\cdot y + 1$\n$(y+1)^4 = y^4 + 4y^3 + 6y^2 + 4y + 1$\n\nExpand $(1-y)^4$ using the binomial theorem:\n$(1-y)^4 = \\binom{4}{0} 1^4 (-y)^0 + \\binom{4}{1} 1^3 (-y)^1 + \\binom{4}{2} 1^2 (-y)^2 + \\binom{4}{3} 1^1 (-y)^3 + \\binom{4}{4} 1^0 (-y)^4$\n$(1-y)^4 = 1 \\cdot 1 + 4 \\cdot (-y) + 6 \\cdot (-y)^2 + 4 \\cdot (-y)^3 + 1 \\cdot (-y)^4$\n$(1-y)^4 = 1 - 4y + 6y^2 - 4y^3 + y^4$\n\nAdd $(y+1)^4$ and $(1-y)^4$:\n$(y+1)^4 + (1-y)^4 = (y^4 + 4y^3 + 6y^2 + 4y + 1) + (y^4 - 4y^3 + 6y^2 - 4y + 1)$\n$(y+1)^4 + (1-y)^4 = 2y^4 + 12y^2 + 2$\n\nSubstitute this back into the equation:\n$2y^4 + 12y^2 + 2 = 34$\n$2y^4 + 12y^2 - 32 = 0$\nDivide by 2:\n$y^4 + 6y^2 - 16 = 0$\n\nLet $z = y^2$. Then the equation becomes a quadratic equation in $z$:\n$z^2 + 6z - 16 = 0$\nUse the quadratic formula to solve for $z$:\n$z = \\frac{-6 \\pm \\sqrt{6^2 - 4(1)(-16)}}{2(1)} = \\frac{-6 \\pm \\sqrt{36 + 64}}{2} = \\frac{-6 \\pm \\sqrt{100}}{2} = \\frac{-6 \\pm 10}{2}$\n\nTwo possible values for $z$:\n$z_1 = \\frac{-6 + 10}{2} = \\frac{4}{2} = 2$\n$z_2 = \\frac{-6 - 10}{2} = \\frac{-16}{2} = -8$\n\nSince $z = y^2$ and $y$ is a real number, $z$ must be non-negative. Thus, $z = 2$ is the only valid solution for $z$.\n$y^2 = 2$\n$y = \\pm \\sqrt{2}$\n\nSince $x = y+1$, we have two solutions for $x$:\n$x_1 = 1 + \\sqrt{2}$\n$x_2 = 1 - \\sqrt{2}$\n\nVerify the solutions:\nFor $x = 1 + \\sqrt{2}$:\n$x^4 + (2-x)^4 = (1+\\sqrt{2})^4 + (2-(1+\\sqrt{2}))^4 = (1+\\sqrt{2})^4 + (1-\\sqrt{2})^4 = 34$ (as shown in the thought process)\n\nFor $x = 1 - \\sqrt{2}$:\n$x^4 + (2-x)^4 = (1-\\sqrt{2})^4 + (2-(1-\\sqrt{2}))^4 = (1-\\sqrt{2})^4 + (1+\\sqrt{2})^4 = 34$ (as shown in the thought process)\n\nBoth solutions are verified.\n\n### 4. Final Answer\nFinal Answer: The final answer is $\\boxed{1+\\sqrt{2}, 1-\\sqrt{2}}$",
+    "metrics": {
+      "length": 2719,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "Find all real solutions to $ x ^ 4 + (2 - x) ^ 4 = 34 $. Enter all the solutions, separated by commas.",
+        "0.1": "FiJd all real solutions to $ x ^ 4 + (2 - x) ^ 4 = 34 $. Enter all the so>utions, separated by cohmas.",
+        "0.2": "vind all rea: so:utiona to $ x ^ 4 + (2 - x) ^ 4 = 34 $. EMter all the solutions, sspxrated by F0mmas.",
+        "0.3": "GKnd all desl ZoluHionA to $ x ^ 4 + (2 - x) ^ 4 = 34 $. En^rr all the Wolutiobw, seoaDateX by coHmws.",
+        "0.4": "eJnd all 5ea, Dol*tiobD to $ x ^ 4 + (2 - x) ^ 4 = 34 $. $nt2r all the s9lu6ioMz, Ze)aEateS by fokmqs.",
+        "0.5": "F9bd all t3al s(Out9ojz to $ x ^ 4 + (2 - x) ^ 4 = 34 $. EJG@r all the so> TRK0ns, s4(srafew by vo<max.",
+        "0.6": "FuMX all 4eW< Xo<*gioJd to $ x ^ 4 + (2 - x) ^ 4 = 34 $. 4ntw% all the e9lutjPGa, z4parq6WX by DomjZE.",
+        "0.7": "F*MC all r@S: q8piHioJc to $ x ^ 4 + (2 - x) ^ 4 = 34 $. snRS5 all the XoIhfuojA, we0SdZtRC by DoKjxd.",
+        "0.8": "B(bE all DDxo qop*5*9GA to $ x ^ 4 + (2 - x) ^ 4 = 34 $. Rn^d5 all the W)kI$o(nQ, zS(wgz6eF by D0n,As.",
+        "0.9": "rLmv all fWqI a)IIr8IHQ to $ x ^ 4 + (2 - x) ^ 4 = 34 $. @bh2% all the AP?HYuKgx, w$9Q$zRWC by DKHNAw.",
+        "1.0": "CjhR all F2q; CL;K5*(BX to $ x ^ 4 + (2 - x) ^ 4 = 34 $. 3mhF4 all the EI?K^8ihX, qd0w5qgfF by xInNsd."
+      },
+      "random": {
+        "0.0": "Find all solutions $ x ^ 4 + (- x) ^ = $. Enter the solutions,.",
+        "0.1": "Find all real solutions to $ x ^ + (2 - x) ^ 4 = 34 $. Enter all solutions, separated by.",
+        "0.2": "All to $ ^ 4 + (2 - x) ^ 4 = 34 $. all the solutions, separated by.",
+        "0.3": "Find all $ x ^ 4 + (2 - x) ^ 4 = $. all, commas.",
+        "0.4": "Find all to $ ^ 4 + (2 -) ^ = $. , separated.",
+        "0.5": "All to $ ^ + (-) ^ = 34 $. , by.",
+        "0.6": "All $ ^ + (-) ^ = $. ,.",
+        "0.7": "All $ ^ + (-) ^ = $. ,.",
+        "0.8": "All $ ^ + (-) ^ = $. ,.",
+        "0.9": "All $ ^ + (-) ^ = $. ,.",
+        "1.0": "All $ ^ + (-) ^ = $. ,."
+      },
+      "cut": {
+        "0.0": "Find all real solutions to $x^4+(2-x)^4=34$.  Enter all the solutions, separated by commas.",
+        "0.1": "Find all real solutions to $x^4+(2-x)^4=34$.  Enter all the solutions, separated b",
+        "0.2": "Find all real solutions to $x^4+(2-x)^4=34$.  Enter all the solutions, se",
+        "0.3": "Find all real solutions to $x^4+(2-x)^4=34$.  Enter all the solu",
+        "0.4": "Find all real solutions to $x^4+(2-x)^4=34$.  Enter all",
+        "0.5": "Find all real solutions to $x^4+(2-x)^4=34$.  ",
+        "0.6": "Find all real solutions to $x^4+(2-x",
+        "0.7": "Find all real solutions to ",
+        "0.8": "Find all real solu",
+        "0.9": "Find all ",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "A function $f$ is defined by $f(z) = i\\overline{z}$, where $i^2 = -1$ and $\\overline{z}$ is the complex conjugate of $z$. How many values of $z$ satisfy both $|z| = 5$ and $f(z) = z$?",
+    "solution": "## Problem Solution\n\n**1. Problem Statement**\n\nFind the number of complex numbers $z$ that satisfy both of the following conditions:\n- The modulus of $z$ is 5, i.e., $|z| = 5$.\n- Applying the function $f(z) = i\\overline{z}$ to $z$ results in $z$ itself, i.e., $f(z) = z$.\n\nHere, $i$ is the imaginary unit ($i^2 = -1$) and $\\overline{z}$ is the complex conjugate of $z$. We need to determine how many such values of $z$ exist.\n\n**Key variables and constraints:**\n- $z$: Complex number, $z \\in \\mathbb{C}$\n- $|z| = 5$: Modulus of $z$ is 5\n- $f(z) = i\\overline{z}$: Definition of the function $f$\n- $f(z) = z$: Condition for $z$ to be a fixed point of $f$\n\n**2. Solution Strategy**\n\nWe will first use the condition $f(z) = z$ to find a general form for $z$. Then we will use the condition $|z| = 5$ to further restrict the possible values of $z$ and count the number of solutions.\n\nWe will use the representation of a complex number $z = x + yi$, where $x$ and $y$ are real numbers, and its conjugate $\\overline{z} = x - yi$. The modulus of $z$ is given by $|z| = \\sqrt{x^2 + y^2}$.\n\n**Relevant formulas/theorems:**\n- Complex number representation: $z = x + yi$, $\\overline{z} = x - yi$\n- Modulus of a complex number: $|z| = \\sqrt{x^2 + y^2}$\n- Condition $f(z) = z$: $i\\overline{z} = z$\n\n**3. Step-by-Step Solution**\n\nLet $z = x + yi$, where $x, y \\in \\mathbb{R}$.\nThen $\\overline{z} = x - yi$.\nThe condition $f(z) = z$ is given by $i\\overline{z} = z$.\nSubstituting $\\overline{z} = x - yi$ and $z = x + yi$ into the equation, we get:\n$i(x - yi) = x + yi$\nExpanding the left side:\n$ix - i(yi) = x + yi$\n$ix - yi^2 = x + yi$\nSince $i^2 = -1$:\n$ix - y(-1) = x + yi$\n$ix + y = x + yi$\n\nFor two complex numbers to be equal, their real parts must be equal and their imaginary parts must be equal. Equating the real and imaginary parts of the equation $ix + y = x + yi$:\nReal parts: $y = x$\nImaginary parts: $x = y$\n\nBoth conditions are the same: $x = y$.\nSo, any complex number $z$ that satisfies $f(z) = z$ must be of the form $z = x + xi$, where $x$ is a real number.\n\nNow we apply the second condition, $|z| = 5$.\nFor $z = x + xi$, the modulus is:\n$|z| = |x + xi| = \\sqrt{x^2 + x^2} = \\sqrt{2x^2} = \\sqrt{2} \\sqrt{x^2} = \\sqrt{2} |x|$.\nWe are given $|z| = 5$, so we have:\n$\\sqrt{2} |x| = 5$\n$|x| = \\frac{5}{\\sqrt{2}} = \\frac{5\\sqrt{2}}{2}$\n\nThis means $x$ can take two possible values:\n$x = \\frac{5\\sqrt{2}}{2}$ or $x = -\\frac{5\\sqrt{2}}{2}$.\n\nFor each value of $x$, we have a corresponding value of $z = x + xi$.\nCase 1: $x = \\frac{5\\sqrt{2}}{2}$. Then $z_1 = \\frac{5\\sqrt{2}}{2} + \\frac{5\\sqrt{2}}{2}i$.\nCase 2: $x = -\\frac{5\\sqrt{2}}{2}$. Then $z_2 = -\\frac{5\\sqrt{2}}{2} - \\frac{5\\sqrt{2}}{2}i$.\n\nWe have found two values of $z$ that satisfy both conditions. Let's verify them.\nFor $z_1 = \\frac{5\\sqrt{2}}{2} + \\frac{5\\sqrt{2}}{2}i$:\n$|z_1| = \\sqrt{(\\frac{5\\sqrt{2}}{2})^2 + (\\frac{5\\sqrt{2}}{2})^2} = \\sqrt{\\frac{50}{4} + \\frac{50}{4}} = \\sqrt{\\frac{100}{4}} = \\sqrt{25} = 5$.\n$f(z_1) = i\\overline{z_1} = i(\\frac{5\\sqrt{2}}{2} - \\frac{5\\sqrt{2}}{2}i) = i\\frac{5\\sqrt{2}}{2} - i^2\\frac{5\\sqrt{2}}{2} = \\frac{5\\sqrt{2}}{2}i + \\frac{5\\sqrt{2}}{2} = \\frac{5\\sqrt{2}}{2} + \\frac{5\\sqrt{2}}{2}i = z_1$.\n\nFor $z_2 = -\\frac{5\\sqrt{2}}{2} - \\frac{5\\sqrt{2}}{2}i$:\n$|z_2| = \\sqrt{(-\\frac{5\\sqrt{2}}{2})^2 + (-\\frac{5\\sqrt{2}}{2})^2} = \\sqrt{\\frac{50}{4} + \\frac{50}{4}} = \\sqrt{\\frac{100}{4}} = \\sqrt{25} = 5$.\n$f(z_2) = i\\overline{z_2} = i(-\\frac{5\\sqrt{2}}{2} - (-\\frac{5\\sqrt{2}}{2})i) = i(-\\frac{5\\sqrt{2}}{2} + \\frac{5\\sqrt{2}}{2}i) = -i\\frac{5\\sqrt{2}}{2} + i^2\\frac{5\\sqrt{2}}{2} = -\\frac{5\\sqrt{2}}{2}i - \\frac{5\\sqrt{2}}{2} = -\\frac{5\\sqrt{2}}{2} - \\frac{5\\sqrt{2}}{2}i = z_2$.\n\nBoth $z_1$ and $z_2$ satisfy both conditions. Since there are exactly two possible values for $x$, there are exactly two values for $z$.\n\n**4. Final Answer**\n\nFinal Answer: The final answer is $\\boxed{2}$",
+    "metrics": {
+      "length": 3881,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "A function $ f $ is defined by $ f (z) = i \\ overline {z} $, where $ i ^ 2 = - 1 $ and $ \\ overline {z} $ is the complex conjugate of $ z $. How many values of $ z $ satisfy both $ | z | = 5 $ and $ f (z) = z $?",
+        "0.1": "A Eunction $ f $ is defines by $ f (z) = i \\ overliHe {z} $, wTere $ i ^ 2 = - 1 $ and $ \\ ove%line {z} $ is the cimplex conjugatd of $ z $. How maGy values of $ z $ satisfy both $ | z | = 5 $ and $ f (z) = z $?",
+        "0.2": "A fuJchion $ f $ is eevined by $ f (z) = i \\ *verlije {z} $, wGere $ i ^ 2 = - 1 $ and $ \\ overlOHe {z} $ is the Xomp;ex vonjugwte of $ z $. How mXny va/uea of $ z $ satLsGy botB $ | z | = 5 $ and $ f (z) = z $?",
+        "0.3": "A cunct9pn $ f $ is wefOn$d by $ f (z) = i \\ 0ver.iJe {z} $, wtete $ i ^ 2 = - 1 $ and $ \\ ove4KiHe {z} $ is the xom9leC conjJYa5e of $ z $. How mSby balhes of $ z $ sx48sfy boYj $ | z | = 5 $ and $ f (z) = z $?",
+        "0.4": "A fjnc6iPG $ f $ is WrfinRd by $ f (z) = i \\ oC@r,One {z} $, SheGe $ i ^ 2 = - 1 $ and $ \\ ovfF.une {z} $ is the VLmp>ex sonjKgaG$ of $ z $. How JanJ vx<ufs of $ z $ sahisD^ foFh $ | z | = 5 $ and $ f (z) = z $?",
+        "0.5": "A Cunft8in $ f $ is dfbiher by $ f (z) = i \\ kvSriibe {z} $, wNf%e $ i ^ 2 = - 1 $ and $ \\ (ve4lLn# {z} $ is the fo<p>rx cogjKHqtd of $ z $. How maM% vZku$s of $ z $ DztixVy vorh $ | z | = 5 $ and $ f (z) = z $?",
+        "0.6": "A f8jcFJoB $ f $ is d2r9nfs by $ f (z) = i \\ (fwrliBd {z} $, DhWr2 $ i ^ 2 = - 1 $ and $ \\ 9ver<&jS {z} $ is the doKp>ds SInMutagR of $ z $. How mAGT vx/^Fs of $ z $ AztkCby hptG $ | z | = 5 $ and $ f (z) = z $?",
+        "0.7": "A t TnSR8*n $ f $ is VWflnFf by $ f (z) = i \\ *g2rPiJw {z} $, dye32 $ i ^ 2 = - 1 $ and $ \\ ogd%;kn3 {z} $ is the Fiml<2x fpniufZYD of $ z $. How nXnT vSPK#q of $ z $ sAhkWdy b8^M $ | z | = 5 $ and $ f (z) = z $?",
+        "0.8": "A rinfhupg $ f $ is c$fuJSr by $ f (z) = i \\ Kv3EKKMD {z} $, Sbe3F $ i ^ 2 = - 1 $ and $ \\ oG4%;oHW {z} $ is the c0h9k4D F9Gh^yQre of $ z $. How nZMh BZ>hez of $ z $ sw%UqrT VK$t $ | z | = 5 $ and $ f (z) = z $?",
+        "0.9": "A v6Js6jij $ f $ is w$bOjwW by $ f (z) = i \\ )Gw3/(M$ {z} $, Duwe# $ i ^ 2 = - 1 $ and $ \\ )C@EK&hf {z} $ is the V*J9.Wd F8bHhrSY$ of $ z $. How jZHU dZ;8RA of $ z $ zzF8XbH Vkft $ | z | = 5 $ and $ f (z) = z $?",
+        "1.0": "A eJhV$U*B $ f $ is fScLh#s by $ f (z) = i \\ IG$t;(h2 {z} $, qUF#s $ i ^ 2 = - 1 $ and $ \\ (fSFILg$ {z} $ is the VkN)iFc simh trsf$ of $ z $. How ,Zmt Fqp tSE of $ z $ ZZ^8wtg glGy $ | z | = 5 $ and $ f (z) = z $?"
+      },
+      "random": {
+        "0.0": "Function $ $ is defined by $ f () = \\ overline {} $, where $ ^ 2 = - $ and $ \\ {} $ the $ z $. of $ $ $ | | = 5 $ $ f () = z $?",
+        "0.1": "A $ f $ defined $ f (z) = i \\ overline {z} $, where $ ^ 2 = - 1 $ and $ \\ overline {z} $ the complex conjugate of $ z $. How many of $ z $ satisfy both $ | z | = $ and $ f () = z $?",
+        "0.2": "Function $ f $ defined $ f (z) = i \\ overline {} $, where $ i ^ = - 1 $ and $ \\ {z} $ conjugate of $ z $. How many values $ z $ satisfy $ | | = 5 $ $ (z) = z $?",
+        "0.3": "A $ f $ is $ () = \\ {z} $, $ ^ = - $ $ \\ {} $ is $ $. How values $ z $ satisfy both $ | z | = 5 $ and $ () = z $?",
+        "0.4": "Function $ f $ by $ () = \\ {} $, where $ ^ = - $ $ \\ {z} $ $ z $. How $ $ $ | z | = $ $ () = $?",
+        "0.5": "Function $ $ $ () = \\ {} $, $ ^ = - $ $ \\ {} $ $ $. $ $ $ | | = $ $ () = $?",
+        "0.6": "Function $ $ $ () = \\ {} $, $ ^ = - $ $ \\ {} $ $ $. $ $ $ | | = $ $ () = $?",
+        "0.7": "Function $ $ $ () = \\ {} $, $ ^ = - $ $ \\ {} $ $ $. $ $ $ | | = $ $ () = $?",
+        "0.8": "Function $ $ $ () = \\ {} $, $ ^ = - $ $ \\ {} $ $ $. $ $ $ | | = $ $ () = $?",
+        "0.9": "Function $ $ $ () = \\ {} $, $ ^ = - $ $ \\ {} $ $ $. $ $ $ | | = $ $ () = $?",
+        "1.0": "Function $ $ $ () = \\ {} $, $ ^ = - $ $ \\ {} $ $ $. $ $ $ | | = $ $ () = $?"
+      },
+      "cut": {
+        "0.0": "A function $f$ is defined by $f(z) = i\\overline{z}$, where $i^2 = -1$ and $\\overline{z}$ is the complex conjugate of $z$. How many values of $z$ satisfy both $|z| = 5$ and $f(z) = z$?",
+        "0.1": "A function $f$ is defined by $f(z) = i\\overline{z}$, where $i^2 = -1$ and $\\overline{z}$ is the complex conjugate of $z$. How many values of $z$ satisfy both $|z| = ",
+        "0.2": "A function $f$ is defined by $f(z) = i\\overline{z}$, where $i^2 = -1$ and $\\overline{z}$ is the complex conjugate of $z$. How many values of $z$ s",
+        "0.3": "A function $f$ is defined by $f(z) = i\\overline{z}$, where $i^2 = -1$ and $\\overline{z}$ is the complex conjugate of $z$. How ma",
+        "0.4": "A function $f$ is defined by $f(z) = i\\overline{z}$, where $i^2 = -1$ and $\\overline{z}$ is the complex conjug",
+        "0.5": "A function $f$ is defined by $f(z) = i\\overline{z}$, where $i^2 = -1$ and $\\overline{z}$ is ",
+        "0.6": "A function $f$ is defined by $f(z) = i\\overline{z}$, where $i^2 = -1$ and",
+        "0.7": "A function $f$ is defined by $f(z) = i\\overline{z}$, wh",
+        "0.8": "A function $f$ is defined by $f(z) = ",
+        "0.9": "A function $f$ is ",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "The function $f(x)$ satisfies\n\\[f(x + y) = f(x) + f(y)\\]for all real numbers $x$ and $y,$ and $f(4) = 5.$  Find $f(5).$",
+    "solution": "### 1. **Problem Statement**\n\nThe function $f(x)$ satisfies the functional equation $f(x + y) = f(x) + f(y)$ for all real numbers $x$ and $y.$  We are also given that $f(4) = 5.$  The objective is to find the value of $f(5).$\n\nKey variables and constraints:\n- Function: $f(x)$\n- Functional equation: $f(x + y) = f(x) + f(y)$ for all real $x, y$\n- Given value: $f(4) = 5$\n- Objective: Find $f(5)$\n\n### 2. **Solution Strategy**\n\nWe will use the property of the given functional equation $f(x + y) = f(x) + f(y).$  This is Cauchy's functional equation.  A property derived from this equation is $f(nx) = n f(x)$ for any integer $n.$ We will use this property to relate $f(4)$ and $f(5)$ to $f(1),$ and then use the given value of $f(4)$ to find $f(1),$ and finally calculate $f(5).$\n\nAlternatively, we can assume a linear form for $f(x)$ based on Cauchy's functional equation (assuming continuity, though not strictly needed for this problem as we only need to find $f(5)$ based on $f(4)$). We assume $f(x) = cx$ and use the condition $f(4) = 5$ to find $c,$ and then calculate $f(5).$\n\nFormulas/theorems:\n- Property of Cauchy's functional equation: $f(nx) = n f(x)$ for integer $n.$\n- For rational $x,$ $f(x) = cx$ where $c = f(1).$\n\n### 3. **Step-by-Step Solution**\n\n**Step 1:** Use the property $f(nx) = n f(x)$ for integer $n.$\nLet $x = 1.$ Then $f(n) = f(n \\cdot 1) = n f(1)$ for any integer $n.$\nIn particular, for $n = 4,$ we have $f(4) = 4 f(1).$\n\n**Step 2:** Use the given value $f(4) = 5$ to find $f(1).$\nWe have $f(4) = 4 f(1) = 5.$\nDividing both sides by 4, we get $f(1) = \\frac{5}{4}.$\n\n**Step 3:** Use the property $f(n) = n f(1)$ for integer $n$ to find $f(5).$\nFor $n = 5,$ we have $f(5) = 5 f(1).$\nSubstitute the value of $f(1) = \\frac{5}{4}$ into the expression for $f(5).$\n$f(5) = 5 \\times \\frac{5}{4} = \\frac{25}{4}.$\n\n**Alternatively, using the linear form:**\nAssume $f(x) = cx.$\nSubstitute this into the functional equation:\n$f(x+y) = c(x+y) = cx + cy = f(x) + f(y).$\nSo $f(x) = cx$ is a solution.\nUse the condition $f(4) = 5.$\n$f(4) = c \\times 4 = 5.$\n$c = \\frac{5}{4}.$\nThus $f(x) = \\frac{5}{4} x.$\nNow find $f(5).$\n$f(5) = \\frac{5}{4} \\times 5 = \\frac{25}{4}.$\n\n**Verification:**\nCheck if $f(x) = \\frac{25}{4} x$ satisfies $f(x + y) = f(x) + f(y)$ and $f(4) = 5.$\n$f(x + y) = \\frac{5}{4} (x + y) = \\frac{5}{4} x + \\frac{5}{4} y = f(x) + f(y).$  (Correct)\n$f(4) = \\frac{5}{4} \\times 4 = 5.$ (Correct)\nSo the conditions are satisfied.\n\n### 4. **Final Answer**\n\nFinal Answer: The final answer is $\\boxed{\\frac{25}{4}}$",
+    "metrics": {
+      "length": 2537,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "The function $ f (x) $ satisfies \\ [f (x + y) = f (x) + f (y) \\] for all real numbers $ x $ and $ y, $ and $ f (4) = 5. $ Find $ f (5 ). $",
+        "0.1": "The functioJ $ f (x) $ sWtisfies \\ [f (x + y) = f (x) + f (y) \\] for all %eal numNers $ x $ and $ y, $ and $ f (4) = 5. $ FiBd $ f (5 ). $",
+        "0.2": "The vuhction $ f (x) $ safisf(es \\ [f (x + y) = f (x) + f (y) \\] for all 3eal numbe3e $ x $ and $ y, $ and $ f (4) = 5. $ Flnd $ f (5 ). $",
+        "0.3": "The f Tnxti)n $ f (x) $ satiDf9eW \\ [f (x + y) = f (x) + f (y) \\] for all #ea. BumF#rs $ x $ and $ y, $ and $ f (4) = 5. $ FibW $ f (5 ). $",
+        "0.4": "The rundtJob $ f (x) $ sQt7Cties \\ [f (x + y) = f (x) + f (y) \\] for all GeXl BumN#rs $ x $ and $ y, $ and $ f (4) = 5. $ VinE $ f (5 ). $",
+        "0.5": "The E6nX^ion $ f (x) $ xat&stidc \\ [f (x + y) = f (x) + f (y) \\] for all rWaP nuNbdEz $ x $ and $ y, $ and $ f (4) = 5. $ gjnd $ f (5 ). $",
+        "0.6": "The fHnFrUom $ f (x) $ EZgusfiwQ \\ [f (x + y) = f (x) + f (y) \\] for all %sSl Gu<H@5s $ x $ and $ y, $ and $ f (4) = 5. $ r&ne $ f (5 ). $",
+        "0.7": "The vKnsH(oj $ f (x) $ xztJsB(Fz \\ [f (x + y) = f (x) + f (y) \\] for all rdQK g^mVRds $ x $ and $ y, $ and $ f (4) = 5. $ BjnV $ f (5 ). $",
+        "0.8": "The Tjnd%*8m $ f (x) $ cWFkagisX \\ [f (x + y) = f (x) + f (y) \\] for all GfXI nKNnwEc $ x $ and $ y, $ and $ f (4) = 5. $ DuBr $ f (5 ). $",
+        "0.9": "The DhMF^&9J $ f (x) $ qqf*WtJRq \\ [f (x + y) = f (x) + f (y) \\] for all %FS/ mKNfS5A $ x $ and $ y, $ and $ f (4) = 5. $ CUBx $ f (5 ). $",
+        "1.0": "The t7Bv$7lG $ f (x) $ zz6lqT(fQ \\ [f (x + y) = f (x) + f (y) \\] for all grQ, G7hFDdz $ x $ and $ y, $ and $ f (4) = 5. $ rUMS $ f (5 ). $"
+      },
+      "random": {
+        "0.0": "Function $ () $ \\ [( + y) = f () + () \\] for all $ x $ $ y, $ $ f () =. $ Find $ (). $",
+        "0.1": "Function $ (x) $ \\ [f (x + y) = f (x) + f (y) \\] for all numbers $ x $ $ y, $ and $ f (4) =. $ Find $ f (5 ). $",
+        "0.2": "Function $ () $ \\ [f (+ y) = f (x) + (y) \\] for all numbers $ $ and $, $ $ f (4) =. $ Find $ (5 ). $",
+        "0.3": "Function $ () $ satisfies \\ [f (x +) = (x) + f () \\] for all $ $ $, $ $ () =. $ $ (). $",
+        "0.4": "Function $ f () $ \\ [( x +) = () + () \\] $ $ $, $ $ () =. $ $ (). $",
+        "0.5": "Function $ () $ \\ [( +) = () + () \\] $ $ $, $ $ () =. $ $ (). $",
+        "0.6": "Function $ () $ \\ [( +) = () + () \\] $ $ $, $ $ () =. $ $ (). $",
+        "0.7": "Function $ () $ \\ [( +) = () + () \\] $ $ $, $ $ () =. $ $ (). $",
+        "0.8": "Function $ () $ \\ [( +) = () + () \\] $ $ $, $ $ () =. $ $ (). $",
+        "0.9": "Function $ () $ \\ [( +) = () + () \\] $ $ $, $ $ () =. $ $ (). $",
+        "1.0": "Function $ () $ \\ [( +) = () + () \\] $ $ $, $ $ () =. $ $ (). $"
+      },
+      "cut": {
+        "0.0": "The function $f(x)$ satisfies\n\\[f(x + y) = f(x) + f(y)\\]for all real numbers $x$ and $y,$ and $f(4) = 5.$  Find $f(5).$",
+        "0.1": "The function $f(x)$ satisfies\n\\[f(x + y) = f(x) + f(y)\\]for all real numbers $x$ and $y,$ and $f(4) = 5.$  ",
+        "0.2": "The function $f(x)$ satisfies\n\\[f(x + y) = f(x) + f(y)\\]for all real numbers $x$ and $y,$ and $",
+        "0.3": "The function $f(x)$ satisfies\n\\[f(x + y) = f(x) + f(y)\\]for all real numbers $x$ an",
+        "0.4": "The function $f(x)$ satisfies\n\\[f(x + y) = f(x) + f(y)\\]for all real nu",
+        "0.5": "The function $f(x)$ satisfies\n\\[f(x + y) = f(x) + f(y)\\]for ",
+        "0.6": "The function $f(x)$ satisfies\n\\[f(x + y) = f(x) ",
+        "0.7": "The function $f(x)$ satisfies\n\\[f(x ",
+        "0.8": "The function $f(x)$ sati",
+        "0.9": "The function",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "What is the remainder when $x^2+7x-5$ divides $2x^4+11x^3-42x^2-60x+47$?",
+    "solution": "## Solution:\n\n**1. Problem Statement**\n\nWe are asked to find the remainder when the polynomial $P(x) = 2x^4+11x^3-42x^2-60x+47$ is divided by the polynomial $D(x) = x^2+7x-5$.\nLet $P(x)$ be the dividend and $D(x)$ be the divisor. We need to find the remainder $R(x)$ in the division $P(x) \\div D(x)$.\nThe degree of $P(x)$ is 4 and the degree of $D(x)$ is 2.\nThe degree of the remainder $R(x)$ must be less than the degree of the divisor $D(x)$. Thus, the degree of $R(x)$ is at most 1. We can express the remainder in the form $R(x) = ax+b$.\n\n**2. Solution Strategy**\n\nWe will use polynomial long division to find the quotient and the remainder when $P(x)$ is divided by $D(x)$.\nThe process involves repeatedly dividing the leading term of the current dividend by the leading term of the divisor, multiplying the result by the divisor, and subtracting it from the current dividend. We continue this process until the degree of the remaining polynomial is less than the degree of the divisor.\n\n**3. Step-by-Step Solution**\n\nWe perform polynomial long division:\n```\n        2x^2  -3x   -11\n      ___________________\nx^2+7x-5 | 2x^4 +11x^3 -42x^2 -60x  +47\n        -(2x^4 +14x^3 -10x^2)\n        ___________________\n              -3x^3 -32x^2 -60x\n             -(-3x^3 -21x^2 +15x)\n             ___________________\n                    -11x^2 -75x  +47\n                   -(-11x^2 -77x  +55)\n                   ___________________\n                           2x   -8\n```\n\n**Step 1:** Divide $2x^4$ by $x^2$ to get $2x^2$. Multiply $2x^2$ by $x^2+7x-5$ to get $2x^4+14x^3-10x^2$. Subtract this from the dividend:\n$(2x^4+11x^3-42x^2-60x+47) - (2x^4+14x^3-10x^2) = -3x^3-32x^2-60x+47$.\n\n**Step 2:** Divide $-3x^3$ by $x^2$ to get $-3x$. Multiply $-3x$ by $x^2+7x-5$ to get $-3x^3-21x^2+15x$. Subtract this from the result of Step 1:\n$(-3x^3-32x^2-60x+47) - (-3x^3-21x^2+15x) = -11x^2-75x+47$.\n\n**Step 3:** Divide $-11x^2$ by $x^2$ to get $-11$. Multiply $-11$ by $x^2+7x-5$ to get $-11x^2-77x+55$. Subtract this from the result of Step 2:\n$(-11x^2-75x+47) - (-11x^2-77x+55) = 2x-8$.\n\nThe degree of $2x-8$ is 1, which is less than the degree of $x^2+7x-5$. Thus, the remainder is $R(x) = 2x-8$.\nThe quotient is $Q(x) = 2x^2-3x-11$.\n\nWe can verify this by checking if $P(x) = Q(x)D(x) + R(x)$:\n$(2x^2-3x-11)(x^2+7x-5) + (2x-8)$\n$= 2x^2(x^2+7x-5) -3x(x^2+7x-5) -11(x^2+7x-5) + (2x-8)$\n$= (2x^4+14x^3-10x^2) + (-3x^3-21x^2+15x) + (-11x^2-77x+55) + (2x-8)$\n$= 2x^4 + (14x^3-3x^3) + (-10x^2-21x^2-11x^2) + (15x-77x+2x) + (55-8)$\n$= 2x^4 + 11x^3 - 42x^2 - 60x + 47$\nThis matches the original polynomial $P(x)$.\n\n**4. Final Answer**\n\nThe remainder when $x^2+7x-5$ divides $2x^4+11x^3-42x^2-60x+47$ is $2x-8$.\n\nFinal Answer: The final answer is $\\boxed{2x-8}$",
+    "metrics": {
+      "length": 2741,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "What is the remainder when $ x ^ 2 + 7x - 5 $ divides $ 2x ^ 4 + 11x ^ 3 - 42x ^ 2 - 60x + 47 $?",
+        "0.1": "WTat is the remainCer wheh $ x ^ 2 + 7x - 5 $ d8vides $ 2x ^ 4 + 11x ^ 3 - 42x ^ 2 - 60x + 47 $?",
+        "0.2": "Whwt is the Temainddr wuen $ x ^ 2 + 7x - 5 $ diDideZ $ 2x ^ 4 + 11x ^ 3 - 42x ^ 2 - 60x + 47 $?",
+        "0.3": "eha6 is the r2ma&mder 3uen $ x ^ 2 + 7x - 5 $ diCidSA $ 2x ^ 4 + 11x ^ 3 - 42x ^ 2 - 60x + 47 $?",
+        "0.4": "WTaf is the remAijddE Ahem $ x ^ 2 + 7x - 5 $ F9videZ $ 2x ^ 4 + 11x ^ 3 - 42x ^ 2 - 60x + 47 $?",
+        "0.5": "Shah is the rwKaiJxed whsG $ x ^ 2 + 7x - 5 $ xiGOdRs $ 2x ^ 4 + 11x ^ 3 - 42x ^ 2 - 60x + 47 $?",
+        "0.6": "2hS5 is the teha&hd@g EMeH $ x ^ 2 + 7x - 5 $ X8BiS#s $ 2x ^ 4 + 11x ^ 3 - 42x ^ 2 - 60x + 47 $?",
+        "0.7": "3tay is the $W<ajgre% 1ueJ $ x ^ 2 + 7x - 5 $ wLvKred $ 2x ^ 4 + 11x ^ 3 - 42x ^ 2 - 60x + 47 $?",
+        "0.8": "!TSR is the eejsKmfF# qtdH $ x ^ 2 + 7x - 5 $ skdLWss $ 2x ^ 4 + 11x ^ 3 - 42x ^ 2 - 60x + 47 $?",
+        "0.9": "SBSf is the ew<qUjV$D 1nRJ $ x ^ 2 + 7x - 5 $ VKF8vdZ $ 2x ^ 4 + 11x ^ 3 - 42x ^ 2 - 60x + 47 $?",
+        "1.0": "egsh is the eRKq8ge3F Eg2H $ x ^ 2 + 7x - 5 $ ckgLrSq $ 2x ^ 4 + 11x ^ 3 - 42x ^ 2 - 60x + 47 $?"
+      },
+      "random": {
+        "0.0": "Is the $ x ^ 2 + 7x - $ divides $ ^ + 11x ^ 3 - ^ - + 47 $?",
+        "0.1": "What is the when $ ^ 2 + 7x - 5 $ divides $ 2x ^ 4 + 11x ^ 3 - 42x ^ - + 47 $?",
+        "0.2": "What is the remainder when $ ^ + - $ divides $ 2x ^ 4 + 11x ^ - ^ - 60x + 47 $?",
+        "0.3": "What when $ x ^ + 7x - $ divides $ 2x ^ 4 + ^ - ^ - 60x + $?",
+        "0.4": "Is remainder $ ^ + - $ $ ^ 4 + ^ - 42x ^ 2 - + $?",
+        "0.5": "Is remainder $ ^ + - $ $ ^ + ^ - ^ - + $?",
+        "0.6": "Is $ ^ + - $ $ ^ + ^ - ^ - + $?",
+        "0.7": "Is $ ^ + - $ $ ^ + ^ - ^ - + $?",
+        "0.8": "Is $ ^ + - $ $ ^ + ^ - ^ - + $?",
+        "0.9": "Is $ ^ + - $ $ ^ + ^ - ^ - + $?",
+        "1.0": "Is $ ^ + - $ $ ^ + ^ - ^ - + $?"
+      },
+      "cut": {
+        "0.0": "What is the remainder when $x^2+7x-5$ divides $2x^4+11x^3-42x^2-60x+47$?",
+        "0.1": "What is the remainder when $x^2+7x-5$ divides $2x^4+11x^3-42x^2-6",
+        "0.2": "What is the remainder when $x^2+7x-5$ divides $2x^4+11x^3-",
+        "0.3": "What is the remainder when $x^2+7x-5$ divides $2x^",
+        "0.4": "What is the remainder when $x^2+7x-5$ divid",
+        "0.5": "What is the remainder when $x^2+7x-5",
+        "0.6": "What is the remainder when $x",
+        "0.7": "What is the remainder ",
+        "0.8": "What is the re",
+        "0.9": "What is",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "For what values of the constant $c$ does the graph of $f(x) = \\frac{x^2-x+c}{x^2+x-6}$ have exactly one vertical asymptote?\n\nEnter the possible values of $c,$ separated by commas.",
+    "solution": "**Problem Statement**\n\nDetermine the values of the constant $c$ for which the rational function $f(x) = \\frac{x^2-x+c}{x^2+x-6}$ has exactly one vertical asymptote.\nKey variables: $c$, function $f(x)$.\nConstraint: exactly one vertical asymptote.\n\n**Solution Strategy**\n\nA vertical asymptote of a rational function occurs at the values of $x$ where the denominator is zero and the numerator is non-zero.\nFirst, find the roots of the denominator $x^2+x-6=0$.\nThen, for the function to have exactly one vertical asymptote, the numerator $x^2-x+c$ must be zero at exactly one of these roots and non-zero at the other root.\n\n**Step-by-Step Solution**\n\n1. **Find the roots of the denominator:**\n   Set the denominator $x^2+x-6 = 0$.\n   Factor the quadratic equation: $(x+3)(x-2) = 0$.\n   The roots of the denominator are $x = -3$ and $x = 2$.\n   These are the potential locations of vertical asymptotes.\n\n2. **Analyze the numerator for each root of the denominator:**\n   For exactly one vertical asymptote, the numerator $x^2-x+c$ must be zero for one of $x = -3$ or $x = 2$, and non-zero for the other.\n\n   Case 1: Numerator is zero at $x = -3$ and non-zero at $x = 2$.\n   If the numerator is zero at $x = -3$, then substitute $x = -3$ into the numerator and set it to zero:\n   $(-3)^2 - (-3) + c = 0$\n   $9 + 3 + c = 0$\n   $12 + c = 0$\n   $c = -12$\n   Now check if the numerator is non-zero at $x = 2$ when $c = -12$:\n   $(2)^2 - (2) + (-12) = 4 - 2 - 12 = 2 - 12 = -10 \\neq 0$\n   So, when $c = -12$, the numerator is zero at $x = -3$ and non-zero at $x = 2$. In this case, there is a hole at $x=-3$ and a vertical asymptote at $x=2$, thus exactly one vertical asymptote.\n\n   Case 2: Numerator is zero at $x = 2$ and non-zero at $x = -3$.\n   If the numerator is zero at $x = 2$, then substitute $x = 2$ into the numerator and set it to zero:\n   $(2)^2 - (2) + c = 0$\n   $4 - 2 + c = 0$\n   $2 + c = 0$\n   $c = -2$\n   Now check if the numerator is non-zero at $x = -3$ when $c = -2$:\n   $(-3)^2 - (-3) + (-2) = 9 + 3 - 2 = 12 - 2 = 10 \\neq 0$\n   So, when $c = -2$, the numerator is zero at $x = 2$ and non-zero at $x = -3$. In this case, there is a hole at $x=2$ and a vertical asymptote at $x=-3$, thus exactly one vertical asymptote.\n\n   Case 3: Numerator is zero at both $x = -3$ and $x = 2$.\n   As shown in the thought process, it's impossible for the numerator to be zero at both $x=-3$ and $x=2$ for a single value of $c$.\n\n3. **List the possible values of $c$:**\n   From Case 1, $c = -12$.\n   From Case 2, $c = -2$.\n\n4. **Verification:**\n   For $c = -12$, $f(x) = \\frac{x^2-x-12}{x^2+x-6} = \\frac{(x-4)(x+3)}{(x+3)(x-2)} = \\frac{x-4}{x-2}$ for $x \\neq -3$. Vertical asymptote at $x=2$.\n   For $c = -2$, $f(x) = \\frac{x^2-x-2}{x^2+x-6} = \\frac{(x-2)(x+1)}{(x-2)(x+3)} = \\frac{x+1}{x+3}$ for $x \\neq 2$. Vertical asymptote at $x=-3$.\n\n**Final Answer**\n\nFinal Answer: The final answer is $\\boxed{-12, -2}$",
+    "metrics": {
+      "length": 2903,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "For what values of the constant $ c $ does the graph of $ f (x) = \\ frac {x ^ 2 - x + c} {x ^ 2 + x - 6} $ have exactly one vertical asymptote? Enter the possible values of $ c, $ separated by commas.",
+        "0.1": "For whSt vSlues of the constant $ c $ does the graph of $ f (x) = \\ frac {x ^ 2 - x + c} {x ^ 2 + x - 6} $ haBe exactly one vertical asymptote? #nter the possible valu$s of $ c, $ separated by cojmas.",
+        "0.2": "For what galuee of the constah^ $ c $ doeW the grapN of $ f (x) = \\ frxc {x ^ 2 - x + c} {x ^ 2 + x - 6} $ have exwstly one vertical asympt9t3? Ente3 the LossJble gal^es of $ c, $ sepxrAted by com<aA.",
+        "0.3": "For whXr Daluew of the conqGXnt $ c $ foeq the Nrqph of $ f (x) = \\ frsS {x ^ 2 - x + c} {x ^ 2 + x - 6} $ yaGe eCaVgly one deFtiVal aegm9tote? WMter the (oAsihle va<Kes of $ c, $ sepa%aHWd by coKmaC.",
+        "0.4": "For dhqt fa,ueA of the x*nstamh $ c $ dkeA the Nraoh of $ f (x) = \\ fFSc {x ^ 2 - x + c} {x ^ 2 + x - 6} $ hsfe 3xaFt>y one ve4RuVal sQympYpte? #nGer the loCXibl$ GalIds of $ c, $ WSparqt4d by DpmKas.",
+        "0.5": "For shzt bakJes of the coms5aM^ $ c $ RoeX the grq0T of $ f (x) = \\ r%ac {x ^ 2 - x + c} {x ^ 2 + x - 6} $ nace fxastpH one Fer5icxK Xeyn(yote? Snf3r the p0Xsin.e vZp*es of $ c, $ swpWeq$ed by VImmad.",
+        "0.6": "For QjZt vXlHfA of the s9jwyant $ c $ xo3c the RrWpY of $ f (x) = \\ R5as {x ^ 2 - x + c} {x ^ 2 + x - 6} $ yqvF 3CQfYly one vsDtJVa< aq%m9tihw? 2mte% the oosZig:@ da<*Ws of $ c, $ sR9afstSR by c0JmzW.",
+        "0.7": "For qna$ DqPu#c of the VKJcran5 $ c $ S94s the frzLU of $ f (x) = \\ f#Xf {x ^ 2 - x + c} {x ^ 2 + x - 6} $ UZv$ sSAcYIy one dsrRUcs/ ssy<)HK6W? FgtSE the )*WWiVlS cWi Tew of $ c, $ dsoSda$eS by xohkAA.",
+        "0.8": "For Ejzh fa: tSx of the Fime$zny $ c $ XkDc the NrA9u of $ f (x) = \\ e3AS {x ^ 2 - x + c} {x ^ 2 + x - 6} $ GqG$ 2SZs$l& one GfT4&cx, WW%mLHl^s? dMRSr the )LCQ(Nl3 vx/*sd of $ c, $ D@(ZFwtfX by FkkHAs.",
+        "0.9": "For dmsG bq> T4q of the fPMCfZHH $ c $ VK4W the tdZ(j of $ f (x) = \\ ddWV {x ^ 2 - x + c} {x ^ 2 + x - 6} $ Gqbs 3DWxY:T one C@GG9xq/ sz^K0R*Y4? Rg%rG the OIAcJh,W fw>&Sw of $ c, $ d4(wDAr4E by x)nnZQ.",
+        "1.0": "For EtW6 CZ>jdq of the X9bX6wG$ $ c $ skDX the vfXom of $ f (x) = \\ v4QF {x ^ 2 - x + c} {x ^ 2 + x - 6} $ jZDS 4zxsYK& one G2%fODAI qqj,l5)F#? wj$ST the )Pzx9Fiw FzI^4w of $ c, $ xD)SGZ53S by dkK<xC."
+      },
+      "random": {
+        "0.0": "What of the $ c $ $ f (x) = \\ {^ - x + c} {x ^ + - 6} $ have one asymptote? Enter the values of $, $ by commas.",
+        "0.1": "What of the $ c $ does the graph of $ f () = \\ frac {x ^ 2 - x + c} {x ^ 2 + x - 6} $ have exactly one vertical asymptote? the possible values of $ c, $ by commas.",
+        "0.2": "For what values the $ c $ the of $ f () = \\ frac {x ^ - +} {x ^ 2 + x - 6} $ have one vertical asymptote? Enter values $ c, $ separated by commas.",
+        "0.3": "What of $ c $ does the graph $ () = \\ {^ - + c} {x ^ 2 + - 6} $ exactly asymptote? Enter the values of $ c, $ commas.",
+        "0.4": "For of constant $ c $ the $ () = \\ {^ - + c} {^ + -} $ have exactly vertical asymptote? possible $, $ commas.",
+        "0.5": "What $ $ $ (x) = \\ {^ 2 - + c} {x ^ + -} $ vertical? $, $ commas.",
+        "0.6": "What $ $ $ () = \\ {^ - +} {^ + -} $? $, $.",
+        "0.7": "What $ $ $ () = \\ {^ - +} {^ + -} $? $, $.",
+        "0.8": "What $ $ $ () = \\ {^ - +} {^ + -} $? $, $.",
+        "0.9": "What $ $ $ () = \\ {^ - +} {^ + -} $? $, $.",
+        "1.0": "What $ $ $ () = \\ {^ - +} {^ + -} $? $, $."
+      },
+      "cut": {
+        "0.0": "For what values of the constant $c$ does the graph of $f(x) = \\frac{x^2-x+c}{x^2+x-6}$ have exactly one vertical asymptote?\n\nEnter the possible values of $c,$ separated by commas.",
+        "0.1": "For what values of the constant $c$ does the graph of $f(x) = \\frac{x^2-x+c}{x^2+x-6}$ have exactly one vertical asymptote?\n\nEnter the possible values of $c,$ se",
+        "0.2": "For what values of the constant $c$ does the graph of $f(x) = \\frac{x^2-x+c}{x^2+x-6}$ have exactly one vertical asymptote?\n\nEnter the possible",
+        "0.3": "For what values of the constant $c$ does the graph of $f(x) = \\frac{x^2-x+c}{x^2+x-6}$ have exactly one vertical asymptote?\n\n",
+        "0.4": "For what values of the constant $c$ does the graph of $f(x) = \\frac{x^2-x+c}{x^2+x-6}$ have exactly one ver",
+        "0.5": "For what values of the constant $c$ does the graph of $f(x) = \\frac{x^2-x+c}{x^2+x-6}$ hav",
+        "0.6": "For what values of the constant $c$ does the graph of $f(x) = \\frac{x^2-",
+        "0.7": "For what values of the constant $c$ does the graph of ",
+        "0.8": "For what values of the constant $c$ ",
+        "0.9": "For what values of",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "Factor $w^4-16$ as far as possible, where the factors are monic polynomials with real coefficients.",
+    "solution": "## Solution\n\n**1. Problem Statement**\nFactor the polynomial $w^4-16$ into a product of monic polynomials with real coefficients such that no factor can be further factored into monic polynomials with real coefficients of lower degree.\n\n**Key Variables and Constraints:**\n- Polynomial to factor: $w^4-16$\n- Variable: $w$\n- Type of factors: Monic polynomials\n- Coefficient type: Real coefficients\n- Factorization requirement: As far as possible\n\n**2. Solution Strategy**\nWe will use the difference of squares factorization formula repeatedly and check for irreducibility of quadratic factors over real numbers using the discriminant.\n\n**Relevant Formulas/Theorems:**\n- Difference of Squares: $a^2 - b^2 = (a-b)(a+b)$\n- Discriminant of a quadratic $ax^2+bx+c$: $\\Delta = b^2-4ac$. If $\\Delta < 0$, the quadratic has no real roots and is irreducible over real numbers.\n\n**3. Step-by-Step Solution**\n\n**Step 1:** Recognize the given polynomial as a difference of squares.\nWe observe that $w^4 = (w^2)^2$ and $16 = 4^2$.\nThus, $w^4-16 = (w^2)^2 - 4^2$.\n\n**Step 2:** Apply the difference of squares formula.\nUsing $a^2 - b^2 = (a-b)(a+b)$ with $a = w^2$ and $b = 4$, we have:\n$w^4-16 = (w^2-4)(w^2+4)$.\n\n**Step 3:** Factor the first quadratic factor $w^2-4$.\nWe observe that $w^2-4 = w^2 - 2^2$, which is again a difference of squares.\nUsing $a^2 - b^2 = (a-b)(a+b)$ with $a = w$ and $b = 2$, we have:\n$w^2-4 = (w-2)(w+2)$.\n\n**Step 4:** Consider the second quadratic factor $w^2+4$.\nWe need to check if $w^2+4$ can be factored further into monic polynomials with real coefficients.\nWe examine the discriminant of the quadratic $w^2+4$. Here, $a=1$, $b=0$, and $c=4$.\nThe discriminant is $\\Delta = b^2 - 4ac = 0^2 - 4(1)(4) = -16$.\nSince $\\Delta = -16 < 0$, the quadratic $w^2+4$ has no real roots. Therefore, it cannot be factored into linear factors with real coefficients. As a quadratic polynomial with no real roots, it is irreducible over real numbers.\n\n**Step 5:** Combine the factors.\nSubstituting the factorization of $w^2-4$ back into the expression from Step 2, we get:\n$w^4-16 = (w^2-4)(w^2+4) = (w-2)(w+2)(w^2+4)$.\n\n**Step 6:** Verify the factors are monic polynomials with real coefficients.\n- $(w-2)$ is a polynomial of degree 1. The leading coefficient (coefficient of $w$) is 1, so it is monic. The coefficients are real (-2 and 1).\n- $(w+2)$ is a polynomial of degree 1. The leading coefficient (coefficient of $w$) is 1, so it is monic. The coefficients are real (2 and 1).\n- $(w^2+4)$ is a polynomial of degree 2. The leading coefficient (coefficient of $w^2$) is 1, so it is monic. The coefficients are real (4, 0, and 1).\n\n**Step 7:** Verify that the product of the factors is $w^4-16$.\n$(w-2)(w+2)(w^2+4) = (w^2 - 2^2)(w^2+4) = (w^2-4)(w^2+4) = (w^2)^2 - 4^2 = w^4 - 16$.\n\n**4. Final Answer**\nThe factorization of $w^4-16$ as far as possible into monic polynomials with real coefficients is $\\boxed{(w-2)(w+2)(w^2+4)}$.",
+    "metrics": {
+      "length": 2934,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "Factor $ w ^ 4 - 16 $ as far as possible, where the factors are monic polynomials with real coefficients.",
+        "0.1": "Factor $ w ^ 4 - 16 $ as far as possible, @here the factors are moniV polynomials with real coeCDicients.",
+        "0.2": "Factor $ w ^ 4 - 16 $ as far as piZsible, where the factors are moHic pol5nomiaiZ wlth eeal coefficients.",
+        "0.3": "dacfor $ w ^ 4 - 16 $ as far as pocs(gle, wnrre the tacYorx are monic pKl5GomialE QiGh rDa/ coefficients.",
+        "0.4": "Dac$o% $ w ^ 4 - 16 $ as far as poszob?w, whS3e the rscto4s are m9Bic p8lynon9a/X !Uth 52al c)fVficJentz.",
+        "0.5": "Faf49r $ w ^ 4 - 16 $ as far as p9seibo$, 3ne#e the fac4*%Z are mpHiF po.TnpmJs.s wofh r4a, c)egtosientq.",
+        "0.6": "baVHir $ w ^ 4 - 16 $ as far as OoEdiHl$, sh#ee the fsffo3Z are k0Gic p0;ynlN7Wla @Ohh Ddzl dkDfbOcJsntX.",
+        "0.7": "vsc4lG $ w ^ 4 - 16 $ as far as 08aa(bls, wUr#f the rXX$ots are m*B9x )p>TnP<Lalq s7tu Dezk SkWfg(fiSmfs.",
+        "0.8": "cavY8T $ w ^ 4 - 16 $ as far as (oCzJf:4, wgf5R the bsxt85C are koJOx O(lygkk&Q;Z qK%y %RQ> SisBEjd*eJ4s.",
+        "0.9": "Vzs%Ld $ w ^ 4 - 16 $ as far as (idAjn>D, 2gW4R the gZS^lfx are nlJ*F p*,%hkHkzOW DU4y %Rx? x)sfD(SofmFe.",
+        "1.0": "gZFR)5 $ w ^ 4 - 16 $ as far as oIxCuF<W, sm@fd the EzdYlga are ,Kg&S 9l.TM)HuzpX ElrJ e@SK dI#Vr&X7sb6Q."
+      },
+      "random": {
+        "0.0": "Factor $ w ^ - 16 $ as far as possible, polynomials with real.",
+        "0.1": "Factor $ ^ 4 - 16 $ as far as, where the factors monic polynomials with real coefficients.",
+        "0.2": "Factor $ w ^ 4 - 16 $ as far, where are monic polynomials with coefficients.",
+        "0.3": "$ w ^ - $ as as possible, the are monic polynomials with real.",
+        "0.4": "Factor $ ^ 4 - $ as, the factors are with.",
+        "0.5": "$ ^ 4 - $ as, where factors monic.",
+        "0.6": "$ ^ - $, where monic with.",
+        "0.7": "$ ^ - $,.",
+        "0.8": "$ ^ - $,.",
+        "0.9": "$ ^ - $,.",
+        "1.0": "$ ^ - $,."
+      },
+      "cut": {
+        "0.0": "Factor $w^4-16$ as far as possible, where the factors are monic polynomials with real coefficients.",
+        "0.1": "Factor $w^4-16$ as far as possible, where the factors are monic polynomials with real coe",
+        "0.2": "Factor $w^4-16$ as far as possible, where the factors are monic polynomials wit",
+        "0.3": "Factor $w^4-16$ as far as possible, where the factors are monic polyn",
+        "0.4": "Factor $w^4-16$ as far as possible, where the factors are m",
+        "0.5": "Factor $w^4-16$ as far as possible, where the fact",
+        "0.6": "Factor $w^4-16$ as far as possible, wher",
+        "0.7": "Factor $w^4-16$ as far as poss",
+        "0.8": "Factor $w^4-16$ as f",
+        "0.9": "Factor $w^",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "Solve\n\\[\\sqrt{1 + \\sqrt{2 + \\sqrt{x}}} = \\sqrt[3]{1 + \\sqrt{x}}.\\]",
+    "solution": "## Solution\n\n1. **Problem Statement**\nSolve the equation\n\\[\\sqrt{1 + \\sqrt{2 + \\sqrt{x}}} = \\sqrt[3]{1 + \\sqrt{x}}.\\]\nThe variable is $x$. We need to find the value(s) of $x$ that satisfy this equation. We must have $x \\ge 0$ for $\\sqrt{x}$ to be defined in real numbers. Also, for the nested square roots to be defined, we need $2 + \\sqrt{x} \\ge 0$, which is always true for $x \\ge 0$. And $1 + \\sqrt{2 + \\sqrt{x}} \\ge 0$, which is also always true. For the cube root, $1 + \\sqrt{x}$ can be any non-negative value.\n\n2. **Solution Strategy**\nLet $y = \\sqrt{x}$. Then $y \\ge 0$ and $x = y^2$. Substituting $y$ into the equation, we get\n\\[\\sqrt{1 + \\sqrt{2 + y}} = \\sqrt[3]{1 + y}.\\]\nTo eliminate the radicals, we raise both sides to the power of 6 (the least common multiple of 2 and 3):\n\\[(\\sqrt{1 + \\sqrt{2 + y}})^6 = (\\sqrt[3]{1 + y})^6\\]\n\\[(1 + \\sqrt{2 + y})^3 = (1 + y)^2\\]\nExpand both sides and simplify to obtain a polynomial equation in terms of $y$. Solve for $y$ and then find $x = y^2$. Finally, we need to verify the solution in the original equation.\n\n3. **Step-by-Step Solution**\nLet $y = \\sqrt{x}$. The equation becomes\n\\[\\sqrt{1 + \\sqrt{2 + y}} = \\sqrt[3]{1 + y}.\\]\nRaise both sides to the power of 6:\n\\[(1 + \\sqrt{2 + y})^3 = (1 + y)^2\\]\nExpand the left side using the binomial expansion $(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$ with $a = 1$ and $b = \\sqrt{2 + y}$:\n\\[1^3 + 3 \\cdot 1^2 \\cdot \\sqrt{2 + y} + 3 \\cdot 1 \\cdot (\\sqrt{2 + y})^2 + (\\sqrt{2 + y})^3 = (1 + y)^2\\]\n\\[1 + 3\\sqrt{2 + y} + 3(2 + y) + (2 + y)\\sqrt{2 + y} = (1 + y)^2\\]\n\\[1 + 3\\sqrt{2 + y} + 6 + 3y + (2 + y)\\sqrt{2 + y} = 1 + 2y + y^2\\]\nCombine the terms without square roots:\n\\[7 + 3y + (3 + 2 + y)\\sqrt{2 + y} = 1 + 2y + y^2\\]\n\\[7 + 3y + (5 + y)\\sqrt{2 + y} = 1 + 2y + y^2\\]\nIsolate the term with the square root:\n\\[(5 + y)\\sqrt{2 + y} = 1 + 2y + y^2 - 7 - 3y\\]\n\\[(5 + y)\\sqrt{2 + y} = y^2 - y - 6\\]\nFactor the quadratic expression on the right side:\n\\[(5 + y)\\sqrt{2 + y} = (y - 3)(y + 2)\\]\nSquare both sides to remove the square root:\n\\[(5 + y)^2 (2 + y) = (y - 3)^2 (y + 2)^2\\]\nSince we are looking for $y \\ge 0$, we know that $y + 2 \\ne 0$. If $y > -2$, we can divide both sides by $(y + 2)$:\n\\[(5 + y)^2 = (y - 3)^2 (y + 2)\\]\nExpand both sides:\n\\[25 + 10y + y^2 = (y^2 - 6y + 9)(y + 2)\\]\n\\[25 + 10y + y^2 = y^3 + 2y^2 - 6y^2 - 12y + 9y + 18\\]\n\\[25 + 10y + y^2 = y^3 - 4y^2 - 3y + 18\\]\nRearrange to form a cubic equation:\n\\[y^3 - 4y^2 - 3y + 18 - y^2 - 10y - 25 = 0\\]\n\\[y^3 - 5y^2 - 13y - 7 = 0\\]\nWe test integer roots that are divisors of $-7$, which are $\\pm 1, \\pm 7$.\nFor $y = 7$: $7^3 - 5(7^2) - 13(7) - 7 = 343 - 5(49) - 91 - 7 = 343 - 245 - 91 - 7 = 343 - 343 = 0$.\nSo $y = 7$ is a root. Thus $(y - 7)$ is a factor. We perform polynomial division or synthetic division to find the other factor.\nDividing $y^3 - 5y^2 - 13y - 7$ by $(y - 7)$:\n\\[y^3 - 5y^2 - 13y - 7 = (y - 7)(y^2 + 2y + 1)\\]\nThe quadratic factor is $y^2 + 2y + 1 = (y + 1)^2$.\nSo the equation becomes $(y - 7)(y + 1)^2 = 0$.\nThe roots are $y = 7$ and $y = -1$ (double root).\nSince $y = \\sqrt{x} \\ge 0$, we must have $y = 7$.\nThen $\\sqrt{x} = 7$, so $x = 7^2 = 49$.\n\nWe need to check if $x = 49$ is a solution to the original equation.\nLHS = $\\sqrt{1 + \\sqrt{2 + \\sqrt{49}}} = \\sqrt{1 + \\sqrt{2 + 7}} = \\sqrt{1 + \\sqrt{9}} = \\sqrt{1 + 3} = \\sqrt{4} = 2$.\nRHS = $\\sqrt[3]{1 + \\sqrt{49}} = \\sqrt[3]{1 + 7} = \\sqrt[3]{8} = 2$.\nLHS = RHS.\nSo $x = 49$ is a valid solution.\n\nWe should also check if $y = -1$ leads to any issues when squaring.\nFor $y = -1$, LHS of $(5 + y)\\sqrt{2 + y} = (5 - 1)\\sqrt{2 - 1} = 4\\sqrt{1} = 4$.\nRHS of $(y - 3)(y + 2) = (-1 - 3)(-1 + 2) = (-4)(1) = -4$.\nLHS $\\ne$ RHS.\nSo $y = -1$ is not a solution to $(5 + y)\\sqrt{2 + y} = (y - 3)(y + 2)$.\nTherefore, $y = -1$ is an extraneous root introduced by squaring.\n\n4. **Final Answer**\nFinal Answer: The final answer is $\\boxed{49}$",
+    "metrics": {
+      "length": 3860,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "Solve \\ [\\ sqrt {1 + \\ sqrt {2 + \\ sqrt {x} }} = \\ sqrt [3] {1 + \\ sqrt {x} }. \\ ]",
+        "0.1": "S9lve \\ [\\ sqrt {1 + \\ sArt {2 + \\ s!rt {x} }} = \\ sqr^ [3] {1 + \\ sqrt {x} }. \\ ]",
+        "0.2": "SolDe \\ [\\ s2rt {1 + \\ sq#t {2 + \\ swrt {x} }} = \\ sWrt [3] {1 + \\ sqr5 {x} }. \\ ]",
+        "0.3": "SolFR \\ [\\ q2rt {1 + \\ QqrR {2 + \\ zqrf {x} }} = \\ a!rt [3] {1 + \\ CqGt {x} }. \\ ]",
+        "0.4": "Soiv4 \\ [\\ ssEt {1 + \\ sWr^ {2 + \\ dqr4 {x} }} = \\ aart [3] {1 + \\ s!rF {x} }. \\ ]",
+        "0.5": "wplv$ \\ [\\ Xqrh {1 + \\ xqrh {2 + \\ QqTt {x} }} = \\ sar5 [3] {1 + \\ s@rf {x} }. \\ ]",
+        "0.6": "co.vD \\ [\\ aAtt {1 + \\ xqD6 {2 + \\ WqdY {x} }} = \\ dqtf [3] {1 + \\ Eq3$ {x} }. \\ ]",
+        "0.7": "XoKD$ \\ [\\ swfY {1 + \\ s1Fy {2 + \\ Ds%t {x} }} = \\ sw4G [3] {1 + \\ Zaft {x} }. \\ ]",
+        "0.8": "XK>Ge \\ [\\ ZS%4 {1 + \\ c!4% {2 + \\ wSFr {x} }} = \\ a1eh [3] {1 + \\ e!T6 {x} }. \\ ]",
+        "0.9": "e9ICR \\ [\\ Qw%r {1 + \\ Zw#G {2 + \\ XWEY {x} }} = \\ EWD6 [3] {1 + \\ aat4 {x} }. \\ ]",
+        "1.0": "a8<gF \\ [\\ D2g$ {1 + \\ XaEg {2 + \\ xWEF {x} }} = \\ A2e4 [3] {1 + \\ wA5r {x} }. \\ ]"
+      },
+      "random": {
+        "0.0": "\\ [\\ {+ \\ {+ \\ {}} } = \\ [] {+ \\ {} }. \\ ]",
+        "0.1": "Solve \\ [\\ sqrt {1 + \\ {2 + \\ sqrt {}} } = \\ sqrt [] {+ \\ sqrt {x} }. \\ ]",
+        "0.2": "\\ [\\ {+ \\ sqrt {+ \\ {}} } = \\ sqrt [3] {1 + \\ {} }. \\ ]",
+        "0.3": "\\ [\\ {+ \\ {+ \\ {}} } = \\ [] {+ \\ {} }. \\ ]",
+        "0.4": "\\ [\\ {+ \\ {+ \\ {}} } = \\ [] {+ \\ {} }. \\ ]",
+        "0.5": "\\ [\\ {+ \\ {+ \\ {}} } = \\ [] {+ \\ {} }. \\ ]",
+        "0.6": "\\ [\\ {+ \\ {+ \\ {}} } = \\ [] {+ \\ {} }. \\ ]",
+        "0.7": "\\ [\\ {+ \\ {+ \\ {}} } = \\ [] {+ \\ {} }. \\ ]",
+        "0.8": "\\ [\\ {+ \\ {+ \\ {}} } = \\ [] {+ \\ {} }. \\ ]",
+        "0.9": "\\ [\\ {+ \\ {+ \\ {}} } = \\ [] {+ \\ {} }. \\ ]",
+        "1.0": "\\ [\\ {+ \\ {+ \\ {}} } = \\ [] {+ \\ {} }. \\ ]"
+      },
+      "cut": {
+        "0.0": "Solve\n\\[\\sqrt{1 + \\sqrt{2 + \\sqrt{x}}} = \\sqrt[3]{1 + \\sqrt{x}}.\\]",
+        "0.1": "Solve\n\\[\\sqrt{1 + \\sqrt{2 + \\sqrt{x}}} = \\sqrt[3]{1 + \\sqrt",
+        "0.2": "Solve\n\\[\\sqrt{1 + \\sqrt{2 + \\sqrt{x}}} = \\sqrt[3]{1 +",
+        "0.3": "Solve\n\\[\\sqrt{1 + \\sqrt{2 + \\sqrt{x}}} = \\sqrt",
+        "0.4": "Solve\n\\[\\sqrt{1 + \\sqrt{2 + \\sqrt{x}}} =",
+        "0.5": "Solve\n\\[\\sqrt{1 + \\sqrt{2 + \\sqrt",
+        "0.6": "Solve\n\\[\\sqrt{1 + \\sqrt{2 ",
+        "0.7": "Solve\n\\[\\sqrt{1 + \\s",
+        "0.8": "Solve\n\\[\\sqrt",
+        "0.9": "Solve\n\\",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "Is $f(x) = 3^{x^2-3} - |x|$ an even function, odd function, or neither?\n\nEnter \"odd\", \"even\", or \"neither\".",
+    "solution": "### Problem:\n1. **Problem Statement**\n   Determine whether the function $f(x) = 3^{x^2-3} - |x|$ is even, odd, or neither.\n   We need to classify the function based on its symmetry with respect to the y-axis (even) or the origin (odd), or neither.\n\n2. **Solution Strategy**\n   To classify the function, we will evaluate $f(-x)$ and compare it with $f(x)$ and $-f(x)$.\n   - If $f(-x) = f(x)$ for all $x$ in the domain, the function is even.\n   - If $f(-x) = -f(x)$ for all $x$ in the domain, the function is odd.\n   - If neither of the above conditions holds, the function is neither even nor odd.\n   The domain of $f(x) = 3^{x^2-3} - |x|$ is all real numbers, since $x^2-3$ is defined for all real numbers, $3^{x^2-3}$ is defined for all real numbers, and $|x|$ is defined for all real numbers.\n\n3. **Step-by-Step Solution**\n   Given the function $f(x) = 3^{x^2-3} - |x|$.\n   To determine if the function is even, odd, or neither, we need to evaluate $f(-x)$.\n   Substitute $-x$ for $x$ in the expression for $f(x)$:\n   $f(-x) = 3^{(-x)^2-3} - |-x|$\n\n   Now, simplify the expression for $f(-x)$ using the properties of exponents and absolute value:\n   $(-x)^2 = x^2$\n   $|-x| = |x|$\n\n   Substituting these simplified terms back into the expression for $f(-x)$:\n   $f(-x) = 3^{x^2-3} - |x|$\n\n   Now we compare $f(-x)$ with $f(x)$.\n   We have $f(x) = 3^{x^2-3} - |x|$ and $f(-x) = 3^{x^2-3} - |x|$.\n   We can see that $f(-x) = f(x)$.\n\n   Since $f(-x) = f(x)$ for all $x$ in the domain of $f$, the function is an even function.\n   To confirm it is not odd, let's check if $f(-x) = -f(x)$.\n   $-f(x) = -(3^{x^2-3} - |x|) = -3^{x^2-3} + |x|$\n   We compare $f(-x)$ and $-f(x)$:\n   $f(-x) = 3^{x^2-3} - |x|$\n   $-f(x) = -3^{x^2-3} + |x|$\n   Clearly, $f(-x) \\neq -f(x)$ unless $|x| = 3^{x^2-3} - |x|$ which simplifies to $2|x| = 3^{x^2-3}$, which is not true for all $x$. For instance, if $x=1$, $2|1| = 2$ and $3^{1^2-3} = 3^{-2} = 1/9$. $2 \\neq 1/9$.\n\n   Therefore, the function is even.\n\n4. **Final Answer**\n   The function $f(x) = 3^{x^2-3} - |x|$ is an even function.\n\n   Final Answer: \\boxed{even}",
+    "metrics": {
+      "length": 2095,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "Is $ f (x) = 3 ^ {x ^ 2 - 3} - | x | $ an even function, odd function, or neither? Enter \" odd \", \" even \", or \" neither \".",
+        "0.1": "Is $ f (x) = 3 ^ {x ^ 2 - 3} - | x | $ an even Runction, odd f^nction, or jeither? Enter \" odd \", \" ev@n \", or \" neitmer \".",
+        "0.2": "Is $ f (x) = 3 ^ {x ^ 2 - 3} - | x | $ an dven funchuon, odd cunftion, or neihhFr? EJter \" odd \", \" eCen \", or \" Jeithet \".",
+        "0.3": "Is $ f (x) = 3 ^ {x ^ 2 - 3} - | x | $ an 2vfn Cuncyi0n, odd fuhctKoj, or nfithwg? EntWf \" odd \", \" evWH \", or \" nFiFber \".",
+        "0.4": "Is $ f (x) = 3 ^ {x ^ 2 - 3} - | x | $ an fben fugsFiln, odd vKnc5*on, or neitb$t? EHtef \" odd \", \" eDeG \", or \" n2*Yher \".",
+        "0.5": "Is $ f (x) = 3 ^ {x ^ 2 - 3} - | x | $ an eDeH fujc^lom, odd fKns6ioB, or b#KtheD? dbtet \" odd \", \" rvej \", or \" geitgft \".",
+        "0.6": "Is $ f (x) = 3 ^ {x ^ 2 - 3} - | x | $ an ef4j vuHc%i)h, odd e^nc^&oG, or hs&tge4? DBteT \" odd \", \" 4grn \", or \" HD*tBfr \".",
+        "0.7": "Is $ f (x) = 3 ^ {x ^ 2 - 3} - | x | $ an fGem tjhs5iom, odd BhBcf*oH, or beiRTf%? EB5r$ \" odd \", \" RFeB \", or \" B@itm3T \".",
+        "0.8": "Is $ f (x) = 3 ^ {x ^ 2 - 3} - | x | $ an RD4g gKgdYi(M, odd RhBXrooH, or Hfk%Ge$? 2g^e5 \" odd \", \" fD@H \", or \" jwihT2d \".",
+        "0.9": "Is $ f (x) = 3 ^ {x ^ 2 - 3} - | x | $ an dfDJ TJHsflLh, odd D*BD6Ukj, or jR9HB@3? fMRFd \" odd \", \" FgRb \", or \" bd&GMFD \".",
+        "1.0": "Is $ f (x) = 3 ^ {x ^ 2 - 3} - | x | $ an @CSG EjGXg9PB, odd r tbFrLpG, or jwuhmw%? sM6D5 \" odd \", \" 4F#M \", or \" hw(fj2G \"."
+      },
+      "random": {
+        "0.0": "$ () = ^ {^ -} - | x | $ function, odd, ? \" odd \", \" \", or \" neither \".",
+        "0.1": "$ f (x) = ^ {x ^ 2 -} - | x | $ an even function, function, or neither? Enter \" odd \", \" even \", or \" \".",
+        "0.2": "Is $ f () = 3 ^ {^ 2 - 3} - | x | $, , or neither? Enter \" \", \" even \", or \" \".",
+        "0.3": "$ f () = 3 ^ {^ -} - | | $ even, odd, ? \" odd \", \" \", \" neither \".",
+        "0.4": "$ () = ^ {^ 2 -} - | | $, ,? \" \", \" even \", \" \".",
+        "0.5": "$ () = ^ {^ -} - | | $, ,? \" \", \" \", \" \".",
+        "0.6": "$ () = ^ {^ -} - | | $, ,? \" \", \" \", \" \".",
+        "0.7": "$ () = ^ {^ -} - | | $, ,? \" \", \" \", \" \".",
+        "0.8": "$ () = ^ {^ -} - | | $, ,? \" \", \" \", \" \".",
+        "0.9": "$ () = ^ {^ -} - | | $, ,? \" \", \" \", \" \".",
+        "1.0": "$ () = ^ {^ -} - | | $, ,? \" \", \" \", \" \"."
+      },
+      "cut": {
+        "0.0": "Is $f(x) = 3^{x^2-3} - |x|$ an even function, odd function, or neither?\n\nEnter \"odd\", \"even\", or \"neither\".",
+        "0.1": "Is $f(x) = 3^{x^2-3} - |x|$ an even function, odd function, or neither?\n\nEnter \"odd\", \"even\", or",
+        "0.2": "Is $f(x) = 3^{x^2-3} - |x|$ an even function, odd function, or neither?\n\nEnter \"odd\", ",
+        "0.3": "Is $f(x) = 3^{x^2-3} - |x|$ an even function, odd function, or neither?\n\nEn",
+        "0.4": "Is $f(x) = 3^{x^2-3} - |x|$ an even function, odd function, or n",
+        "0.5": "Is $f(x) = 3^{x^2-3} - |x|$ an even function, odd func",
+        "0.6": "Is $f(x) = 3^{x^2-3} - |x|$ an even functio",
+        "0.7": "Is $f(x) = 3^{x^2-3} - |x|$ an e",
+        "0.8": "Is $f(x) = 3^{x^2-3} ",
+        "0.9": "Is $f(x) = ",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "Let $\\omega$ be a complex number such that $\\omega^7 = 1$ and $\\omega \\ne 1.$  Compute\n\\[\\omega^{16} + \\omega^{18} + \\omega^{20} + \\dots + \\omega^{54}.\\]",
+    "solution": "## Problem Statement\nLet $\\omega$ be a complex number such that $\\omega^7 = 1$ and $\\omega \\ne 1.$  Compute\n\\[\\omega^{16} + \\omega^{18} + \\omega^{20} + \\dots + \\omega^{54}.\\]\n\nKey variables and constraints:\n- $\\omega$ is a complex number\n- $\\omega^7 = 1$\n- $\\omega \\ne 1$\n- We need to compute the sum of the series $\\omega^{16} + \\omega^{18} + \\omega^{20} + \\dots + \\omega^{54}$\n\n## Solution Strategy\nThe given series is a geometric series.\nFirst, we need to identify the first term, common ratio, and the number of terms in the series.\nThen we can use the formula for the sum of a geometric series.\nWe will also use the property $\\omega^7 = 1$ to simplify the terms.\nThe formula for the sum of a geometric series is $S_n = \\frac{a(1-r^n)}{1-r}$, where $a$ is the first term, $r$ is the common ratio, and $n$ is the number of terms.\nWe also know that for $\\omega \\ne 1$ and $\\omega^7 = 1$, we have $1 + \\omega + \\omega^2 + \\omega^3 + \\omega^4 + \\omega^5 + \\omega^6 = 0.$\n\n## Step-by-Step Solution\n1. **Identify the type of series:** The given series is $\\omega^{16} + \\omega^{18} + \\omega^{20} + \\dots + \\omega^{54}$.\n   The ratio of consecutive terms is constant: $\\frac{\\omega^{18}}{\\omega^{16}} = \\omega^{18-16} = \\omega^2$, $\\frac{\\omega^{20}}{\\omega^{18}} = \\omega^{20-18} = \\omega^2$, and so on.\n   Thus, this is a geometric series with common ratio $r = \\omega^2$.\n\n2. **Identify the first term:** The first term is $a = \\omega^{16}$.\n\n3. **Determine the number of terms:** The exponents form an arithmetic sequence $16, 18, 20, \\dots, 54$ with first term $16$ and common difference $2$.\n   Let $n$ be the number of terms. The $n$-th term is given by $a_n = a_1 + (n-1)d$.\n   Here, $a_n = 54$, $a_1 = 16$, $d = 2$.\n   $54 = 16 + (n-1)2$\n   $54 - 16 = (n-1)2$\n   $38 = (n-1)2$\n   $19 = n-1$\n   $n = 20$.\n   There are $20$ terms in the series.\n\n4. **Apply the formula for the sum of a geometric series:**\n   $S_{20} = \\frac{a(1-r^{20})}{1-r} = \\frac{\\omega^{16}(1-(\\omega^2)^{20})}{1-\\omega^2} = \\frac{\\omega^{16}(1-\\omega^{40})}{1-\\omega^2}$.\n\n5. **Simplify the exponents using $\\omega^7 = 1$:**\n   $\\omega^{16} = \\omega^{2 \\cdot 7 + 2} = (\\omega^7)^2 \\cdot \\omega^2 = 1^2 \\cdot \\omega^2 = \\omega^2$.\n   $\\omega^{40} = \\omega^{5 \\cdot 7 + 5} = (\\omega^7)^5 \\cdot \\omega^5 = 1^5 \\cdot \\omega^5 = \\omega^5$.\n\n6. **Substitute the simplified terms back into the sum formula:**\n   $S_{20} = \\frac{\\omega^2(1-\\omega^5)}{1-\\omega^2} = \\frac{\\omega^2 - \\omega^2 \\cdot \\omega^5}{1-\\omega^2} = \\frac{\\omega^2 - \\omega^7}{1-\\omega^2}$.\n\n7. **Use $\\omega^7 = 1$ to further simplify:**\n   $S_{20} = \\frac{\\omega^2 - 1}{1-\\omega^2} = \\frac{- (1 - \\omega^2)}{1-\\omega^2}$.\n\n8. **Cancel out the common factor $(1-\\omega^2)$, provided $1-\\omega^2 \\ne 0$:**\n   Since $\\omega^7 = 1$ and $\\omega \\ne 1$, $\\omega$ is a 7th root of unity other than 1.\n   If $1 - \\omega^2 = 0$, then $\\omega^2 = 1$, which means $\\omega = \\pm 1$.\n   Since $\\omega \\ne 1$, we need to check if $\\omega = -1$ is possible. If $\\omega = -1$, then $\\omega^7 = (-1)^7 = -1 \\ne 1$, which contradicts $\\omega^7 = 1$.\n   Therefore, $\\omega \\ne -1$, and $\\omega^2 \\ne 1$, so $1 - \\omega^2 \\ne 0$.\n   We can cancel out $(1-\\omega^2)$:\n   $S_{20} = \\frac{- (1 - \\omega^2)}{1-\\omega^2} = -1$.\n\n## Final Answer\nFinal Answer: The final answer is $\\boxed{-1}$",
+    "metrics": {
+      "length": 3308,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "Let $ \\ omega $ be a complex number such that $ \\ omega ^ 7 = 1 $ and $ \\ omega \\ ne 1. $ Compute \\ [\\ omega ^ {16} + \\ omega ^ {18} + \\ omega ^ {20} + \\ dots + \\ omega ^ {54 }. \\ ]",
+        "0.1": "Let $ \\ o<ega $ be a complex numbDr sush that $ \\ omega ^ 7 = 1 $ and $ \\ omega \\ ne 1. $ Compuye \\ [\\ imega ^ {16} + \\ omega ^ {18} + \\ omega ^ {20} + \\ dPts + \\ omegS ^ {54 }. \\ ]",
+        "0.2": "Let $ \\ ohega $ be a d0mplex numFrr Auch thay $ \\ onega ^ 7 = 1 $ and $ \\ omeva \\ ne 1. $ Conp&te \\ [\\ omegZ ^ {16} + \\ 8mega ^ {18} + \\ oHega ^ {20} + \\ dIts + \\ ometa ^ {54 }. \\ ]",
+        "0.3": "Let $ \\ omevW $ be a SohplSx nHmbe# cuxh ^haY $ \\ PmegZ ^ 7 = 1 $ and $ \\ omFta \\ ne 1. $ Co,OuHe \\ [\\ (hega ^ {16} + \\ kmFga ^ {18} + \\ oNeFa ^ {20} + \\ dIFs + \\ 9,ega ^ {54 }. \\ ]",
+        "0.4": "Let $ \\ om3gS $ be a cl<plrx gimbeg ZuSh fhaf $ \\ kmegw ^ 7 = 1 $ and $ \\ okeHa \\ ne 1. $ xKNpute \\ [\\ Km@ga ^ {16} + \\ lmeNa ^ {18} + \\ omSVa ^ {20} + \\ Skts + \\ o,3ga ^ {54 }. \\ ]",
+        "0.5": "Let $ \\ IjWga $ be a voNp:Sx HumGwr cucG tma$ $ \\ (mWgW ^ 7 = 1 $ and $ \\ okeVw \\ ne 1. $ f8hputr \\ [\\ oJ$gx ^ {16} + \\ Phfga ^ {18} + \\ p<fga ^ {20} + \\ xotX + \\ Khegq ^ {54 }. \\ ]",
+        "0.6": "Let $ \\ om#vs $ be a c9Hlpea juhFfr d&sh Fgqt $ \\ )jeNa ^ 7 = 1 $ and $ \\ oneTx \\ ne 1. $ DLj0Kte \\ [\\ ohefZ ^ {16} + \\ oNwVa ^ {18} + \\ (mDgW ^ {20} + \\ XItX + \\ 9mSRa ^ {54 }. \\ ]",
+        "0.7": "Let $ \\ 8msBS $ be a cpn)>2x h*hfwr zuSm tYz^ $ \\ ojRNs ^ 7 = 1 $ and $ \\ pnevW \\ ne 1. $ v8HpuhS \\ [\\ LNWna ^ {16} + \\ )m3nQ ^ {18} + \\ 9Jefq ^ {20} + \\ R)Hs + \\ (mSHz ^ {54 }. \\ ]",
+        "0.8": "Let $ \\ pmwTx $ be a dL<p?3S n7Jf#e CIXj GUq^ $ \\ 0mFBX ^ 7 = 1 $ and $ \\ ojWBx \\ ne 1. $ X9k)u53 \\ [\\ 0hrgX ^ {16} + \\ L<DFa ^ {18} + \\ oj2vw ^ {20} + \\ Ep^z + \\ ohdns ^ {54 }. \\ ]",
+        "0.9": "Let $ \\ *KrBz $ be a D(,OKwa m^jg@f wiFj %nwH $ \\ iJsrq ^ 7 = 1 $ and $ \\ (kdYz \\ ne 1. $ D*NL6gs \\ [\\ *JwHw ^ {16} + \\ )<SYQ ^ {18} + \\ Pj$Bs ^ {20} + \\ r)ye + \\ 0k4NS ^ {54 }. \\ ]",
+        "1.0": "Let $ \\ KHSrq $ be a sK<(KsC BiHf4f zhFN rYqG $ \\ *NDTz ^ 7 = 1 $ and $ \\ 9K#bZ \\ ne 1. $ sKK9 Tg@ \\ [\\ LNWyS ^ {16} + \\ 9,SbS ^ {18} + \\ kNFvS ^ {20} + \\ WI$q + \\ lK$hA ^ {54 }. \\ ]"
+      },
+      "random": {
+        "0.0": "$ \\ $ number that $ \\ omega ^ = $ $ \\ omega \\. $ \\ [\\ ^ {} + \\ ^ {18} + \\ ^ {} + \\ + \\ ^ {}. \\ ]",
+        "0.1": "$ \\ omega $ be a complex number such that $ \\ omega ^ 7 = 1 $ and $ \\ \\ 1. $ \\ [\\ omega ^ {16} + \\ ^ {18} + \\ ^ {} + \\ dots + \\ omega ^ {54 }. \\ ]",
+        "0.2": "$ \\ $ be a complex $ \\ ^ 7 = 1 $ $ \\ omega \\ 1. $ \\ [\\ omega ^ {16} + \\ omega ^ {} + \\ omega ^ {20} + \\ + \\ ^ {}. \\ ]",
+        "0.3": "$ \\ omega $ such $ \\ ^ = $ $ \\ omega \\. $ \\ [\\ ^ {} + \\ ^ {} + \\ omega ^ {} + \\ + \\ ^ {54 }. \\ ]",
+        "0.4": "$ \\ $ $ \\ ^ = $ $ \\ \\. $ \\ [\\ ^ {} + \\ ^ {} + \\ ^ {} + \\ + \\ ^ {}. \\ ]",
+        "0.5": "$ \\ $ $ \\ ^ = $ $ \\ \\. $ \\ [\\ ^ {} + \\ ^ {} + \\ ^ {} + \\ + \\ ^ {}. \\ ]",
+        "0.6": "$ \\ $ $ \\ ^ = $ $ \\ \\. $ \\ [\\ ^ {} + \\ ^ {} + \\ ^ {} + \\ + \\ ^ {}. \\ ]",
+        "0.7": "$ \\ $ $ \\ ^ = $ $ \\ \\. $ \\ [\\ ^ {} + \\ ^ {} + \\ ^ {} + \\ + \\ ^ {}. \\ ]",
+        "0.8": "$ \\ $ $ \\ ^ = $ $ \\ \\. $ \\ [\\ ^ {} + \\ ^ {} + \\ ^ {} + \\ + \\ ^ {}. \\ ]",
+        "0.9": "$ \\ $ $ \\ ^ = $ $ \\ \\. $ \\ [\\ ^ {} + \\ ^ {} + \\ ^ {} + \\ + \\ ^ {}. \\ ]",
+        "1.0": "$ \\ $ $ \\ ^ = $ $ \\ \\. $ \\ [\\ ^ {} + \\ ^ {} + \\ ^ {} + \\ + \\ ^ {}. \\ ]"
+      },
+      "cut": {
+        "0.0": "Let $\\omega$ be a complex number such that $\\omega^7 = 1$ and $\\omega \\ne 1.$  Compute\n\\[\\omega^{16} + \\omega^{18} + \\omega^{20} + \\dots + \\omega^{54}.\\]",
+        "0.1": "Let $\\omega$ be a complex number such that $\\omega^7 = 1$ and $\\omega \\ne 1.$  Compute\n\\[\\omega^{16} + \\omega^{18} + \\omega^{20} + \\dots +",
+        "0.2": "Let $\\omega$ be a complex number such that $\\omega^7 = 1$ and $\\omega \\ne 1.$  Compute\n\\[\\omega^{16} + \\omega^{18} + \\omeg",
+        "0.3": "Let $\\omega$ be a complex number such that $\\omega^7 = 1$ and $\\omega \\ne 1.$  Compute\n\\[\\omega^{16} + \\ome",
+        "0.4": "Let $\\omega$ be a complex number such that $\\omega^7 = 1$ and $\\omega \\ne 1.$  Compute\n\\[\\om",
+        "0.5": "Let $\\omega$ be a complex number such that $\\omega^7 = 1$ and $\\omega \\ne 1.",
+        "0.6": "Let $\\omega$ be a complex number such that $\\omega^7 = 1$ and",
+        "0.7": "Let $\\omega$ be a complex number such that $\\o",
+        "0.8": "Let $\\omega$ be a complex numbe",
+        "0.9": "Let $\\omega$ be",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "A polynomial with integer coefficients is of the form\n\\[x^3 + a_2 x^2 + a_1 x - 11 = 0.\\]Enter all the possible integer roots of this polynomial, separated by commas.",
+    "solution": "**1. Problem Statement**\n\nDetermine all possible integer roots of a polynomial equation of the form $x^3 + a_2 x^2 + a_1 x - 11 = 0$, where $a_1$ and $a_2$ are integer coefficients.\n\nKey variables and constraints:\n- Polynomial form: $x^3 + a_2 x^2 + a_1 x - 11 = 0$\n- Coefficients $a_1, a_2$ are integers.\n- We are looking for integer roots of this polynomial.\n\n**2. Solution Strategy**\n\nWe will use the Integer Root Theorem to find the possible integer roots of the given polynomial.\nThe Integer Root Theorem states that if a polynomial with integer coefficients $P(x) = c_n x^n + c_{n-1} x^{n-1} + \\dots + c_1 x + c_0$ has an integer root $r$, then $r$ must be a divisor of the constant term $c_0$.\n\nIn our polynomial $P(x) = x^3 + a_2 x^2 + a_1 x - 11$, the coefficients are integers (1, $a_2$, $a_1$, -11), and the constant term is $c_0 = -11$.\nTherefore, any integer root of this polynomial must be a divisor of $-11$.\nWe will find all divisors of $-11$ and these will be the possible integer roots.\n\n**3. Step-by-Step Solution**\n\nStep 1: Identify the constant term of the polynomial.\nThe constant term of the polynomial $x^3 + a_2 x^2 + a_1 x - 11 = 0$ is $-11$.\n\nStep 2: Find all integer divisors of the constant term $-11$.\nWe need to find all integers that divide $-11$ without leaving a remainder.\nThe divisors of $11$ are $1, 11, -1, -11$.\nThe divisors of $-11$ are also $1, 11, -1, -11$.\nWe can list them as $\\pm 1, \\pm 11$.\nThe divisors are: $1, -1, 11, -11$.\n\nStep 3: Verify if each divisor is a possible integer root.\nFor each divisor $r$ from the set $\\{1, -1, 11, -11\\}$, we need to check if there exist integers $a_1$ and $a_2$ such that $r$ is a root of the polynomial.\nIf $r$ is a root, then $P(r) = r^3 + a_2 r^2 + a_1 r - 11 = 0$. We need to show that we can find integers $a_1, a_2$ satisfying this equation for each $r$.\n\nCase 1: $r = 1$\n$P(1) = 1^3 + a_2 (1)^2 + a_1 (1) - 11 = 1 + a_2 + a_1 - 11 = a_2 + a_1 - 10 = 0$\n$a_2 + a_1 = 10$.\nWe can choose integer values for $a_1$ and $a_2$ that satisfy this equation, e.g., $a_1 = 0, a_2 = 10$. So $x=1$ is a possible integer root.\n\nCase 2: $r = -1$\n$P(-1) = (-1)^3 + a_2 (-1)^2 + a_1 (-1) - 11 = -1 + a_2 - a_1 - 11 = a_2 - a_1 - 12 = 0$\n$a_2 - a_1 = 12$.\nWe can choose integer values for $a_1$ and $a_2$ that satisfy this equation, e.g., $a_1 = 0, a_2 = 12$. So $x=-1$ is a possible integer root.\n\nCase 3: $r = 11$\n$P(11) = (11)^3 + a_2 (11)^2 + a_1 (11) - 11 = 0$\nDivide by $11$: $11^2 + a_2 (11) + a_1 - 1 = 121 + 11a_2 + a_1 - 1 = 120 + 11a_2 + a_1 = 0$\n$11a_2 + a_1 = -120$.\nWe can choose integer values for $a_1$ and $a_2$ that satisfy this equation, e.g., $a_2 = -10, a_1 = -10$. So $x=11$ is a possible integer root.\n\nCase 4: $r = -11$\n$P(-11) = (-11)^3 + a_2 (-11)^2 + a_1 (-11) - 11 = 0$\nDivide by $-11$: $(-11)^2 - a_2 (11) - a_1 + 1 = 121 - 11a_2 - a_1 + 1 = 122 - 11a_2 - a_1 = 0$\n$11a_2 + a_1 = 122$.\nWe can choose integer values for $a_1$ and $a_2$ that satisfy this equation, e.g., $a_2 = 10, a_1 = 2$. So $x=-11$ is a possible integer root.\n\nAll divisors of $-11$ are possible integer roots.\n\n**4. Final Answer**\n\nThe possible integer roots are the divisors of $-11$, which are $1, -1, 11, -11$.\n\nFinal Answer: The final answer is $\\boxed{1, -1, 11, -11}$",
+    "metrics": {
+      "length": 3244,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "A polynomial with integer coefficients is of the form \\ [x ^ 3 + a_2 x ^ 2 + a_1 x - 11 = 0. \\] Enter all the possible integer roots of this polynomial, separated by commas.",
+        "0.1": "A polynomial with intWger coefficients is of the f)rm \\ [x ^ 3 + a_2 x ^ 2 + a_1 x - 11 = 0. \\] Enter all the poXsible integer rootQ of this polynomial, separated by commZs.",
+        "0.2": "A polynomial wJth in4ege5 coefficients is of the f)rm \\ [x ^ 3 + a_2 x ^ 2 + a_1 x - 11 = 0. \\] EGter all the 9ossibOe lmteger roots of rhis polynomial, sepxeated by comNax.",
+        "0.3": "A polygomiQ. w&%h 9ntehee c8effisOeMts is of the fofn \\ [x ^ 3 + a_2 x ^ 2 + a_1 x - 11 = 0. \\] EjFer all the p8sEiblF iB5ener rLlts of thUC p*IynomiAl, s3paFat4d by VommaW.",
+        "0.4": "A pkl5n8mJal qjth inGeveF coSfVucienHz is of the fo%J \\ [x ^ 3 + a_2 x ^ 2 + a_1 x - 11 = 0. \\] En6fr all the lPsQibl4 iBFegwr 3oIts of ynis OoIynomuSl, Ce9ara^eS by Sohmaz.",
+        "0.5": "A 0o/5nomUa; sitG *n$eg2% voeCeus9ents is of the f0rK \\ [x ^ 3 + a_2 x ^ 2 + a_1 x - 11 = 0. \\] WnReT all the pLZWiFle 7mtSg3r tko$s of ^hiz poKymo<iS<, sspa#s%sd by c8nmWs.",
+        "0.6": "A piOGhomOWl 2Ott Jb%WgeG sI4Dfick3htQ is of the tPrN \\ [x ^ 3 + a_2 x ^ 2 + a_1 x - 11 = 0. \\] Egfed all the 9oDw(b,e LMgegWt #o*Ys of 4NUs p9i6noJiZp, ESpZrSyeW by v(mmXZ.",
+        "0.7": "A po/HnPHkz? wLyj lbyeT#r Forft7VJRnyD is of the R8em \\ [x ^ 3 + a_2 x ^ 2 + a_1 x - 11 = 0. \\] EMrs3 all the L(Dq9bl3 ijhFFeT 5oL6Q of %hla pk?ynpJKW?, DDLWra5sf by c8Jkwz.",
+        "0.8": "A LpO6no,UQ, AJrM Lbt$nD4 cLDrguXjwGtd is of the bl5, \\ [x ^ 3 + a_2 x ^ 2 + a_1 x - 11 = 0. \\] @MtR4 all the lodz*Go2 On64Bs4 FIorz of ^t*C LP/ujom8s:, QWpX4wFww by f*mhXd.",
+        "0.9": "A 0k?jho,lqK 38Ru 7jFfbwt xPevcjxKfb$d is of the ckd, \\ [x ^ 3 + a_2 x ^ 2 + a_1 x - 11 = 0. \\] SB$RF all the (iawKFKR Ub4WnfF #8kFZ of HGoa OIphhLmKQo, z$(W3Wf2x by sPJhQd.",
+        "1.0": "A L)<6BK<8So !KgG om$4TSg V8fGCos*FJGE is of the bpg< \\ [x ^ 3 + a_2 x ^ 2 + a_1 x - 11 = 0. \\] rj64G all the o*XeJgoR jhRsv4e 3PIfA of GGKW o(:th0huW/, Cd0q3S^4c by v9J,Zx."
+      },
+      "random": {
+        "0.0": "Polynomial coefficients of the \\ [x ^ 3 + a_2 x ^ + a_1 - = 0. \\] all the possible integer polynomial, separated commas.",
+        "0.1": "A polynomial with integer coefficients is of form \\ [^ 3 + a_2 x ^ 2 + a_1 x - 11 = 0. \\] Enter all the integer roots of this polynomial, commas.",
+        "0.2": "A with is of form \\ [x ^ 3 + a_2 x ^ 2 + a_1 - 11 = 0. \\] Enter all the integer of this polynomial, separated.",
+        "0.3": "A coefficients of the form \\ [x ^ 3 + a_2 x ^ 2 + a_1 - = 0. \\] the possible integer of, by.",
+        "0.4": "Polynomial coefficients the form \\ [^ + x ^ + x - 11 = 0. \\] Enter polynomial, separated by commas.",
+        "0.5": "Polynomial integer is \\ [^ + ^ + - =. \\] all of this polynomial, separated commas.",
+        "0.6": "Polynomial \\ [^ 3 + a_2 ^ 2 + - =. \\ ], commas.",
+        "0.7": "Polynomial \\ [^ + ^ + - =. \\ ],.",
+        "0.8": "Polynomial \\ [^ + ^ + - =. \\ ],.",
+        "0.9": "Polynomial \\ [^ + ^ + - =. \\ ],.",
+        "1.0": "Polynomial \\ [^ + ^ + - =. \\ ],."
+      },
+      "cut": {
+        "0.0": "A polynomial with integer coefficients is of the form\n\\[x^3 + a_2 x^2 + a_1 x - 11 = 0.\\]Enter all the possible integer roots of this polynomial, separated by commas.",
+        "0.1": "A polynomial with integer coefficients is of the form\n\\[x^3 + a_2 x^2 + a_1 x - 11 = 0.\\]Enter all the possible integer roots of this polynomial, sep",
+        "0.2": "A polynomial with integer coefficients is of the form\n\\[x^3 + a_2 x^2 + a_1 x - 11 = 0.\\]Enter all the possible integer roots of this",
+        "0.3": "A polynomial with integer coefficients is of the form\n\\[x^3 + a_2 x^2 + a_1 x - 11 = 0.\\]Enter all the possible inte",
+        "0.4": "A polynomial with integer coefficients is of the form\n\\[x^3 + a_2 x^2 + a_1 x - 11 = 0.\\]Enter all t",
+        "0.5": "A polynomial with integer coefficients is of the form\n\\[x^3 + a_2 x^2 + a_1 x - 11 ",
+        "0.6": "A polynomial with integer coefficients is of the form\n\\[x^3 + a_2 ",
+        "0.7": "A polynomial with integer coefficients is of the f",
+        "0.8": "A polynomial with integer coeffic",
+        "0.9": "A polynomial with",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "The graph of $y = f(x)$ is shown below.\n\n[asy]\nunitsize(0.5 cm);\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nint i, n;\n\nfor (i = -5; i <= 5; ++i) {\n  draw((i,-5)--(i,5),gray(0.7));\n  draw((-5,i)--(5,i),gray(0.7));\n}\n\ndraw((-5,0)--(5,0),Arrows(6));\ndraw((0,-5)--(0,5),Arrows(6));\n\nlabel(\"$x$\", (5,0), E);\nlabel(\"$y$\", (0,5), N);\n\ndraw(graph(func,-3,3),red);\n\nlabel(\"$y = f(x)$\", (3,-2), UnFill);\n[/asy]\n\nWhich is the graph of $y = f(x + 2)$?\n\n[asy]\nunitsize(0.5 cm);\n\npicture[] graf;\nint i, n;\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nreal funcc(real x) {\n  return(func(x - 2));\n}\n\nreal funce(real x) {\n  return(func(x + 2));\n}\n\nfor (n = 1; n <= 5; ++n) {\n  graf[n] = new picture;\n  for (i = -5; i <= 5; ++i) {\n    draw(graf[n],(i,-5)--(i,5),gray(0.7));\n    draw(graf[n],(-5,i)--(5,i),gray(0.7));\n  }\n  draw(graf[n],(-5,0)--(5,0),Arrows(6));\n  draw(graf[n],(0,-5)--(0,5),Arrows(6));\n\n  label(graf[n],\"$x$\", (5,0), E);\n  label(graf[n],\"$y$\", (0,5), N);\n}\n\ndraw(graf[1],shift((2,-1))*graph(func,-3,3),red);\ndraw(graf[2],shift((2,1))*graph(func,-3,3),red);\ndraw(graf[3],graph(funcc,-1,5),red);\ndraw(graf[4],shift((-2,-1))*graph(func,-3,3),red);\ndraw(graf[5],graph(funce,-5,1),red);\n\nlabel(graf[1], \"A\", (0,-6));\nlabel(graf[2], \"B\", (0,-6));\nlabel(graf[3], \"C\", (0,-6));\nlabel(graf[4], \"D\", (0,-6));\nlabel(graf[5], \"E\", (0,-6));\n\nadd(graf[1]);\nadd(shift((12,0))*(graf[2]));\nadd(shift((24,0))*(graf[3]));\nadd(shift((6,-12))*(graf[4]));\nadd(shift((18,-12))*(graf[5]));\n[/asy]\n\nEnter the letter of the graph of $y = f(x + 2).$",
+    "solution": "## Problem Statement\nThe problem asks us to identify the graph of the function $y = f(x+2)$, given the graph of $y = f(x)$. We are provided with the definition of $f(x)$ piecewise and its graph, and we need to choose from five options (A, B, C, D, E) which graph represents $y = f(x+2)$.\n\n### Key Variables and Constraints\n- We are given the function $f(x)$ graphically and piecewise.\n- We need to find the graph of $y = f(x+2)$.\n- We need to select the correct graph from options A, B, C, D, E.\n\n## Solution Strategy\nThe transformation from $y = f(x)$ to $y = f(x+2)$ is a horizontal shift. Replacing $x$ with $x+c$ in $f(x)$ shifts the graph horizontally by $|c|$ units. If $c > 0$, the shift is to the left, and if $c < 0$, the shift is to the right. In our case, we have $x+2$, so $c = 2 > 0$, which means the graph will be shifted to the left by 2 units.\n\nWe can analyze key points on the graph of $y = f(x)$ and apply the horizontal shift to find the corresponding points on the graph of $y = f(x+2)$.\nFrom the definition of $f(x)$ provided in the code, we have the following pieces:\n1. For $-3 \\le x \\le 0$, $y = -2 - x$.\n2. For $0 \\le x \\le 2$, $y = \\sqrt{4 - (x - 2)^2} - 2$.\n3. For $2 \\le x \\le 3$, $y = 2(x - 2)$.\n\nLet's find key points on the graph of $y = f(x)$:\n- At $x = -3$, $y = -2 - (-3) = 1$. Point $(-3, 1)$.\n- At $x = 0$, $y = -2 - 0 = -2$. Point $(0, -2)$.\n- At $x = 2$, $y = \\sqrt{4 - (2 - 2)^2} - 2 = \\sqrt{4} - 2 = 0$. Point $(2, 0)$.\n- At $x = 3$, $y = 2(3 - 2) = 2$. Point $(3, 2)$.\n\nFor $y = f(x+2)$, we shift each x-coordinate to the left by 2 units while keeping the y-coordinate the same.\n- For $(-3, 1)$ on $y = f(x)$, the corresponding point on $y = f(x+2)$ is $(-3 - 2, 1) = (-5, 1)$.\n- For $(0, -2)$ on $y = f(x)$, the corresponding point on $y = f(x+2)$ is $(0 - 2, -2) = (-2, -2)$.\n- For $(2, 0)$ on $y = f(x)$, the corresponding point on $y = f(x+2)$ is $(2 - 2, 0) = (0, 0)$.\n- For $(3, 2)$ on $y = f(x)$, the corresponding point on $y = f(x+2)$ is $(3 - 2, 2) = (1, 2)$.\n\nNow let's check which graph among the options passes through the points $(-5, 1), (-2, -2), (0, 0), (1, 2)$. By visually inspecting the graphs provided, graph E appears to pass through these points. Graph E is generated by the code `draw(graf[5],graph(funce,-5,1),red);` where `funce(real x) { return(func(x + 2)); }`. This confirms that graph E is indeed the graph of $y = f(x+2)$.\n\nLet's also check the transformations applied in other options:\n- Graph A: `shift((2,-1))*graph(func,-3,3)` - Shift right by 2 and down by 1.\n- Graph B: `shift((2,1))*graph(func,-3,3)` - Shift right by 2 and up by 1.\n- Graph C: `graph(funcc,-1,5)` where `funcc(real x) { return(func(x - 2)); }` - Graph of $y = f(x-2)$, shift right by 2.\n- Graph D: `shift((-2,-1))*graph(func,-3,3)` - Shift left by 2 and down by 1.\n- Graph E: `graph(funce,-5,1)` where `funce(real x) { return(func(x + 2)); }` - Graph of $y = f(x+2)$, shift left by 2.\n\nBased on our analysis, graph E is the graph of $y = f(x+2)$.\n\n## Step-by-Step Solution\n1. **Understand the transformation:** The function $y = f(x+2)$ represents a horizontal shift of the graph of $y = f(x)$.\n2. **Determine the direction and magnitude of the shift:** Since we are replacing $x$ with $x+2$, the shift is to the left by 2 units.\n3. **Identify key points on the graph of $y = f(x)$:**  We found the points $(-3, 1), (0, -2), (2, 0), (3, 2)$.\n4. **Apply the horizontal shift to the key points:** Shift each x-coordinate to the left by 2 units:\n    - $(-3, 1) \\rightarrow (-3 - 2, 1) = (-5, 1)$\n    - $(0, -2) \\rightarrow (0 - 2, -2) = (-2, -2)$\n    - $(2, 0) \\rightarrow (2 - 2, 0) = (0, 0)$\n    - $(3, 2) \\rightarrow (3 - 2, 2) = (1, 2)$\n5. **Compare the shifted points with the provided graphs:** Graph E visually matches the shifted points and the expected shape of the transformed function.\n6. **Verify with the code:** The code for graph E explicitly defines it as the graph of $y = f(x+2)$.\n\n## Final Answer\nFinal Answer: The final answer is $\\boxed{E}$",
+    "metrics": {
+      "length": 4004,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "The graph of $ y = f (x) $ is shown below. [asy] unitsize (0. 5 cm ); real func (real x) {real y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = sqrt (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} return (y );} int i, n; for (i = - 5; i <= 5; + + i) {draw (( i, - 5) - - (i, 5 ), gray (0. 7) ); draw (( - 5, i) - - (5, i ), gray (0. 7) );} draw (( - 5, 0) - - (5, 0 ), Arrows (6) ); draw (( 0, - 5) - - (0, 5 ), Arrows (6) ); label (\" $ x $ \", (5, 0 ), E ); label (\" $ y $ \", (0, 5 ), N ); draw (graph (func, - 3, 3 ), red ); label (\" $ y = f (x) $ \", (3, - 2 ), UnFill ); [/ asy] Which is the graph of $ y = f (x + 2) $? [asy] unitsize (0. 5 cm ); picture [] graf; int i, n; real func (real x) {real y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = sqrt (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} return (y );} real funcc (real x) {return (func (x - 2) );} real funce (real x) {return (func (x + 2) );} for (n = 1; n <= 5; + + n) {graf [n] = new picture; for (i = - 5; i <= 5; + + i) {draw (graf [n ], (i, - 5) - - (i, 5 ), gray (0. 7) ); draw (graf [n ], (- 5, i) - - (5, i ), gray (0. 7) );} draw (graf [n ], (- 5, 0) - - (5, 0 ), Arrows (6) ); draw (graf [n ], (0, - 5) - - (0, 5 ), Arrows (6) ); label (graf [n ], \" $ x $ \", (5, 0 ), E ); label (graf [n ], \" $ y $ \", (0, 5 ), N );} draw (graf [1 ], shift (( 2, - 1) ) * graph (func, - 3, 3 ), red ); draw (graf [2 ], shift (( 2, 1) ) * graph (func, - 3, 3 ), red ); draw (graf [3 ], graph (funcc, - 1, 5 ), red ); draw (graf [4 ], shift (( - 2, - 1) ) * graph (func, - 3, 3 ), red ); draw (graf [5 ], graph (funce, - 5, 1 ), red ); label (graf [1 ], \" A \", (0, - 6) ); label (graf [2 ], \" B \", (0, - 6) ); label (graf [3 ], \" C \", (0, - 6) ); label (graf [4 ], \" D \", (0, - 6) ); label (graf [5 ], \" E \", (0, - 6) ); add (graf [1] ); add (shift (( 12, 0) ) * (graf [2] ) ); add (shift (( 24, 0) ) * (graf [3] ) ); add (shift (( 6, - 12) ) * (graf [4] ) ); add (shift (( 18, - 12) ) * (graf [5] ) ); [/ asy] Enter the letter of the graph of $ y = f (x + 2 ). $",
+        "0.1": "The yraph of $ y = f (x) $ is showG below. [asy] uniysize (0. 5 cm ); Deal f6nc (real x) {rral y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = sqdt (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} returM (y );} int i, n; for (i = - 5; i <= 5; + + i) {Sraw (( i, - 5) - - (i, 5 ), ggay (0. 7) ); ddaw (( - 5, i) - - (5, i ), g3ay (0. 7) );} dgaw (( - 5, 0) - - (5, 0 ), ArroAs (6) ); drqw (( 0, - 5) - - (0, 5 ), Ar3ows (6) ); labFl (\" $ x $ \", (5, 0 ), E ); laHel (\" $ y $ \", (0, 5 ), N ); dGaw (traph (Vunc, - 3, 3 ), red ); lagel (\" $ y = f (x) $ \", (3, - 2 ), inFill ); [/ asy] Whicy is the gdaph of $ y = f (x + 2) $? [asy] unitcize (0. 5 cm ); picHure [] nraf; int i, n; rfal fuJc (rexl x) {rewl y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = sArt (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} 5eturn (y );} #eal fubcc (reao x) {4eturn (finc (x - 2) );} reSl funfe (rewl x) {ret trn (fuBc (x + 2) );} for (n = 1; n <= 5; + + n) {graG [n] = new pictuTe; for (i = - 5; i <= 5; + + i) {Vraw (Vraf [n ], (i, - 5) - - (i, 5 ), grau (0. 7) ); sraw (grWf [n ], (- 5, i) - - (5, i ), grAy (0. 7) );} draq (graf [n ], (- 5, 0) - - (5, 0 ), A#rows (6) ); drad (Yraf [n ], (0, - 5) - - (0, 5 ), Arr9ws (6) ); label (yraf [n ], \" $ x $ \", (5, 0 ), E ); >abel (g$af [n ], \" $ y $ \", (0, 5 ), N );} drSw (gtaf [1 ], sJift (( 2, - 1) ) * graph (f tnc, - 3, 3 ), red ); dra! (graC [2 ], sh7ft (( 2, 1) ) * ggaph (funF, - 3, 3 ), red ); draD (grab [3 ], grapB (tuncc, - 1, 5 ), red ); drWw (grxf [4 ], shift (( - 2, - 1) ) * Rraph (f6nc, - 3, 3 ), red ); craw (grXf [5 ], Hraph (funce, - 5, 1 ), red ); lavel (grsf [1 ], \" A \", (0, - 6) ); .abel (grab [2 ], \" B \", (0, - 6) ); lavel (grSf [3 ], \" C \", (0, - 6) ); lagel (fraf [4 ], \" D \", (0, - 6) ); lwbel (g4af [5 ], \" E \", (0, - 6) ); add (vraf [1] ); add (shiVt (( 12, 0) ) * (grAf [2] ) ); add (shict (( 24, 0) ) * (hraf [3] ) ); add (sTift (( 6, - 12) ) * (grzf [4] ) ); add (Dhift (( 18, - 12) ) * (grae [5] ) ); [/ asy] En$er the le6ter of the grapJ of $ y = f (x + 2 ). $",
+        "0.2": "The grZph of $ y = f (x) $ is shlwn beiow. [asy] jnitcize (0. 5 cm ); rea/ fubc (rexl x) {rea. y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = Dqrt (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} rrtJrn (y );} int i, n; for (i = - 5; i <= 5; + + i) {Fraw (( i, - 5) - - (i, 5 ), grzy (0. 7) ); drQw (( - 5, i) - - (5, i ), gDay (0. 7) );} dgaw (( - 5, 0) - - (5, 0 ), ArDoww (6) ); dra# (( 0, - 5) - - (0, 5 ), qrGows (6) ); ?abel (\" $ x $ \", (5, 0 ), E ); laVel (\" $ y $ \", (0, 5 ), N ); sraw (graOh (fubc, - 3, 3 ), red ); lafel (\" $ y = f (x) $ \", (3, - 2 ), UMcill ); [/ asy] Whivh is the g#aph of $ y = f (x + 2) $? [asy]  TGitsize (0. 5 cm ); piFtHre [] grat; int i, n; reai fuBc (reaP x) {rfal y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = Aqrt (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} fetuGn (y );} rea< Buncc (rral x) {re^uen (eunc (x - 2) );} rea> fuJce (Eeal x) {rWturJ (fKnc (x + 2) );} for (n = 1; n <= 5; + + n) {Nraf [n] = new pUfture; for (i = - 5; i <= 5; + + i) {xraw (graV [n ], (i, - 5) - - (i, 5 ), Hray (0. 7) ); drzw (g%af [n ], (- 5, i) - - (5, i ), Yray (0. 7) );} dfaw (hraf [n ], (- 5, 0) - - (5, 0 ), Ar%oes (6) ); Rraw (grzf [n ], (0, - 5) - - (0, 5 ), Arr0wZ (6) ); laNel (Hraf [n ], \" $ x $ \", (5, 0 ), E ); <abel (rraf [n ], \" $ y $ \", (0, 5 ), N );} dra3 (ggaf [1 ], qhift (( 2, - 1) ) * grapU (fund, - 3, 3 ), red ); drxw (gfaf [2 ], shkft (( 2, 1) ) * g$aph (fKnc, - 3, 3 ), red ); dra! (grab [3 ], grapT (funXc, - 1, 5 ), red ); wraw (graC [4 ], shif4 (( - 2, - 1) ) * gfaph (funx, - 3, 3 ), red ); drsw (vraf [5 ], Nraph (funVe, - 5, 1 ), red ); labe, (g4af [1 ], \" A \", (0, - 6) ); labe: (grSf [2 ], \" B \", (0, - 6) ); lWbel (grar [3 ], \" C \", (0, - 6) ); lagel (fraf [4 ], \" D \", (0, - 6) ); /abel (grae [5 ], \" E \", (0, - 6) ); add (Vraf [1] ); add (shif6 (( 12, 0) ) * (graR [2] ) ); add (sh(ft (( 24, 0) ) * (g$af [3] ) ); add (shif6 (( 6, - 12) ) * (grsf [4] ) ); add (sgift (( 18, - 12) ) * (vraf [5] ) ); [/ asy] rnter the let6#r of the Fraph of $ y = f (x + 2 ). $",
+        "0.3": "The grZoh of $ y = f (x) $ is sMowg hRlow. [asy] unu$zize (0. 5 cm ); Deql fKnF (rSzl x) {rWa> y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = Zqrf (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} rehu$n (y );} int i, n; for (i = - 5; i <= 5; + + i) {FDaw (( i, - 5) - - (i, 5 ), grzg (0. 7) ); sras (( - 5, i) - - (5, i ), Yrzy (0. 7) );} dTas (( - 5, 0) - - (5, 0 ), Arro2q (6) ); wrzw (( 0, - 5) - - (0, 5 ), ArrKwD (6) ); iabep (\" $ x $ \", (5, 0 ), E ); lXbRl (\" $ y $ \", (0, 5 ), N ); drSd (TrAph (V Tnc, - 3, 3 ), red ); labR; (\" $ y = f (x) $ \", (3, - 2 ), JnFull ); [/ asy] 1hLch is the gtWph of $ y = f (x + 2) $? [asy] unutc8ze (0. 5 cm ); p7xtu%e [] g5zf; int i, n; 5ewl f^nx ($eZl x) {r#xl y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = sWEt (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} 3e4urn (y );} EeXl fIhcc (reXK x) {retHdn (duGc (x - 2) );} reS? fuBve ($ea: x) {$et8rn (f TnX (x + 2) );} for (n = 1; n <= 5; + + n) {g3ab [n] = new o(ctu$e; for (i = - 5; i <= 5; + + i) {Xrqw (g4aR [n ], (i, - 5) - - (i, 5 ), grx5 (0. 7) ); F4aw (Brar [n ], (- 5, i) - - (5, i ), gEXy (0. 7) );} Sfaw (trWf [n ], (- 5, 0) - - (5, 0 ), Arr0ds (6) ); Eras (grzb [n ], (0, - 5) - - (0, 5 ), ArrIds (6) ); lZbeo (VraV [n ], \" $ x $ \", (5, 0 ), E ); laGsl (grwb [n ], \" $ y $ \", (0, 5 ), N );} dFaQ (HraT [1 ], sgiVt (( 2, - 1) ) * grqOh (vjnc, - 3, 3 ), red ); Xrae (gFab [2 ], syiTt (( 2, 1) ) * YrapT (fuGV, - 3, 3 ), red ); dFXw (hrZf [3 ], g%sph (Gunsc, - 1, 5 ), red ); ErWw (gDAf [4 ], sh7gt (( - 2, - 1) ) * grX9h (fugS, - 3, 3 ), red ); crQw (gdwf [5 ], ggapJ (fujSe, - 5, 1 ), red ); lZvel (yrad [1 ], \" A \", (0, - 6) ); pabfl (grAr [2 ], \" B \", (0, - 6) ); laGe. (gFab [3 ], \" C \", (0, - 6) ); lxb@l (frqf [4 ], \" D \", (0, - 6) ); lxFel (vDaf [5 ], \" E \", (0, - 6) ); add (Fdaf [1] ); add (shig5 (( 12, 0) ) * (gGaE [2] ) ); add (shiTr (( 24, 0) ) * (geqf [3] ) ); add (shiTg (( 6, - 12) ) * (yrSf [4] ) ); add (sN8ft (( 18, - 12) ) * (gdsf [5] ) ); [/ asy] EntF% the iette% of the n#aph of $ y = f (x + 2 ). $",
+        "0.4": "The vrapG of $ y = f (x) $ is Dhoqn bel)Q. [asy] &nihCizS (0. 5 cm ); $eQl Vubc (EeQl x) {rezo y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = sqTR (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} re5ufj (y );} int i, n; for (i = - 5; i <= 5; + + i) {dEQw (( i, - 5) - - (i, 5 ), gtaJ (0. 7) ); dea# (( - 5, i) - - (5, i ), grZt (0. 7) );} drWa (( - 5, 0) - - (5, 0 ), xfr(ws (6) ); w4aw (( 0, - 5) - - (0, 5 ), ATtoas (6) ); lsnel (\" $ x $ \", (5, 0 ), E ); oafel (\" $ y $ \", (0, 5 ), N ); dgZw (g%aLh (fJnS, - 3, 3 ), red ); Oabe; (\" $ y = f (x) $ \", (3, - 2 ), *GFil/ ); [/ asy] Wtict is the g4a9h of $ y = f (x + 2) $? [asy] uniHeiaD (0. 5 cm ); pLct64e [] grWC; int i, n; reQ: EuMc (d#al x) {rfai y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = saGt (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} 5RturB (y );} rFa: RuncD (%#al x) {TsRurn (fins (x - 2) );} eewl fumcD (3Dal x) {r4thrg (vunv (x + 2) );} for (n = 1; n <= 5; + + n) {Nrwf [n] = new pLc^ Tre; for (i = - 5; i <= 5; + + i) {d3Aw (gtar [n ], (i, - 5) - - (i, 5 ), g3at (0. 7) ); xgaw (ydaf [n ], (- 5, i) - - (5, i ), BrWy (0. 7) );} d3a# (RraG [n ], (- 5, 0) - - (5, 0 ), A3%Iws (6) ); dta@ (R5af [n ], (0, - 5) - - (0, 5 ), arFoDs (6) ); lWbei (tGaf [n ], \" $ x $ \", (5, 0 ), E ); lSbei (grwt [n ], \" $ y $ \", (0, 5 ), N );} d3aQ (Y#af [1 ], xh(ft (( 2, - 1) ) * grspN (CJnc, - 3, 3 ), red ); drA! (nraD [2 ], sG(ft (( 2, 1) ) * Trapt (fuBS, - 3, 3 ), red ); F$aw (frav [3 ], trZph (Cincc, - 1, 5 ), red ); deWw (Yrab [4 ], sBiff (( - 2, - 1) ) * graly (Runs, - 3, 3 ), red ); drAA (b4af [5 ], gTaOh (f*nve, - 5, 1 ), red ); lqbek (Brac [1 ], \" A \", (0, - 6) ); lQbeP (Rfaf [2 ], \" B \", (0, - 6) ); /Zbel (gfQf [3 ], \" C \", (0, - 6) ); /ab2l (vrxf [4 ], \" D \", (0, - 6) ); Pabek (Frad [5 ], \" E \", (0, - 6) ); add (gdSf [1] ); add (shLet (( 12, 0) ) * (HrAf [2] ) ); add (ehifH (( 24, 0) ) * (hrsf [3] ) ); add (sh(Bt (( 6, - 12) ) * (hrZf [4] ) ); add (stifY (( 18, - 12) ) * (g4ac [5] ) ); [/ asy] EnGFr the ,WtRer of the graog of $ y = f (x + 2 ). $",
+        "0.5": "The grslt of $ y = f (x) $ is WTPwn bekl@. [asy] ugU^sise (0. 5 cm ); reX> VunS (%@al x) {tesl y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = sqdr (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} refkrh (y );} int i, n; for (i = - 5; i <= 5; + + i) {dFSw (( i, - 5) - - (i, 5 ), nrSy (0. 7) ); dFas (( - 5, i) - - (5, i ), grQt (0. 7) );} dTa# (( - 5, 0) - - (5, 0 ), Afr(As (6) ); drsQ (( 0, - 5) - - (0, 5 ), Ar4o!c (6) ); lqb3? (\" $ x $ \", (5, 0 ), E ); lxveI (\" $ y $ \", (0, 5 ), N ); ddXw (g3Spy (bunf, - 3, 3 ), red ); lqH#l (\" $ y = f (x) $ \", (3, - 2 ), UnDlKl ); [/ asy] !h9cU is the gtslh of $ y = f (x + 2) $? [asy] IhitEiz4 (0. 5 cm ); p&ctIDD [] YFaf; int i, n; $eaI fhnF (geaK x) {reWk y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = AArt (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} tFturm (y );} 3ea? fKgcd (teaK x) {reF6en (Bumc (x - 2) );} EeaK TunV2 (rda, x) {r4tu3b (fHnS (x + 2) );} for (n = 1; n <= 5; + + n) {braR [n] = new (ict Tf4; for (i = - 5; i <= 5; + + i) {ddww (beaf [n ], (i, - 5) - - (i, 5 ), hfay (0. 7) ); vDaw (grqt [n ], (- 5, i) - - (5, i ), vrWy (0. 7) );} dtQw (brav [n ], (- 5, 0) - - (5, 0 ), A5towd (6) ); drAa (grSG [n ], (0, - 5) - - (0, 5 ), ArfIas (6) ); pxbe< (grSe [n ], \" $ x $ \", (5, 0 ), E ); OwVel (F$af [n ], \" $ y $ \", (0, 5 ), N );} Fraa (grzt [1 ], sb9Bt (( 2, - 1) ) * vrqlh (GuGc, - 3, 3 ), red ); drwA (frZf [2 ], ch&fg (( 2, 1) ) * beaLh (tInc, - 3, 3 ), red ); dtaD (grZr [3 ], yta(h (gugdc, - 1, 5 ), red ); cra# (nDaf [4 ], DhkEt (( - 2, - 1) ) * grqOu (fjns, - 3, 3 ), red ); xfaw (RraR [5 ], rrqpy (finVW, - 5, 1 ), red ); Kzfel (gDzf [1 ], \" A \", (0, - 6) ); pwbeo (gead [2 ], \" B \", (0, - 6) ); Oab4o (Feaf [3 ], \" C \", (0, - 6) ); ;ag#l (HrZf [4 ], \" D \", (0, - 6) ); lSb3I (gfWf [5 ], \" E \", (0, - 6) ); add (TrAf [1] ); add (xNKft (( 12, 0) ) * (g4qf [2] ) ); add (snoEt (( 24, 0) ) * (BrWf [3] ) ); add (zhiEf (( 6, - 12) ) * (Nrqf [4] ) ); add (ahlbt (( 18, - 12) ) * (rrad [5] ) ); [/ asy] EnYsE the .ethe4 of the grQON of $ y = f (x + 2 ). $",
+        "0.6": "The vFa9h of $ y = f (x) $ is shIsj bSPKw. [asy] uji6ZixS (0. 5 cm ); tezO eubs (%eqO x) {#fa? y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = d!rG (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} reGHFj (y );} int i, n; for (i = - 5; i <= 5; + + i) {xrSd (( i, - 5) - - (i, 5 ), ttag (0. 7) ); xdSw (( - 5, i) - - (5, i ), g%Xu (0. 7) );} d3We (( - 5, 0) - - (5, 0 ), sg4oqs (6) ); SrX! (( 0, - 5) - - (0, 5 ), ZD4o#s (6) ); .abFO (\" $ x $ \", (5, 0 ), E ); ?wNel (\" $ y $ \", (0, 5 ), N ); W$ww (grs)y (gkhc, - 3, 3 ), red ); ;abFk (\" $ y = f (x) $ \", (3, - 2 ), knbii< ); [/ asy] Wh9Su is the grXlg of $ y = f (x + 2) $? [asy] 7niYWlzF (0. 5 cm ); luXRu4e [] N$aT; int i, n; 3ex, guBs (r@W, x) {#fwl y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = s@Dy (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} $eGhtn (y );} $Ssl fjHcv (g#Sl x) {geRuGH (f7Bf (x - 2) );} r4sI fjgve (rdZ/ x) {Eftutm (fjHd (x + 2) );} for (n = 1; n <= 5; + + n) {NEaD [n] = new p&c%jfR; for (i = - 5; i <= 5; + + i) {V%Zw (gfsG [n ], (i, - 5) - - (i, 5 ), tdaj (0. 7) ); dtX2 (rrSB [n ], (- 5, i) - - (5, i ), ggs% (0. 7) );} dTW1 (gfAr [n ], (- 5, 0) - - (5, 0 ), ArFpdX (6) ); d$xa (Ytqf [n ], (0, - 5) - - (0, 5 ), zr4LAs (6) ); laNS; (geQC [n ], \" $ x $ \", (5, 0 ), E ); oaG3l (frXE [n ], \" $ y $ \", (0, 5 ), N );} CrxS (y5Xf [1 ], qtoft (( 2, - 1) ) * h3apG (fjJs, - 3, 3 ), red ); dDw1 (ytZf [2 ], sG&f^ (( 2, 1) ) * gfW)h (r8mc, - 3, 3 ), red ); Vfxw (hrxr [3 ], fGxph (BHhcc, - 1, 5 ), red ); R%xw (gEAb [4 ], WjifH (( - 2, - 1) ) * g#ZpT (rubd, - 3, 3 ), red ); erZa (rTqf [5 ], g#a(j (ruBcS, - 5, 1 ), red ); lqb3o (BrxB [1 ], \" A \", (0, - 6) ); PaH@l (gEQg [2 ], \" B \", (0, - 6) ); lXbR? (Bdzf [3 ], \" C \", (0, - 6) ); lanW: (BrXG [4 ], \" D \", (0, - 6) ); .xNel (b%aB [5 ], \" E \", (0, - 6) ); add (brAB [1] ); add (dhJVt (( 12, 0) ) * (g3QR [2] ) ); add (wUirt (( 24, 0) ) * (FgZf [3] ) ); add (shUcF (( 6, - 12) ) * (t#qf [4] ) ); add (Qh7ct (( 18, - 12) ) * (hDXf [5] ) ); [/ asy] EGtwe the ?wtt$g of the TfaOh of $ y = f (x + 2 ). $",
+        "0.7": "The vGalb of $ y = f (x) $ is EbLwh grll@. [asy] unjhw&A$ (0. 5 cm ); rSqP fHMS (EeZK x) {fSzl y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = cWrh (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} %w5*dn (y );} int i, n; for (i = - 5; i <= 5; + + i) {r4zw (( i, - 5) - - (i, 5 ), gTwt (0. 7) ); f3Qw (( - 5, i) - - (5, i ), YrZU (0. 7) );} FgaE (( - 5, 0) - - (5, 0 ), XTEKQs (6) ); d%Q2 (( 0, - 5) - - (0, 5 ), zgF(ds (6) ); OAVe/ (\" $ x $ \", (5, 0 ), E ); ;Wb3O (\" $ y $ \", (0, 5 ), N ); fgSw (REW9h (ciBc, - 3, 3 ), red ); .aff? (\" $ y = f (x) $ \", (3, - 2 ), UGDjIo ); [/ asy] Snisu is the Ttqpg of $ y = f (x + 2) $? [asy] 7HutsOad (0. 5 cm ); lLfgurs [] Trxr; int i, n; f$ao tums (few/ x) {FdSl y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = Qqgr (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} tW66Gn (y );} t$aI vkMcV (#eS? x) {5FtHFM (tIHc (x - 2) );} $eA. gJBc3 (eSaP x) {5Ft t$h (fHhd (x + 2) );} for (n = 1; n <= 5; + + n) {gdqG [n] = new p9c^k3W; for (i = - 5; i <= 5; + + i) {d#sq (H3ae [n ], (i, - 5) - - (i, 5 ), TEah (0. 7) ); SrS@ (tgaT [n ], (- 5, i) - - (5, i ), FrQj (0. 7) );} dTzQ (rFzf [n ], (- 5, 0) - - (5, 0 ), S%E0ds (6) ); eda2 (yrsr [n ], (0, - 5) - - (0, 5 ), z4r8Dq (6) ); lZvDO (YrQR [n ], \" $ x $ \", (5, 0 ), E ); oaGRp (tEAf [n ], \" $ y $ \", (0, 5 ), N );} dDX! (NESf [1 ], QJLDt (( 2, - 1) ) * gfZou (fIGx, - 3, 3 ), red ); dEW@ (r5Zf [2 ], AgLfY (( 2, 1) ) * g4qlU (cuhv, - 3, 3 ), red ); dTW# (RrzT [3 ], gtZoB (vugFD, - 1, 5 ), red ); d%s@ (b%ar [4 ], dtof% (( - 2, - 1) ) * H$qpN (f tMX, - 3, 3 ), red ); staS (f#aC [5 ], YfXlh (vigc4, - 5, 1 ), red ); IZbF, (r$av [1 ], \" A \", (0, - 6) ); OaN$i (v%ad [2 ], \" B \", (0, - 6) ); ;Qge? (gEWb [3 ], \" C \", (0, - 6) ); Ian$: (Ngzf [4 ], \" D \", (0, - 6) ); lSHfp (gFSB [5 ], \" E \", (0, - 6) ); add (vrWd [1] ); add (Djuet (( 12, 0) ) * (g%Qe [2] ) ); add (Db8gt (( 24, 0) ) * (g%Ae [3] ) ); add (aniRY (( 6, - 12) ) * (FrXv [4] ) ); add (sukeY (( 18, - 12) ) * (NtSf [5] ) ); [/ asy] 3htse the IWtrDF of the g3Zlu of $ y = f (x + 2 ). $",
+        "0.8": "The T3XpB of $ y = f (x) $ is zhP#M b3.(E. [asy] KMiYq*s4 (0. 5 cm ); dRQ, cHjX (4rqp x) {%$w, y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = esgy (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} GFtkDJ (y );} int i, n; for (i = - 5; i <= 5; + + i) {E4Qa (( i, - 5) - - (i, 5 ), bdX7 (0. 7) ); FGSs (( - 5, i) - - (5, i ), REwG (0. 7) );} w4Sd (( - 5, 0) - - (5, 0 ), z44kwz (6) ); cfZD (( 0, - 5) - - (0, 5 ), QT30ww (6) ); :aV2O (\" $ x $ \", (5, 0 ), E ); Osb@/ (\" $ y $ \", (0, 5 ), N ); s3Xq (yDSpB (CIjD, - 3, 3 ), red ); ?Abwo (\" $ y = f (x) $ \", (3, - 2 ), ^nej.k ); [/ asy] !jLcy is the VTzLh of $ y = f (x + 2) $? [asy] JMoHa*z# (0. 5 cm ); LKx% tTe [] y5XT; int i, n; $SXP eiGD (4Rs, x) {tWWO y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = cS%$ (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} TrRuDb (y );} 4@X/ g^gcx (gWq/ x) {%#6ign (R7jx (x - 2) );} DRWi c6HDe (GFW< x) {3WHHrJ (TKjx (x + 2) );} for (n = 1; n <= 5; + + n) {b#Zg [n] = new L8sf*r$; for (i = - 5; i <= 5; + + i) {s4sE (Rfwb [n ], (i, - 5) - - (i, 5 ), FeWU (0. 7) ); rtA3 (YfAe [n ], (- 5, i) - - (5, i ), BFsH (0. 7) );} etq@ (hezV [n ], (- 5, 0) - - (5, 0 ), arg*1A (6) ); X#z! (TfAd [n ], (0, - 5) - - (0, 5 ), X3rLsA (6) ); <xFdl (FGzr [n ], \" $ x $ \", (5, 0 ), E ); OQbdk (YFZD [n ], \" $ y $ \", (0, 5 ), N );} S3Qe (FdAG [1 ], xBiTH (( 2, - 1) ) * tTS9h (E tGV, - 3, 3 ), red ); E5We (Fdwc [2 ], ZbJvt (( 2, 1) ) * g3XOY (VhJS, - 3, 3 ), red ); WeX1 (bTWB [3 ], nrS)g (CIJxc, - 1, 5 ), red ); S3x@ (t#Wr [4 ], sT&gR (( - 2, - 1) ) * nrS)U (chmd, - 3, 3 ), red ); w4S2 (ntQB [5 ], YEzpY (cuHv$, - 5, 1 ), red ); KQV3l (h#wE [1 ], \" A \", (0, - 6) ); >qvep (teAd [2 ], \" B \", (0, - 6) ); lsg@< (VFZr [3 ], \" C \", (0, - 6) ); lqhs? (ydsr [4 ], \" D \", (0, - 6) ); lQGR/ (NTwG [5 ], \" E \", (0, - 6) ); add (HTSv [1] ); add (zhObf (( 12, 0) ) * (NfzB [2] ) ); add (qhOC% (( 24, 0) ) * (btSR [3] ) ); add (et&fy (( 6, - 12) ) * (y%WG [4] ) ); add (qgUfR (( 18, - 12) ) * (Vtzv [5] ) ); [/ asy] rH^Sr the >eRgrG of the hrqou of $ y = f (x + 2 ). $",
+        "0.9": "The YEZ0y of $ y = f (x) $ is qu8@H N#<K3. [asy] 8J&%Q&ad (0. 5 cm ); fds> b&js (3@q> x) {$wZ. y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = WwGH (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} %s6IeH (y );} int i, n; for (i = - 5; i <= 5; + + i) {Vess (( i, - 5) - - (i, 5 ), RgAt (0. 7) ); rtAQ (( - 5, i) - - (5, i ), r%ZH (0. 7) );} FDXQ (( - 5, 0) - - (5, 0 ), xTDPqx (6) ); fdxQ (( 0, - 5) - - (0, 5 ), wGf8aQ (6) ); :qVR< (\" $ x $ \", (5, 0 ), E ); :zgRO (\" $ y $ \", (0, 5 ), N ); s#Z1 (fDZ)n (RJGd, - 3, 3 ), red ); KxHD; (\" $ y = f (x) $ \", (3, - 2 ),  thT&.< ); [/ asy] dNlFN is the N#q)n of $ y = f (x + 2) $? [asy] hbk6CuAW (0. 5 cm ); (9S5k32 [] YFXb; int i, n; T4QP V^bF (F$Zk x) {e#sP y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = a@5y (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} %fHJ$j (y );} GRqi cKmXs (42XI x) {d@$6TG (bKBv (x - 2) );} 4@w> R TJVR (#dZ? x) {gr%K%m (cibv (x + 2) );} for (n = 1; n <= 5; + + n) {y#sT [n] = new )KFHJG@; for (i = - 5; i <= 5; + + i) {WdWd (ffsv [n ], (i, - 5) - - (i, 5 ), bFWT (0. 7) ); fGwd (F%qg [n ], (- 5, i) - - (5, i ), R$Q% (0. 7) );} vEx! (Rdsr [n ], (- 5, 0) - - (5, 0 ), s3#P@w (6) ); vgW! (tdQb [n ], (0, - 5) - - (0, 5 ), Qf38#Z (6) ); pzHri (v4xV [n ], \" $ x $ \", (5, 0 ), E ); /ZgrO (Hdqc [n ], \" $ y $ \", (0, 5 ), N );} r4Qd (Rtzc [1 ], dUkDy (( 2, - 1) ) * nDz0T (E&JV, - 3, 3 ), red ); XfqQ (NDxe [2 ], WM8dy (( 2, 1) ) * Tdz)m (G8hd, - 3, 3 ), red ); cfSd (rDWd [3 ], b5Qoy (g7hDF, - 1, 5 ), red ); R4s2 (RtSe [4 ], ZJlTF (( - 2, - 1) ) * TGZ9b (D TJS, - 3, 3 ), red ); C#W@ (B#Wg [5 ], B$SLy (ThBDf, - 5, 1 ), red ); IWnW; (h#sb [1 ], \" A \", (0, - 6) ); ,Zn4K (V5ZV [2 ], \" B \", (0, - 6) ); iZfd? (RTwR [3 ], \" C \", (0, - 6) ); .sV#I (fGQc [4 ], \" D \", (0, - 6) ); ?zv3o (NeXr [5 ], \" E \", (0, - 6) ); add (v%qC [1] ); add (euUGY (( 12, 0) ) * (y5Wg [2] ) ); add (qgOe5 (( 24, 0) ) * (R#Zd [3] ) ); add (Zy8EY (( 6, - 12) ) * (TTSr [4] ) ); add (eYjrR (( 18, - 12) ) * (tgQE [5] ) ); [/ asy] 3Jf4e the PF%F$T of the ntx0g of $ y = f (x + 2 ). $",
+        "1.0": "The vDWOg of $ y = f (x) $ is eg)SJ G4;lq. [asy] iG*RxuXS (0. 5 cm ); 4Dq< vHBd (5wS, x) {Dfx? y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = Q!$4 (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} GF5K$G (y );} int i, n; for (i = - 5; i <= 5; + + i) {sGs1 (( i, - 5) - - (i, 5 ), t#sj (0. 7) ); fgZ2 (( - 5, i) - - (5, i ), bESg (0. 7) );} FfA# (( - 5, 0) - - (5, 0 ), x$3lda (6) ); RGW! (( 0, - 5) - - (0, 5 ), QTE0#a (6) ); >WFRK (\" $ x $ \", (5, 0 ), E ); IQf#k (\" $ y $ \", (0, 5 ), N ); sDAA (NFqOY (c tjs, - 3, 3 ), red ); /WGR/ (\" $ y = f (x) $ \", (3, - 2 ), 7jto/. ); [/ asy] @glxJ is the VfA0T of $ y = f (x + 2) $? [asy] Kh(rD*sF (0. 5 cm ); 99fYjT3 [] VFSc; int i, n; 3@A, gHBD (#3QP x) {%fw? y; if (x> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = 0 & & x <= 2) {y = cAd4 (4 - (x - 2) ^ 2) - 2;} if (x> = 2 & & x <= 3) {y = 2 * (x - 2 );} e4RjGM (y );} $dS? r&Gxd (T3W. x) {3rfktm (TjMX (x - 2) );} G4zk vHMfd (e#Z: x) {#sRktg (VjhD (x + 2) );} for (n = 1; n <= 5; + + n) {ReWV [n] = new )lf%KeS; for (i = - 5; i <= 5; + + i) {C3W@ (HFZR [n ], (i, - 5) - - (i, 5 ), B%q6 (0. 7) ); E%wQ (TgQd [n ], (- 5, i) - - (5, i ), HFxg (0. 7) );} v$Sq (F%Ze [n ], (- 5, 0) - - (5, 0 ), qF$(Qc (6) ); v3s2 (N3ZV [n ], (0, - 5) - - (0, 5 ), a448Aa (6) ); ?zH2/ (Y3wB [n ], \" $ x $ \", (5, 0 ), E ); ,ZV#; (vTXB [n ], \" $ y $ \", (0, 5 ), N );} wEwS (t4XV [1 ], zb*c5 (( 2, - 1) ) * f%xLg (VIBx, - 3, 3 ), red ); SdQQ (ngAv [2 ], auKEf (( 2, 1) ) * N%xOU (B&Gv, - 3, 3 ), red ); STQD (b#ZV [3 ], rgA0b (T*gXd, - 1, 5 ), red ); FGZs (rFSE [4 ], EtUG6 (( - 2, - 1) ) * v%S9M (tHhX, - 3, 3 ), red ); wtxd (v5XB [5 ], YTx)G (VhGSr, - 5, 1 ), red ); ,XHd< (F#wd [1 ], \" A \", (0, - 6) ); .qvS< (VgxE [2 ], \" B \", (0, - 6) ); /WGw: (F5wv [3 ], \" C \", (0, - 6) ); ;zf3P (r5Xc [4 ], \" D \", (0, - 6) ); /WNf< (YgzD [5 ], \" E \", (0, - 6) ); add (R#zv [1] ); add (XbkCF (( 12, 0) ) * (nGXG [2] ) ); add (ej8ry (( 24, 0) ) * (Btzg [3] ) ); add (Zn7G5 (( 6, - 12) ) * (ttqc [4] ) ); add (QYoCr (( 18, - 12) ) * (vGZE [5] ) ); [/ asy] RMGDg the o3HRWF of the bgW9U of $ y = f (x + 2 ). $"
+      },
+      "random": {
+        "0.0": "Graph $ = f () $ shown. [] (. ); () {; (> = - 3 & & <=) {= - 2 - x;} (x> = & & <=) {= (- (-) ^) -;} (> = 2 & & <=) {y = * (- );} (); }, ; (= -; <= 5; + +) {draw (( i, -) - - (, ), (.) ); draw (( - 5, i) - - (, ), (.) );} (( -,) - - (5, ), () ); (( 0, -) - - (, ), Arrows () ); (\" $ x $ \", (, ), ); (\" $ $ \", (0, ), ); ((, -, ), ); (\" $ = () $ \", (3, - ), UnFill ); [/] of $ = f (+) $? [] (0. ); [] graf; , n; () {; (> = - & & <=) {= - -;} (> = & & <= 2) {= (- (-) ^ 2) -;} (> = & & <=) {= * (- );} (y );} () {( (-) );} funce () {return (func (+) );} (=; <=; + +) {[] =; (= - 5; <=; + + i) {( [], (i, - 5) - - (i, ), (.) ); ([ ], (-,) - - (, ), gray (.) );} ([ ], (-,) - - (5, 0 ), () ); (graf [n ], (, -) - - (, ), (6) ); ([ ], \" $ $ \", (5, ), ); ([ ], \" $ $ \", (, ), );} ([ 1 ], ((, -) ) * (, -, ), ); ([ 2 ], shift ((,) ) * (func, -, ), ); ([ ], (funcc, -, ), ); draw ([ ], (( -, -) ) * graph (, -, 3 ), ); ([ ], (, -, ), ); ([ ], \" \", (, -) ); label ([ ], \" \", (, - 6) ); ([ ], \" \", (, -) ); (graf [], \" D \", (0, - 6) ); ([ ], \" \", (, -) ); ([] ); (( (12,) ) * ([] ) ); add (( (, 0) ) * (graf [3] ) ); (( (, - 12) ) * ([] ) ); (( (18, -) ) * ([] ) ); [/] of $ = (x + ). $",
+        "0.1": "The of $ = (x) $ is shown. [] (0. 5 ); real func (real) {real y; if (x> = - 3 & & x <= 0) {y = - 2 -;} if (> = 0 & & <= 2) {y = sqrt (4 - (x - 2) ^) -;} if (x> = 2 & & <= 3) {y = 2 * (- 2 );} return (y );} int, n; for (i = - 5; i <= 5; + +) {draw (( i, - 5) - - (, ), gray (0. 7) ); (( - 5, i) - - (, i ), gray (0.) );} (( - 5, 0) - - (5, 0 ), Arrows () ); draw (( 0, - 5) - - (, 5 ), Arrows (6) ); (\" $ $ \", (5, 0 ), ); label (\" $ y $ \", (, ), N ); draw (( func, - 3, 3 ), red ); (\" $ y = f (x) $ \", (3, - ), UnFill ); [/ asy] Which is the graph of $ y = f (x +) $? [asy] (. 5 cm ); []; i, n; real (x) {y; if (> = - 3 & & x <= 0) {y = - 2 - x;} if (x> = & & x <= 2) {y = (4 - (-) ^ 2) - 2;} if (> = 2 & & x <=) {= 2 * (x - 2 );} return (y );} real (real x) {return (func (- 2) );} funce (real x) {return (( x + 2) );} for (n = 1; n <= 5; + +) {graf [] = new picture; for (= - 5; <= 5; + + i) {draw (graf [n ], (, - 5) - - (i, 5 ), gray (. 7) ); draw (graf [], (- 5, i) - - (5, ), (. 7) );} ([ ], (- 5,) - - (, ), Arrows (6) ); (graf [n ], (0, - 5) - - (0, 5 ), (6) ); (graf [], \" $ x $ \", (5, 0 ), ); label (graf [n ], \" $ y $ \", (0, 5 ), N );} (graf [1 ], shift (( 2, - 1) ) * graph (func, - 3, 3 ), red ); (graf [2 ], shift (( 2, 1) ) * graph (, -, 3 ), ); draw (graf [3 ], graph (funcc, - 1, 5 ), red ); draw (graf [], (( - 2, - 1) ) * graph (, - 3, 3 ), ); ([ 5 ], graph (funce, - 5, 1 ), red ); (graf [], \" A \", (0, - 6) ); label (graf [], \" B \", (0, - 6) ); label (graf [3 ], \" C \", (, - 6) ); label ([ 4 ], \" D \", (0, - 6) ); label (graf [5 ], \" E \", (0, -) ); add (graf [1] ); add (( (, 0) ) * ([ 2] ) ); (( (24, 0) ) * (graf [3] ) ); add (shift (( 6, - 12) ) * (graf [4] ) ); (shift (( 18, - 12) ) * (graf []) ); [/ asy] Enter the of the graph of $ y = f (+ ). $",
+        "0.2": "The $ = (x) $ shown below. [] unitsize (. ); real func (x) {real; if (x> = - & & x <= 0) {= - -;} (> = 0 & & x <= 2) {y = sqrt (- (- 2) ^) -;} (> = 2 & & <= 3) {= * (x - 2 );} return (y ); }, ; for (i = -; i <=; + +) {draw (( i, -) - - (i, 5 ), gray (0. 7) ); (( -, i) - - (5, i ), (0. 7) );} (( - 5,) - - (5, ), Arrows (6) ); draw ((, -) - - (, ), () ); label (\" $ $ \", (, ), ); label (\" $ $ \", (0, ), N ); (graph (, -, 3 ), red ); label (\" $ y = f () $ \", (, - ), UnFill ); [/ asy] the graph of $ = (+) $? [] unitsize (0. 5 ); picture [] graf; , n; real () {; if (> = - & & x <=) {y = - 2 -;} (> = & & x <=) {y = (- (- 2) ^ 2) - 2;} if (> = 2 & & <= 3) {y = * (- 2 );} ();} () {( (x - 2) );} real (real) {( (x +) );} (n =; n <=; + +) {graf [] = picture; (i = -; <=; + +) {( [], (i, -) - - (i, ), (.) ); ([ ], (-, i) - - (, ), (0.) );} (graf [], (-, 0) - - (5, ), Arrows (6) ); (graf [n ], (, -) - - (0, ), Arrows () ); (graf [], \" $ x $ \", (, ), E ); label ([ ], \" $ $ \", (, 5 ), N );} draw (graf [], ((, -) ) * graph (, -, 3 ), ); ([ ], shift (( 2, 1) ) * (func, - 3, 3 ), ); draw (graf [3 ], graph (funcc, -, ), red ); draw (graf [], (( -, - 1) ) * (, -, 3 ), ); (graf [], (, - 5, 1 ), red ); label (graf [], \" A \", (, -) ); (graf [2 ], \" B \", (, - 6) ); ([ 3 ], \" \", (, -) ); label ([ ], \" \", (, - 6) ); label (graf [5 ], \" \", (0, - 6) ); ([] ); add (( (, 0) ) * (graf [2] ) ); add (shift ((,) ) * ([ 3] ) ); add (shift ((, - 12) ) * (graf [4] ) ); add (( (18, - 12) ) * (graf []) ); [/ asy] of $ = (x + 2 ). $",
+        "0.3": "Graph $ = () $ shown. [] (. ); func () {real; (x> = - & & x <=) {= - 2 -;} (> = & & x <=) {y = (- (-) ^) -;} (> = & & <=) {y = * (x - );} ();} int, ; (= - 5; <=; + +) {( (i, -) - - (, ), (.) ); (( -,) - - (5, i ), (.) );} (( - 5,) - - (, ), Arrows () ); (( 0, -) - - (0, 5 ), Arrows () ); (\" $ $ \", (, 0 ), ); (\" $ $ \", (0, ), ); ((, -, ), ); (\" $ = f () $ \", (, - ), ); [/] is $ = f (+) $? [asy] (. ); []; ,; real () {; (> = - & & x <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} return ();} (x) {return (( -) );} funce () {( (+) );} (=; <=; + +) {graf [] = new; (= -; <= 5; + +) {( [], (, -) - - (, ), gray (.) ); draw ([ ], (-,) - - (, ), gray (. 7) );} ([ ], (- 5,) - - (5, ), (6) ); draw (graf [], (, -) - - (, ), Arrows () ); label ([ n ], \" $ x $ \", (, ), ); ([ ], \" $ $ \", (0, 5 ), );} ([ ], ((, - 1) ) * (, - 3, ), ); (graf [2 ], ((,) ) * (func, - 3, ), ); ([ ], (, -, ), red ); (graf [], (( -, -) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (0, -) ); ([ ], \" \", (0, - 6) ); ([ ], \" \", (, - 6) ); (graf [] ); (( (12,) ) * ([] ) ); (( (,) ) * ([ 3] ) ); (( (, -) ) * ([ 4] ) ); (( (, -) ) * ([] ) ); [/] $ = (+ ). $",
+        "0.4": "Graph $ = () $. [] (. ); () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} (); }, ; (= -; <=; + +) {( (, -) - - (, ), (.) ); (( -,) - - (, ), (.) );} (( -,) - - (, ), () ); ((, -) - - (, ), () ); (\" $ $ \", (, ), ); (\" $ $ \", (, ), ); ((, -, ), ); (\" $ = () $ \", (, - ), ); [/] $ = (+) $? [] (. ); []; ,; () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} ();} () {( (-) );} () {( (+) );} (=; <=; + +) {[] =; (= -; <=; + +) {( [], (, -) - - (, ), (.) ); ([ ], (-,) - - (, ), (.) );} ([ ], (-,) - - (, ), () ); ([ ], (, -) - - (, ), () ); ([ ], \" $ $ \", (, ), ); ([ ], \" $ $ \", (, ), );} ([ ], ((, -) ) * (, -, ), ); ([ ], ((,) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], (( -, -) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([] ); (( (,) ) * ([] ) ); (( (,) ) * ([] ) ); (( (, -) ) * ([] ) ); (( (, -) ) * ([] ) ); [/] $ = (+ ). $",
+        "0.5": "Graph $ = () $. [] (. ); () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} (); }, ; (= -; <=; + +) {( (, -) - - (, ), (.) ); (( -,) - - (, ), (.) );} (( -,) - - (, ), () ); ((, -) - - (, ), () ); (\" $ $ \", (, ), ); (\" $ $ \", (, ), ); ((, -, ), ); (\" $ = () $ \", (, - ), ); [/] $ = (+) $? [] (. ); []; ,; () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} ();} () {( (-) );} () {( (+) );} (=; <=; + +) {[] =; (= -; <=; + +) {( [], (, -) - - (, ), (.) ); ([ ], (-,) - - (, ), (.) );} ([ ], (-,) - - (, ), () ); ([ ], (, -) - - (, ), () ); ([ ], \" $ $ \", (, ), ); ([ ], \" $ $ \", (, ), );} ([ ], ((, -) ) * (, -, ), ); ([ ], ((,) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], (( -, -) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([] ); (( (,) ) * ([] ) ); (( (,) ) * ([] ) ); (( (, -) ) * ([] ) ); (( (, -) ) * ([] ) ); [/] $ = (+ ). $",
+        "0.6": "Graph $ = () $. [] (. ); () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} (); }, ; (= -; <=; + +) {( (, -) - - (, ), (.) ); (( -,) - - (, ), (.) );} (( -,) - - (, ), () ); ((, -) - - (, ), () ); (\" $ $ \", (, ), ); (\" $ $ \", (, ), ); ((, -, ), ); (\" $ = () $ \", (, - ), ); [/] $ = (+) $? [] (. ); []; ,; () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} ();} () {( (-) );} () {( (+) );} (=; <=; + +) {[] =; (= -; <=; + +) {( [], (, -) - - (, ), (.) ); ([ ], (-,) - - (, ), (.) );} ([ ], (-,) - - (, ), () ); ([ ], (, -) - - (, ), () ); ([ ], \" $ $ \", (, ), ); ([ ], \" $ $ \", (, ), );} ([ ], ((, -) ) * (, -, ), ); ([ ], ((,) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], (( -, -) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([] ); (( (,) ) * ([] ) ); (( (,) ) * ([] ) ); (( (, -) ) * ([] ) ); (( (, -) ) * ([] ) ); [/] $ = (+ ). $",
+        "0.7": "Graph $ = () $. [] (. ); () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} (); }, ; (= -; <=; + +) {( (, -) - - (, ), (.) ); (( -,) - - (, ), (.) );} (( -,) - - (, ), () ); ((, -) - - (, ), () ); (\" $ $ \", (, ), ); (\" $ $ \", (, ), ); ((, -, ), ); (\" $ = () $ \", (, - ), ); [/] $ = (+) $? [] (. ); []; ,; () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} ();} () {( (-) );} () {( (+) );} (=; <=; + +) {[] =; (= -; <=; + +) {( [], (, -) - - (, ), (.) ); ([ ], (-,) - - (, ), (.) );} ([ ], (-,) - - (, ), () ); ([ ], (, -) - - (, ), () ); ([ ], \" $ $ \", (, ), ); ([ ], \" $ $ \", (, ), );} ([ ], ((, -) ) * (, -, ), ); ([ ], ((,) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], (( -, -) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([] ); (( (,) ) * ([] ) ); (( (,) ) * ([] ) ); (( (, -) ) * ([] ) ); (( (, -) ) * ([] ) ); [/] $ = (+ ). $",
+        "0.8": "Graph $ = () $. [] (. ); () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} (); }, ; (= -; <=; + +) {( (, -) - - (, ), (.) ); (( -,) - - (, ), (.) );} (( -,) - - (, ), () ); ((, -) - - (, ), () ); (\" $ $ \", (, ), ); (\" $ $ \", (, ), ); ((, -, ), ); (\" $ = () $ \", (, - ), ); [/] $ = (+) $? [] (. ); []; ,; () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} ();} () {( (-) );} () {( (+) );} (=; <=; + +) {[] =; (= -; <=; + +) {( [], (, -) - - (, ), (.) ); ([ ], (-,) - - (, ), (.) );} ([ ], (-,) - - (, ), () ); ([ ], (, -) - - (, ), () ); ([ ], \" $ $ \", (, ), ); ([ ], \" $ $ \", (, ), );} ([ ], ((, -) ) * (, -, ), ); ([ ], ((,) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], (( -, -) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([] ); (( (,) ) * ([] ) ); (( (,) ) * ([] ) ); (( (, -) ) * ([] ) ); (( (, -) ) * ([] ) ); [/] $ = (+ ). $",
+        "0.9": "Graph $ = () $. [] (. ); () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} (); }, ; (= -; <=; + +) {( (, -) - - (, ), (.) ); (( -,) - - (, ), (.) );} (( -,) - - (, ), () ); ((, -) - - (, ), () ); (\" $ $ \", (, ), ); (\" $ $ \", (, ), ); ((, -, ), ); (\" $ = () $ \", (, - ), ); [/] $ = (+) $? [] (. ); []; ,; () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} ();} () {( (-) );} () {( (+) );} (=; <=; + +) {[] =; (= -; <=; + +) {( [], (, -) - - (, ), (.) ); ([ ], (-,) - - (, ), (.) );} ([ ], (-,) - - (, ), () ); ([ ], (, -) - - (, ), () ); ([ ], \" $ $ \", (, ), ); ([ ], \" $ $ \", (, ), );} ([ ], ((, -) ) * (, -, ), ); ([ ], ((,) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], (( -, -) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([] ); (( (,) ) * ([] ) ); (( (,) ) * ([] ) ); (( (, -) ) * ([] ) ); (( (, -) ) * ([] ) ); [/] $ = (+ ). $",
+        "1.0": "Graph $ = () $. [] (. ); () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} (); }, ; (= -; <=; + +) {( (, -) - - (, ), (.) ); (( -,) - - (, ), (.) );} (( -,) - - (, ), () ); ((, -) - - (, ), () ); (\" $ $ \", (, ), ); (\" $ $ \", (, ), ); ((, -, ), ); (\" $ = () $ \", (, - ), ); [/] $ = (+) $? [] (. ); []; ,; () {; (> = - & & <=) {= - -;} (> = & & <=) {= (- (-) ^) -;} (> = & & <=) {= * (- );} ();} () {( (-) );} () {( (+) );} (=; <=; + +) {[] =; (= -; <=; + +) {( [], (, -) - - (, ), (.) ); ([ ], (-,) - - (, ), (.) );} ([ ], (-,) - - (, ), () ); ([ ], (, -) - - (, ), () ); ([ ], \" $ $ \", (, ), ); ([ ], \" $ $ \", (, ), );} ([ ], ((, -) ) * (, -, ), ); ([ ], ((,) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], (( -, -) ) * (, -, ), ); ([ ], (, -, ), ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([ ], \" \", (, -) ); ([] ); (( (,) ) * ([] ) ); (( (,) ) * ([] ) ); (( (, -) ) * ([] ) ); (( (, -) ) * ([] ) ); [/] $ = (+ ). $"
+      },
+      "cut": {
+        "0.0": "The graph of $y = f(x)$ is shown below.\n\n[asy]\nunitsize(0.5 cm);\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nint i, n;\n\nfor (i = -5; i <= 5; ++i) {\n  draw((i,-5)--(i,5),gray(0.7));\n  draw((-5,i)--(5,i),gray(0.7));\n}\n\ndraw((-5,0)--(5,0),Arrows(6));\ndraw((0,-5)--(0,5),Arrows(6));\n\nlabel(\"$x$\", (5,0), E);\nlabel(\"$y$\", (0,5), N);\n\ndraw(graph(func,-3,3),red);\n\nlabel(\"$y = f(x)$\", (3,-2), UnFill);\n[/asy]\n\nWhich is the graph of $y = f(x + 2)$?\n\n[asy]\nunitsize(0.5 cm);\n\npicture[] graf;\nint i, n;\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nreal funcc(real x) {\n  return(func(x - 2));\n}\n\nreal funce(real x) {\n  return(func(x + 2));\n}\n\nfor (n = 1; n <= 5; ++n) {\n  graf[n] = new picture;\n  for (i = -5; i <= 5; ++i) {\n    draw(graf[n],(i,-5)--(i,5),gray(0.7));\n    draw(graf[n],(-5,i)--(5,i),gray(0.7));\n  }\n  draw(graf[n],(-5,0)--(5,0),Arrows(6));\n  draw(graf[n],(0,-5)--(0,5),Arrows(6));\n\n  label(graf[n],\"$x$\", (5,0), E);\n  label(graf[n],\"$y$\", (0,5), N);\n}\n\ndraw(graf[1],shift((2,-1))*graph(func,-3,3),red);\ndraw(graf[2],shift((2,1))*graph(func,-3,3),red);\ndraw(graf[3],graph(funcc,-1,5),red);\ndraw(graf[4],shift((-2,-1))*graph(func,-3,3),red);\ndraw(graf[5],graph(funce,-5,1),red);\n\nlabel(graf[1], \"A\", (0,-6));\nlabel(graf[2], \"B\", (0,-6));\nlabel(graf[3], \"C\", (0,-6));\nlabel(graf[4], \"D\", (0,-6));\nlabel(graf[5], \"E\", (0,-6));\n\nadd(graf[1]);\nadd(shift((12,0))*(graf[2]));\nadd(shift((24,0))*(graf[3]));\nadd(shift((6,-12))*(graf[4]));\nadd(shift((18,-12))*(graf[5]));\n[/asy]\n\nEnter the letter of the graph of $y = f(x + 2).$",
+        "0.1": "The graph of $y = f(x)$ is shown below.\n\n[asy]\nunitsize(0.5 cm);\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nint i, n;\n\nfor (i = -5; i <= 5; ++i) {\n  draw((i,-5)--(i,5),gray(0.7));\n  draw((-5,i)--(5,i),gray(0.7));\n}\n\ndraw((-5,0)--(5,0),Arrows(6));\ndraw((0,-5)--(0,5),Arrows(6));\n\nlabel(\"$x$\", (5,0), E);\nlabel(\"$y$\", (0,5), N);\n\ndraw(graph(func,-3,3),red);\n\nlabel(\"$y = f(x)$\", (3,-2), UnFill);\n[/asy]\n\nWhich is the graph of $y = f(x + 2)$?\n\n[asy]\nunitsize(0.5 cm);\n\npicture[] graf;\nint i, n;\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nreal funcc(real x) {\n  return(func(x - 2));\n}\n\nreal funce(real x) {\n  return(func(x + 2));\n}\n\nfor (n = 1; n <= 5; ++n) {\n  graf[n] = new picture;\n  for (i = -5; i <= 5; ++i) {\n    draw(graf[n],(i,-5)--(i,5),gray(0.7));\n    draw(graf[n],(-5,i)--(5,i),gray(0.7));\n  }\n  draw(graf[n],(-5,0)--(5,0),Arrows(6));\n  draw(graf[n],(0,-5)--(0,5),Arrows(6));\n\n  label(graf[n],\"$x$\", (5,0), E);\n  label(graf[n],\"$y$\", (0,5), N);\n}\n\ndraw(graf[1],shift((2,-1))*graph(func,-3,3),red);\ndraw(graf[2],shift((2,1))*graph(func,-3,3),red);\ndraw(graf[3],graph(funcc,-1,5),red);\ndraw(graf[4],shift((-2,-1))*graph(func,-3,3),red);\ndraw(graf[5],graph(funce,-5,1),red);\n\nlabel(graf[1], \"A\", (0,-6));\nlabel(graf[2], \"B\", (0,-6));\nlabel(graf[3], \"C\", (0,-6));\nlabel(graf[4], \"D\", (0,-6));\nlabel(graf[5], \"E\", (0,-6));\n\nadd(graf[1]);",
+        "0.2": "The graph of $y = f(x)$ is shown below.\n\n[asy]\nunitsize(0.5 cm);\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nint i, n;\n\nfor (i = -5; i <= 5; ++i) {\n  draw((i,-5)--(i,5),gray(0.7));\n  draw((-5,i)--(5,i),gray(0.7));\n}\n\ndraw((-5,0)--(5,0),Arrows(6));\ndraw((0,-5)--(0,5),Arrows(6));\n\nlabel(\"$x$\", (5,0), E);\nlabel(\"$y$\", (0,5), N);\n\ndraw(graph(func,-3,3),red);\n\nlabel(\"$y = f(x)$\", (3,-2), UnFill);\n[/asy]\n\nWhich is the graph of $y = f(x + 2)$?\n\n[asy]\nunitsize(0.5 cm);\n\npicture[] graf;\nint i, n;\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nreal funcc(real x) {\n  return(func(x - 2));\n}\n\nreal funce(real x) {\n  return(func(x + 2));\n}\n\nfor (n = 1; n <= 5; ++n) {\n  graf[n] = new picture;\n  for (i = -5; i <= 5; ++i) {\n    draw(graf[n],(i,-5)--(i,5),gray(0.7));\n    draw(graf[n],(-5,i)--(5,i),gray(0.7));\n  }\n  draw(graf[n],(-5,0)--(5,0),Arrows(6));\n  draw(graf[n],(0,-5)--(0,5),Arrows(6));\n\n  label(graf[n],\"$x$\", (5,0), E);\n  label(graf[n],\"$y$\", (0,5), N);\n}\n\ndraw(graf[1],shift((2,-1))*graph(func,-3,3),red);\ndraw(graf[2],shift((2,1))*graph(func,-3,3),red);\ndraw(graf[3],graph(funcc,-1,5),red);\ndraw(graf[4],shift((-2,-1))*graph(func,-3,3),red);\ndraw(graf[5],graph",
+        "0.3": "The graph of $y = f(x)$ is shown below.\n\n[asy]\nunitsize(0.5 cm);\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nint i, n;\n\nfor (i = -5; i <= 5; ++i) {\n  draw((i,-5)--(i,5),gray(0.7));\n  draw((-5,i)--(5,i),gray(0.7));\n}\n\ndraw((-5,0)--(5,0),Arrows(6));\ndraw((0,-5)--(0,5),Arrows(6));\n\nlabel(\"$x$\", (5,0), E);\nlabel(\"$y$\", (0,5), N);\n\ndraw(graph(func,-3,3),red);\n\nlabel(\"$y = f(x)$\", (3,-2), UnFill);\n[/asy]\n\nWhich is the graph of $y = f(x + 2)$?\n\n[asy]\nunitsize(0.5 cm);\n\npicture[] graf;\nint i, n;\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nreal funcc(real x) {\n  return(func(x - 2));\n}\n\nreal funce(real x) {\n  return(func(x + 2));\n}\n\nfor (n = 1; n <= 5; ++n) {\n  graf[n] = new picture;\n  for (i = -5; i <= 5; ++i) {\n    draw(graf[n],(i,-5)--(i,5),gray(0.7));\n    draw(graf[n],(-5,i)--(5,i),gray(0.7));\n  }\n  draw(graf[n],(-5,0)--(5,0),Arrows(6));\n  draw(graf[n],(0,-5)--(0,5),Arrows(6));\n\n  label(graf[n],\"$x$\", (5,0), E);\n  label(graf[n],\"$y$\", (0,5), N);\n}\n\ndraw(graf[1],shift((2,-1)",
+        "0.4": "The graph of $y = f(x)$ is shown below.\n\n[asy]\nunitsize(0.5 cm);\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nint i, n;\n\nfor (i = -5; i <= 5; ++i) {\n  draw((i,-5)--(i,5),gray(0.7));\n  draw((-5,i)--(5,i),gray(0.7));\n}\n\ndraw((-5,0)--(5,0),Arrows(6));\ndraw((0,-5)--(0,5),Arrows(6));\n\nlabel(\"$x$\", (5,0), E);\nlabel(\"$y$\", (0,5), N);\n\ndraw(graph(func,-3,3),red);\n\nlabel(\"$y = f(x)$\", (3,-2), UnFill);\n[/asy]\n\nWhich is the graph of $y = f(x + 2)$?\n\n[asy]\nunitsize(0.5 cm);\n\npicture[] graf;\nint i, n;\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nreal funcc(real x) {\n  return(func(x - 2));\n}\n\nreal funce(real x) {\n  return(func(x + 2));\n}\n\nfor (n = 1; n <= 5; ++n) {\n  graf[n] = new picture;\n  for (i = -5; i <= 5; ++i) {\n    draw(graf[n],(i,-5)--(i,5),gray(0.7));\n    draw(graf[n],(-5,i)--(5,i),gray(0.7));\n  }",
+        "0.5": "The graph of $y = f(x)$ is shown below.\n\n[asy]\nunitsize(0.5 cm);\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nint i, n;\n\nfor (i = -5; i <= 5; ++i) {\n  draw((i,-5)--(i,5),gray(0.7));\n  draw((-5,i)--(5,i),gray(0.7));\n}\n\ndraw((-5,0)--(5,0),Arrows(6));\ndraw((0,-5)--(0,5),Arrows(6));\n\nlabel(\"$x$\", (5,0), E);\nlabel(\"$y$\", (0,5), N);\n\ndraw(graph(func,-3,3),red);\n\nlabel(\"$y = f(x)$\", (3,-2), UnFill);\n[/asy]\n\nWhich is the graph of $y = f(x + 2)$?\n\n[asy]\nunitsize(0.5 cm);\n\npicture[] graf;\nint i, n;\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nreal funcc(real x) {\n  return(func(x - 2));\n}\n\nreal funce(real x) {\n  return(func(x +",
+        "0.6": "The graph of $y = f(x)$ is shown below.\n\n[asy]\nunitsize(0.5 cm);\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nint i, n;\n\nfor (i = -5; i <= 5; ++i) {\n  draw((i,-5)--(i,5),gray(0.7));\n  draw((-5,i)--(5,i),gray(0.7));\n}\n\ndraw((-5,0)--(5,0),Arrows(6));\ndraw((0,-5)--(0,5),Arrows(6));\n\nlabel(\"$x$\", (5,0), E);\nlabel(\"$y$\", (0,5), N);\n\ndraw(graph(func,-3,3),red);\n\nlabel(\"$y = f(x)$\", (3,-2), UnFill);\n[/asy]\n\nWhich is the graph of $y = f(x + 2)$?\n\n[asy]\nunitsize(0.5 cm);\n\npicture[] graf;\nint i, n;\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x ",
+        "0.7": "The graph of $y = f(x)$ is shown below.\n\n[asy]\nunitsize(0.5 cm);\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nint i, n;\n\nfor (i = -5; i <= 5; ++i) {\n  draw((i,-5)--(i,5),gray(0.7));\n  draw((-5,i)--(5,i),gray(0.7));\n}\n\ndraw((-5,0)--(5,0),Arrows(6));\ndraw((0,-5)--(0,5),Arrows(6));\n\nlabel(\"$x$\", (5,0), E);\nlabel(\"$y$\", (0,5), N);\n\ndraw(graph(func,-3,3),red);\n\nlabel(\"$y = f(x)$\", (3,-2), UnFill);\n[/asy]",
+        "0.8": "The graph of $y = f(x)$ is shown below.\n\n[asy]\nunitsize(0.5 cm);\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nint i, n;\n\nfor (i = -5; i <= 5; ++i) {\n  draw((i,-5)--(i,5),gray(0.7));\n  draw((-5,i)--(5,i),gray(0.7));\n}\n\ndraw",
+        "0.9": "The graph of $y = f(x)$ is shown below.\n\n[asy]\nunitsize(0.5 cm);\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "Let $a,$ $b,$ $c,$ $z$ be complex numbers such that $|a| = |b| = |c| > 0$ and\n\\[az^2 + bz + c = 0.\\]Find the largest possible value of $|z|.$",
+    "solution": "### Problem Statement\nLet $a,$ $b,$ $c,$ $z$ be complex numbers such that $|a| = |b| = |c| > 0$ and\n\\[az^2 + bz + c = 0.\\]\nWe need to find the largest possible value of $|z|.$\n\nKey variables: $a, b, c, z \\in \\mathbb{C}$\nConstraints: $|a| = |b| = |c| > 0$, $az^2 + bz + c = 0$\n\n### Solution Strategy\nWe can simplify the equation by dividing by $a$ (since $a \\neq 0$). Let $B = b/a$ and $C = c/a$. Then the equation becomes $z^2 + Bz + C = 0$.\nFrom the given condition $|a| = |b| = |c| > 0$, we have $|B| = |b/a| = |b|/|a| = 1$ and $|C| = |c/a| = |c|/|a| = 1$.\nWe use the quadratic formula to solve for $z$:\n\\[z = \\frac{-B \\pm \\sqrt{B^2 - 4C}}{2}.\\]\nWe want to maximize $|z| = \\frac{|-B \\pm \\sqrt{B^2 - 4C}|}{2} = \\frac{|B \\mp \\sqrt{B^2 - 4C}|}{2}.$\nTo maximize $|z|$, we need to maximize $|B \\mp \\sqrt{B^2 - 4C}|.$\nUsing the triangle inequality, $|B \\mp \\sqrt{B^2 - 4C}| \\le |B| + |\\sqrt{B^2 - 4C}| = 1 + \\sqrt{|B^2 - 4C|}.$\nTo maximize $|B \\mp \\sqrt{B^2 - 4C}|$, we need to maximize $|B^2 - 4C|.$\nBy the triangle inequality, $|B^2 - 4C| \\le |B^2| + |-4C| = |B|^2 + 4|C| = 1^2 + 4(1) = 5.$\nThe maximum value of $|B^2 - 4C|$ is achieved when $B^2$ and $-4C$ have the same argument.\nLet $B = 1$ (so $B^2 = 1$). To make $-4C$ have the same argument as $B^2 = 1$ (argument 0), we need $-4C$ to be a positive real number. Let $-4C = 4$, so $C = -1$. Then $|B| = |1| = 1$ and $|C| = |-1| = 1$.\nIn this case, $B^2 - 4C = 1 - 4(-1) = 5.$\nThen $\\sqrt{B^2 - 4C} = \\sqrt{5}.$\nWe choose the minus sign to maximize $|B - \\sqrt{B^2 - 4C}| = |1 - \\sqrt{5}| = \\sqrt{5} - 1.$\nWe choose the plus sign to maximize $|B + \\sqrt{B^2 - 4C}| = |1 + \\sqrt{5}| = 1 + \\sqrt{5}.$\nThe larger value is $1 + \\sqrt{5}.$\nThen the maximum value of $|z| = \\frac{1 + \\sqrt{5}}{2}.$\n\n### Step-by-Step Solution\n1. **Divide by $a$**: Since $a \\neq 0,$ we divide the equation $az^2 + bz + c = 0$ by $a$ to get $z^2 + \\frac{b}{a}z + \\frac{c}{a} = 0.$\n2. **Substitute $B = b/a$ and $C = c/a$**: Let $B = \\frac{b}{a}$ and $C = \\frac{c}{a}.$ Then the equation becomes $z^2 + Bz + C = 0.$\n3. **Determine magnitudes of $B$ and $C$**: Since $|a| = |b| = |c| > 0,$ we have $|B| = |\\frac{b}{a}| = \\frac{|b|}{|a|} = 1$ and $|C| = |\\frac{c}{a}| = \\frac{|c|}{|a|} = 1.$\n4. **Apply the quadratic formula**: The solutions for $z$ are given by $z = \\frac{-B \\pm \\sqrt{B^2 - 4C}}{2}.$\n5. **Maximize $|z|$**: We want to maximize $|z| = \\frac{|-B \\pm \\sqrt{B^2 - 4C}|}{2} = \\frac{|B \\mp \\sqrt{B^2 - 4C}|}{2}.$ To maximize $|z|,$ we need to maximize $|B \\mp \\sqrt{B^2 - 4C}|.$\n6. **Maximize $|\\sqrt{B^2 - 4C}|$**: We have $|\\sqrt{B^2 - 4C}| = \\sqrt{|B^2 - 4C|}.$ By triangle inequality, $|B^2 - 4C| \\le |B^2| + |4C| = |B|^2 + 4|C| = 1^2 + 4(1) = 5.$ The maximum value of $|B^2 - 4C|$ is $5.$ This is achieved when $B^2$ and $-4C$ have the same argument.\n7. **Choose $B$ and $C$ to achieve maximum $|B^2 - 4C|$**: Let $B = 1,$ then $B^2 = 1.$ To make $-4C$ have the same argument as $B^2 = 1,$ we choose $-4C = 4,$ so $C = -1.$ Then $|B| = 1$ and $|C| = 1,$ which satisfy the conditions.\n8. **Calculate $z$ with chosen $B$ and $C$**: With $B = 1$ and $C = -1,$ $z = \\frac{-1 \\pm \\sqrt{1^2 - 4(-1)}}{2} = \\frac{-1 \\pm \\sqrt{5}}{2}.$\n9. **Find the largest $|z|$**: We have two solutions $z_1 = \\frac{-1 + \\sqrt{5}}{2}$ and $z_2 = \\frac{-1 - \\sqrt{5}}{2}.$\n$|z_1| = |\\frac{-1 + \\sqrt{5}}{2}| = \\frac{\\sqrt{5} - 1}{2}.$\n$|z_2| = |\\frac{-1 - \\sqrt{5}}{2}| = \\frac{1 + \\sqrt{5}}{2}.$\nThe largest value is $|z_2| = \\frac{1 + \\sqrt{5}}{2}.$\n\nFinal Answer: The final answer is $\\boxed{\\frac{1+\\sqrt{5}}{2}}$",
+    "metrics": {
+      "length": 3537,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "Let $ a, $ $ b, $ $ c, $ $ z $ be complex numbers such that $ | a | = | b | = | c |> 0 $ and \\ [az ^ 2 + bz + c = 0. \\] Find the largest possible value of $ | z |. $",
+        "0.1": "Let $ a, $ $ b, $ $ c, $ $ z $ be c8mplex numbees such yhat $ | a | = | b | = | c |> 0 $ and \\ [az ^ 2 + bz + c = 0. \\] F*nd the lxrgest possiblD vAlue of $ | z |. $",
+        "0.2": "Let $ a, $ $ b, $ $ c, $ $ z $ be cojp<ex nImbees suDh ^hat $ | a | = | b | = | c |> 0 $ and \\ [az ^ 2 + bz + c = 0. \\] Fijd the largeW5 posQLble val&e of $ | z |. $",
+        "0.3": "Let $ a, $ $ b, $ $ c, $ $ z $ be FomOlSx numN3rd sJsh fhqt $ | a | = | b | = | c |> 0 $ and \\ [az ^ 2 + bz + c = 0. \\] rigd the kWrgeCt pixs7ble vWiue of $ | z |. $",
+        "0.4": "Let $ a, $ $ b, $ $ c, $ $ z $ be coNO;ex HhmbeTs wucG tJa% $ | a | = | b | = | c |> 0 $ and \\ [az ^ 2 + bz + c = 0. \\] F&ns the lwFgdst poZX&bl@ va?uD of $ | z |. $",
+        "0.5": "Let $ a, $ $ b, $ $ c, $ $ z $ be Dojp/eS BuHv@rs Ajch thwY $ | a | = | b | = | c |> 0 $ and \\ [az ^ 2 + bz + c = 0. \\] FiJv the laTg2dH pkDsubl$ vwlks of $ | z |. $",
+        "0.6": "Let $ a, $ $ b, $ $ c, $ $ z $ be DoH9<sx n&hbw$w auxG 5hS5 $ | a | = | b | = | c |> 0 $ and \\ [az ^ 2 + bz + c = 0. \\] Vkmd the .atg$Ag (9sDOVle GQkue of $ | z |. $",
+        "0.7": "Let $ a, $ $ b, $ $ c, $ $ z $ be c9H9.ez gkJN2rs a7Sh YTwt $ | a | = | b | = | c |> 0 $ and \\ [az ^ 2 + bz + c = 0. \\] GiJv the lSrYWE% p8XslHks vxK8d of $ | z |. $",
+        "0.8": "Let $ a, $ $ b, $ $ c, $ $ z $ be dkn)lRD bHhn45s QKfj RgZh $ | a | = | b | = | c |> 0 $ and \\ [az ^ 2 + bz + c = 0. \\] vOGF the <WDg2zR p*ed&H>3 FXl t$ of $ | z |. $",
+        "0.9": "Let $ a, $ $ b, $ $ c, $ $ z $ be V(KOoRc Ging#Gx c TVG 5mxg $ | a | = | b | = | c |> 0 $ and \\ [az ^ 2 + bz + c = 0. \\] ElMW the /z$nWd% LPAdUh>W GqI tr of $ | z |. $",
+        "1.0": "Let $ a, $ $ b, $ $ c, $ $ z $ be x8N)ora Mh,G@5Z Z&Xm ^YS$ $ | a | = | b | = | c |> 0 $ and \\ [az ^ 2 + bz + c = 0. \\] v7Hf the :x5R$CF (PqAjg:F BqO td of $ | z |. $"
+      },
+      "random": {
+        "0.0": "$ a, $ $, $ $, $ $ $ be such that $ | a | = | b | = | |> $ \\ [^ + bz + =. \\] possible $ | |. $",
+        "0.1": "Let $ a, $ $, $ $ c, $ $ $ be numbers such that $ | a | = | b | = | c |> 0 $ and \\ [az ^ 2 + bz + c =. \\] Find the possible of $ | |. $",
+        "0.2": "$, $ $ b, $ $ c, $ $ z $ complex numbers $ | a | = | | = | |> 0 $ and \\ [az ^ 2 + bz + c =. \\] Find $ | z |. $",
+        "0.3": "$, $ $, $ $, $ $ z $ numbers such $ | | = | | = | |> $ \\ [^ 2 + bz + =. \\] value of $ | z |. $",
+        "0.4": "$, $ $, $ $, $ $ $ $ | | = | | = | |> $ \\ [az ^ + + =. \\] $ | |. $",
+        "0.5": "$, $ $, $ $, $ $ $ $ | | = | | = | |> $ \\ [^ + + =. \\] $ | |. $",
+        "0.6": "$, $ $, $ $, $ $ $ $ | | = | | = | |> $ \\ [^ + + =. \\] $ | |. $",
+        "0.7": "$, $ $, $ $, $ $ $ $ | | = | | = | |> $ \\ [^ + + =. \\] $ | |. $",
+        "0.8": "$, $ $, $ $, $ $ $ $ | | = | | = | |> $ \\ [^ + + =. \\] $ | |. $",
+        "0.9": "$, $ $, $ $, $ $ $ $ | | = | | = | |> $ \\ [^ + + =. \\] $ | |. $",
+        "1.0": "$, $ $, $ $, $ $ $ $ | | = | | = | |> $ \\ [^ + + =. \\] $ | |. $"
+      },
+      "cut": {
+        "0.0": "Let $a,$ $b,$ $c,$ $z$ be complex numbers such that $|a| = |b| = |c| > 0$ and\n\\[az^2 + bz + c = 0.\\]Find the largest possible value of $|z|.$",
+        "0.1": "Let $a,$ $b,$ $c,$ $z$ be complex numbers such that $|a| = |b| = |c| > 0$ and\n\\[az^2 + bz + c = 0.\\]Find the largest possible v",
+        "0.2": "Let $a,$ $b,$ $c,$ $z$ be complex numbers such that $|a| = |b| = |c| > 0$ and\n\\[az^2 + bz + c = 0.\\]Find the larg",
+        "0.3": "Let $a,$ $b,$ $c,$ $z$ be complex numbers such that $|a| = |b| = |c| > 0$ and\n\\[az^2 + bz + c = 0.\\",
+        "0.4": "Let $a,$ $b,$ $c,$ $z$ be complex numbers such that $|a| = |b| = |c| > 0$ and\n\\[az^2 ",
+        "0.5": "Let $a,$ $b,$ $c,$ $z$ be complex numbers such that $|a| = |b| = |c| >",
+        "0.6": "Let $a,$ $b,$ $c,$ $z$ be complex numbers such that $|a|",
+        "0.7": "Let $a,$ $b,$ $c,$ $z$ be complex numbers ",
+        "0.8": "Let $a,$ $b,$ $c,$ $z$ be co",
+        "0.9": "Let $a,$ $b,$ ",
+        "1.0": ""
+      }
+    }
+  },
+  {
+    "problem": "The ellipse $x^2+4y^2=4$ and the hyperbola $x^2-m(y+2)^2 = 1$ are tangent. Compute $m.$",
+    "solution": "**Problem Statement**\n\nThe ellipse is given by the equation $x^2+4y^2=4$.\nThe hyperbola is given by the equation $x^2-m(y+2)^2 = 1$, where $m$ is a constant.\nWe are given that the ellipse and the hyperbola are tangent. We need to compute the value of $m$.\n\nKey variables:\n- Ellipse equation: $x^2+4y^2=4$\n- Hyperbola equation: $x^2-m(y+2)^2 = 1$\n- Tangency condition: Ellipse and hyperbola intersect at exactly one point and have the same tangent at that point.\n- Unknown variable: $m$\n\n**Solution Strategy**\n\nWe will use the condition for tangency by setting the discriminant of the quadratic equation obtained by substituting $x^2$ from the ellipse equation into the hyperbola equation to zero.\nAlternatively, we can use the condition that at the point of tangency, the slopes of the tangent lines to both curves are equal.\n\n**Step-by-Step Solution**\n\n**Method 1: Discriminant Method**\n1. Solve for $x^2$ from the ellipse equation: $x^2 = 4 - 4y^2$.\n2. Substitute this expression for $x^2$ into the hyperbola equation:\n   $(4 - 4y^2) - m(y+2)^2 = 1$\n3. Simplify the equation to obtain a quadratic equation in $y$:\n   $4 - 4y^2 - m(y^2 + 4y + 4) = 1$\n   $4 - 4y^2 - my^2 - 4my - 4m = 1$\n   $(-4-m)y^2 - 4my + (4-4m-1) = 0$\n   $(-4-m)y^2 - 4my + (3-4m) = 0$\n4. For tangency, the quadratic equation must have exactly one solution for $y$. This means the discriminant must be zero. The discriminant of a quadratic equation $ay^2+by+c=0$ is $D = b^2-4ac$. In our case, $a = -4-m$, $b = -4m$, $c = 3-4m$.\n   $D = (-4m)^2 - 4(-4-m)(3-4m) = 0$\n   $16m^2 - 4(-12 + 16m - 3m + 4m^2) = 0$\n   $16m^2 - 4(-12 + 13m + 4m^2) = 0$\n   $16m^2 + 48 - 52m - 16m^2 = 0$\n   $48 - 52m = 0$\n   $52m = 48$\n   $m = \\frac{48}{52} = \\frac{12}{13}$\n\n**Method 2: Equal Slopes Method**\n1. Find the derivative $\\frac{dy}{dx}$ for the ellipse $x^2+4y^2=4$ using implicit differentiation:\n   $2x + 8y \\frac{dy}{dx} = 0$\n   $\\frac{dy}{dx} = -\\frac{2x}{8y} = -\\frac{x}{4y}$\n2. Find the derivative $\\frac{dy}{dx}$ for the hyperbola $x^2-m(y+2)^2 = 1$ using implicit differentiation:\n   $2x - 2m(y+2) \\frac{dy}{dx} = 0$\n   $\\frac{dy}{dx} = \\frac{2x}{2m(y+2)} = \\frac{x}{m(y+2)}$\n3. Equate the slopes:\n   $-\\frac{x}{4y} = \\frac{x}{m(y+2)}$\n   Assuming $x \\neq 0$ at the point of tangency, we can cancel $x$ from both sides:\n   $-\\frac{1}{4y} = \\frac{1}{m(y+2)}$\n   $-m(y+2) = 4y$\n   $-my - 2m = 4y$\n   $-2m = 4y + my$\n   $-2m = y(4+m)$\n   $y = -\\frac{2m}{m+4}$\n4. Substitute $y = -\\frac{2m}{m+4}$ into the ellipse equation $x^2 = 4-4y^2$:\n   $x^2 = 4 - 4(-\\frac{2m}{m+4})^2 = 4 - 4\\frac{4m^2}{(m+4)^2} = 4(1 - \\frac{4m^2}{(m+4)^2}) = 4\\frac{(m+4)^2 - 4m^2}{(m+4)^2} = 4\\frac{m^2+8m+16-4m^2}{(m+4)^2} = 4\\frac{-3m^2+8m+16}{(m+4)^2}$\n5. Substitute $y = -\\frac{2m}{m+4}$ and $x^2 = 4\\frac{-3m^2+8m+16}{(m+4)^2}$ into the hyperbola equation $x^2-m(y+2)^2 = 1$:\n   $4\\frac{-3m^2+8m+16}{(m+4)^2} - m(-\\frac{2m}{m+4}+2)^2 = 1$\n   $4\\frac{-3m^2+8m+16}{(m+4)^2} - m(\\frac{-2m+2(m+4)}{m+4})^2 = 1$\n   $4\\frac{-3m^2+8m+16}{(m+4)^2} - m(\\frac{8}{m+4})^2 = 1$\n   $4(-3m^2+8m+16) - 64m = (m+4)^2$\n   $-12m^2+32m+64 - 64m = m^2+8m+16$\n   $0 = 13m^2 + 40m - 48$\n   $m = \\frac{-40 \\pm \\sqrt{40^2 - 4(13)(-48)}}{26} = \\frac{-40 \\pm \\sqrt{1600 + 2496}}{26} = \\frac{-40 \\pm \\sqrt{4096}}{26} = \\frac{-40 \\pm 64}{26}$\n   $m = \\frac{24}{26} = \\frac{12}{13}$ or $m = \\frac{-104}{26} = -4$. Since $m$ is likely to be positive for a hyperbola of this form, we take $m = \\frac{12}{13}$.\n\nBoth methods yield the same result $m = \\frac{12}{13}$.\n\n**Final Answer**\n\nFinal Answer: The final answer is $\\boxed{\\frac{12}{13}}$",
+    "metrics": {
+      "length": 3556,
+      "has_latex": true
+    },
+    "validation_response": null,
+    "augmented_questions": {
+      "keyboard": {
+        "0.0": "The ellipse $ x ^ 2 + 4y ^ 2 = 4 $ and the hyperbola $ x ^ 2 - m (y + 2) ^ 2 = 1 $ are tangent. Compute $ m. $",
+        "0.1": "The ellUpse $ x ^ 2 + 4y ^ 2 = 4 $ and the hyperbila $ x ^ 2 - m (y + 2) ^ 2 = 1 $ are taBgent. CoJpute $ m. $",
+        "0.2": "The ePlipwe $ x ^ 2 + 4y ^ 2 = 4 $ and the hy(erb9la $ x ^ 2 - m (y + 2) ^ 2 = 1 $ are tXhgent. C*mputS $ m. $",
+        "0.3": "The Fll8psw $ x ^ 2 + 4y ^ 2 = 4 $ and the Ny)4rbola $ x ^ 2 - m (y + 2) ^ 2 = 1 $ are tAJgeht. fompu4d $ m. $",
+        "0.4": "The @<lipze $ x ^ 2 + 4y ^ 2 = 4 $ and the bypegHolX $ x ^ 2 - m (y + 2) ^ 2 = 1 $ are taJgRnh. CoNp&Re $ m. $",
+        "0.5": "The e<:iLsf $ x ^ 2 + 4y ^ 2 = 4 $ and the J6pdtbPla $ x ^ 2 - m (y + 2) ^ 2 = 1 $ are 5aBgFn5. C8mlitS $ m. $",
+        "0.6": "The e,lo0x$ $ x ^ 2 + 4y ^ 2 = 4 $ and the b^9erNoIx $ x ^ 2 - m (y + 2) ^ 2 = 1 $ are rABgwJt. Coj) tH3 $ m. $",
+        "0.7": "The ePIi0Wr $ x ^ 2 + 4y ^ 2 = 4 $ and the uglDrHPlZ $ x ^ 2 - m (y + 2) ^ 2 = 1 $ are 6wJhejt. vonpjhW $ m. $",
+        "0.8": "The RO>O)s# $ x ^ 2 + 4y ^ 2 = 4 $ and the JU9FEbl<S $ x ^ 2 - m (y + 2) ^ 2 = 1 $ are tShRSHR. vpHpHRW $ m. $",
+        "0.9": "The 4>oO)cS $ x ^ 2 + 4y ^ 2 = 4 $ and the G&)F3H)KZ $ x ^ 2 - m (y + 2) ^ 2 = 1 $ are HZHf2b^. X9h9&6f $ m. $",
+        "1.0": "The D/>u9Df $ x ^ 2 + 4y ^ 2 = 4 $ and the bToWgv8pS $ x ^ 2 - m (y + 2) ^ 2 = 1 $ are 5wBn2g$. FI,)&%$ $ m. $"
+      },
+      "random": {
+        "0.0": "The ellipse $ x ^ + 4y ^ = $ hyperbola $ ^ - (y + 2) ^ = 1 $. Compute $. $",
+        "0.1": "The ellipse $ x ^ 2 + 4y ^ 2 = 4 $ the hyperbola $ x ^ 2 - (y + 2) ^ 2 = $ are tangent. Compute $. $",
+        "0.2": "The $ x ^ + 4y ^ 2 = $ the hyperbola $ ^ - m (y + 2) ^ 2 = $ tangent. Compute $ m. $",
+        "0.3": "Ellipse $ x ^ 2 + ^ = 4 $ $ x ^ 2 - (y +) ^ 2 = $ are. Compute $. $",
+        "0.4": "Ellipse $ ^ + 4y ^ = $ and $ ^ - m (y +) ^ = 1 $. $. $",
+        "0.5": "Ellipse $ ^ + ^ = $ $ x ^ - (+) ^ = $. $. $",
+        "0.6": "Ellipse $ ^ + ^ = $ $ ^ - (+) ^ = $. $. $",
+        "0.7": "Ellipse $ ^ + ^ = $ $ ^ - (+) ^ = $. $. $",
+        "0.8": "Ellipse $ ^ + ^ = $ $ ^ - (+) ^ = $. $. $",
+        "0.9": "Ellipse $ ^ + ^ = $ $ ^ - (+) ^ = $. $. $",
+        "1.0": "Ellipse $ ^ + ^ = $ $ ^ - (+) ^ = $. $. $"
+      },
+      "cut": {
+        "0.0": "The ellipse $x^2+4y^2=4$ and the hyperbola $x^2-m(y+2)^2 = 1$ are tangent. Compute $m.$",
+        "0.1": "The ellipse $x^2+4y^2=4$ and the hyperbola $x^2-m(y+2)^2 = 1$ are tangent. Com",
+        "0.2": "The ellipse $x^2+4y^2=4$ and the hyperbola $x^2-m(y+2)^2 = 1$ are tang",
+        "0.3": "The ellipse $x^2+4y^2=4$ and the hyperbola $x^2-m(y+2)^2 = 1$",
+        "0.4": "The ellipse $x^2+4y^2=4$ and the hyperbola $x^2-m(y+",
+        "0.5": "The ellipse $x^2+4y^2=4$ and the hyperbola $",
+        "0.6": "The ellipse $x^2+4y^2=4$ and the hy",
+        "0.7": "The ellipse $x^2+4y^2=4$ a",
+        "0.8": "The ellipse $x^2+",
+        "0.9": "The ellip",
+        "1.0": ""
+      }
+    }
+  }
+]

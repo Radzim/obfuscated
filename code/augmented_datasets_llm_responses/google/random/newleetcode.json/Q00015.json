@@ -1,0 +1,107 @@
+{
+  "slug": "sum-of-k-subarrays-with-length-at-least-m",
+  "problem_title": "Sum of K Subarrays With Length at Least M",
+  "number": 3473,
+  "acceptance": 0.239,
+  "difficulty": "Medium",
+  "question": "You are given an integer array nums and two integers, k and m. Return the maximum sum of k non-overlapping subarrays of nums, where each subarray has a length of at least m.\n\n**Example 1:**\n\n```\nInput: nums = [1,2,-1,3,3,4], k = 2, m = 2\nOutput: 13\nExplanation:\nThe optimal choice is:\n- Subarray nums[3..5] with sum 3 + 3 + 4 = 10 (length is 3 >= m).\n- Subarray nums[0..1] with sum 1 + 2 = 3 (length is 2 >= m).\nThe total sum is 10 + 3 = 13.\n```\n\n**Example 2:**\n\n```\nInput: nums = [-10,3,-1,-2], k = 4, m = 1\nOutput: -10\nExplanation:\nThe optimal choice is choosing each element as a subarray. The output is (-10) + 3 + (-1) + (-2) = -10.\n```\n\n**Constraints:**\n\n- 1 <= nums.length <= 2000\n- -10^4 <= nums[i] <= 10^4\n- 1 <= k <= floor(nums.length / m)\n- 1 <= m <= 3",
+  "post_href": "https://leetcode.com/problems/sum-of-k-subarrays-with-length-at-least-m/discuss/3473/Medium-Python-Solution",
+  "python_solutions": "class Solution:\n    def maxSum(self, nums: List[int], k: int, m: int) -> int:\n        from itertools import accumulate\n        from functools import lru_cache\n        n = len(nums)\n        prefix = [0] + list(accumulate(nums))\n        @lru_cache(None)\n        def dp(i, k):\n            if k == 0:\n                return 0\n            if i + m > n:\n                return float('-inf')\n            return max(dp(j, k - 1) + prefix[j] - prefix[i] for j in range(i + m, n + 1))\n        return dp(0, k)",
+  "post_title": "Medium Python Solution",
+  "user": "leetcode_user",
+  "upvotes": 50,
+  "views": 2000,
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "You are given an integer array nums and two integers, k and m. Return the maximum sum of k non - overlapping subarrays of nums, where each subarray has a length of at least m.",
+      "0.1": "You are given an integer array n8ms and two integers, k and m. Return the mAximum sum of k non - overlapping subarrays of nu<s, where each subarray has a length of at leasG m.",
+      "0.2": "You are givDn an inR#ger array nuJs and two integers, k and m. 54turn the maximum sum of k non - overlapping subarrays of nums, ahere eAch suba4rzy has a length of at leaEt m.",
+      "0.3": "You are giDej an iB5ege4 array nuHQ and two iJtevdrs, k and m. ReRufn the mssinum sum of k non - ove5iaLp9ng Zubagrzys of nums, wNRre eadM sugardAy has a length of at :easY m.",
+      "0.4": "You are glveb an UntFg2r arrW5 n&<s and two lnGeNefs, k and m. R2HurM the mWxLmuN sum of k non - iB$rlWppinh s6bQrrwyZ of n6Ks, wTerr eAfh WufwrrAy has a lebg5T of at leaWH m.",
+      "0.5": "You are gic#h an Lg$eher adrqg n&mW and two iJyeNe#s, k and m. RehuTJ the mWxJKuN sum of k non - LvWr:ALp*ng suFa4rSGc of nuHd, dge3e exvh sufsrrQ& has a leHyrh of at l#qCt m.",
+      "0.6": "You are guBWn an imtSv#e xrrWU muJX and two oHteNeTD, k and m. Eet TeJ the HQZikuk sum of k non - oBrGlqop9nr AjhartZUs of h^js, sNerF esXU s tVSr4aJ has a k@nggg of at oeaAR m.",
+      "0.7": "You are fuC2n an jb6Syer aD5S^ n7ND and two UmtrFegX, k and m. R$$6Fb the kad*k&m sum of k non - obfDlXpL8gB x&baGts^C of MKks, wys5S 4Ash XIhQd5ay has a <eGY^J of at <3aWG m.",
+      "0.8": "You are noc$n an iB$3n@% SE4Sy H TnC and two jj^3Vf5s, k and m. gd5*rM the nZcJKuN sum of k non - *DeDizlLibb divwg5Z5s of HJKC, wJd32 rWfJ X TbWteQ& has a .RnN^y of at .eSEF m.",
+      "0.9": "You are h(D4H an KgrWy4d AeTQ6 bkJX and two JMg2V3eQ, k and m. d4g T$h the KQZ7KjH sum of k non - 0dS4iSpOJmH CIfw#$w5c of J T,e, EJFEW sWVy e6GXg5zh has a >@jt%J of at iFwzr m.",
+      "1.0": "You are YJCsj an oJYSrsE w3GwH B T,x and two khhsRw$A, k and m. g3gjDB the HXzKn6H sum of k non - (Gr#KxO9OMF CkgqE%QtW of BIkZ, 1MseS #Zsm X*Hz4$X% has a <FHbHG of at KRQDF m."
+    },
+    "synonym": {
+      "0.0": "You make up given an integer array nums and two integers, k and k. Repay the maximal sum of thou not - overlapping subarrays of nums, where each subarray has a length of at least meter.",
+      "0.1": "You be given an whole number array nums and two integers, k and m. Return the maximum sum of k non - overlapping subarrays of nums, where each subarray has a length of at least m.",
+      "0.2": "You are given an whole number array nums and two integer, kb and molarity. Return the maximum substance of k not - overlapping subarrays of nums, where each subarray has a length of at least m.",
+      "0.3": "You constitute given an integer array nums and deuce integer, k and m. Return the maximal kernel of k non - overlap subarrays of nums, where each subarray own a length of at least m.",
+      "0.4": "You are leave an integer regalia nums and two integer, k and metre. Return the maximal aggregate of kibibyte non - overlap subarrays of nums, where each subarray own a length of at least metre.",
+      "0.5": "You represent given an whole number array nums and ii integers, kibibyte and molarity. Regress the maximal sum of thousand not - overlap subarrays of nums, where each subarray experience a duration of at least m.",
+      "0.6": "You be impart an whole number array nums and two whole number, thou and g. Revert the maximal inwardness of g not - overlap subarrays of nums, where each subarray have a duration of at least mb.",
+      "0.7": "You equal give an whole number raiment nums and two whole number, thousand and molar concentration. Hark back the maximal amount of kilobyte not - overlapping subarrays of nums, where each subarray get a distance of at least grand.",
+      "0.8": "You equal impart an whole number raiment nums and ii integer, kelvin and mb. Bring back the maximal heart of special k not - overlap subarrays of nums, where each subarray take a distance of at least molar concentration.",
+      "0.9": "You exist pay an whole number raiment nums and ii whole number, g and yard. Reelect the maximal sum of money of jet not - overlap subarrays of nums, where each subarray accept a distance of at least megabyte.",
+      "1.0": "You make up consecrate an whole number regalia nums and deuce whole number, special k and mib. Render the maximal core of kb not - overlap subarrays of nums, where each subarray take a duration of at least meter."
+    },
+    "random": {
+      "0.0": "You are given an array nums two, k. the maximum sum of k non - overlapping subarrays nums, where has length of m.",
+      "0.1": "You are given an integer array nums and integers, k and m. Return the maximum sum of non - overlapping subarrays of nums, where each subarray has a of least m.",
+      "0.2": "Are given an integer nums and two integers, k m. Return maximum sum k - overlapping subarrays of, where each subarray has a length of at least.",
+      "0.3": "You given an array nums and two integers, m. Return maximum sum of k non - overlapping subarrays of, where each length at.",
+      "0.4": "You are nums two integers, k m. the maximum sum - overlapping subarrays of nums, each has least m.",
+      "0.5": "Are and two integers, k and. Return the k - nums, a length least m.",
+      "0.6": "Are integer array and two, k. k - subarrays, has of at.",
+      "0.7": "Are an, . the maximum - subarrays, a.",
+      "0.8": "Are, . -, subarray.",
+      "0.9": "Are, . -,.",
+      "1.0": "Are, . -,."
+    },
+    "cut": {
+      "0.0": "You are given an integer array nums and two integers, k and m. Return the maximum sum of k non-overlapping subarrays of nums, where each subarray has a length of at least m.",
+      "0.1": "You are given an integer array nums and two integers, k and m. Return the maximum sum of k non-overlapping subarrays of nums, where each subarray has a leng",
+      "0.2": "You are given an integer array nums and two integers, k and m. Return the maximum sum of k non-overlapping subarrays of nums, where each s",
+      "0.3": "You are given an integer array nums and two integers, k and m. Return the maximum sum of k non-overlapping subarrays of n",
+      "0.4": "You are given an integer array nums and two integers, k and m. Return the maximum sum of k non-overlappi",
+      "0.5": "You are given an integer array nums and two integers, k and m. Return the maximum sum ",
+      "0.6": "You are given an integer array nums and two integers, k and m. Return",
+      "0.7": "You are given an integer array nums and two integers",
+      "0.8": "You are given an integer array nums",
+      "0.9": "You are given an ",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "google": {
+      "random": {
+        "0.0": [
+          "def max_non_overlapping_subarrays(nums, k):\n    n = len(nums)\n    dp = {}\n\n    def solve(index, count):\n        if count == 0:\n            return 0\n        if index >= n:\n            return float('-inf')\n\n        if (index, count) in dp:\n            return dp[(index, count)]\n\n        max_sum = solve(index + 1, count)  # Skip the current element\n\n        current_sum = 0\n        for i in range(index, n):\n            current_sum += nums[i]\n            max_sum = max(max_sum, current_sum + solve(i + 1, count - 1))\n\n        dp[(index, count)] = max_sum\n        return max_sum\n\n    result = solve(0, k)\n    return result"
+        ],
+        "0.1": [
+          "def max_non_overlapping_subarrays(nums, k, m):\n    n = len(nums)\n    dp = {}\n\n    def solve(index, count):\n        if index == n:\n            if count == k:\n                return 0\n            else:\n                return float('-inf')\n\n        if (index, count) in dp:\n            return dp[(index, count)]\n\n        ans = solve(index + 1, count)  # Skip the current element\n\n        current_sum = 0\n        for j in range(index, n):\n            current_sum += nums[j]\n            if j - index + 1 >= m:\n                if count + 1 <= k:\n                    ans = max(ans, current_sum + solve(j + 1, count + 1))\n\n        dp[(index, count)] = ans\n        return ans\n\n    result = solve(0, 0)\n    if result == float('-inf'):\n        return 0\n    return result"
+        ],
+        "0.2": [
+          "def max_sum_non_overlapping_subarrays(nums, k, m):\n    n = len(nums)\n    if n < k * m:\n        return 0\n\n    dp = {}\n\n    def solve(index, count):\n        if count == k:\n            return 0\n        if index > n - m:\n            return float('-inf')\n\n        if (index, count) in dp:\n            return dp[(index, count)]\n\n        ans = solve(index + 1, count)  # Skip the current index\n\n        current_sum = 0\n        for i in range(index, min(n - m + 1, index + (n - index) - (k - count -1)*m +1)):\n            current_sum = 0\n            for j in range(i, i + m):\n                current_sum += nums[j]\n            ans = max(ans, current_sum + solve(i + m, count + 1))\n\n        dp[(index, count)] = ans\n        return ans\n\n    return solve(0, 0)"
+        ],
+        "0.3": [
+          "def max_sum_non_overlapping_subarrays(nums, m, k):\n    n = len(nums)\n    if n < m * k:\n        return 0\n\n    dp = {}\n\n    def solve(index, subarrays_left):\n        if subarrays_left == 0:\n            return 0\n        if index > n - m * subarrays_left:\n            return float('-inf')\n\n        if (index, subarrays_left) in dp:\n            return dp[(index, subarrays_left)]\n\n        max_so_far = solve(index + 1, subarrays_left)\n\n        current_sum = 0\n        for i in range(index, index + m):\n            current_sum += nums[i]\n\n        max_so_far = max(max_so_far, current_sum + solve(index + m, subarrays_left - 1))\n\n        dp[(index, subarrays_left)] = max_so_far\n        return max_so_far\n\n    return solve(0, k)"
+        ],
+        "0.4": [
+          "def max_non_overlapping_subarrays(nums, k, m):\n    n = len(nums)\n    dp = {}\n\n    def solve(idx, count):\n        if idx == n:\n            return 0 if count == k else float('-inf')\n        \n        if (idx, count) in dp:\n            return dp[(idx, count)]\n\n        ans = solve(idx + 1, count)  # Skip the current element\n\n        current_sum = 0\n        for j in range(idx, min(n, idx + m)):\n            current_sum += nums[j]\n            if (j - idx + 1) >= m:\n                if count < k:\n                    ans = max(ans, current_sum + solve(j + 1, count + 1))\n\n        dp[(idx, count)] = ans\n        return ans\n\n    result = solve(0, 0)\n    return result if result != float('-inf') else 0"
+        ],
+        "0.5": [
+          "def min_subarray_len(nums, target):\n    \"\"\"\n    Given an array of positive integers nums and a positive integer target,\n    find the minimal length of a contiguous subarray [numsl, numsl+1, ..., numsr-1, numsr]\n    whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.\n\n    Args:\n        nums (List[int]): An array of positive integers.\n        target (int): A positive integer.\n\n    Returns:\n        int: The minimal length of a contiguous subarray whose sum is greater than or equal to target.\n             If there is no such subarray, return 0 instead.\n    \"\"\"\n    n = len(nums)\n    min_len = float('inf')\n    window_start = 0\n    window_sum = 0\n\n    for window_end in range(n):\n        window_sum += nums[window_end]\n\n        while window_sum >= target:\n            min_len = min(min_len, window_end - window_start + 1)\n            window_sum -= nums[window_start]\n            window_start += 1\n\n    if min_len == float('inf'):\n        return 0\n    else:\n        return min_len"
+        ],
+        "0.6": [
+          "def solve():\n    n, k = map(int, input().split())\n    a = list(map(int, input().split()))\n\n    if k > n:\n        print(\"No\")\n        return\n\n    if k == 1:\n        print(\"Yes\")\n        return\n\n    if k == n:\n        print(\"Yes\")\n        return\n\n    print(\"Yes\")\n\nsolve()"
+        ],
+        "0.7": [
+          "def max_subarray(nums):\n    \"\"\"\n    Finds the maximum sum of a contiguous subarray within a given array.\n\n    Args:\n        nums: A list of integers.\n\n    Returns:\n        The maximum sum of a contiguous subarray.\n    \"\"\"\n\n    if not nums:\n        return 0\n\n    max_so_far = nums[0]\n    current_max = nums[0]\n\n    for i in range(1, len(nums)):\n        current_max = max(nums[i], current_max + nums[i])\n        max_so_far = max(max_so_far, current_max)\n\n    return max_so_far\n\nif __name__ == '__main__':\n    nums1 = [-2, 1, -3, 4, -1, 2, 1, -5, 4]\n    print(f\"Maximum subarray sum for {nums1}: {max_subarray(nums1)}\")  # Output: 6\n\n    nums2 = [1]\n    print(f\"Maximum subarray sum for {nums2}: {max_subarray(nums2)}\")  # Output: 1\n\n    nums3 = [5, 4, -1, 7, 8]\n    print(f\"Maximum subarray sum for {nums3}: {max_subarray(nums3)}\")  # Output: 23\n\n    nums4 = [-1, -2, -3]\n    print(f\"Maximum subarray sum for {nums4}: {max_subarray(nums4)}\") # Output: -1\n\n    nums5 = [-2, -1]\n    print(f\"Maximum subarray sum for {nums5}: {max_subarray(nums5)}\") # Output: -1"
+        ],
+        "0.8": [
+          "def max_subarray_sum(arr):\n    \"\"\"\n    Finds the maximum sum of a contiguous subarray within a given array.\n\n    Args:\n        arr: A list of integers.\n\n    Returns:\n        The maximum sum of a contiguous subarray.\n    \"\"\"\n\n    max_so_far = 0\n    current_max = 0\n\n    for i in range(len(arr)):\n        current_max += arr[i]\n\n        if current_max > max_so_far:\n            max_so_far = current_max\n\n        if current_max < 0:\n            current_max = 0\n\n    if max_so_far == 0:\n        max_so_far = max(arr)\n\n    return max_so_far"
+        ],
+        "0.9": [
+          "def are_equal(a, b, c):\n  \"\"\"\n  Checks if three numbers are equal.\n\n  Args:\n    a: The first number.\n    b: The second number.\n    c: The third number.\n\n  Returns:\n    True if all three numbers are equal, False otherwise.\n  \"\"\"\n  return a == b and b == c\n\n# Example usage:\n# print(are_equal(1, 1, 1))  # Output: True\n# print(are_equal(1, 2, 1))  # Output: False\n# print(are_equal(2, 2, 2))  # Output: True\n# print(are_equal(1, 2, 3))  # Output: False"
+        ],
+        "1.0": [
+          "def are_equal(a, b, c):\n  \"\"\"\n  Checks if three numbers are equal.\n\n  Args:\n    a: The first number.\n    b: The second number.\n    c: The third number.\n\n  Returns:\n    True if all three numbers are equal, False otherwise.\n  \"\"\"\n  return a == b and b == c\n\n# Example usage:\n# print(are_equal(1, 1, 1))  # Output: True\n# print(are_equal(1, 2, 1))  # Output: False\n# print(are_equal(2, 2, 2))  # Output: True\n# print(are_equal(1, 2, 3))  # Output: False"
+        ]
+      }
+    }
+  }
+}

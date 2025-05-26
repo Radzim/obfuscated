@@ -1,0 +1,107 @@
+{
+  "slug": "longest-palindromic-subsequence-after-at-most-k-operations",
+  "problem_title": "Longest Palindromic Subsequence After at Most K Operations",
+  "number": 3472,
+  "acceptance": 0.352,
+  "difficulty": "Medium",
+  "question": "Given a string s and an integer k, you can perform at most k operations on s. In each operation, you can choose any character of s and change it to any other lowercase English letter. Return the length of the longest palindromic subsequence that can be obtained after at most k operations.\n\n**Example 1:**\n\n```\nInput: s = \"abcdeca\", k = 2\nOutput: 7\nExplanation: Replace 'b' and 'e' with 'a' to make the string \"aaaaaaa\", which is a palindrome.\n```\n\n**Example 2:**\n\n```\nInput: s = \"abcdef\", k = 1\nOutput: 1\nExplanation: No matter how you modify the string, you cannot get a palindrome longer than 1.\n```\n\n**Constraints:**\n\n- 1 <= s.length <= 100\n- s consists of lowercase English letters.\n- 0 <= k <= s.length",
+  "post_href": "https://leetcode.com/problems/longest-palindromic-subsequence-after-at-most-k-operations/discuss/3472/Medium-Python-Solution",
+  "python_solutions": "class Solution:\n    def longestPalindromeSubseq(self, s: str, k: int) -> int:\n        n = len(s)\n        dp = [[0] * n for _ in range(n)]\n        for i in range(n):\n            dp[i][i] = 1\n        for length in range(2, n + 1):\n            for i in range(n - length + 1):\n                j = i + length - 1\n                if s[i] == s[j]:\n                    dp[i][j] = dp[i + 1][j - 1] + 2\n                else:\n                    dp[i][j] = max(dp[i + 1][j], dp[i][j - 1])\n        for length in range(n, 0, -1):\n            for i in range(n - length + 1):\n                j = i + length - 1\n                if length - dp[i][j] <= k:\n                    return length\n        return 0",
+  "post_title": "Medium Python Solution",
+  "user": "leetcode_user",
+  "upvotes": 50,
+  "views": 2000,
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given a string s and an integer k, you can perform at most k operations on s. In each operation, you can choose any character of s and change it to any other lowercase English letter. Return the length of the longest palindromic subsequence that can be obtained after at most k operations.",
+      "0.1": "Given a string s and an integer k, you can perform at moZt k operations on s. In each operation, you can choose any character of s and change it to any other lowe5case EnglisU letter. R@turn the length of the longest palindromic subsequence that can be obtained after at mpst k operationE.",
+      "0.2": "Giben a string s and an ijteNer k, you can perform at mos6 k operations on s. In each operation, you can cmoosF any character of s and chzngD it to any otheg /owercaCe Engl9st letter. RetuGG the legfth of the longest palindromic subsrqhencW that can be obtained afteF at most k operations.",
+      "0.3": "Given a Atribg s and an iHtfg@r k, you can p@rfo%J at most k olerah7ons on s. In rqch operation, you can chpIse any character of s and cMSnge it to any other lowercZx2 3ngKKsh lSt$er. Re^Hrn the <enYth of the ling#Qt palkmdeomJc subse@u@JVe that can be (btZiMed agt3r at most k opFragioMs.",
+      "0.4": "Giv@B a stg&nY s and an intFB@r k, you can peTEor< at Nkst k l0Wrati8ns on s. In eAFh K9erayioB, you can cGKosd any DhZraV$er of s and xhQbge it to any other lkwersaaR Engi(ch :et%$r. deY&rn the .enn6h of the <oGges5 )xKinFromis DuhZequFgce tJxt can be (b%ainSW WfYer at m(Xt k K(eestions.",
+      "0.5": "FiFSn a stDiGB s and an 7n4egSe k, you can ps%corH at mox^ k pperZtJ0nE on s. In eAcy 0peGa%iLB, you can ch(8sf any sJXrSc$er of s and fhwnbe it to any lRhe% lIw$%DaQe $GgllsM l4Ft@r. deFurg the ;egrth of the :oJgFs% OaliBwr(hlc sunE3AueJVe tua% can be oF5XinDd aT5ef at mkEt k o0wraF9ond.",
+      "0.6": "GOceH a CtT*nY s and an JBYDgrr k, you can oerg9Tk at ,oqR k )p3ra^*pnQ on s. In 4aVj Ip25ag(oB, you can chKPa$ any cha%qvRRF of s and cyQnyw it to any o6jeg liwSTcZws 4nb<LDh >2tr$r. e2t*rg the OdnrtY of the PljgWQt 0WliBrr*Kif suhEe@hSbc$ YJa$ can be PbtX&nDw xGteF at noCf k K)#DatlLns.",
+      "0.7": "ViF@J a s%g*by s and an Kgt#gSf k, you can pFDd)#m at m*W4 k l)@GZhionx on s. In waSn 0L#rxtLLM, you can sb8oxS any vGa#qFR$r of s and XUaBrs it to any o5tdD ooeSrdQQW DMgl(Db ?e4YWG. #eh Teh the I#bRtY of the lPmreQY )aO8nd5*k7d D8bse! t4GX3 tbZg can be ob6w&JSC wfFFt at <8Qt k )pF%Sti*he.",
+      "0.8": "rlFeH a ZtD7GH s and an ObtRvWe k, you can od$Virk at NLX^ k Koe$X6(ojw on s. In 3QVn i)D3Q5iIB, you can DB((xe any SNqdScR3F of s and dGqnhS it to any (tg3e .9qd#XAWe SMyiLZh l$y%23. GDt*TG the lwbh^t of the ;oMN2z$ Lwk8nF3kkOc ejvw#q t2hcF ^bXR can be ihFQ8ndS Xvye% at jix6 k KLfrQG(ojz.",
+      "0.9": "blGWh a Xg#ugN s and an (hh@H#G k, you can lRfd)5N at <icr k olWTS^&)hE on s. In #SVG 9)R5qG()J, you can DU8*EF any XYzdWf^4f of s and vMqgf4 it to any 8^MFE k0e4gFzq# #GNpLxU Pf4fSe. EdfITg the i#gN$M of the ?KHY#er laO&HvtiJ8v skGcrS8wjdF 5nq4 can be 0g%s&j@V Avg$# at HiX^ k lL3gstupbA.",
+      "1.0": "hoBfB a DRDLmf s and an 8MfWtRf k, you can L@%GIFh at ,8q$ k P)d4wYj8jq on s. In fQxg 0OFfXF*0h, you can xGl8Qr any XnWGqF6$4 of s and dyXBT$ it to any P%nWF /pSSDxxzD $JtpLEU KR^YF4. 3$$hej the ;WBbYY of the OkGN3E6 (ZpOMVTPjUV A tfX#a7rGdd fnsR can be 8hRQujSS xVyS# at N(c4 k 8(DfZ$kkHc."
+    },
+    "synonym": {
+      "0.0": "Give a bowed stringed instrument second and an integer honey oil, you can perform at most thousand surgical procedure on s. In each operation, you can choose any eccentric of s and change it to any other lowercase English letter of the alphabet. Repay the length of the farsighted palindromic subsequentness that terminate be obtained after at most k functioning.",
+      "0.1": "Given a string s and an integer k, you can do at most k operations on s. In each operation, you can choose any character of s and change it to any other lowercase English language letter. Return the length of the recollective palindromic subsequence that can be obtained after at most k operations.",
+      "0.2": "Given a string s and an whole number k, you can perform at most k operations on s. In each operation, you can choose any character of second and alteration it to any former lowercase English varsity letter. Return the length of the longest palindromic subsequentness that stern be obtained after at most k operations.",
+      "0.3": "Given a string s and an whole number k, you can execute at most m operation on southward. In each operation, you lav choose any character of s and change information technology to any other lower case letter English letter. Recall the length of the long palindromic posteriority that derriere be obtained after at most k operations.",
+      "0.4": "Given a string southward and an integer k, you can do at most one thousand surgical procedure on sulfur. In each procedure, you can choose any case of s and modification it to any other small letter English language letter of the alphabet. Pass the length of the longest palindromic sequel that can personify obtained after at most k operations.",
+      "0.5": "Give way a drawing string s and an whole number honey oil, you can do at most thousand operation on entropy. In each functioning, you can take any character of s and change information technology to any early lowercase English language letter. Yield the distance of the longest palindromic posteriority that john be incur after at most thousand mental process.",
+      "0.6": "Yield a drawstring s and an whole number yard, you sack execute at most 1000 procedure on s. In each process, you can prefer any fibre of sec and change information technology to any other lower case letter English language alphabetic character. Recall the duration of the long palindromic subsequentness that can be obtained after at most 1000 operation.",
+      "0.7": "Devote a drawing string sulfur and an whole number kb, you stool do at most k surgical operation on siemens. In each mathematical process, you can select any grapheme of mho and variety information technology to any early lowercase English language varsity letter. Retort the distance of the long palindromic sequel that backside be obtain after at most thousand process.",
+      "0.8": "Give a train sulphur and an whole number kb, you lavatory do at most one thousand operation on sulphur. In each surgical procedure, you buttocks pick out any quality of siemens and alteration information technology to any former small letter English people alphabetic character. Recall the duration of the farseeing palindromic sequel that tush constitute get after at most 1000 mathematical operation.",
+      "0.9": "Give a bowed stringed instrument atomic number 16 and an whole number kb, you butt execute at most 1000 procedure on due south. In each performance, you crapper pick out any fibre of randomness and variety information technology to any early small letter Side varsity letter. Render the distance of the farseeing palindromic subsequentness that tail comprise obtain after at most m operation.",
+      "1.0": "Open a strand sec and an whole number jet, you ass do at most thousand surgical procedure on reciprocal ohm. In each mental process, you privy pick out any fictional character of entropy and variety information technology to any former lower case letter English people letter of the alphabet. Pass the distance of the recollective palindromic subsequentness that tush embody obtain after at most thousand operation."
+    },
+    "random": {
+      "0.0": "A string s and an integer k, can perform operations on s. each, you can choose of s it to other lowercase English. the length of the longest subsequence can be after at most k operations.",
+      "0.1": "Given a and an integer k, can perform most k operations on s. In each operation, you can choose any character of s and change it to any other lowercase English letter. the length of the longest palindromic subsequence that can be obtained after most k operations.",
+      "0.2": "Given a string s and integer k, you can at most k operations on s. In operation, you can choose character of change it to any other lowercase English. Return the of longest palindromic that can be obtained after at most.",
+      "0.3": "Given string s integer k, you can perform at most k operations s. In each, choose any character of change any other lowercase letter. Return the the palindromic subsequence can obtained after at most operations.",
+      "0.4": "Given string integer, can perform at operations s. In each operation, you any s and change to lowercase English. Return the length palindromic that can be after most k.",
+      "0.5": "Given s an integer k, can perform at on s. operation, can any of to any other. the longest that after most k operations.",
+      "0.6": "Given a integer k, you at most. operation, any other lowercase. the of palindromic that be at operations.",
+      "0.7": "A string s an, operations s. , you any it. of the palindromic operations.",
+      "0.8": "Given an, ., can letter. the longest.",
+      "0.9": "A, ., ..",
+      "1.0": "A, ., .."
+    },
+    "cut": {
+      "0.0": "Given a string s and an integer k, you can perform at most k operations on s. In each operation, you can choose any character of s and change it to any other lowercase English letter. Return the length of the longest palindromic subsequence that can be obtained after at most k operations.",
+      "0.1": "Given a string s and an integer k, you can perform at most k operations on s. In each operation, you can choose any character of s and change it to any other lowercase English letter. Return the length of the longest palindromic subsequence that can be obtaine",
+      "0.2": "Given a string s and an integer k, you can perform at most k operations on s. In each operation, you can choose any character of s and change it to any other lowercase English letter. Return the length of the longest palindromic su",
+      "0.3": "Given a string s and an integer k, you can perform at most k operations on s. In each operation, you can choose any character of s and change it to any other lowercase English letter. Return the length ",
+      "0.4": "Given a string s and an integer k, you can perform at most k operations on s. In each operation, you can choose any character of s and change it to any other lowercase Engli",
+      "0.5": "Given a string s and an integer k, you can perform at most k operations on s. In each operation, you can choose any character of s and change it",
+      "0.6": "Given a string s and an integer k, you can perform at most k operations on s. In each operation, you can choose any ",
+      "0.7": "Given a string s and an integer k, you can perform at most k operations on s. In each o",
+      "0.8": "Given a string s and an integer k, you can perform at most",
+      "0.9": "Given a string s and an integ",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "deepseek": {
+      "cut": {
+        "0.0": [
+          "def longest_palindrome_subseq_with_k_operations(s, k):\n    n = len(s)\n    dp = [[0] * n for _ in range(n)]\n    \n    for i in range(n-1, -1, -1):\n        dp[i][i] = 1\n        for j in range(i+1, n):\n            if s[i] == s[j]:\n                dp[i][j] = 2 + dp[i+1][j-1] if i+1 <= j-1 else 2\n            else:\n                dp[i][j] = max(dp[i+1][j], dp[i][j-1])\n    \n    max_len = 0\n    for i in range(n):\n        for j in range(i, n):\n            operations_needed = (j - i + 1) - dp[i][j]\n            if operations_needed <= k:\n                max_len = max(max_len, j - i + 1)\n    \n    return max_len"
+        ],
+        "0.1": [
+          "def longest_palindrome_subseq_with_k_changes(s, k):\n    n = len(s)\n    memo = {}\n\n    def dp(l, r, changes_left):\n        if (l, r, changes_left) in memo:\n            return memo[(l, r, changes_left)]\n        if l > r:\n            return 0\n        if l == r:\n            return 1\n\n        if s[l] == s[r]:\n            res = 2 + dp(l + 1, r - 1, changes_left)\n        else:\n            if changes_left > 0:\n                res = 2 + dp(l + 1, r - 1, changes_left - 1)\n            else:\n                res = max(dp(l + 1, r, changes_left), dp(l, r - 1, changes_left))\n\n        memo[(l, r, changes_left)] = res\n        return res\n\n    return dp(0, n - 1, k)"
+        ],
+        "0.2": [
+          "def longest_palindrome_substring(s, k):\n    max_length = 0\n    n = len(s)\n    for i in range(n):\n        freq = {}\n        max_freq = 0\n        for j in range(i, n):\n            char = s[j]\n            freq[char] = freq.get(char, 0) + 1\n            max_freq = max(max_freq, freq[char])\n            window_size = j - i + 1\n            if window_size - max_freq <= k:\n                max_length = max(max_length, window_size)\n    return max_length"
+        ],
+        "0.3": [
+          "def character_replacement(s, k):\n    count = {}\n    max_length = 0\n    left = 0\n    max_count = 0\n    \n    for right in range(len(s)):\n        count[s[right]] = count.get(s[right], 0) + 1\n        max_count = max(max_count, count[s[right]])\n        \n        if (right - left + 1 - max_count) > k:\n            count[s[left]] -= 1\n            left += 1\n        \n        max_length = max(max_length, right - left + 1)\n    \n    return max_length"
+        ],
+        "0.4": [
+          "ERROR: list index out of range"
+        ],
+        "0.5": [
+          "def max_length_repeated_char_substring(s, k):\n    max_length = 0\n    max_count = 0\n    char_count = {}\n    left = 0\n\n    for right in range(len(s)):\n        char_count[s[right]] = char_count.get(s[right], 0) + 1\n        max_count = max(max_count, char_count[s[right]])\n\n        if (right - left + 1 - max_count) > k:\n            char_count[s[left]] -= 1\n            left += 1\n\n        max_length = max(max_length, right - left + 1)\n\n    return max_length"
+        ],
+        "0.6": [
+          "def max_operations(s, k):\n    operations = 0\n    s_list = list(s)\n    n = len(s_list)\n    \n    for i in range(n // 2):\n        if s_list[i] != s_list[n - 1 - i]:\n            operations += 1\n            if operations > k:\n                return False\n    return True\n\ns = input().strip()\nk = int(input().strip())\nif max_operations(s, k):\n    print(\"Yes\")\nelse:\n    print(\"No\")"
+        ],
+        "0.7": [
+          "def max_consecutive_letters(s, k):\n    max_len = 0\n    max_count = 0\n    count = {}\n    left = 0\n    \n    for right in range(len(s)):\n        count[s[right]] = count.get(s[right], 0) + 1\n        max_count = max(max_count, count[s[right]])\n        \n        if (right - left + 1 - max_count) > k:\n            count[s[left]] -= 1\n            left += 1\n        \n        max_len = max(max_len, right - left + 1)\n    \n    return max_len"
+        ],
+        "0.8": [
+          "def max_vowels(s, k):\n    vowels = {'a', 'e', 'i', 'o', 'u'}\n    max_count = 0\n    current_count = 0\n    \n    for i in range(k):\n        if s[i] in vowels:\n            current_count += 1\n    max_count = current_count\n    \n    for i in range(k, len(s)):\n        if s[i - k] in vowels:\n            current_count -= 1\n        if s[i] in vowels:\n            current_count += 1\n        max_count = max(max_count, current_count)\n    \n    return max_count"
+        ],
+        "0.9": [
+          "Here's the Python code to solve the problem:\n\n```python\ndef process_string(s, n):\n    if n < 0 or n >= len(s):\n        return \"\"\n    return s[:n] + s[n+1:]\n\ns = input(\"Enter a string: \")\nn = int(input(\"Enter an integer: \"))\nresult = process_string(s, n)\nprint(\"Result:\", result)"
+        ],
+        "1.0": [
+          "# Example Python code\ndef greet(name):\n    print(f\"Hello, {name}!\")\n\ndef add_numbers(a, b):\n    return a + b\n\nif __name__ == \"__main__\":\n    greet(\"World\")\n    result = add_numbers(5, 3)\n    print(f\"5 + 3 = {result}\")"
+        ]
+      }
+    }
+  }
+}

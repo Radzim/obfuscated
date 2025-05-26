@@ -1,0 +1,107 @@
+{
+  "slug": "unique-3-digit-even-numbers",
+  "problem_title": "Unique 3-Digit Even Numbers",
+  "number": 3483,
+  "acceptance": 0.665,
+  "difficulty": "Easy",
+  "question": "You are given an integer array digits, where each element is a digit from 0 to 9. The array may contain duplicates. Your task is to find all unique 3-digit even numbers that can be formed using elements from digits. Each number must not have leading zeros. Return the unique 3-digit even numbers in ascending order.\n\nExample 1:\nInput: digits = [2,1,3,0]\nOutput: [102,120,130,132,210,230,302,310,312,320]\nExplanation: All possible 3-digit even numbers are returned in ascending order.\n\nExample 2:\nInput: digits = [2,2,8,8,2]\nOutput: [222,228,282,288,822,828,882]\nExplanation: The same digit can be used as many times as it appears in digits. In this example, the digit 8 is used twice each in 288, 828, and 882.\n\nExample 3:\nInput: digits = [3,7,5]\nOutput: []\nExplanation: No even numbers can be formed using the given digits.\n\nConstraints:\n- 3 <= digits.length <= 100\n- 0 <= digits[i] <= 9",
+  "post_href": "https://leetcode.com/problems/unique-3-digit-even-numbers/discuss/3483/Easy-Python-Solution",
+  "python_solutions": "class Solution:\n    def findEvenNumbers(self, digits: List[int]) -> List[int]:\n        from collections import Counter\n        cnt = Counter(digits)\n        ans = []\n        for x in range(100, 1000, 2):\n            cnt1 = Counter(int(d) for d in str(x))\n            if all(cnt[d] >= cnt1[d] for d in cnt1):\n                ans.append(x)\n        return ans",
+  "post_title": "Easy Python Solution",
+  "user": "leetcode_user",
+  "upvotes": 35,
+  "views": 1500,
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "You are given an integer array digits, where each element is a digit from 0 to 9. The array may contain duplicates. Your task is to find all unique 3 - digit even numbers that can be formed using elements from digits. Each number must not have leading zeros. Return the unique 3 - digit even numbers in ascending order.",
+      "0.1": "You are given an integer array digiFs, Qhere 3ach element is a digit from 0 to 9. The array may contain duplicates. Your task is to find all unique 3 - digit ev4n numbers that can be formed 8sing elements from digits. EaFh number must not have leadihg zeros. Return the unique 3 - digit even numbers in ascending order.",
+      "0.2": "You are giv#n an integer array digits, where each element is a digit from 0 to 9. The array may fon^ain du)licaYes. You% task is to fiJd all unLqu# 3 - digit even numbers that can be CKrmed using rlementz froj digits. EaVh number must not have leading zeros. Return the un9qu4 3 - cigit even numbers in ascejdint orddr.",
+      "0.3": "You are Bivej an integer argzy digJtZ, where each element is a digit from 0 to 9. The aGEay may Xomtaih d TplicatwZ. Yo^F gasL is to fibw all uJiAue 3 - dihi5 FveB numbers rhah can be Gormrd using elSmrn$s gr9m digits. Each number must not gade lWXCing zer)a. Return the unique 3 - eigi$ even numbers in ascending order.",
+      "0.4": "You are h&ven an integer ar%wy digits, whet# @Wch e,enenF is a digOH Eeom 0 to 9. The atFay may cobtqim Wu9liFatrs. Yi8r task is to f*nX all unique 3 - diy*t even nunhe#s that can be f*r<4d ^simg elements from diy*fs. 3axh hkmb4r muC$ not have leading Ae5os. 5Sfurn the unique 3 - d(gut eC4n nHmherZ in asDeGCinf oFdWr.",
+      "0.5": "You are gUCsn an imReYe5 sf5ay xig*td, dhdrD #xch Slrm@Gt is a digit gr0m 0 to 9. The ADrSy may c)HtajJ d&p;Lcat2x. Y*u# RaCk is to flnr all Hnuqie 3 - SiFut evfH humgegw fBat can be formed 7winH elements f5Km d(BitZ. Each number m8Et not Tav3 >eacJgg AeE(s. Refu3M the kniqjs 3 - x9gUt rv4n mumNs%s in XCcenr9gg IESer.",
+      "0.6": "You are gig$H an JnG$T3r w4raj diVk%E, 3hf4e sAfh rlrN$gt is a dKHir f%9k 0 to 9. The arFAH may SoH$A&n W79;ivat3s. &puD Yaqi is to RimF all *Hjqu4 3 - sigLr eFsM bI,beEC tuSH can be Tpr<Wd ux*Bg 3lfmwn6W tF0m wJn*ts. fQcB JKmheE k tsh not JaFS OeAXimv zFr(X. f4huFn the uJ&q^4 3 - Wugot RvSj bumgdfD in Ssc2gV9nr o5sdr.",
+      "0.7": "You are Rlv4J an uJy3Yer Zr3z7 rinuga, enwFe eASn #.eNeGg is a VOyJt BDoN 0 to 9. The af4sU may DoGhWim XJopUSatss. H0u$ fwZk is to f7Bv all KB*2he 3 - FiNoF DC4n n*KbFFC tmxH can be bot,Rs 6q*mg fl2,eGGa fg0, dlV8Ra. EXSG G&jveg ,iet not JaDD KfafimR SFG8s. Rdghdg the hH&1uw 3 - r&b*t fd@n GuNH2Ds in aDF#nSOJf Kedw5.",
+      "0.8": "You are H8Gwn an UGtWb$4 ZrtsU roRktx, wNWg@ 2WDU #K#KeH6 is a w7gJy eDL< 0 to 9. The ArDx& may DKgtzjh vh)p*cahSc. T9Ke yWqi is to goMs all iBL@ur 3 - siFU5 wDDM JKKNfrW RuzH can be Dodj4e ^zimF RKdm2mhZ gg0H WUgUFW. rSSY Jukfs5 hhX^ not uZC2 ;DqcKnv x@rLw. RWRhfg the ^huq72 3 - xKfi6 Wf#G HuHFdgd in Xss#GFuGV pTxeD.",
+      "0.9": "You are R9DdM an lj4$hrF AFgW6 sJVoHA, #nFg$ $WfU 2k@<wMG is a sJF(H R%)< 0 to 9. The x#3S7 may VIj4SLH VH(,*SAtSE. h)hF %wXi is to dOJc all &M*!6d 3 - e8BJg FcRg J^hf2eZ fNx^ can be E0$H$r jcUmB #ORnwJ^d d5iN E8r($C. wzxY JjKv@D j tx^ not ySB2 .Fzw8hT aR$LE. 3R^7FH the 7G*@&R 3 - fKyJy Sfrj H thh$$z in xAXDHS9bN IGR25.",
+      "1.0": "You are hkFRB an *grFh@$ x%3Au w&F&%c, !TFfd 2XfG wP4K$hr is a eLNU5 TTPJ 0 to 9. The zt5xt may DpJ6A&B vHlIJVS%RW. GKIG gWD> is to e8mv all ib91k@ 3 - XlhJr RBSJ JJnhWGQ GBA$ can be gpT<4C  tw&Gt RO3jdbYe Rek, ElrkhE. sXxy m^,h4d JHq% not ySB$ PWAfjjn Asepd. 5S%*Fj the 7H(WI# 3 - SjvU$ 3Frb bijND%X in XqvWBROmr K#V2T."
+    },
+    "synonym": {
+      "0.0": "You embody given an integer array digits, where each constituent is a digit from 0 to 9. The raiment may contain duplicate. Your project is to find all unequalled 3 - digit still numbers that rear comprise formed using element from dactyl. Each number must not get leading aught. Return the unique three - digit still numbers in ascending monastic order.",
+      "0.1": "You are given an integer raiment digits, where each chemical element is a digit from 0 to 9. The array may contain duplicates. Your task is to find all unique 3 - digit even number that hindquarters embody formed apply elements from digits. Each number must not have leading zeros. Return the unparalleled 3 - digit even numbers in ascending order.",
+      "0.2": "You are render an integer array figure, where each element is a digit from 0 to nine. The array may contain duplication. Your job is to discover all unique 3 - digit even numbers that buttocks be form using elements from digits. Each number must non stimulate go zeros. Return the alone 3 - digit even numbers in ascending order.",
+      "0.3": "You be given an integer regalia digits, where each element is a digit from cypher to 9. The array whitethorn moderate extra. Your task be to discover all unique troika - figure even number that rump follow formed using chemical element from digit. Each bit must not get lead zeros. Yield the alone 3 - digit even numbers in ascending order.",
+      "0.4": "You are given an whole number regalia digit, where each element be a figure from 0 to nine. The regalia crataegus oxycantha contain duplicates. Your chore is to receive all unique 3 - digit even book of numbers that derriere be formed apply component from digits. Each number mustiness not deliver go zero. Return the singular 3 - digit yet numbers racket in ascending orderliness.",
+      "0.5": "You personify give an whole number array dactyl, where each element is a finger's breadth from 0 to 9. The array whitethorn hold duplication. Your task be to detect all unparalleled threesome - digit still act that terminate exist formed utilise elements from fingerbreadth. Each numeral must non get lead zeros. Return the unique trinity - dactyl still routine in ascend ordering.",
+      "0.6": "You follow kick in an whole number array digit, where each chemical element make up a digit from zero to ennead. The raiment may hold back duplication. Your job constitute to find all unequaled 3 - figure yet numbers that give notice equal imprint expend element from figure. Each number moldiness non have lead nada. Riposte the singular trio - finger's breadth still book of numbers in ascending ordination.",
+      "0.7": "You be contribute an integer raiment figure, where each constituent follow a finger's breadth from zero to niner. The raiment crataegus laevigata turn back duplication. Your task be to ascertain all unequaled trio - dactyl still telephone number that can make up mold use factor from finger's breadth. Each figure moldiness non get lead naught. Repay the unequalled tierce - dactyl yet numbers in ascend edict.",
+      "0.8": "You equal present an whole number raiment fingerbreadth, where each component make up a figure from nought to ix. The regalia crataegus oxycantha hold in duplicate. Your project be to ascertain all unequaled leash - figure yet bit that tooshie exist mould use element from digit. Each telephone number moldiness non take pass cipher. Yield the unparalleled trey - figure still numeral in ascend ordering.",
+      "0.9": "You be ease up an whole number regalia digit, where each ingredient cost a finger's breadth from zero to nina from carolina. The regalia whitethorn hold extra. Your job be to receive all unparalleled triad - finger's breadth yet bit that bum represent organize use constituent from finger's breadth. Each phone number moldiness non sustain lead naught. Retrovert the unequalled three - fingerbreadth still numeral in ascend lodge.",
+      "1.0": "You equal give an whole number raiment fingerbreadth, where each component make up a dactyl from zero to niner. The raiment whitethorn take duplication. Your labor constitute to witness all unequaled tercet - fingerbreadth yet phone number that nates exist form apply element from finger. Each bit mustiness non take lead zippo. Pass the unequalled tierce - fingerbreadth still number in ascend orderliness."
+    },
+    "random": {
+      "0.0": "Are integer digits, each element is a digit 0 9. The array may. Your task is all unique 3 - even that be using elements digits. Each number must have leading zeros. Return unique - digit numbers in ascending order.",
+      "0.1": "You are given an integer array digits, where each is a digit from 0 to 9. The array may contain. Your task is to find all - digit numbers that can formed using elements from digits. Each number must not have leading zeros. Return the unique 3 - digit even numbers ascending order.",
+      "0.2": "You an integer digits, where element is a digit from 0. The array may duplicates. Your is to find all 3 - digit numbers that can be formed using from digits. Each number not have leading zeros. Return the unique 3 - even numbers in order.",
+      "0.3": "Are given an integer digits, where element is digit from 0 to 9. array may contain duplicates. task is find all unique 3 - digit even numbers that using from. Each number not zeros. the unique 3 - digit numbers in.",
+      "0.4": "You an integer digits, where each element is digit 9. array contain duplicates. task is find all - even that be formed using digits. number must not have zeros. the unique - digit.",
+      "0.5": "Are given an, where a 0 9. . Your task is find all unique - digit even numbers that formed using. Each number not. the 3 - in order.",
+      "0.6": "Are an digits, where. . find 3 - digit using elements. number leading zeros. Return the 3 - digit even order.",
+      "0.7": "Are given integer array, digit 9. . task - numbers can. . the unique - order.",
+      "0.8": "Are digits, .. Your - using. have. - digit.",
+      "0.9": "Are, .. -. . -.",
+      "1.0": "Are, .. -. . -."
+    },
+    "cut": {
+      "0.0": "You are given an integer array digits, where each element is a digit from 0 to 9. The array may contain duplicates. Your task is to find all unique 3-digit even numbers that can be formed using elements from digits. Each number must not have leading zeros. Return the unique 3-digit even numbers in ascending order.",
+      "0.1": "You are given an integer array digits, where each element is a digit from 0 to 9. The array may contain duplicates. Your task is to find all unique 3-digit even numbers that can be formed using elements from digits. Each number must not have leading zeros. Return the unique 3-digit e",
+      "0.2": "You are given an integer array digits, where each element is a digit from 0 to 9. The array may contain duplicates. Your task is to find all unique 3-digit even numbers that can be formed using elements from digits. Each number must not have leading ze",
+      "0.3": "You are given an integer array digits, where each element is a digit from 0 to 9. The array may contain duplicates. Your task is to find all unique 3-digit even numbers that can be formed using elements from digits. Each",
+      "0.4": "You are given an integer array digits, where each element is a digit from 0 to 9. The array may contain duplicates. Your task is to find all unique 3-digit even numbers that can be formed u",
+      "0.5": "You are given an integer array digits, where each element is a digit from 0 to 9. The array may contain duplicates. Your task is to find all unique 3-digit ev",
+      "0.6": "You are given an integer array digits, where each element is a digit from 0 to 9. The array may contain duplicates. Your task ",
+      "0.7": "You are given an integer array digits, where each element is a digit from 0 to 9. The array ma",
+      "0.8": "You are given an integer array digits, where each element is a ",
+      "0.9": "You are given an integer array d",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "openai": {
+      "cut": {
+        "0.0": [
+          "def unique_even_numbers(digits):\n    from itertools import permutations\n\n    unique_numbers = set()\n    for perm in permutations(digits, 3):\n        if perm[0] != 0 and perm[2] % 2 == 0:  # Check for leading zero and even last digit\n            number = perm[0] * 100 + perm[1] * 10 + perm[2]\n            unique_numbers.add(number)\n\n    return sorted(unique_numbers)\n\n# Example usage:\n# digits = [1, 2, 3, 4, 5, 6, 2]\n# print(unique_even_numbers(digits))"
+        ],
+        "0.1": [
+          "def unique_even_numbers(digits):\n    from itertools import permutations\n\n    unique_numbers = set()\n    for perm in permutations(digits, 3):\n        num = int(''.join(map(str, perm)))\n        if num >= 100 and num % 2 == 0:\n            unique_numbers.add(num)\n\n    return sorted(unique_numbers)\n\n# Example usage:\n# digits = [1, 2, 2, 3, 4]\n# print(unique_even_numbers(digits))"
+        ],
+        "0.2": [
+          "from itertools import permutations\n\ndef unique_even_numbers(digits):\n    unique_numbers = set()\n    for perm in permutations(digits, 3):\n        if perm[0] != 0 and perm[2] % 2 == 0:  # Check for leading zero and even last digit\n            number = perm[0] * 100 + perm[1] * 10 + perm[2]\n            unique_numbers.add(number)\n    return sorted(unique_numbers)\n\n# Example usage\ndigits = [1, 2, 3, 4, 4]\nresult = unique_even_numbers(digits)\nprint(result)"
+        ],
+        "0.3": [
+          "def unique_even_numbers(digits):\n    from itertools import permutations\n\n    unique_numbers = set()\n    for perm in permutations(digits, 3):\n        if perm[2] % 2 == 0:  # Check if the last digit is even\n            number = perm[0] * 100 + perm[1] * 10 + perm[2]\n            unique_numbers.add(number)\n\n    return sorted(unique_numbers)\n\n# Example usage:\n# digits = [1, 2, 2, 3, 4]\n# print(unique_even_numbers(digits))"
+        ],
+        "0.4": [
+          "from itertools import permutations\n\ndef unique_even_numbers(digits):\n    unique_numbers = set()\n    for perm in permutations(digits, 3):\n        if perm[2] % 2 == 0:  # Check if the last digit is even\n            number = perm[0] * 100 + perm[1] * 10 + perm[2]\n            unique_numbers.add(number)\n    return sorted(unique_numbers)\n\n# Example usage\ndigits = [1, 2, 3, 4, 4]\nresult = unique_even_numbers(digits)\nprint(result)"
+        ],
+        "0.5": [
+          "def unique_three_digit_evens(digits):\n    unique_evens = set()\n    n = len(digits)\n    \n    for i in range(n):\n        for j in range(n):\n            for k in range(n):\n                if i != j and j != k and i != k:\n                    num = digits[i] * 100 + digits[j] * 10 + digits[k]\n                    if num % 2 == 0:\n                        unique_evens.add(num)\n    \n    return sorted(unique_evens)\n\n# Example usage:\n# digits = [1, 2, 3, 4, 5, 6, 2]\n# print(unique_three_digit_evens(digits))"
+        ],
+        "0.6": [
+          "def unique_digits(digits):\n    return list(set(digits))\n\n# Example usage\ndigits = [1, 2, 2, 3, 4, 4, 5]\nresult = unique_digits(digits)\nprint(result)"
+        ],
+        "0.7": [
+          "def plusOne(digits):\n    for i in range(len(digits) - 1, -1, -1):\n        if digits[i] < 9:\n            digits[i] += 1\n            return digits\n        digits[i] = 0\n    return [1] + digits\n\n# Example usage:\n# result = plusOne([1, 2, 3])\n# print(result)  # Output: [1, 2, 4]"
+        ],
+        "0.8": [
+          "def plus_one(digits):\n    for i in range(len(digits) - 1, -1, -1):\n        if digits[i] < 9:\n            digits[i] += 1\n            return digits\n        digits[i] = 0\n    return [1] + digits\n\n# Example usage:\n# result = plus_one([1, 2, 3])\n# print(result)  # Output: [1, 2, 4]"
+        ],
+        "0.9": [
+          "def process_array(d):\n    return [x * 2 for x in d]\n\n# Example usage\nd = [1, 2, 3, 4]\nresult = process_array(d)\nprint(result)"
+        ],
+        "1.0": [
+          "def fibonacci(n):\n    a, b = 0, 1\n    sequence = []\n    for _ in range(n):\n        sequence.append(a)\n        a, b = b, a + b\n    return sequence\n\nn = int(input(\"Enter the number of Fibonacci numbers to generate: \"))\nprint(fibonacci(n))"
+        ]
+      }
+    }
+  }
+}

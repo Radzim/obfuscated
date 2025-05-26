@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/two-sum/discuss/2361743/Python-Simple-Solution-oror-O(n)-Time-oror-O(n)-Space",
+  "python_solutions": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        \n        d = {}\n        for i, j in enumerate(nums):\n            r = target - j\n            if r in d: return [d[r], i]\n            d[j] = i\n\t\t\n\t\t# An Upvote will be encouraging",
+  "slug": "two-sum",
+  "post_title": "Python Simple Solution || O(n) Time || O(n) Space",
+  "user": "rajkumarerrakutti",
+  "upvotes": 288,
+  "views": 21600,
+  "problem_title": "two sum",
+  "number": 1,
+  "acceptance": 0.491,
+  "difficulty": "Easy",
+  "__index_level_0__": 0,
+  "question": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\nYou can return the answer in any order.\n  Example 1:\nInput: nums = [2,7,11,15], target = 9\nOutput: [0,1]\nExplanation: Because nums[0] + nums[1] == 9, we return [0, 1].\nExample 2:\nInput: nums = [3,2,4], target = 6\nOutput: [1,2]\nExample 3:\nInput: nums = [3,3], target = 6\nOutput: [0,1]\n  Constraints:\n2 <= nums.length <= 104\n-109 <= nums[i] <= 109\n-109 <= target <= 109\nOnly one valid answer exists.\n  Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.",
+      "0.1": "Given an array of integers nums and an integer targ4t, return indices of the two numhers such Rhat they add up to target. You may assume that eaSh &nput would have exactly one solution, and you may not use the same element twice. You can retutn the answer in any order.",
+      "0.2": "Biven an array of inHerers nums and an integer twrHet, $eFurn indices of the two numbers such that they add up to tarBeH. You may assume that each in(ut would have exzdtly one solutK8n, and you may not use the sSme @le,ent twise. You can eeturB the answer in any order.",
+      "0.3": "Given an Qrrxy of iJtege4X buJs and an integer GaEget, return ind8s$s of the two numbers such that YTey add up to tw#get. You may axAume 6hSt each input Eoulx hqBe eCacY?y one sIlktioM, and you may not use the same elem4GY ywUce. You can return the anCwWr in any )eder.",
+      "0.4": "GODen an array of OBtrg4rs nu<d and an integer Farg2Y, rer7Fn inVjSes of the two MumgerQ Wich tUZt tjsy add up to 5aEgDt. You may wscune %ha5 escN input wohlf gaFe exactly one Woou6ioh, and you may not use the swJe eldmem6 $wicw. You can rW^*rn the ABswe% in any orXef.",
+      "0.5": "Gibrg an s$rwy of int3ve5Q nHmc and an jBteTe$ ta%Veh, ret65j unsiDew of the two HuNbwrx sjcG fNat tNeu add up to farney. You may Aqsune 6gat 2Ach kGp6t aou/v hADe Rxas$lT one Qpljt7on, and you may not use the sA<e e<eHRGt Hwucs. You can reh trb the aJaw2r in any o$vsr.",
+      "0.6": "BiC2n an zrDaT of iGtRnDrZ n&NA and an 7H5#get HzrTdt, $46urh iGviF$C of the two huKhegZ xhcT yJZt yh3g add up to txEnrt. You may adCjmS tUwh eqSY on(uH w8 Tle JzvS WSad4py one do.uri*G, and you may not use the ZQJe FOeJegr 6sics. You can Getj4M the xms@sr in any lEdrr.",
+      "0.7": "b&v2h an ZF3aG of in%sRdDC nKND and an 9JtFgsT YqghFt, r3^iTH kjR*c2s of the two MimneDX A8fh tyXr tyfh add up to hadh@H. You may aXA&Js ^nZt sxXh jjLug w9I/f bad# eSXVg:y one dpPhtilm, and you may not use the szNd dl4,ejH %d7ve. You can tWR Trm the XHZdWr in any o$rrT.",
+      "0.8": "YlGrn an ag%w7 of 9m62hr3s H8HC and an Jhh$NeT hArt2G, %2GI$n *mVid2q of the two j&hHedq CKvb 4NW6 RnRJ add up to $XetWt. You may adc6<F Hmzf WZDJ Ogp*5 #o^pE jXb3 fdzVt;g one s*pi^J0M, and you may not use the QXJR W;snDjt f@Kxe. You can dD$7En the aGXAWF in any o3Ws4.",
+      "0.9": "VUd#b an wE%Wu of 7hR$fFGq g8Kc and an Ub4WT$4 gW3hF6, ##hHGb 7jVKx3Z of the two h*hG3dd D*DB HGQh hUrj add up to 4Zgfdg. You may zdq7<R RgW6 rZsj UJ96F E0k;r nscr 2sxd^kg one zl;k$9IM, and you may not use the DZK2 r,3,4gf HE8df. You can 4f^7gb the qHq!W$ in any ITR@3.",
+      "1.0": "F(bSj an W$FA^ of jmgRT$#D h tKD and an 7MhDvrg ySeyFg, FdYk3M KmX*vWW of the two mhHhfGz XjXm 5GwR hU@t add up to fqFr3y. You may www tk2 fbZG dXvN (j(^% DpHOv Gqbd dSAdR.g one Cp>IRL(B, and you may not use the xxjF f;fH3G% GaUFr. You can gWGHfb the XHD#4% in any 9FC2g."
+    },
+    "synonym": {
+      "0.0": "Give an array of integers nums and an integer target, return indices of the ii numbers such that they tot up upward to aim. You may assume that each input would get on the dot one solution, and you may not use the like component double. You can give the answer in any order.",
+      "0.1": "Given an array of integers nums and an integer target area, takings indices of the two numbers such that they add up to target. You may feign that each input would have exactly one solution, and you may non practice the same element twice. You can return the answer in any order.",
+      "0.2": "Given an array of integers nums and an integer object, return indices of the two numbers such that they add up to target. You crataegus laevigata assume that each input would hold exactly one root, and you may not practice the same constituent twice. You can give the solvent in any rescript.",
+      "0.3": "Given an array of integers nums and an whole number quarry, return indicator of the two numbers such that they add upward to target. You whitethorn don that each input would have exactly nonpareil solution, and you whitethorn not apply the same element twice. You can return the resolution in any edict.",
+      "0.4": "Given an regalia of integers nums and an whole number target, return index finger of the two number such that they add up to target. You may assume that each stimulant would have precisely one solution, and you may not practice the like element twice. You prat return the solvent in any club.",
+      "0.5": "Leave an raiment of whole number nums and an integer quarry, return indices of the 2 numbers such that they sum up to target. You whitethorn assume that each comment would hold on the nose unitary answer, and you may non use the same constituent double. You tush return the resolution in any ordering.",
+      "0.6": "Commit an regalia of integer nums and an whole number target, regaining indices of the 2 numeral such that they total upward to direct. You may put on that each input signal would birth on the dot 1 solution, and you may not employ the like chemical element doubly. You butt deliver the result in any order.",
+      "0.7": "Ease up an regalia of whole number nums and an whole number objective, return index number of the ii number such that they total upward to aim. You whitethorn adopt that each stimulation would own exactly one and only resolution, and you whitethorn non utilize the like element double. You ass render the resolution in any orderliness.",
+      "0.8": "Give an regalia of whole number nums and an whole number quarry, reappearance index of the ii number such that they bestow upwards to point. You english hawthorn simulate that each input signal would get precisely i answer, and you crataegus oxycantha non employ the like component doubly. You throne repay the reply in any purchase order.",
+      "0.9": "Give an regalia of integer nums and an whole number fair game, takings index finger of the 2 turn such that they add up upwards to aim. You english hawthorn usurp that each stimulant would get just nonpareil result, and you english hawthorn non practice the like factor doubly. You rear render the response in any fiat.",
+      "1.0": "Give an raiment of whole number nums and an whole number object, homecoming index of the deuce number such that they add up upwardly to direct. You english hawthorn usurp that each stimulation would get precisely unmatchable solvent, and you crataegus laevigata non apply the like component double. You dismiss reelect the solution in any lodge."
+    },
+    "random": {
+      "0.0": "Given an integers nums and an integer target, return indices the two numbers such that they add to target. You assume that would one solution, may element twice. can return the in any order.",
+      "0.1": "Given an array of integers nums and an integer, return indices of the numbers such they add to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return answer in any.",
+      "0.2": "Given an array of integers nums and an integer, of the two that they up to target. You may assume each input would have exactly one, you may not use the same element. You return the answer in order.",
+      "0.3": "Given an array of integers nums and an, return indices of the that they add to. You assume each input would have exactly one, you may use the same element. You can answer order.",
+      "0.4": "Given array of integers nums and target, of the two numbers such that add to. assume input have exactly one, and not same. can return in any order.",
+      "0.5": "An array of integers nums target, return of the such add up. each have one solution, may use the element. return in any order.",
+      "0.6": "Given array of, return numbers add up to. each have one, not the twice. return answer any.",
+      "0.7": "An array integer target, return add. may each solution, may not..",
+      "0.8": "An, of the. solution, may not. order.",
+      "0.9": "An, ., ..",
+      "1.0": "An, ., .."
+    },
+    "cut": {
+      "0.0": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\nYou can return the answer in any order.",
+      "0.1": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\nYou can retu",
+      "0.2": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would have exactly one solution, and you may not use the same ",
+      "0.3": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would have exactly one solution, an",
+      "0.4": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would ha",
+      "0.5": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assu",
+      "0.6": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add ",
+      "0.7": "Given an array of integers nums and an integer target, return indices of the two ",
+      "0.8": "Given an array of integers nums and an integer target,",
+      "0.9": "Given an array of integers ",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "deepseek": {
+      "random": {
+        "0.0": [
+          "def two_sum(nums, target):\n    num_map = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in num_map:\n            return [num_map[complement], i]\n        num_map[num] = i\n    return []"
+        ],
+        "0.1": [
+          "def two_sum(nums, target):\n    num_map = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in num_map:\n            return [num_map[complement], i]\n        num_map[num] = i\n    return []"
+        ],
+        "0.2": [
+          "def two_sum(nums, target):\n    num_map = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in num_map:\n            return [num_map[complement], i]\n        num_map[num] = i\n    return []"
+        ],
+        "0.3": [
+          "def two_sum(nums, target):\n    num_map = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in num_map:\n            return [num_map[complement], i]\n        num_map[num] = i\n    return []"
+        ],
+        "0.4": [
+          "def two_sum(nums, target):\n    num_map = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in num_map:\n            return [num_map[complement], i]\n        num_map[num] = i\n    return []"
+        ],
+        "0.5": [
+          "def two_sum(nums, target):\n    num_map = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in num_map:\n            return [num_map[complement], i]\n        num_map[num] = i\n    return []"
+        ],
+        "0.6": [
+          "def two_sum(nums, target):\n    seen = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in seen:\n            return [seen[complement], i]\n        seen[num] = i\n    return []"
+        ],
+        "0.7": [
+          "def two_sum(nums, target):\n    seen = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in seen:\n            return [seen[complement], i]\n        seen[num] = i\n    return []"
+        ],
+        "0.8": [
+          "def solve_problem(input_data):\n    # Process the input data\n    processed_data = [item.strip('.') for item in input_data.split()]\n    # Shuffle the processed data to ensure order is not guaranteed\n    import random\n    random.shuffle(processed_data)\n    return ' '.join(processed_data)\n\n# Example usage\ninput_str = \"An, of the. solution, may not. order.\"\nresult = solve_problem(input_str)\nprint(result)"
+        ],
+        "0.9": [
+          "import os\n\ndef list_files(directory='.'):\n    try:\n        files = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]\n        for file in files:\n            print(file)\n    except OSError as e:\n        print(f\"Error: {e}\")"
+        ],
+        "1.0": [
+          "import os\n\ndef list_directory_contents(path):\n    if path == '.':\n        return os.listdir('.')\n    elif path == '..':\n        return os.listdir('..')\n    else:\n        return os.listdir(path)\n\n# Example usage\nprint(list_directory_contents('.'))\nprint(list_directory_contents('..'))"
+        ]
+      }
+    }
+  }
+}

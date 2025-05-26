@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/discuss/2098804/Python3-Clean-Solution-using-Queue-Level-Order-Traversal",
+  "python_solutions": "class Solution:\n    def zigzagLevelOrder(self, root):\n        \n        res = []\n        if not root: return res\n        zigzag = True\n        \n        q = collections.deque()\n        q.append(root)\n        \n        while q:\n            n = len(q)\n            nodesOfThisLevel = []\n            \n            for i in range(n):\n                node = q.popleft()\n                nodesOfThisLevel.append(node.val)\n                \n                if node.left: q.append(node.left)\n                if node.right: q.append(node.right)\n                    \n            if zigzag:\n                res.append(nodesOfThisLevel)\n                zigzag = False\n            else:\n                res.append(nodesOfThisLevel[::-1])\n                zigzag = True\n        \n        return res\n    \n# Time: O(N)\n# Space: O(N)",
+  "slug": "binary-tree-zigzag-level-order-traversal",
+  "post_title": "[Python3] Clean Solution using Queue Level Order Traversal",
+  "user": "samirpaul1",
+  "upvotes": 7,
+  "views": 240,
+  "problem_title": "binary tree zigzag level order traversal",
+  "number": 103,
+  "acceptance": 0.552,
+  "difficulty": "Medium",
+  "__index_level_0__": 614,
+  "question": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then right to left for the next level and alternate between).\n  Example 1:\nInput: root = [3,9,20,null,null,15,7]\nOutput: [[3],[20,9],[15,7]]\nExample 2:\nInput: root = [1]\nOutput: [[1]]\nExample 3:\nInput: root = []\nOutput: []\n  Constraints:\nThe number of nodes in the tree is in the range [0, 2000].\n-100 <= Node.val <= 100",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given the root of a binary tree, return the zigzag level order traversal of its nodes ' values. (i. e. , from left to right, then right to left for the next level and alternate between ).",
+      "0.1": "Given the root of a binarH tree, return the zigzag level order tragersal of its nodes ' values. (i. e. , froh left to right, tmen right to left for the next level and alternate betwe3n ).",
+      "0.2": "Given the $oot of a binary trSe, return the zigzag leve: order traversal of its nodes ' valuwC. (i. e. , from lefF to right, then right to legt for the ndxt leGel and altergQte between ).",
+      "0.3": "Given the tooh of a binWru trFF, r$Gurn the ziBAag ,eCel oede5 grXvRrsal of its nodes ' BaluSs. (i. e. , fFim left to rigYG, then rinGt to left for the next oeCel and alternate vFt1een ).",
+      "0.4": "TiveM the Tooy of a NinAEy 6reF, $e4ufn the SigxQg lef@l order traversal of its gides ' vwl8Rs. (i. e. , f%o, Isft to f9ght, thwB 4ihht to iegt for the GexG lfCel and zltdrJatD between ).",
+      "0.5": "GUfdn the fo)t of a b(nag^ t4eW, rStufg the aKgzan oefei oFd#F t$xcRrsQl of its M0deD ' Gw>ues. (i. e. , g%om lRfF to r&gyF, HheJ #igtF to >efY for the Mex^ kede: and xpGrrnage beywRfg ).",
+      "0.6": "G(vSB the t(9t of a buHwrt YDeW, r@6ugM the s9gSat KFv$l KrreG RGav3TsSp of its m8wes ' vaI&$x. (i. e. , dGoh .3Ct to EONht, tu@j rjgUh to :#f$ for the ndZ^ l4cSl and Zl4Wrnx$3 GWt@erG ).",
+      "0.7": "nid@j the $8o^ of a v&nz3g Yte3, 5e$J$G the AirswY lWfr. K%SFr grxvFtXs/ of its hoC2Z ' Csl trC. (i. e. , e$im ;Sgt to r&BtF, HnFn GOvmt to k$fg for the JFx5 KdvSP and s,6DFJQte V#RDeeH ).",
+      "0.8": "G(c2m the ep(% of a Vibqtu 5DWw, 5d5jgn the xJhssg ,eBF< *DseG 6rqG2Tcxk of its HIdSw ' vw,&#e. (i. e. , Ge*N ;3t4 to 4ibn4, %nFg rkVmy to PsVh for the Hrsf Odfsl and AigrFGa5d f@tESDG ).",
+      "0.9": "v9DfM the Ek9$ of a Fkgq%% 4F#r, 5#YItH the XuHSsv ,SB3O peEr4 4#WG4TDX: of its m9S4c ' gw/jrA. (i. e. , dTih i@gH to $KtTg, fj3b F(hu^ to ?Ft4 for the MWcG .3bdK and xKF4$MX$F Vr$!s3m ).",
+      "1.0": "hKB2M the TI8r of a NuBX$G yDDR, %$$ T#M the A8rxWT ;fFrk *%ss3 gdqgd#zw> of its hiXww ' cAo*3Z. (i. e. , t%iH :fr5 to FkByy, hnDj GjvYy to .3vH for the jrZR k@GrI and XPff%Jx^W hr^eR#j )."
+    },
+    "synonym": {
+      "0.0": "Gift the root of a binary tree, bring back the zag stratum order traverse of information technology nodes ' values. (i. atomic number 99. , from left to correct, then right to left for the next degree and alternate between ).",
+      "0.1": "Given the root of a binary tree, return the zigzag level order traversal of its node ' values. (i. e. , from left to right, then decently to leave for the next level and replacement between ).",
+      "0.2": "Given the root of a binary tree, return the zag level order traversal of its nodes ' values. (ane. e. , from depart to right, so in good order to leave for the next level and alternate between ).",
+      "0.3": "Collapse the root of a binary sir herbert beerbohm tree, return the zigzag level order traversal of information technology leaf node ' value. (i. e. , from get out to rectify, so mightily to leave behind for the following level and replacement between ).",
+      "0.4": "Afford the radical of a binary tree, return the zigzag storey order traversal of information technology nodes ' values. (i. east. , from bequeath to compensate, so flop to left for the side by side horizontal surface and alternate between ).",
+      "0.5": "Give the root of a binary tree diagram, repay the zig grade order traverse of information technology node ' value. (ane. e. , from impart to right, and then flop to lead for the following storey and alternate between ).",
+      "0.6": "Yield the ascendent of a binary tree diagram, give back the zigzag level holy order traverse of it knob ' economic value. (ane. due east. , from left to correct, and so mighty to give for the succeeding horizontal surface and replacement between ).",
+      "0.7": "Ease up the source of a binary tree diagram, recall the zag storey holy order traverse of information technology lymph gland ' note value. (ane. einsteinium. , from give to correct, and then correctly to leave for the following grade and surrogate between ).",
+      "0.8": "Render the stem of a binary tree diagram, revert the zag degree ordering traverse of information technology node ' value. (one. es. , from leave to correct, and then flop to give for the adjacent point and surrogate between ).",
+      "0.9": "Move over the beginning of a binary sir herbert beerbohm tree, render the zig floor purchase order traverse of information technology node ' value. (one. vitamin e. , from leave to rectify, and so properly to leave for the succeeding degree and surrogate between ).",
+      "1.0": "Turn over the source of a binary tree diagram, come back the zig floor decree traverse of it node ' economic value. (one. eastward. , from leave to redress, and then correctly to leave for the succeeding degree and surrogate between )."
+    },
+    "random": {
+      "0.0": "The of tree, return zigzag level order traversal of its nodes ' values. (. ., left to right, right left for and between ).",
+      "0.1": "Given the root of a binary tree, return the zigzag level traversal of its nodes ' values. (i. e. , from left to right, right to left for the level alternate ).",
+      "0.2": "The root of a binary tree, return the zigzag order traversal its ' values. (i. e. , from left to right, left for the level and between ).",
+      "0.3": "Given the of, the order of its '. (i. ., from left to right, then right to for next and alternate between ).",
+      "0.4": "The binary tree, zigzag level order traversal ' values. (. ., left right, to the next and alternate between ).",
+      "0.5": "Given a tree, the order traversal of '. (i. e. , left, then to ).",
+      "0.6": "The, return traversal '. (. ., from to, then and ).",
+      "0.7": "The, '. (. ., left, between ).",
+      "0.8": "The, '. (. ., , ).",
+      "0.9": "The, '. (. ., , ).",
+      "1.0": "The, '. (. ., , )."
+    },
+    "cut": {
+      "0.0": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then right to left for the next level and alternate between).",
+      "0.1": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then right to left for the next level and a",
+      "0.2": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then right to left for t",
+      "0.3": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then r",
+      "0.4": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from lef",
+      "0.5": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' value",
+      "0.6": "Given the root of a binary tree, return the zigzag level order traversal ",
+      "0.7": "Given the root of a binary tree, return the zigzag leve",
+      "0.8": "Given the root of a binary tree, retu",
+      "0.9": "Given the root of ",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "deepseek": {
+      "synonym": {
+        "0.0": [
+          "from collections import deque\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef zigzagLevelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    left_to_right = True\n    \n    while queue:\n        level_size = len(queue)\n        current_level = deque()\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            \n            if left_to_right:\n                current_level.append(node.val)\n            else:\n                current_level.appendleft(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(list(current_level))\n        left_to_right = not left_to_right\n    \n    return result"
+        ],
+        "0.1": [
+          "from collections import deque\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef zigzagLevelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    left_to_right = True\n    \n    while queue:\n        level_size = len(queue)\n        current_level = deque()\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            \n            if left_to_right:\n                current_level.append(node.val)\n            else:\n                current_level.appendleft(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(list(current_level))\n        left_to_right = not left_to_right\n    \n    return result"
+        ],
+        "0.2": [
+          "from collections import deque\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef zigzagLevelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    left_to_right = True\n    \n    while queue:\n        level_size = len(queue)\n        current_level = deque()\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            \n            if left_to_right:\n                current_level.append(node.val)\n            else:\n                current_level.appendleft(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(list(current_level))\n        left_to_right = not left_to_right\n    \n    return result"
+        ],
+        "0.3": [
+          "from collections import deque\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef zigzagLevelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    left_to_right = True\n    \n    while queue:\n        level_size = len(queue)\n        current_level = deque()\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            \n            if left_to_right:\n                current_level.append(node.val)\n            else:\n                current_level.appendleft(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(list(current_level))\n        left_to_right = not left_to_right\n    \n    return result"
+        ],
+        "0.4": [
+          "ERROR: list index out of range"
+        ],
+        "0.5": [
+          "from collections import deque\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef zigzagLevelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    left_to_right = True\n    \n    while queue:\n        level_size = len(queue)\n        current_level = deque()\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            \n            if left_to_right:\n                current_level.append(node.val)\n            else:\n                current_level.appendleft(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(list(current_level))\n        left_to_right = not left_to_right\n    \n    return result"
+        ],
+        "0.6": [
+          "from collections import deque\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef zigzagLevelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    left_to_right = True\n    \n    while queue:\n        level_size = len(queue)\n        current_level = deque()\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            \n            if left_to_right:\n                current_level.append(node.val)\n            else:\n                current_level.appendleft(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(list(current_level))\n        left_to_right = not left_to_right\n    \n    return result"
+        ],
+        "0.7": [
+          "from collections import deque\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef zigzagLevelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    left_to_right = True\n    \n    while queue:\n        level_size = len(queue)\n        current_level = deque()\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            \n            if left_to_right:\n                current_level.append(node.val)\n            else:\n                current_level.appendleft(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(list(current_level))\n        left_to_right = not left_to_right\n    \n    return result"
+        ],
+        "0.8": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef zigzag_level_order(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = [root]\n    left_to_right = True\n    \n    while queue:\n        level_size = len(queue)\n        current_level = []\n        \n        for _ in range(level_size):\n            node = queue.pop(0)\n            current_level.append(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        if not left_to_right:\n            current_level = current_level[::-1]\n        \n        result.append(current_level)\n        left_to_right = not left_to_right\n    \n    return result\n\n# Example usage:\n# root = TreeNode(1)\n# root.left = TreeNode(2)\n# root.right = TreeNode(3)\n# root.left.left = TreeNode(4)\n# root.right.right = TreeNode(5)\n# print(zigzag_level_order(root))"
+        ],
+        "0.9": [
+          "from collections import deque\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef zigzagLevelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    left_to_right = True\n    \n    while queue:\n        level_size = len(queue)\n        current_level = deque()\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            \n            if left_to_right:\n                current_level.append(node.val)\n            else:\n                current_level.appendleft(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(list(current_level))\n        left_to_right = not left_to_right\n    \n    return result"
+        ],
+        "1.0": [
+          "from collections import deque\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef zigzagLevelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    left_to_right = True\n    \n    while queue:\n        level_size = len(queue)\n        current_level = deque()\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            \n            if left_to_right:\n                current_level.append(node.val)\n            else:\n                current_level.appendleft(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(list(current_level))\n        left_to_right = not left_to_right\n    \n    return result"
+        ]
+      }
+    }
+  }
+}

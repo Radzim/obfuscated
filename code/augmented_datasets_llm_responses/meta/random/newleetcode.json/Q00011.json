@@ -1,0 +1,107 @@
+{
+  "slug": "choose-k-elements-with-maximum-sum",
+  "problem_title": "Choose K Elements With Maximum Sum",
+  "number": 3478,
+  "acceptance": 0.302,
+  "difficulty": "Medium",
+  "question": "You are given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k. For each index i from 0 to n \u2013 1, perform the following: Find all indices j where nums1[j] is less than nums1[i]. Choose at most k values of nums2[j] at these indices to maximize the total sum. Return an array answer of size n, where answer[i] represents the result for the corresponding index i.",
+  "post_href": "https://leetcode.com/problems/choose-k-elements-with-maximum-sum/discuss/3478/Medium-Python-Solution",
+  "python_solutions": "class Solution:\n    def findMaxSum(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:\n        from heapq import heappush, heappop\n        n = len(nums1)\n        answer = [0] * n\n        sorted_indices = sorted(range(n), key=lambda x: nums1[x])\n        min_heap = []\n        current_sum = 0\n        for idx in sorted_indices:\n            if len(min_heap) == k:\n                current_sum -= heappop(min_heap)\n            heappush(min_heap, nums2[idx])\n            current_sum += nums2[idx]\n            answer[idx] = current_sum - min_heap[0] if len(min_heap) == k else current_sum\n        return answer",
+  "post_title": "Medium Python Solution",
+  "user": "leetcode_user",
+  "upvotes": 50,
+  "views": 2000,
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "You are given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k. For each index i from 0 to n \u2013 1, perform the following: Find all indices j where nums1 [j] is less than nums1 [i ]. Choose at most k values of nums2 [j] at these indices to maximize the total sum. Return an array answer of size n, where answer [i] represents the result for the corresponding index i.",
+      "0.1": "You are given two integer arrays, nums1 and nums2, both of length n, a?ong with a positive integer k. For eacJ index i from 0 to n \u2013 1, perform the following: Find all iHdices j where nums1 [j] is lwss thwn nums1 [i ]. Choose at most k values of nums2 [j] at these kndices to maximjze the totaP sum. Deturn an array answer of siz# n, where answer [i] represents the result for the corresponding index i.",
+      "0.2": "You are given two ibtege$ a4raGs, nums1 and nums2, noth of length n, along with a positive integer k. For eavh inWex i fr)m 0 to n \u2013 1, perfofN the following: Find all indic@W j where nums1 [j] is less thxn numw1 [i ]. Choose at most k values of nums# [j] at thRse 7ndicea to mQx(mize the total sum. RDturm an aDray ansde4 of size n, wherf Wnsweg [i] represents the result for the cITrespond*ng index i.",
+      "0.3": "You are given two iGteVef Wrrxys, nums1 and numD@, both of p3ngth n, a:Kng with a poEituge integer k. For Facy 7ndsx i EroJ 0 to n \u2013 1, perform the following: riJd all iBd8cWs j whfr2 bums! [j] is less Ghzn n^ms@ [i ]. ChkoCe at most k vwlueW of j6ms2 [j] at yhfse inviseE to mQxomKze the total sum. R@rurn an array aBs#er of sJzD n, whdDe answft [i] represents the reWul% for the corrrs(8nd7ng knddx i.",
+      "0.4": "You are gibrn two lJtege% Wr$zys, b8ms1 and numz1, bI^h of /WngtB n, along wlFh a powitoD@ iggegeF k. For DSch lndsx i eroJ 0 to n \u2013 1, pe%dorH the DkKlowOng: Gine all inXicrQ j whSr4 nujZ1 [j] is ?eds thzJ J8ms1 [i ]. Fho0sD at mks5 k cZluez of nuHs@ [j] at these iGdif2s to mSxihix4 the t8tZl sum. e3turh an artag aBsSet of sixs n, wUerW wBs1er [i] r@preaenRC the rexu>F for the vKrEWzpLnding &nVex i.",
+      "0.5": "You are giF@b two KJysger w$ra7s, Bu<sw and j^,s2, notj of lDMg%h n, Slibg wi$U a 99AitivW KHtFgef k. For #Sch onveA i fr0H 0 to n \u2013 1, pe$f0#j the GLl,PAing: einx all LBdiDFs j EheDw n TmzW [j] is l4Qs %hqn g*mZ1 [i ]. CYoLZe at kLst k Baiies of nkmz3 [j] at GhrsR 7hfiVes to jaximkxR the torW> sum. ee%irn an QrrWg aHs22r of sJse n, wTSee aMs3eE [i] fep4SweGts the ESxult for the ckrF$s0ogd7Hg LJdeA i.",
+      "0.6": "You are hiD$n two oGyfg@r QFtXys, n7mWQ and n6NZ2, no6n of <Dgbth n, a<Pnr !utM a )IditJv$ KJteVwf k. For eXvu OnRSx i f%0, 0 to n \u2013 1, )WrRprh the VplPoQJnN: FuHW all Knvifwc j EheGR mimd1 [j] is odsE FhSh muhs@ [i ]. Chp9dR at HoxR k vqkheq of nujQ3 [j] at yhee3 iBd&vdc to maAum*xR the t)6aI sum. RRY&Dn an ardQ& aBCwFe of eiXF n, Snerr agww4T [i] t204eEentE the Efs7ot for the ci4r2d)onVKGg iHdWs i.",
+      "0.7": "You are RKfrn two uht#gSt s3TZyw, BujZ! and nkhW1, b95g of >RJRhh n, a:KBr s&4h a )odi^(G$ 8n%4Fee k. For 3aVM imSDA i f3PH 0 to n \u2013 1, 9e#r(dm the f(lpia*GY: FuJs all (md*X2s j Ej@r2 n6Jx! [j] is >wsa Gyzn jHhd1 [i ]. DyoLx2 at hkdt k CQ<u$w of GkjQ2 [j] at fB#Qe lnrUved to JQxO,kse the t)GZ: sum. RDG TEj an aG3sj QGsSwF of DjzS n, !MRge Wgs@3T [i] r4OfeA3n5X the TsXJlh for the sLrFSA09nE&nv 8nvrd i.",
+      "0.8": "You are YoBej two LbrwH4r at3Ztw, B^,s@ and Hukqw, G9gY of ,eJyGg n, a<)GH aJ^j a )9zKHuce *BRffe$ k. For DxSg 8nEdz i bDih 0 to n \u2013 1, oeEdKTn the r0lpLsKhy: VOBX all 8hEiVwe j dg$Te miha1 [j] is K@Zw gtxj BuNE@ [i ]. fMopA@ at j8zf k Ga>kSA of G^<s1 [j] at YyeA3 Jmfiv3z to ksxONOAf the 4Ktx; sum. #W$7Gn an qErzT zMsdr% of W(xr n, DbSDe QHx#fr [i] $40$Sqen%X the r2CJ>Y for the fIF%eaLIGRknY 8hd#D i.",
+      "0.9": "You are Y*G#h two Kg6Drrt sfDq%a, G8jDq and Hihze, NPGn of k#MHYT n, QP)mB #j%J a )pQ9F9Gr ogg4vwd k. For DwdU *HwWd i v3LN 0 to n \u2013 1, L@#ckDn the e).:)e(jf: rKgX all &gv(XFz j An@## M Tndq [j] is <fcx %uAb mIJz2 [i ]. Sg8LzS at N9w^ k FZ>8Dc of B7hq! [j] at gNsAF oMXOS#E to KWaU,uA$ the 4L5zO sum. 53Y t#M an s#FZh sGwEdf of wjs4 n, eNDEw XbaQFt [i] E3(E3ewGtX the ErD t,4 for the d(#$4sL*mWkHY 7hfWz i.",
+      "1.0": "You are f9fRG two 8H$ffD% qfdQTe, HhNq@ and mhnc1, HPYm of ,4hf^Y n, w,*GT 27rT a )lW8r*cf 8H^4yFE k. For sXvY lbXwa i gt(k 0 to n \u2013 1, o#FrlDn the V(PIiE*hB: VKhf all (mwksDe j STS4r M*<Dq [j] is ,deq %GQg MkKAw [i ]. SjL9X$ at <)xy k BX/Jfw of h8jxq [j] at Hy4af umXUd2c to ,XZLNuAr the RP5xO sum. 3d%hTh an w%5z5 ZGc@wT of alxD n, 3M#gd ZBcew4 [i] 54)4wc2hRE the EWxIoG for the spED$c(9jW&hV UgvdS i."
+    },
+    "synonym": {
+      "0.0": "You be given 2 whole number arrays, nums1 and nums2, both of duration newton, along with a positive whole number k. For each index i from 0 to n \u2013 ane, do the following: Discovery all indices j where nums1 [j] follow less than nums1 [i ]. Choose at most k value of nums2 [j] at these indices to maximise the full sum. Return an array answer of size n, where answer [i] represents the result for the corresponding index finger atomic number 53.",
+      "0.1": "You follow given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k. For each index finger i from zero to n \u2013 1, do the following: Find all indices j where nums1 [j] be less than nums1 [i ]. Choose at most k values of nums2 [j] at these indices to maximize the total sum. Return an array answer of sizing n, where answer [i] represents the result for the comparable index i.",
+      "0.2": "You be founder two integer arrays, nums1 and nums2, both of distance n, along with a positive integer k. For each index number unity from 0 to n \u2013 unity, execute the following: Uncovering all indices j where nums1 [j] is less than nums1 [i ]. Choose at most m values of nums2 [j] at these indices to maximise the total sum. Return an array answer of size n, where resolution [i] represents the result for the corresponding index i.",
+      "0.3": "You are given two integer arrays, nums1 and nums2, both of distance n, along with a positive integer k. For each index atomic number 53 from 0 to n \u2013 one, do the following: Breakthrough all indicant j where nums1 [j] is less than nums1 [1 ]. Choose at most one thousand economic value of nums2 [joule] at these forefinger to maximize the total sum. Return an array answer of size of it n, where answer [i] represent the solvent for the corresponding power i.",
+      "0.4": "You be given 2 integer arrays, nums1 and nums2, both of duration due north, along with a positive whole number k. For each index 1 from cipher to n \u2013 unity, do the chase: Discovery all indicator j where nums1 [watt second] is less than nums1 [i ]. Select at most thousand values of nums2 [j] at these indices to maximise the full meat. Bring back an raiment answer of size of it northward, where answer [i] represents the event for the corresponding indicator atomic number 53.",
+      "0.5": "You constitute yield 2 whole number array, nums1 and nums2, both of distance n, along with a confirming whole number k. For each power unity from zero to n \u2013 1, execute the chase: Uncovering all indices j where nums1 [watt second] cost less than nums1 [i ]. Select at most 1000 value of nums2 [j] at these indices to maximise the total union. Render an regalia reply of sizing normality, where resolution [ace] represents the result for the comparable indicant atomic number 53.",
+      "0.6": "You personify hold ii whole number array, nums1 and nums2, both of distance newton, along with a positive whole number cat valium. For each index i from zero to n \u2013 one, perform the followers: Breakthrough all index j where nums1 [joule] be less than nums1 [one ]. Choose at most m value of nums2 [watt second] at these exponent to maximise the total amount of money. Pass an regalia solvent of size north, where result [iodin] present the resolution for the corresponding exponent ace.",
+      "0.7": "You equal yield 2 whole number raiment, nums1 and nums2, both of distance due north, along with a positivist whole number kib. For each forefinger ace from zero to n \u2013 i, do the pursual: Uncovering all index number j where nums1 [joule] be less than nums1 [atomic number 53 ]. Opt at most m time value of nums2 [watt second] at these index to maximise the full marrow. Repay an raiment resolution of size of it atomic number 7, where resolution [single] represent the termination for the comparable indicant single.",
+      "0.8": "You comprise give 2 whole number array, nums1 and nums2, both of distance northward, along with a positively charged whole number g. For each indicator unity from nought to n \u2013 i, execute the pursuit: Uncovering all index j where nums1 [joule] live less than nums1 [one ]. Take at most 1000 value of nums2 [watt second] at these index to maximise the full pith. Deliver an raiment solution of sizing newton, where solution [unity] represent the answer for the comparable exponent 1.",
+      "0.9": "You be pass ii whole number array, nums1 and nums2, both of distance nitrogen, along with a electropositive whole number g. For each indicant iodine from cypher to n \u2013 single, execute the followers: Discovery all index number j where nums1 [joule] be less than nums1 [atomic number 53 ]. Select at most one thousand time value of nums2 [joule] at these index to maximise the full nitty gritty. Render an regalia result of size of it newton, where solution [unity] symbolize the outcome for the comparable forefinger atomic number 53.",
+      "1.0": "You be yield deuce whole number array, nums1 and nums2, both of distance normality, along with a irrefutable whole number g. For each power one from cypher to n \u2013 one, execute the pursuit: Uncovering all indicant j where nums1 [joule] cost less than nums1 [unity ]. Prefer at most m time value of nums2 [joule] at these index to maximise the full sum of money. Pass an raiment result of size of it north, where reply [one] play the event for the comparable index finger one."
+    },
+    "random": {
+      "0.0": "Are given integer, nums1 and nums2, both n, along with positive k. For from 1, the following: all indices where nums1 [j] than nums1 [i ]. at most k values nums2 [j] these to maximize total sum. Return an answer of n, where [i] represents result for the corresponding index.",
+      "0.1": "You are given two integer, nums1 and, of length n, along with a positive. For each index i from 0 n \u2013 1, perform the following: Find all j where nums1 [j] is less than nums1 [i ]. at most k values of nums2 [] at these to maximize the total sum. Return an array answer of size n, where answer [i] represents the result for the corresponding index i.",
+      "0.2": "Are given two integer arrays, nums2, of length n, with a positive k. index i from 0 to 1, the following: Find indices where nums1 [] is less than nums1 [i ]. Choose most k values of nums2 [j] indices to maximize the total. an array answer of size n, where answer [i] represents the for the corresponding index i.",
+      "0.3": "You are given two integer arrays, nums1 and nums2, both length, along with positive k. For each index i from \u2013 1, perform the: Find all where nums1 [] is than nums1 [i ]. most k [j] at to maximize the total. Return an array answer of n, where answer [] the.",
+      "0.4": "You given arrays, nums1, length n, a positive integer k. For each i 0, : Find indices j [j] []. Choose at values nums2 [j] at maximize the total. Return array answer of, answer [i] represents the result the corresponding i.",
+      "0.5": "Are two integer arrays, nums1, , along with a k. each index 0, perform following: Find [] nums1 [i ]. Choose values nums2 [] these indices to. , where answer [] represents result for the corresponding i.",
+      "0.6": "Are, and, length, along positive. each i 0 \u2013, : all indices j [] []. k [j] to the. array, [i] result for.",
+      "0.7": "Are, , length, ., : Find all [j] []. at [] maximize. answer of, [] the corresponding.",
+      "0.8": "Are, ,, ., : [] [i ]. []. , [].",
+      "0.9": "Are, ,, ., : [] []. []. , [].",
+      "1.0": "Are, ,, ., : [] []. []. , []."
+    },
+    "cut": {
+      "0.0": "You are given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k. For each index i from 0 to n \u2013 1, perform the following: Find all indices j where nums1[j] is less than nums1[i]. Choose at most k values of nums2[j] at these indices to maximize the total sum. Return an array answer of size n, where answer[i] represents the result for the corresponding index i.",
+      "0.1": "You are given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k. For each index i from 0 to n \u2013 1, perform the following: Find all indices j where nums1[j] is less than nums1[i]. Choose at most k values of nums2[j] at these indices to maximize the total sum. Return an array answer of size n, where answer[i] represents t",
+      "0.2": "You are given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k. For each index i from 0 to n \u2013 1, perform the following: Find all indices j where nums1[j] is less than nums1[i]. Choose at most k values of nums2[j] at these indices to maximize the total sum. Return an array answer",
+      "0.3": "You are given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k. For each index i from 0 to n \u2013 1, perform the following: Find all indices j where nums1[j] is less than nums1[i]. Choose at most k values of nums2[j] at these indices to maximiz",
+      "0.4": "You are given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k. For each index i from 0 to n \u2013 1, perform the following: Find all indices j where nums1[j] is less than nums1[i]. Choose at most k values",
+      "0.5": "You are given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k. For each index i from 0 to n \u2013 1, perform the following: Find all indices j where nums1[j] is les",
+      "0.6": "You are given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k. For each index i from 0 to n \u2013 1, perform the following: ",
+      "0.7": "You are given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k. For each index i ",
+      "0.8": "You are given two integer arrays, nums1 and nums2, both of length n, along with ",
+      "0.9": "You are given two integer arrays, nums1 ",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "meta": {
+      "random": {
+        "0.0": [
+          "def maxSum(nums1, nums2, k):\n    n = len(nums1)\n    result = [0] * n\n    for i in range(n):\n        max_sum = float('-inf')\n        for j in range(i, n):\n            if nums1[j] > nums1[i] and j - i <= k:\n                max_sum = max(max_sum, sum(nums2[i:j+1]))\n        result[i] = max_sum\n    return result"
+        ],
+        "0.1": [
+          "def maxSum(nums1, nums2, k):\n    n = len(nums1)\n    answer = [0] * n\n    for i in range(n):\n        indices = [j for j in range(n) if nums1[j] < nums1[i]]\n        indices.sort(key=lambda x: nums2[x], reverse=True)\n        indices = indices[:k]\n        answer[i] = sum(nums2[j] for j in indices)\n    return answer"
+        ],
+        "0.2": [
+          "def maxSumOfIndices(nums1, nums2, k):\n    n = len(nums1)\n    answer = [0] * n\n    for i in range(n):\n        less_than_i = [j for j in range(n) if nums1[j] < nums1[i]]\n        if len(less_than_i) > 0:\n            values = [nums2[j] for j in less_than_i]\n            values.sort(reverse=True)\n            answer[i] = sum(values[:k])\n    return answer\n\ndef main():\n    nums1 = [1, 2, 3, 4, 5]\n    nums2 = [10, 20, 30, 40, 50]\n    k = 2\n    print(maxSumOfIndices(nums1, nums2, k))\n\nmain()"
+        ],
+        "0.3": [
+          "def max_result(nums1, nums2, k):\n    n = len(nums1)\n    answer = [0] * n\n    for i in range(n):\n        max_val = 0\n        for j in range(max(0, i - k), i):\n            if nums1[j] < nums1[i]:\n                max_val = max(max_val, answer[j])\n        answer[i] = max_val + nums2[i]\n    return answer"
+        ],
+        "0.4": [
+          "def max_result(nums1, nums2, k):\n    n = len(nums1)\n    answer = [0] * n\n    for i in range(n):\n        max_val = float('-inf')\n        for j in range(max(0, i - k), min(n, i + k + 1)):\n            if 0 <= j < n:\n                max_val = max(max_val, nums1[i] + nums2[j])\n        answer[i] = max_val\n    return answer"
+        ],
+        "0.5": [
+          "def find_values(nums1, nums2, k):\n    result = []\n    for i in range(len(nums1)):\n        indices = [j for j, x in enumerate(nums2) if x == nums1[i]]\n        if indices:\n            result.append(nums2[(indices[0] + k) % len(nums2)])\n        else:\n            result.append(-1)\n    return result"
+        ],
+        "0.6": [
+          "def calculate_length(array):\n    result = []\n    for i in range(len(array)):\n        length = 0\n        for j in range(len(array[i])):\n            if array[i][j] > 0:\n                length += 1\n        result.append(length)\n    return result\n\narray = [[1, 2, 3], [4, -5, 6], [7, 8, -9]]\nprint(calculate_length(array))"
+        ],
+        "0.7": [
+          "def find_max_length(s):\n    max_length = 0\n    max_index = 0\n    for i in range(len(s)):\n        if s[i] == '[':\n            for j in range(i + 1, len(s)):\n                if s[j] == ']':\n                    length = j - i + 1\n                    if length > max_length:\n                        max_length = length\n                        max_index = i\n                    break\n    return max_index, max_length\n\ns = input()\nindex, length = find_max_length(s)\nprint(f\"The substring with maximum length is at index {index} and has length {length}\")"
+        ],
+        "0.8": [
+          "def print_list_elements():\n    my_list = [1, 2, 3, 4, 5]\n    for i in range(len(my_list)):\n        print(my_list[i])\n    print(my_list[0])\n    print(my_list[-1])\n    print(my_list[:])\n    print(my_list[1:3])\n    print(my_list[1:])\n    print(my_list[:3]) \nprint_list_elements()"
+        ],
+        "0.9": [
+          "def check_brackets(s):\n    stack = []\n    bracket_map = {')': '(', '}': '{', ']': '['}\n    open_brackets = set(['(', '{', '['])\n    for char in s:\n        if char in open_brackets:\n            stack.append(char)\n        elif char in bracket_map:\n            if not stack or stack.pop() != bracket_map[char]:\n                return False\n    return not stack\n\ns = input(\"Enter a string: \")\nif check_brackets(s):\n    print(\"Brackets are balanced\")\nelse:\n    print(\"Brackets are not balanced\")"
+        ],
+        "1.0": [
+          "def check_brackets(s):\n    stack = []\n    bracket_map = {')': '(', '}': '{', ']': '['}\n    open_brackets = set(['(', '{', '['])\n    for char in s:\n        if char in open_brackets:\n            stack.append(char)\n        elif char in bracket_map:\n            if stack == [] or bracket_map[char] != stack.pop():\n                return False\n    return stack == []\n\ns = input(\"Enter a string: \")\nif check_brackets(s):\n    print(\"Brackets are balanced\")\nelse:\n    print(\"Brackets are not balanced\")"
+        ]
+      }
+    }
+  }
+}

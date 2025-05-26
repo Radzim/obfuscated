@@ -1,0 +1,12 @@
+model,method,dataset,task,augmentation_rate,eval_score
+anthropic,cut,math.json,Q00010,0.0,1.0
+anthropic,cut,math.json,Q00010,0.1,0.0
+anthropic,cut,math.json,Q00010,0.2,
+anthropic,cut,math.json,Q00010,0.3,
+anthropic,cut,math.json,Q00010,0.4,
+anthropic,cut,math.json,Q00010,0.5,
+anthropic,cut,math.json,Q00010,0.6,
+anthropic,cut,math.json,Q00010,0.7,
+anthropic,cut,math.json,Q00010,0.8,
+anthropic,cut,math.json,Q00010,0.9,
+anthropic,cut,math.json,Q00010,1.0,

@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/2790811/Python-solution",
+  "python_solutions": "class Solution:\n    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:\n        levels = []\n        \n        def order(node, level):\n            if level >= len(levels):\n                levels.append([])\n            \n            if node:\n                levels[level].append(node.val)\n            \n                if node.left:\n                    order(node.left, level + 1)\n                \n                if node.right:\n                    order(node.right, level + 1)\n        \n        if not root:\n            return []\n        \n        order(root, 0)\n        return levels",
+  "slug": "binary-tree-level-order-traversal",
+  "post_title": "Python solution",
+  "user": "maomao1010",
+  "upvotes": 0,
+  "views": 3,
+  "problem_title": "binary tree level order traversal",
+  "number": 102,
+  "acceptance": 0.634,
+  "difficulty": "Medium",
+  "__index_level_0__": 613,
+  "question": "Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).\n  Example 1:\nInput: root = [3,9,20,null,null,15,7]\nOutput: [[3],[9,20],[15,7]]\nExample 2:\nInput: root = [1]\nOutput: [[1]]\nExample 3:\nInput: root = []\nOutput: []\n  Constraints:\nThe number of nodes in the tree is in the range [0, 2000].\n-1000 <= Node.val <= 1000",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given the root of a binary tree, return the level order traversal of its nodes ' values. (i. e. , from left to right, level by level ).",
+      "0.1": "GiFen the root of a binary tree, returh the level order traversal of its nodes ' valu4s. (i. e. , from left to right, level by ievel ).",
+      "0.2": "Given the Eoot of a binary tree, re5urH the level order traversal of its nodes ' val7Fs. (i. e. , Erom left to #ight, lfvel by leBel ).",
+      "0.3": "Given the Go(t of a ninaDy %rwe, re6irn the peBel order trZvWraal of its jodrs ' vw.ues. (i. e. , from Oebt to riRJt, level by ldvei ).",
+      "0.4": "GiDej the riPt of a FiMa4y 4Dee, rstjrg the lrveK order rgaferzal of its n*dRs ' vakkFs. (i. e. , Tro< leb% to figh$, l$vWl by leFep ).",
+      "0.5": "VivwH the 5o8t of a binxET hre$, r3YurB the leb$; 8gfer RfaFersq< of its JoE2s ' vzlkDs. (i. e. , fF*m lDvt to %iytt, legwi by K2veK ).",
+      "0.6": "VjFen the 4o9R of a viHQey hrW$, $et6dh the Krvdl irVeg YFwvsEsa> of its noC$w ' va/HdW. (i. e. , Vr9, lrE6 to rJfgt, lDvR> by ievfk ).",
+      "0.7": "GOC3G the %(o% of a gjmQEy tg$F, $sG6rb the pWbe; *fdF% %rAceeWqk of its n0W4x ' DXiheD. (i. e. , f30n keCR to tLNut, l2crK by OFv$o ).",
+      "0.8": "GlCdM the F)*Y of a b7mX4t ^gdW, 4F4j#n the PFv$p )#S4r $%qgRrqz? of its j*dsE ' fZ.8ws. (i. e. , r%p< idDY to G7gBf, lDbw: by o$dSl ).",
+      "0.9": "b&DdJ the d(I$ of a n8GSej feS4, #DHiTH the /@G2i (4R4T H#ACSFCWK of its MPf2Z ' csOiwZ. (i. e. , G%pN ;3dg to f7rj$, ,WG@; by ;rcwK ).",
+      "1.0": "t7CFH the E*kG of a f*BZf% F444, Gw$ItB the ?SDdP 0TVwg rfAd2$zsp of its Blv3a ' bA.ISw. (i. e. , BTi, ircy to tlFGG, ?sf$? by k$BSk )."
+    },
+    "synonym": {
+      "0.0": "Ease up the root of a binary tree, return the level order traversal of it node ' value. (i. e. , from entrust to compensate, story by level ).",
+      "0.1": "Given the root of a binary tree, return the level order traverse of its nodes ' values. (i. e. , from allow for to right, level by floor ).",
+      "0.2": "Given the root of a binary tree, repay the level parliamentary procedure traversal of its nodes ' values. (1. east. , from provide to right, level by level ).",
+      "0.3": "Given the root of a binary tree diagram, return the level rules of order traversal of information technology node ' value. (ane. tocopherol. , from left to right, layer by level ).",
+      "0.4": "Give the root of a binary tree, render the degree orderliness traverse of information technology node ' value. (1. einsteinium. , from leave to redress, level by level ).",
+      "0.5": "Give the root of a binary sir herbert beerbohm tree, reelect the horizontal surface edict traverse of it node ' values. (one. tocopherol. , from leave to rectify, stage by stage ).",
+      "0.6": "Pass on the theme of a binary sir herbert beerbohm tree, render the spirit level purchase order traverse of information technology thickening ' value. (ane. e. , from leave to compensate, stratum by grade ).",
+      "0.7": "Give the solution of a binary tree diagram, rejoin the stratum ordering traverse of information technology thickening ' value. (1. tocopherol. , from give to redress, storey by grade ).",
+      "0.8": "Pass the stem of a binary sir herbert beerbohm tree, yield the stage purchase order traverse of information technology node ' note value. (ane. vitamin e. , from leave to compensate, storey by storey ).",
+      "0.9": "Throw the solution of a binary sir herbert beerbohm tree, pass the grade order of magnitude traverse of information technology node ' value. (one. east. , from go away to correct, horizontal surface by degree ).",
+      "1.0": "Give the base of a binary tree diagram, turn back the horizontal surface purchase order traverse of information technology thickening ' value. (ane. einsteinium. , from leave alone to correct, point by grade )."
+    },
+    "random": {
+      "0.0": "Given the root, level order traversal of '. (. e. , from left to, level by level ).",
+      "0.1": "The root of a binary tree, return the level order traversal of nodes ' values. (i. e. , from right, level by level ).",
+      "0.2": "The root a tree, return the level order traversal its nodes '. (i. e. , left to right, level level ).",
+      "0.3": "The root of binary tree, return the order traversal of '. (. e. , left right, level ).",
+      "0.4": "Given of tree, the level its ' values. (. ., left to right, level ).",
+      "0.5": "The root a tree, the its '. (. ., from to, ).",
+      "0.6": "The, nodes '. (. ., left right, ).",
+      "0.7": "The, '. (. ., , ).",
+      "0.8": "The, '. (. ., , ).",
+      "0.9": "The, '. (. ., , ).",
+      "1.0": "The, '. (. ., , )."
+    },
+    "cut": {
+      "0.0": "Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).",
+      "0.1": "Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, lev",
+      "0.2": "Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left ",
+      "0.3": "Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e",
+      "0.4": "Given the root of a binary tree, return the level order traversal of its nodes'",
+      "0.5": "Given the root of a binary tree, return the level order traversal ",
+      "0.6": "Given the root of a binary tree, return the level or",
+      "0.7": "Given the root of a binary tree, return",
+      "0.8": "Given the root of a binary",
+      "0.9": "Given the roo",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "anthropic": {
+      "random": {
+        "0.0": [
+          "from collections import deque\n\ndef levelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    \n    while queue:\n        level_size = len(queue)\n        current_level = []\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            current_level.append(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(current_level)\n    \n    return result"
+        ],
+        "0.1": [
+          "from collections import deque\n\ndef levelOrderBottom(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    \n    while queue:\n        level_size = len(queue)\n        current_level = []\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            current_level.append(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.insert(0, current_level)\n    \n    return result"
+        ],
+        "0.2": [
+          "from collections import deque\n\ndef levelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    \n    while queue:\n        level_size = len(queue)\n        current_level = []\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            current_level.append(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(current_level)\n    \n    return result"
+        ],
+        "0.3": [
+          "from collections import deque\n\ndef levelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = deque([root])\n    \n    while queue:\n        level_size = len(queue)\n        current_level = []\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            current_level.append(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(current_level)\n    \n    return result"
+        ],
+        "0.4": [
+          "def levelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = [root]\n    \n    while queue:\n        level_size = len(queue)\n        current_level = []\n        \n        for _ in range(level_size):\n            node = queue.pop(0)\n            current_level.append(node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(current_level)\n    \n    return result"
+        ],
+        "0.5": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef is_symmetric(root):\n    def is_mirror(left, right):\n        if not left and not right:\n            return True\n        if not left or not right:\n            return False\n        return (left.val == right.val and \n                is_mirror(left.left, right.right) and \n                is_mirror(left.right, right.left))\n    \n    if not root:\n        return True\n    return is_mirror(root.left, root.right)\n\ndef main():\n    # Example symmetric tree\n    root = TreeNode(1)\n    root.left = TreeNode(2)\n    root.right = TreeNode(2)\n    root.left.left = TreeNode(3)\n    root.left.right = TreeNode(4)\n    root.right.left = TreeNode(4)\n    root.right.right = TreeNode(3)\n\n    print(is_symmetric(root))  # Should print True\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.6": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef build_tree(nodes):\n    if not nodes:\n        return None\n    \n    root = TreeNode(nodes[0])\n    queue = [root]\n    i = 1\n    \n    while queue and i < len(nodes):\n        current = queue.pop(0)\n        \n        if i < len(nodes) and nodes[i] is not None:\n            current.left = TreeNode(nodes[i])\n            queue.append(current.left)\n        i += 1\n        \n        if i < len(nodes) and nodes[i] is not None:\n            current.right = TreeNode(nodes[i])\n            queue.append(current.right)\n        i += 1\n    \n    return root\n\ndef print_tree(root):\n    if not root:\n        return\n    \n    queue = [root]\n    while queue:\n        level_size = len(queue)\n        level = []\n        \n        for _ in range(level_size):\n            node = queue.pop(0)\n            \n            if node:\n                level.append(node.val)\n                queue.append(node.left)\n                queue.append(node.right)\n            else:\n                level.append(None)\n        \n        print(level)\n\nnodes = [1, 2, 3, 4, 5, 6, 7]\nroot = build_tree(nodes)\nprint_tree(root)"
+        ],
+        "0.7": [
+          "def parse_text(text):\n    words = text.split()\n    result = []\n    for word in words:\n        if word.startswith('.') or word.startswith(','):\n            if result:\n                result[-1] += word\n        else:\n            result.append(word)\n    return result\n\ndef main():\n    input_text = \"The, '. (. ., , ).\"\n    parsed_words = parse_text(input_text)\n    print(parsed_words)\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.8": [
+          "def parse_text(text):\n    words = text.split()\n    result = []\n    for word in words:\n        if word.startswith('.') or word.startswith(','):\n            if result:\n                result[-1] += word\n        else:\n            result.append(word)\n    return result\n\ndef main():\n    input_text = \"The, '. (. ., , ).\"\n    parsed_words = parse_text(input_text)\n    print(parsed_words)\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.9": [
+          "def parse_text(text):\n    words = text.split()\n    result = []\n    for word in words:\n        if word.startswith('.') or word.startswith(','):\n            if result:\n                result[-1] += word\n        else:\n            result.append(word)\n    return result\n\ndef main():\n    input_text = \"The, '. (. ., , ).\"\n    parsed_words = parse_text(input_text)\n    print(parsed_words)\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "1.0": [
+          "def parse_text(text):\n    words = text.split()\n    result = []\n    for word in words:\n        if word.startswith('.') or word.startswith(','):\n            if result:\n                result[-1] += word\n        else:\n            result.append(word)\n    return result\n\ndef main():\n    input_text = \"The, '. (. ., , ).\"\n    parsed_words = parse_text(input_text)\n    print(parsed_words)\n\nif __name__ == \"__main__\":\n    main()"
+        ]
+      }
+    }
+  }
+}

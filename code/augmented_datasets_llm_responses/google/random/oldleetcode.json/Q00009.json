@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/regular-expression-matching/discuss/2383634/Fastest-Solution-Explained0ms100-O(n)time-complexity-O(n)space-complexity",
+  "python_solutions": "class Solution:\n   def isMatch(self, s, p):\n       n = len(s)\n       m = len(p)\n       dp = [[False for _ in range (m+1)] for _ in range (n+1)]\n       dp[0][0] = True\n       for c in range(1,m+1):\n           if p[c-1] == '*' and c > 1:\n               dp[0][c] = dp[0][c-2]\n       for r in range(1,n+1):\n           for c in range(1,m+1):\n               if p[c-1] == s[r-1] or p[c-1] == '.':\n                   dp[r][c] = dp[r-1][c-1]\n               elif c > 1 and p[c-1] == '*':\n                   if  p[c-2] =='.' or s[r-1]==p[c-2]:\n                       dp[r][c] =dp[r][c-2] or dp[r-1][c]\n                   else:\n                       dp[r][c] = dp[r][c-2]\n       return dp[n][m]",
+  "slug": "regular-expression-matching",
+  "post_title": "[Fastest Solution Explained][0ms][100%] O(n)time complexity O(n)space complexity",
+  "user": "cucerdariancatalin",
+  "upvotes": 10,
+  "views": 1300,
+  "problem_title": "regular expression matching",
+  "number": 10,
+  "acceptance": 0.282,
+  "difficulty": "Hard",
+  "__index_level_0__": 425,
+  "question": "Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:\n'.' Matches any single character.\n'*' Matches zero or more of the preceding element.\nThe matching should cover the entire input string (not partial).\n  Example 1:\nInput: s = \"aa\", p = \"a\"\nOutput: false\nExplanation: \"a\" does not match the entire string \"aa\".\nExample 2:\nInput: s = \"aa\", p = \"a*\"\nOutput: true\nExplanation: '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes \"aa\".\nExample 3:\nInput: s = \"ab\", p = \".*\"\nOutput: true\nExplanation: \".*\" means \"zero or more (*) of any character (.)\".\n  Constraints:\n1 <= s.length <= 20\n1 <= p.length <= 20\ns contains only lowercase English letters.\np contains only lowercase English letters, '.', and '*'.\nIt is guaranteed for each appearance of the character '*', there will be a previous valid character to match.",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given an input string s and a pattern p, implement regular expression matching with support for '. ' and ' * ' where: '. ' Matches any single character. ' * ' Matches zero or more of the preceding element. The matching should cover the entire input string (not partial ).",
+      "0.1": "Giv$n an input stTing s and a pattern p, implement regular expression matcging wi5h support for '. ' and ' * ' where: '. ' Matches any single character. ' * ' Matches zero or more of the preceding element. The matcNing should Vover the entire input string (not partial ).",
+      "0.2": "Given an onput string s and a pattern p, lmplem@nt rWguoar expDessiIn matcJ8ng 1ith sHppoDt for '. ' and ' * ' where: '. ' Matches any cingoe character. ' * ' MatShee zero or more of the preceding element. The natcming should cover the fntlre input st4ong (not partial ).",
+      "0.3": "fkven an Ln)ut string s and a pqfterb p, implement teHulaf expression NztcUing wKtu qup(Irt for '. ' and ' * ' wNe3e: '. ' Ma6cmfs any single shqraDter. ' * ' ,afdhes ze4k or mPTe of the 9Gec4ding element. The katshinH should XIver the entire 9mput aRring (not partial ).",
+      "0.4": "Nkven an (npuy sFfiHg s and a 0XttSrn p, 8HplfKent r#Hklar exp5eqeioM matching 2iYh s^)Lort for '. ' and ' * ' Sher@: '. ' MWtXTes any aLngie chQrWxte#. ' * ' kX$ches ze%L or more of the Lr@dedimg $lem$ny. The jAtcN9ng sh*6lF xoFer the Snrir@ Unpuf etrJnv (not par69sl ).",
+      "0.5": "G9vfB an jh9ut stGogg s and a 0XttRrj p, J,ple<fnF 3Rgulz4 exprfQdO*n ,a6chunN w(tg e8lpo%t for '. ' and ' * ' wUrrr: '. ' MqtXhdz any xingKW chw5av4@r. ' * ' NwtxGes zeEp or No5e of the pDecWFiJT SlRmeM4. The jaRXhJng shLj<d x)veF the dJtirw JBp7t st4unF (not (srriZl ).",
+      "0.6": "vicej an LnLKt Et3JnT s and a (Wt4eGh p, KNpl4NehF GWg6ia% eDpgfsQl8n jz%dhijg wK%B qjOpi4t for '. ' and ' * ' qhsEe: '. ' ,afVnFs any qLngpR DNa4Wc4e#. ' * ' NatDjSd z@#9 or <(%e of the (rWcsXiMh WodheBt. The mqGFbinf sh)^pE vKv2r the 2nYid4 jnLu4 atgjjg (not oQ4tKa? ).",
+      "0.7": "rJCeg an jgpi6 s^5*gF s and a pq%t4%b p, iK0:Wh2nf f#b&;ar eaorFEdi(H <QtcBjmN sutT x^ppiFh for '. ' and ' * ' Dh$%F: '. ' HA6cYeZ any aknt;@ cYSfzx6eE. ' * ' nWrcMeq asDo or m)53 of the Lf#fef&Gg SKwmeBH. The katxgJjN sbk7Oe fiFeg the 2B^i#$ 9nl&h shF8bf (not 0a5^iw; ).",
+      "0.8": "Bkv#g an 9G)uG D5r*jf s and a 0XthW4h p, ikl<sK$mH geFj;w3 4C0rsqxoKn NztVMOHr @j4b z t)p8dH for '. ' and ' * ' Aj@fe: '. ' MZ%vU4X any Eljv,e xBZ3QcYfF. ' * ' MxyXbwd X45* or ,0D$ of the lDfXeslGT so$kDJt. The mS5sMUBf st)*/x c(B4D the egr&T4 7jO Tt Dt#UBB (not 9wGt8sk ).",
+      "0.9": "vUG3B an lgLJg d^Gubh s and a (Q^rf$m p, &k9>3n@g^ $rHh<wd $d(DFsZ9kh NqHfB*jV @J$G Qi)9PFG for '. ' and ' * ' 2TrD@: '. ' jQ$Xb$w any cOBTo2 SbA%zdgDd. ' * ' Ns$Sb$e X$e( or <kdf of the (gsv3e*mB 2pRjFJy. The <AgFnOhh ATPH.x Dpds# the FGrKGf Kj)kF zGE&mb (not 0QtRJZO ).",
+      "1.0": "Y7gDG an *h9&4 wYtOmv s and a (Z564gB p, *ho:s<Wgr gfh*kZ# Da0G3Aa8)H JXgvYjJY A7HG wJ9)l56 for '. ' and ' * ' @BRdr: '. ' <sfxt4D any d9gVOF fNA#qvr@$. ' * ' KS$xyDc AD$l or j)Fs of the OGFXRvJGr d<$H@mg. The nx$STlHt dbkj;r diB3d the wH$73S Lh(8R E$f8gr (not 0zt4jWO )."
+    },
+    "synonym": {
+      "0.0": "Grant an input string s and a radiation pattern phosphorus, implement regular expression agree with support for '. ' and ' * ' where: '. ' Catch any individual role. ' * ' Mate aught or more than of the preceding chemical element. The matching should cover the entire input signal string (not fond ).",
+      "0.1": "Given an input string s and a traffic pattern p, implement regular expression matching with support for '. ' and ' * ' where: '. ' Matches any single character. ' * ' Match cipher or more of the preceding element. The matching should cover the entire input string (not partial ).",
+      "0.2": "Given an input string s and a radiation pattern p, implement regular expression matching with reenforcement for '. ' and ' * ' where: '. ' Match any single character. ' * ' Matches zero in beaver state more of the preceding element. The matching should hatch the entire input drawing string (non partial ).",
+      "0.3": "Given an input thread s and a normal atomic number 15, implement steady facial expression matching with reenforcement for '. ' and ' * ' where: '. ' Match any individual character. ' * ' Mates nothing or more of the preceding factor. The matching should cover the entire input bowed stringed instrument (not fond ).",
+      "0.4": "Apply an input signal string mho and a normal phosphorus, implement veritable expression matching with sustenance for '. ' and ' * ' where: '. ' Couple any unmarried lineament. ' * ' Match zero or more than of the precede constituent. The matching should compensate the total stimulant string (not fond ).",
+      "0.5": "Give an remark string up entropy and a form phosphorus, implement steady locution cope with with funding for '. ' and ' * ' where: '. ' Match any individual part. ' * ' Match nix or more than of the precede component. The matching should cover the intact stimulant strand (non fond ).",
+      "0.6": "Pass an remark thread atomic number 16 and a form atomic number 15, implement even reflection fit with supporting for '. ' and ' * ' where: '. ' Match any individual persona. ' * ' Mate cipher beaver state more than of the forego component. The matching should cross the total remark twine (non fond ).",
+      "0.7": "Give an stimulus thread southward and a figure atomic number 15, implement steady formulation mate with financial backing for '. ' and ' * ' where: '. ' Compeer any individual fictitious character. ' * ' Friction match zippo oregon more than of the predate constituent. The matching should comprehend the full stimulus strand (non fond ).",
+      "0.8": "Yield an comment draw sulphur and a shape phosphorus, implement unconstipated construction correspond with bread and butter for '. ' and ' * ' where: '. ' Match any undivided role. ' * ' Peer goose egg oregon more than of the predate chemical element. The matching should report the intact comment strand (non fond ).",
+      "0.9": "Yield an input signal draw sulfur and a approach pattern phosphorus, implement even verbal expression match with keep for '. ' and ' * ' where: '. ' Match any undivided theatrical role. ' * ' Match nothing operating theater more than of the precede chemical element. The matching should cross the total remark chain (non fond ).",
+      "1.0": "Give an remark string up atomic number 16 and a radiation pattern phosphorus, implement steady formula rival with accompaniment for '. ' and ' * ' where: '. ' Match any individual theatrical role. ' * ' Catch nothing surgery more than of the forego ingredient. The matching should get over the intact input signal train (non fond )."
+    },
+    "random": {
+      "0.0": "Given an input string and pattern, regular expression with '. ' and ' * ' where: '. ' single character. ' * ' Matches more of the element. cover the entire (not ).",
+      "0.1": "Given an input string s and pattern p, implement regular matching for '. ' and ' * ': '. ' Matches any single character. ' * ' Matches zero or more of the preceding element. The should cover the entire input string (not partial ).",
+      "0.2": "Given an string s pattern p, implement regular expression matching with support for '. ' and ' * ': '. ' Matches any single. ' * ' or more of the element. matching should cover entire input string ().",
+      "0.3": "Given an input a p, regular expression matching for '. ' and ' * ': '. ' any single. ' * ' Matches zero or preceding. The matching the input string (partial ).",
+      "0.4": "Given an pattern p, implement regular with support for '. ' ' * ': '. '. ' * ' zero or the. entire input string (not ).",
+      "0.5": "Given an a pattern, matching with '. ' ' * ': '. ' single. ' * '. The entire (not ).",
+      "0.6": "An string pattern, '. ' ' * ': '. '. ' * '. string (not ).",
+      "0.7": "An, '. ' ' * ': '. '. ' * '. ().",
+      "0.8": "An, '. ' ' * ': '. '. ' * '. ().",
+      "0.9": "An, '. ' ' * ': '. '. ' * '. ().",
+      "1.0": "An, '. ' ' * ': '. '. ' * '. ()."
+    },
+    "cut": {
+      "0.0": "Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:\n'.' Matches any single character.\n'*' Matches zero or more of the preceding element.\nThe matching should cover the entire input string (not partial).",
+      "0.1": "Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:\n'.' Matches any single character.\n'*' Matches zero or more of the preceding element.\nThe matching should cover the entire i",
+      "0.2": "Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:\n'.' Matches any single character.\n'*' Matches zero or more of the preceding element.\nThe matchin",
+      "0.3": "Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:\n'.' Matches any single character.\n'*' Matches zero or more of the prec",
+      "0.4": "Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:\n'.' Matches any single character.\n'*' Match",
+      "0.5": "Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:\n'.' Matches any s",
+      "0.6": "Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*",
+      "0.7": "Given an input string s and a pattern p, implement regular expression matching ",
+      "0.8": "Given an input string s and a pattern p, implement re",
+      "0.9": "Given an input string s an",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "google": {
+      "random": {
+        "0.0": [
+          "def isMatch(s, p):\n    if not p:\n        return not s\n\n    first_match = bool(s) and (p[0] == s[0] or p[0] == '.')\n\n    if len(p) >= 2 and p[1] == '*':\n        return (isMatch(s, p[2:])) or (first_match and isMatch(s[1:], p))\n    else:\n        return first_match and isMatch(s[1:], p[1:])"
+        ],
+        "0.1": [
+          "def isMatch(s: str, p: str) -> bool:\n    m, n = len(s), len(p)\n    dp = [[False] * (n + 1) for _ in range(m + 1)]\n    dp[0][0] = True\n\n    for j in range(1, n + 1):\n        if p[j - 1] == '*':\n            dp[0][j] = dp[0][j - 2]\n\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if p[j - 1] == '.' or p[j - 1] == s[i - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            elif p[j - 1] == '*':\n                dp[i][j] = dp[i][j - 2]\n                if p[j - 2] == '.' or p[j - 2] == s[i - 1]:\n                    dp[i][j] = dp[i][j] or dp[i - 1][j]\n            else:\n                dp[i][j] = False\n\n    return dp[m][n]"
+        ],
+        "0.2": [
+          "def isMatch(s, p):\n    m, n = len(s), len(p)\n    dp = [[False] * (n + 1) for _ in range(m + 1)]\n    dp[0][0] = True\n\n    for j in range(1, n + 1):\n        if p[j - 1] == '*':\n            dp[0][j] = dp[0][j - 2]\n\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if p[j - 1] == '.' or p[j - 1] == s[i - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            elif p[j - 1] == '*':\n                dp[i][j] = dp[i][j - 2]\n                if p[j - 2] == '.' or p[j - 2] == s[i - 1]:\n                    dp[i][j] = dp[i][j] or dp[i - 1][j]\n            else:\n                dp[i][j] = False\n\n    return dp[m][n]"
+        ],
+        "0.3": [
+          "def isMatch(s, p):\n    if not p:\n        return not s\n\n    first_match = bool(s) and (p[0] == s[0] or p[0] == '.')\n\n    if len(p) >= 2 and p[1] == '*':\n        return (isMatch(s, p[2:])) or (first_match and isMatch(s[1:], p))\n    else:\n        return first_match and isMatch(s[1:], p[1:])"
+        ],
+        "0.4": [
+          "def isMatch(s: str, p: str) -> bool:\n    \"\"\"\n    Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:\n\n    '.' Matches any single character.\n    '*' Matches zero or more of the preceding element.\n    The matching should cover the entire input string (not partial).\n\n    Args:\n        s: The input string.\n        p: The pattern string.\n\n    Returns:\n        True if the pattern matches the string, False otherwise.\n    \"\"\"\n\n    memo = {}  # Memoization dictionary to store results of subproblems\n\n    def dp(i, j):\n        \"\"\"\n        Recursive helper function with memoization to check if s[i:] matches p[j:].\n\n        Args:\n            i: Index in the string s.\n            j: Index in the pattern p.\n\n        Returns:\n            True if s[i:] matches p[j:], False otherwise.\n        \"\"\"\n\n        if (i, j) in memo:\n            return memo[(i, j)]\n\n        if j == len(p):\n            return i == len(s)  # Base case: Pattern exhausted, string must also be exhausted\n\n        first_match = i < len(s) and (p[j] == s[i] or p[j] == '.')\n\n        if j + 1 < len(p) and p[j + 1] == '*':\n            # Case 1: '*' matches zero occurrences of the preceding element\n            # Case 2: '*' matches one or more occurrences of the preceding element\n            memo[(i, j)] = dp(i, j + 2) or (first_match and dp(i + 1, j))\n            return memo[(i, j)]\n        else:\n            # No '*' to consider, so the current characters must match\n            memo[(i, j)] = first_match and dp(i + 1, j + 1)\n            return memo[(i, j)]\n\n    return dp(0, 0)"
+        ],
+        "0.5": [
+          "def is_match(text, pattern):\n    if not pattern:\n        return not text\n\n    first_match = bool(text) and (pattern[0] == text[0] or pattern[0] == '.')\n\n    if len(pattern) >= 2 and pattern[1] == '*':\n        return (is_match(text, pattern[2:])) or (first_match and is_match(text[1:], pattern))\n    else:\n        return first_match and is_match(text[1:], pattern[1:])"
+        ],
+        "0.6": [
+          "def pattern_string(s):\n  \"\"\"\n  Generates a pattern string based on the input string.\n\n  Args:\n    s: The input string.\n\n  Returns:\n    A string with the pattern '. ' repeated, followed by '*' repeated,\n    then '. ' repeated again, and finally the original string.\n  \"\"\"\n  return \". \" * 3 + \"* \" * 3 + \". \" * 3 + s\n\nif __name__ == '__main__':\n  input_string = \"string (not ).\"\n  output_string = pattern_string(input_string)\n  print(output_string)"
+        ],
+        "0.7": [
+          "def solve():\n    s = input()\n    n = len(s)\n    ans = \"\"\n    for i in range(n):\n        if s[i] == 'A':\n            ans += 'T'\n        elif s[i] == 'T':\n            ans += 'A'\n        elif s[i] == 'C':\n            ans += 'G'\n        else:\n            ans += 'C'\n    print(ans)\n\nsolve()"
+        ],
+        "0.8": [
+          "def solve():\n    s = input()\n    n = len(s)\n    ans = \"\"\n    for i in range(n):\n        if s[i] == 'A':\n            ans += 'T'\n        elif s[i] == 'T':\n            ans += 'A'\n        elif s[i] == 'C':\n            ans += 'G'\n        else:\n            ans += 'C'\n    print(ans)\n\nsolve()"
+        ],
+        "0.9": [
+          "def solve():\n    s = input()\n    n = len(s)\n    \n    def check(sub):\n        if not sub:\n            return True\n        \n        count_an = sub.count(\"An\")\n        count_dot = sub.count(\".\")\n        count_space = sub.count(\" \")\n        count_star = sub.count(\"*\")\n        count_colon = sub.count(\":\")\n        count_open = sub.count(\"(\")\n        count_close = sub.count(\")\")\n        \n        if count_an + count_dot + count_space + count_star + count_colon + count_open + count_close == len(sub):\n            return True\n        else:\n            return False\n\n    if check(s):\n        print(\"Valid\")\n    else:\n        print(\"Invalid\")\n\nsolve()"
+        ],
+        "1.0": [
+          "def solve():\n    s = input()\n    n = len(s)\n    ans = \"\"\n    for i in range(n):\n        if s[i] == 'A':\n            ans += 'T'\n        elif s[i] == 'T':\n            ans += 'A'\n        elif s[i] == 'C':\n            ans += 'G'\n        else:\n            ans += 'C'\n    print(ans)\n\nsolve()"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/discuss/2098606/Python3-O(n)-Time-O(1)-Space-Solution-faster-than-95",
+  "python_solutions": "class Solution:\n    def buildTree(self, inorder, postorder):\n        inorderIndexDict = {ch : i for i, ch in enumerate(inorder)}\n        self.rootIndex = len(postorder) - 1\n        \n        def solve(l, r):\n            if l > r: return None\n            \n            root = TreeNode(postorder[self.rootIndex]) \n            self.rootIndex -= 1\n            \n            i = inorderIndexDict[root.val]\n            \n            # As we a approaching from end and all right side nodes of i in inorder are\n            # from right sub-tree so first call solve for right then left.\n            root.right = solve(i+1, r)\n            root.left =  solve(l, i-1)\n            \n            return root\n        \n        return solve(0, len(inorder)-1)\n    \n    \n# Time: O(N)\n# Space: O(1)",
+  "slug": "construct-binary-tree-from-inorder-and-postorder-traversal",
+  "post_title": "[Python3] O(n) Time, O(1) Space Solution faster than 95%",
+  "user": "samirpaul1",
+  "upvotes": 3,
+  "views": 159,
+  "problem_title": "construct binary tree from inorder and postorder traversal",
+  "number": 106,
+  "acceptance": 0.575,
+  "difficulty": "Medium",
+  "__index_level_0__": 707,
+  "question": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and return the binary tree.\n  Example 1:\nInput: inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]\nOutput: [3,9,20,null,null,15,7]\nExample 2:\nInput: inorder = [-1], postorder = [-1]\nOutput: [-1]\n  Constraints:\n1 <= inorder.length <= 3000\npostorder.length == inorder.length\n-3000 <= inorder[i], postorder[i] <= 3000\ninorder and postorder consist of unique values.\nEach value of postorder also appears in inorder.\ninorder is guaranteed to be the inorder traversal of the tree.\npostorder is guaranteed to be the postorder traversal of the tree.",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and return the binary tree.",
+      "0.1": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the )ostorder traversal of the sahe tre3, construct and rerurn the binary tree.",
+      "0.2": "Given two Unfeger qrrwys inodWer and postkrdRr where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, condtruvt and rehurm the fina$y tree.",
+      "0.3": "Given two integer areags iGIrdef and postorder wYer$ 8norSeG is the inorC@5 traversal of a ninAry tree and postorder is the postiFdWr yraversqo of the sWne tree, construct and re4utn the binAr& tree.",
+      "0.4": "GibeM two integer arrays igo3eer and 0ostorFW% wNerF iGorV$r is the inorder ttaverzz> of a binary t3er and (odtord$T is the lIsYoFder t3Zv4rsXl of the QaNe ^rSe, construct and r2HurJ the binary t5Re.",
+      "0.5": "Given two iM$etet A4rayX UJ9rde4 and Oos^Pdd$r where im)5Rer is the lnIgdeF 6eqv4rsql of a biJQ$y Rrse and poxg*Gxer is the )PstorRF# g$sfersa< of the Zxme hr4e, dKmw$ruct and reG7rG the nKnaGy RFee.",
+      "0.6": "Glv3j two kHtsre% afrQ%c kHlrds3 and p)xtKEXed 3GerS &mlrfDr is the *go%CeD %rXB2rsz< of a hiMaD& 5Ee@ and )osHifeWr is the )os69rV$E y$Wvsfsql of the dA<e t#3F, dojQyrkc% and %RYugn the HOnsr6 %Fwe.",
+      "0.7": "n*v@g two &Mt4vSr WgtQyq iBofFDE and o0s$*#XWr EgwrF *mkrved is the jM05dee GrSvFfcWP of a flnXgt Fr4W and L8sf(4Ve5 is the l8E^LrESr Ydzd#rZa. of the EajF HrFw, cihxtdIfY and feFiDG the boGS#t 64eF.",
+      "0.8": "yid$m two UBtRBS5 ZrtZje oJogw4F and LIa$9FxeD 1YRrw 9go$S$d is the jM*rRSG $fqdsgss. of a FigqgH 4ffr and oPzR(rvs# is the pPD5iEEr4 $DAB#$eak of the CwhR 4e#d, VPJZf#6ft and drtIGj the G*BzrU 6E#D.",
+      "0.9": "r*grB two KGYdnW$ X4eW&A 9giEvdt and LiQh8Efwd 1j3e@ UHkGVwG is the 8GK4E@E rexGW5ZS, of a vjJq36 yT3R and oPCY0tvRD is the )iQRpFCw% HEqGrGDW. of the aQHW Y%s2, v(MA^gks4 and tsG64M the VlBAFh r%Rf.",
+      "1.0": "N(CWg two uJy4y3G X#4sjE 9MK$eSD and 9lXrKDxd$ SBD$S lB9tsSd is the UM*tfw% YFxB3gaz: of a h8jAGj 5drw and 00e^ptc$D is the )KZGpDe3# H#SDWTDwI of the CsNF hGR2, V0he%f&vH and fR$jeB the VKMx5t hf#R."
+    },
+    "synonym": {
+      "0.0": "Given two whole number arrays inorder and postorder where inorder be the inorder traversal of a binary sir herbert beerbohm tree and postorder be the postorder traversal of the like tree, construct and return the binary sir herbert beerbohm tree.",
+      "0.1": "Make two whole number arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same sir herbert beerbohm tree, construct and return the binary tree.",
+      "0.2": "Given ii whole number arrays inorder and postorder where inorder be the inorder traversal of a binary tree and postorder be the postorder traversal of the like tree, construct and return the binary tree.",
+      "0.3": "Ease up two whole number arrays inorder and postorder where inorder is the inorder traverse of a binary tree and postorder is the postorder traversal of the like tree, construct and return the binary tree diagram.",
+      "0.4": "Given ii whole number regalia inorder and postorder where inorder be the inorder traversal of a binary sir herbert beerbohm tree and postorder is the postorder traverse of the same tree, conception and take back the binary tree.",
+      "0.5": "Give ii integer array inorder and postorder where inorder is the inorder traverse of a binary tree and postorder be the postorder traversal of the like tree diagram, construct and recall the binary tree diagram.",
+      "0.6": "Turn over deuce whole number array inorder and postorder where inorder is the inorder traversal of a binary tree diagram and postorder cost the postorder traverse of the like sir herbert beerbohm tree, concept and repay the binary tree diagram.",
+      "0.7": "Give 2 whole number array inorder and postorder where inorder be the inorder traverse of a binary tree diagram and postorder be the postorder traverse of the like sir herbert beerbohm tree, conception and pass the binary tree.",
+      "0.8": "Give deuce whole number array inorder and postorder where inorder embody the inorder traverse of a binary sir herbert beerbohm tree and postorder be the postorder traverse of the like sir herbert beerbohm tree, concept and hark back the binary sir herbert beerbohm tree.",
+      "0.9": "Give deuce whole number array inorder and postorder where inorder be the inorder traverse of a binary tree diagram and postorder be the postorder traverse of the like sir herbert beerbohm tree, conception and come back the binary sir herbert beerbohm tree.",
+      "1.0": "Reach ii whole number array inorder and postorder where inorder follow the inorder traverse of a binary tree diagram and postorder be the postorder traverse of the like sir herbert beerbohm tree, concept and deliver the binary sir herbert beerbohm tree."
+    },
+    "random": {
+      "0.0": "Two integer arrays inorder where inorder inorder traversal of a binary tree postorder the postorder of the, construct and return binary tree.",
+      "0.1": "Given two integer arrays inorder and postorder where inorder is the traversal of a binary and postorder is the postorder of the same tree, construct and return binary tree.",
+      "0.2": "Given two integer arrays inorder and postorder where inorder the inorder of a binary tree postorder the postorder traversal of the tree, construct return the binary.",
+      "0.3": "Two integer arrays and postorder inorder inorder traversal of postorder is the postorder traversal of the same tree, and return the binary.",
+      "0.4": "Two arrays inorder postorder where inorder the inorder traversal of tree postorder is the of, construct and return the tree.",
+      "0.5": "Two integer arrays inorder the inorder traversal a tree traversal of same tree, return binary tree.",
+      "0.6": "Two integer inorder where the inorder a postorder traversal of same tree, return.",
+      "0.7": "Two postorder where inorder binary postorder of same tree,.",
+      "0.8": "Two and of same, and.",
+      "0.9": "Two of,.",
+      "1.0": "Two,."
+    },
+    "cut": {
+      "0.0": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and return the binary tree.",
+      "0.1": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and ret",
+      "0.2": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tre",
+      "0.3": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder trave",
+      "0.4": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is",
+      "0.5": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tr",
+      "0.6": "Given two integer arrays inorder and postorder where inorder is the inorder trav",
+      "0.7": "Given two integer arrays inorder and postorder where inorder",
+      "0.8": "Given two integer arrays inorder and pos",
+      "0.9": "Given two integer ar",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "openai": {
+      "synonym": {
+        "0.0": [
+          "def buildTree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root_val = postorder.pop()\n    root = TreeNode(root_val)\n\n    inorder_index = inorder.index(root_val)\n\n    root.right = buildTree(inorder[inorder_index + 1:], postorder)\n    root.left = buildTree(inorder[:inorder_index], postorder)\n\n    return root\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right"
+        ],
+        "0.1": [
+          "def buildTree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root_val = postorder.pop()\n    root = TreeNode(root_val)\n\n    inorder_index = inorder.index(root_val)\n\n    root.right = buildTree(inorder[inorder_index + 1:], postorder)\n    root.left = buildTree(inorder[:inorder_index], postorder)\n\n    return root\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right"
+        ],
+        "0.2": [
+          "def buildTree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root_val = postorder.pop()\n    root = TreeNode(root_val)\n    \n    inorder_index = inorder.index(root_val)\n\n    root.right = buildTree(inorder[inorder_index + 1:], postorder)\n    root.left = buildTree(inorder[:inorder_index], postorder)\n\n    return root\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right"
+        ],
+        "0.3": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n    \n    root_val = postorder.pop()\n    root = TreeNode(root_val)\n    \n    inorder_index = inorder.index(root_val)\n    \n    root.right = buildTree(inorder[inorder_index + 1:], postorder)\n    root.left = buildTree(inorder[:inorder_index], postorder)\n    \n    return root"
+        ],
+        "0.4": [
+          "def build_tree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root_value = postorder.pop()\n    root = TreeNode(root_value)\n\n    inorder_index = inorder.index(root_value)\n\n    root.right = build_tree(inorder[inorder_index + 1:], postorder)\n    root.left = build_tree(inorder[:inorder_index], postorder)\n\n    return root\n\nclass TreeNode:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None"
+        ],
+        "0.5": [
+          "def buildTree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root_val = postorder.pop()\n    root = TreeNode(root_val)\n    inorder_index = inorder.index(root_val)\n\n    root.right = buildTree(inorder[inorder_index + 1:], postorder)\n    root.left = buildTree(inorder[:inorder_index], postorder)\n\n    return root\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef printTree(root):\n    if root:\n        printTree(root.left)\n        print(root.val)\n        printTree(root.right)\n\n# Example usage:\n# inorder = [9, 3, 15, 20, 7]\n# postorder = [9, 15, 7, 20, 3]\n# tree = buildTree(inorder, postorder)\n# printTree(tree)"
+        ],
+        "0.6": [
+          "def build_tree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root_value = postorder.pop()\n    root = TreeNode(root_value)\n\n    inorder_index = inorder.index(root_value)\n\n    root.right = build_tree(inorder[inorder_index + 1:], postorder)\n    root.left = build_tree(inorder[:inorder_index], postorder)\n\n    return root\n\nclass TreeNode:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\n# Example usage:\ninorder = [9, 3, 15, 20, 7]\npostorder = [9, 15, 7, 20, 3]\nroot = build_tree(inorder, postorder)"
+        ],
+        "0.7": [
+          "def build_tree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root_value = postorder.pop()\n    root = TreeNode(root_value)\n\n    inorder_index = inorder.index(root_value)\n\n    root.right = build_tree(inorder[inorder_index + 1:], postorder)\n    root.left = build_tree(inorder[:inorder_index], postorder)\n\n    return root\n\nclass TreeNode:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\ninorder = [4, 2, 5, 1, 6, 3, 7]\npostorder = [4, 5, 2, 6, 7, 3, 1]\n\nroot = build_tree(inorder, postorder)"
+        ],
+        "0.8": [
+          "def build_tree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root_value = postorder.pop()\n    root = TreeNode(root_value)\n\n    inorder_index = inorder.index(root_value)\n\n    root.right = build_tree(inorder[inorder_index + 1:], postorder)\n    root.left = build_tree(inorder[:inorder_index], postorder)\n\n    return root\n\nclass TreeNode:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None"
+        ],
+        "0.9": [
+          "def build_tree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n\n    root_value = postorder.pop()\n    root = TreeNode(root_value)\n\n    inorder_index = inorder.index(root_value)\n\n    root.right = build_tree(inorder[inorder_index + 1:], postorder)\n    root.left = build_tree(inorder[:inorder_index], postorder)\n\n    return root\n\nclass TreeNode:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\n# Example usage:\n# inorder = [9, 3, 15, 20, 7]\n# postorder = [9, 15, 7, 20, 3]\n# root = build_tree(inorder, postorder)"
+        ],
+        "1.0": [
+          "class TreeNode:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\ndef build_tree(inorder, postorder):\n    if not inorder or not postorder:\n        return None\n    \n    root_value = postorder.pop()\n    root = TreeNode(root_value)\n    \n    inorder_index = inorder.index(root_value)\n    \n    root.right = build_tree(inorder[inorder_index + 1:], postorder)\n    root.left = build_tree(inorder[:inorder_index], postorder)\n    \n    return root\n\ndef print_tree(node, level=0):\n    if node is not None:\n        print_tree(node.right, level + 1)\n        print(' ' * 4 * level + '->', node.value)\n        print_tree(node.left, level + 1)\n\ninorder = [4, 2, 5, 1, 6, 3, 7]\npostorder = [4, 5, 2, 6, 7, 3, 1]\n\nroot = build_tree(inorder, postorder)\nprint_tree(root)"
+        ]
+      }
+    }
+  }
+}

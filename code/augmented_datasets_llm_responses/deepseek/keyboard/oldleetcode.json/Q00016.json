@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/maximum-depth-of-binary-tree/discuss/359949/Python-recursive-and-iterative-solution",
+  "python_solutions": "class Solution:\n    def maxDepth(self, root: TreeNode) -> int:\n        if not root:\n            return 0\n        return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1",
+  "slug": "maximum-depth-of-binary-tree",
+  "post_title": "Python recursive and iterative solution",
+  "user": "amchoukir",
+  "upvotes": 219,
+  "views": 18300,
+  "problem_title": "maximum depth of binary tree",
+  "number": 104,
+  "acceptance": 0.732,
+  "difficulty": "Easy",
+  "__index_level_0__": 630,
+  "question": "Given the root of a binary tree, return its maximum depth.\nA binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.\n  Example 1:\nInput: root = [3,9,20,null,null,15,7]\nOutput: 3\nExample 2:\nInput: root = [1,null,2]\nOutput: 2\n  Constraints:\nThe number of nodes in the tree is in the range [0, 104].\n-100 <= Node.val <= 100",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given the root of a binary tree, return its maximum depth. A binary tree ' s maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.",
+      "0.1": "Given the 5oot of a binary tTee, return its maximum depth. A binary tree ' s maximum depth is the number of nodes along the longest path from the toot node down to the farthes5 leaf node.",
+      "0.2": "yiven the root of a binary tree, return its maximum wepth. A binary tree ' s maximum depYh is the number of nod#s along the OongeZt patu fr(m the root node down to the fz$thest leaf node.",
+      "0.3": "Given the 4o*t of a binary hrew, Tetirn its maximum depth. A bOna5y tree ' s maxjHhm depth is the number of nodes wlonR the oong4Et path from the eooF npXe EowG to the darthwAt leaf H*de.",
+      "0.4": "GivWh the root of a binwFH t%ew, return its madim6< deOFh. A binary fTee ' s jax9Num veOth is the n tmbsF of Mides along the ,ongSsg (a5h ero, the root HodF doDM to the fxrrhWCt leaf node.",
+      "0.5": "RifeJ the ro9Y of a FinaDJ 4r3e, rdYurj its maZk,Km cRp^h. A giHQry tgDe ' s mXa7muN depth is the hukVer of jPdeD Sl*gg the loMfwXt psGh fr9k the root nPxe down to the GaFtmeQt ;eaT n0Ee.",
+      "0.6": "N*veJ the r*p^ of a hlgWry %rs#, r#Y*5n its hax(K&h dr9tT. A niMa3G 64eS ' s KWci,uh SFoth is the mHmfeE of nlxeX SKobg the KKGBes5 pxHg brPk the G8kt Bor@ dIqg to the fatybeqR O#Sf n)Cw.",
+      "0.7": "Tid2H the #*9t of a fOnWGg GDse, rdhKFj its kzZi,uJ ve0yn. A HJjqrT gFe# ' s ,Zx9m&H RRp6g is the M THbre of GPV2s Ql0GN the lkBFeW4 oaGG VrlN the Eo8g J*ve voaH to the tWGhYeet lsqb Mkwe.",
+      "0.8": "G*d3j the 40lF of a bKHWDu 6%33, f#$u$G its ,SZK,hm Se($u. A GiHzE6 Yg4@ ' s NaZOn8j F2(Rh is the GjHHeg of BLFew Wl0JY the ,inNrD^ lSRn cF8j the 4)0$ hie$ XLEb to the fWthGfz4 PSqb bpV$.",
+      "0.9": "rLBrM the E(L^ of a V9HxD7 re@R, f2$*tj its <Scj<Ik f#(6M. A n8mXGt $fr@ ' s nwzUNJK Fw)rM is the G tNHF% of jkFwe AIIHv the PiBNww^ Lqgb CGI< the 3K)5 BlsS e9sg to the RSF5BsDh ?ssg mks@.",
+      "1.0": "RlcfJ the E)k$ of a V9bSF5 G%sR, 3DyI%g its Kqzk,^J vFOHU. A GubwDU rd42 ' s KqaK<*J SrLGn is the h*Jn4e of g)sDZ xk8GN the i9JTSa% (srt VePh the 3k8$ MiCF V0qM to the cAEgtRa6 ;fxV glFR."
+    },
+    "synonym": {
+      "0.0": "Turn over the root of a binary tree, return its maximal deepness. A binary tree ' s maximal depth is the act of node along the longest path from the ancestor node down to the farthest leaf node.",
+      "0.1": "Given the root of a binary tree, return its maximum profundity. A binary tree ' s maximum depth is the figure of node along the longest path from the root node downwards to the farthest leaf node.",
+      "0.2": "Given the root of a binary tree, return its maximum depth. A binary tree ' s maximum depth is the number of lymph node along the longest path from the ascendent node downward to the farthest folio node.",
+      "0.3": "Given the root of a binary tree, generate its maximal depth. A binary tree ' s maximal profoundness be the number of knob along the long course from the root node down to the farthest leaf client.",
+      "0.4": "Given the root of a binary tree diagram, return it maximal deepness. A binary tree ' s maximum profundity represent the phone number of lymph node along the longest way from the root node downwards to the farthest leafage node.",
+      "0.5": "Fall in the root of a binary sir herbert beerbohm tree, render information technology maximal profundity. A binary tree ' s maximal deepness personify the number of node along the longest itinerary from the root node downward to the farthermost folio node.",
+      "0.6": "Contribute the origin of a binary sir herbert beerbohm tree, repay information technology maximal deepness. A binary tree diagram ' s maximal astuteness is the number of knob along the long track from the root node downwardly to the uttermost folio node.",
+      "0.7": "Give the source of a binary sir herbert beerbohm tree, pass it maximal deepness. A binary sir herbert beerbohm tree ' s maximal profoundness make up the identification number of lymph node along the long way from the rootage node downwards to the furthest leafage client.",
+      "0.8": "Establish the theme of a binary sir herbert beerbohm tree, turn back it maximal profundity. A binary tree diagram ' s maximal profundity be the telephone number of node along the foresighted way from the antecedent node downwards to the farthermost folio thickening.",
+      "0.9": "Give the root word of a binary tree diagram, retort information technology maximal profoundness. A binary sir herbert beerbohm tree ' s maximal profoundness be the issue of leaf node along the recollective course from the solution node downwards to the farthermost folio lymph node.",
+      "1.0": "Render the theme of a binary tree diagram, render it maximal astuteness. A binary sir herbert beerbohm tree ' s maximal profoundness live the telephone number of node along the foresightful route from the origin node downwardly to the uttermost folio lymph gland."
+    },
+    "random": {
+      "0.0": "Given root tree, return its maximum depth. binary tree ' s maximum depth is the number nodes path from the node down to the farthest.",
+      "0.1": "Given the root of a tree, return its maximum depth. A binary tree ' s maximum depth is the number of nodes along the longest path from root down to the farthest leaf.",
+      "0.2": "Given the of a binary tree, return its maximum depth. A binary tree ' s maximum is the number of nodes along longest the root node down the node.",
+      "0.3": "The root of binary tree, its maximum depth. binary ' s maximum depth is of along the longest path the root the farthest leaf node.",
+      "0.4": "The binary, return maximum depth. A binary ' depth the number of nodes along the longest from the root node to leaf.",
+      "0.5": "The binary, return maximum. binary tree ' s maximum depth the of along path root to farthest leaf.",
+      "0.6": "The of, its. ' maximum depth the of nodes along longest path down to.",
+      "0.7": "The of, depth. ' maximum depth the along path node.",
+      "0.8": "The, . ' depth root to farthest.",
+      "0.9": "The, . '.",
+      "1.0": "The, . '."
+    },
+    "cut": {
+      "0.0": "Given the root of a binary tree, return its maximum depth.\nA binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.",
+      "0.1": "Given the root of a binary tree, return its maximum depth.\nA binary tree's maximum depth is the number of nodes along the longest path from the root node down to the ",
+      "0.2": "Given the root of a binary tree, return its maximum depth.\nA binary tree's maximum depth is the number of nodes along the longest path from the root",
+      "0.3": "Given the root of a binary tree, return its maximum depth.\nA binary tree's maximum depth is the number of nodes along the longest ",
+      "0.4": "Given the root of a binary tree, return its maximum depth.\nA binary tree's maximum depth is the number of nodes",
+      "0.5": "Given the root of a binary tree, return its maximum depth.\nA binary tree's maximum depth is ",
+      "0.6": "Given the root of a binary tree, return its maximum depth.\nA binary tree's",
+      "0.7": "Given the root of a binary tree, return its maximum dept",
+      "0.8": "Given the root of a binary tree, retu",
+      "0.9": "Given the root of ",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "deepseek": {
+      "keyboard": {
+        "0.0": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef maxDepth(root):\n    if not root:\n        return 0\n    left_depth = maxDepth(root.left)\n    right_depth = maxDepth(root.right)\n    return max(left_depth, right_depth) + 1"
+        ],
+        "0.1": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef maxDepth(root: TreeNode) -> int:\n    if not root:\n        return 0\n    left_depth = maxDepth(root.left)\n    right_depth = maxDepth(root.right)\n    return max(left_depth, right_depth) + 1"
+        ],
+        "0.2": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef maxDepth(root):\n    if not root:\n        return 0\n    left_depth = maxDepth(root.left)\n    right_depth = maxDepth(root.right)\n    return max(left_depth, right_depth) + 1"
+        ],
+        "0.3": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef maxDepth(root):\n    if not root:\n        return 0\n    left_depth = maxDepth(root.left)\n    right_depth = maxDepth(root.right)\n    return max(left_depth, right_depth) + 1"
+        ],
+        "0.4": [
+          "from collections import deque\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef maxDepth(root):\n    if not root:\n        return 0\n    \n    queue = deque([root])\n    depth = 0\n    \n    while queue:\n        depth += 1\n        level_size = len(queue)\n        \n        for _ in range(level_size):\n            node = queue.popleft()\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n    \n    return depth"
+        ],
+        "0.5": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef max_depth(root):\n    if not root:\n        return 0\n    left_depth = max_depth(root.left)\n    right_depth = max_depth(root.right)\n    return max(left_depth, right_depth) + 1"
+        ],
+        "0.6": [
+          "ERROR: Timeout after 3 attempts"
+        ],
+        "0.7": [
+          "ERROR: Timeout after 3 attempts"
+        ],
+        "0.8": [
+          "ERROR: Timeout after 3 attempts"
+        ],
+        "0.9": [
+          "# Parsing and analyzing a complex string pattern\n\ndef analyze_pattern(input_str):\n    \"\"\"\n    Analyze a complex string pattern by:\n    1. Extracting all uppercase letters\n    2. Counting special characters\n    3. Finding numeric sequences\n    \"\"\"\n    uppercase_chars = []\n    special_chars = 0\n    numeric_sequences = []\n    current_num = \"\"\n    \n    for char in input_str:\n        if char.isupper():\n            uppercase_chars.append(char)\n        elif not char.isalnum():\n            special_chars += 1\n        elif char.isdigit():\n            current_num += char\n        else:\n            if current_num:\n                numeric_sequences.append(int(current_num))\n                current_num = \"\"\n    \n    if current_num:\n        numeric_sequences.append(int(current_num))\n    \n    return {\n        'uppercase_chars': uppercase_chars,\n        'special_chars_count': special_chars,\n        'numeric_sequences': numeric_sequences,\n        'total_length': len(input_str)\n    }\n\ndef process_input(input_data):\n    try:\n        pattern_stats = analyze_pattern(input_data)\n        \n        # Calculate derived metrics\n        pattern_stats['uppercase_percentage'] = (len(pattern_stats['uppercase_chars']) / \n                                               pattern_stats['total_length']) * 100\n        \n        if pattern_stats['numeric_sequences']:\n            pattern_stats['avg_numeric'] = sum(pattern_stats['numeric_sequences']) / len(pattern_stats['numeric_sequences'])\n        \n        return pattern_stats\n    except Exception as e:\n        return f\"Error processing input: {str(e)}\""
+        ],
+        "1.0": [
+          "import math\n\ndef calculate_volume_of_cylinder(radius, height):\n    \"\"\"\n    Calculate the volume of a cylinder given its radius and height.\n    The volume of a cylinder is the area of its base multiplied by its height.\n    \"\"\"\n    base_area = math.pi * (radius ** 2)\n    volume = base_area * height\n    return volume\n\n# Example usage:\nradius = 5.0\nheight = 10.0\nvolume = calculate_volume_of_cylinder(radius, height)\nprint(f\"The volume of the cylinder is: {volume}\")"
+        ]
+      }
+    }
+  }
+}

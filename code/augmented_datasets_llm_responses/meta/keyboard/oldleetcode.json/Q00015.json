@@ -1,0 +1,108 @@
+{
+  "post_href": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/discuss/2098804/Python3-Clean-Solution-using-Queue-Level-Order-Traversal",
+  "python_solutions": "class Solution:\n    def zigzagLevelOrder(self, root):\n        \n        res = []\n        if not root: return res\n        zigzag = True\n        \n        q = collections.deque()\n        q.append(root)\n        \n        while q:\n            n = len(q)\n            nodesOfThisLevel = []\n            \n            for i in range(n):\n                node = q.popleft()\n                nodesOfThisLevel.append(node.val)\n                \n                if node.left: q.append(node.left)\n                if node.right: q.append(node.right)\n                    \n            if zigzag:\n                res.append(nodesOfThisLevel)\n                zigzag = False\n            else:\n                res.append(nodesOfThisLevel[::-1])\n                zigzag = True\n        \n        return res\n    \n# Time: O(N)\n# Space: O(N)",
+  "slug": "binary-tree-zigzag-level-order-traversal",
+  "post_title": "[Python3] Clean Solution using Queue Level Order Traversal",
+  "user": "samirpaul1",
+  "upvotes": 7,
+  "views": 240,
+  "problem_title": "binary tree zigzag level order traversal",
+  "number": 103,
+  "acceptance": 0.552,
+  "difficulty": "Medium",
+  "__index_level_0__": 614,
+  "question": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then right to left for the next level and alternate between).\n  Example 1:\nInput: root = [3,9,20,null,null,15,7]\nOutput: [[3],[20,9],[15,7]]\nExample 2:\nInput: root = [1]\nOutput: [[1]]\nExample 3:\nInput: root = []\nOutput: []\n  Constraints:\nThe number of nodes in the tree is in the range [0, 2000].\n-100 <= Node.val <= 100",
+  "augmented_questions": {
+    "keyboard": {
+      "0.0": "Given the root of a binary tree, return the zigzag level order traversal of its nodes ' values. (i. e. , from left to right, then right to left for the next level and alternate between ).",
+      "0.1": "Given the root of a binarH tree, return the zigzag level order tragersal of its nodes ' values. (i. e. , froh left to right, tmen right to left for the next level and alternate betwe3n ).",
+      "0.2": "Given the $oot of a binary trSe, return the zigzag leve: order traversal of its nodes ' valuwC. (i. e. , from lefF to right, then right to legt for the ndxt leGel and altergQte between ).",
+      "0.3": "Given the tooh of a binWru trFF, r$Gurn the ziBAag ,eCel oede5 grXvRrsal of its nodes ' BaluSs. (i. e. , fFim left to rigYG, then rinGt to left for the next oeCel and alternate vFt1een ).",
+      "0.4": "TiveM the Tooy of a NinAEy 6reF, $e4ufn the SigxQg lef@l order traversal of its gides ' vwl8Rs. (i. e. , f%o, Isft to f9ght, thwB 4ihht to iegt for the GexG lfCel and zltdrJatD between ).",
+      "0.5": "GUfdn the fo)t of a b(nag^ t4eW, rStufg the aKgzan oefei oFd#F t$xcRrsQl of its M0deD ' Gw>ues. (i. e. , g%om lRfF to r&gyF, HheJ #igtF to >efY for the Mex^ kede: and xpGrrnage beywRfg ).",
+      "0.6": "G(vSB the t(9t of a buHwrt YDeW, r@6ugM the s9gSat KFv$l KrreG RGav3TsSp of its m8wes ' vaI&$x. (i. e. , dGoh .3Ct to EONht, tu@j rjgUh to :#f$ for the ndZ^ l4cSl and Zl4Wrnx$3 GWt@erG ).",
+      "0.7": "nid@j the $8o^ of a v&nz3g Yte3, 5e$J$G the AirswY lWfr. K%SFr grxvFtXs/ of its hoC2Z ' Csl trC. (i. e. , e$im ;Sgt to r&BtF, HnFn GOvmt to k$fg for the JFx5 KdvSP and s,6DFJQte V#RDeeH ).",
+      "0.8": "G(c2m the ep(% of a Vibqtu 5DWw, 5d5jgn the xJhssg ,eBF< *DseG 6rqG2Tcxk of its HIdSw ' vw,&#e. (i. e. , Ge*N ;3t4 to 4ibn4, %nFg rkVmy to PsVh for the Hrsf Odfsl and AigrFGa5d f@tESDG ).",
+      "0.9": "v9DfM the Ek9$ of a Fkgq%% 4F#r, 5#YItH the XuHSsv ,SB3O peEr4 4#WG4TDX: of its m9S4c ' gw/jrA. (i. e. , dTih i@gH to $KtTg, fj3b F(hu^ to ?Ft4 for the MWcG .3bdK and xKF4$MX$F Vr$!s3m ).",
+      "1.0": "hKB2M the TI8r of a NuBX$G yDDR, %$$ T#M the A8rxWT ;fFrk *%ss3 gdqgd#zw> of its hiXww ' cAo*3Z. (i. e. , t%iH :fr5 to FkByy, hnDj GjvYy to .3vH for the jrZR k@GrI and XPff%Jx^W hr^eR#j )."
+    },
+    "synonym": {
+      "0.0": "Gift the root of a binary tree, bring back the zag stratum order traverse of information technology nodes ' values. (i. atomic number 99. , from left to correct, then right to left for the next degree and alternate between ).",
+      "0.1": "Given the root of a binary tree, return the zigzag level order traversal of its node ' values. (i. e. , from left to right, then decently to leave for the next level and replacement between ).",
+      "0.2": "Given the root of a binary tree, return the zag level order traversal of its nodes ' values. (ane. e. , from depart to right, so in good order to leave for the next level and alternate between ).",
+      "0.3": "Collapse the root of a binary sir herbert beerbohm tree, return the zigzag level order traversal of information technology leaf node ' value. (i. e. , from get out to rectify, so mightily to leave behind for the following level and replacement between ).",
+      "0.4": "Afford the radical of a binary tree, return the zigzag storey order traversal of information technology nodes ' values. (i. east. , from bequeath to compensate, so flop to left for the side by side horizontal surface and alternate between ).",
+      "0.5": "Give the root of a binary tree diagram, repay the zig grade order traverse of information technology node ' value. (ane. e. , from impart to right, and then flop to lead for the following storey and alternate between ).",
+      "0.6": "Yield the ascendent of a binary tree diagram, give back the zigzag level holy order traverse of it knob ' economic value. (ane. due east. , from left to correct, and so mighty to give for the succeeding horizontal surface and replacement between ).",
+      "0.7": "Ease up the source of a binary tree diagram, recall the zag storey holy order traverse of information technology lymph gland ' note value. (ane. einsteinium. , from give to correct, and then correctly to leave for the following grade and surrogate between ).",
+      "0.8": "Render the stem of a binary tree diagram, revert the zag degree ordering traverse of information technology node ' value. (one. es. , from leave to correct, and then flop to give for the adjacent point and surrogate between ).",
+      "0.9": "Move over the beginning of a binary sir herbert beerbohm tree, render the zig floor purchase order traverse of information technology node ' value. (one. vitamin e. , from leave to rectify, and so properly to leave for the succeeding degree and surrogate between ).",
+      "1.0": "Turn over the source of a binary tree diagram, come back the zig floor decree traverse of it node ' economic value. (one. eastward. , from leave to redress, and then correctly to leave for the succeeding degree and surrogate between )."
+    },
+    "random": {
+      "0.0": "The of tree, return zigzag level order traversal of its nodes ' values. (. ., left to right, right left for and between ).",
+      "0.1": "Given the root of a binary tree, return the zigzag level traversal of its nodes ' values. (i. e. , from left to right, right to left for the level alternate ).",
+      "0.2": "The root of a binary tree, return the zigzag order traversal its ' values. (i. e. , from left to right, left for the level and between ).",
+      "0.3": "Given the of, the order of its '. (i. ., from left to right, then right to for next and alternate between ).",
+      "0.4": "The binary tree, zigzag level order traversal ' values. (. ., left right, to the next and alternate between ).",
+      "0.5": "Given a tree, the order traversal of '. (i. e. , left, then to ).",
+      "0.6": "The, return traversal '. (. ., from to, then and ).",
+      "0.7": "The, '. (. ., left, between ).",
+      "0.8": "The, '. (. ., , ).",
+      "0.9": "The, '. (. ., , ).",
+      "1.0": "The, '. (. ., , )."
+    },
+    "cut": {
+      "0.0": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then right to left for the next level and alternate between).",
+      "0.1": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then right to left for the next level and a",
+      "0.2": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then right to left for t",
+      "0.3": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then r",
+      "0.4": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from lef",
+      "0.5": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' value",
+      "0.6": "Given the root of a binary tree, return the zigzag level order traversal ",
+      "0.7": "Given the root of a binary tree, return the zigzag leve",
+      "0.8": "Given the root of a binary tree, retu",
+      "0.9": "Given the root of ",
+      "1.0": ""
+    }
+  },
+  "llm_responses": {
+    "meta": {
+      "keyboard": {
+        "0.0": [
+          "def zigzagLevelOrder(root):\n    if not root:\n        return []\n    result = []\n    queue = [root]\n    flag = True\n    while queue:\n        level = []\n        for _ in range(len(queue)):\n            node = queue.pop(0)\n            if flag:\n                level.append(node.val)\n            else:\n                level.insert(0, node.val)\n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        result.append(level)\n        flag = not flag\n    return result"
+        ],
+        "0.1": [
+          "def zigzagLevelOrder(root):\n    if not root:\n        return []\n    result = []\n    queue = [root]\n    left_to_right = True\n    while queue:\n        level = []\n        for _ in range(len(queue)):\n            node = queue.pop(0)\n            if left_to_right:\n                level.append(node.val)\n            else:\n                level.insert(0, node.val)\n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        result.append(level)\n        left_to_right = not left_to_right\n    return result"
+        ],
+        "0.2": [
+          "def zigzagLevelOrder(root):\n    if not root:\n        return []\n    result = []\n    queue = [root]\n    level = 0\n    while queue:\n        level_size = len(queue)\n        level_values = []\n        for _ in range(level_size):\n            node = queue.pop(0)\n            if level % 2 == 0:\n                level_values.append(node.val)\n            else:\n                level_values.insert(0, node.val)\n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        result.append(level_values)\n        level += 1\n    return result"
+        ],
+        "0.3": [
+          "class TreeNode:\n    def __init__(self, x):\n        self.val = x\n        self.left = None\n        self.right = None\n\ndef zigzagLevelOrder(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = [root]\n    left_to_right = True\n    \n    while queue:\n        level_size = len(queue)\n        level_nodes = []\n        \n        for _ in range(level_size):\n            node = queue.pop(0)\n            \n            if left_to_right:\n                level_nodes.append(node.val)\n            else:\n                level_nodes.insert(0, node.val)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(level_nodes)\n        left_to_right = not left_to_right\n    \n    return result\n\ndef print_zigzag_order(root):\n    result = zigzagLevelOrder(root)\n    for level in result:\n        print(level)\n\n# create a binary tree for testing\nroot = TreeNode(3)\nroot.left = TreeNode(9)\nroot.right = TreeNode(20)\nroot.right.left = TreeNode(15)\nroot.right.right = TreeNode(7)\n\nprint_zigzag_order(root)"
+        ],
+        "0.4": [
+          "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\ndef zigzag_level_order_traversal(root):\n    if root is None:\n        return []\n    \n    result = []\n    queue = [root]\n    left_to_right = True\n    \n    while queue:\n        level_size = len(queue)\n        level_values = []\n        \n        for _ in range(level_size):\n            node = queue.pop(0)\n            if left_to_right:\n                level_values.append(node.value)\n            else:\n                level_values.insert(0, node.value)\n            \n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        \n        result.append(level_values)\n        left_to_right = not left_to_right\n    \n    return result\n\ndef main():\n    root = Node(1)\n    root.left = Node(2)\n    root.right = Node(3)\n    root.left.left = Node(4)\n    root.left.right = Node(5)\n    root.right.left = Node(6)\n    root.right.right = Node(7)\n    \n    print(zigzag_level_order_traversal(root))\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.5": [
+          "def generate_word(word):\n    result = \"\"\n    for char in word:\n        if char.isalpha():\n            if char.lower() == 'z':\n                result += 'a' if char.islower() else 'A'\n            else:\n                result += chr(ord(char) + 1)\n        else:\n            result += char\n    return result\n\ndef generate_text(text):\n    words = text.split()\n    result = []\n    for word in words:\n        result.append(generate_word(word))\n    return ' '.join(result)\n\ntext = \"GUfdn the fo)t of a b(nag^ t4eW, rStufg the aKgzan oefei oFd#F t$xcRrsQl of its M0deD ' Gw>ues.\"\nprint(generate_text(text))"
+        ],
+        "0.6": [
+          "def generate_password(length):\n    import random\n    import string\n    all_characters = string.ascii_letters + string.digits + string.punctuation\n    if length < 8:\n        print(\"Password length should be at least 8 characters.\")\n        return None\n    password = ''.join(random.choice(all_characters) for i in range(length))\n    return password\n\ndef main():\n    length = 10\n    print(generate_password(length))\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.7": [
+          "import re\ndef decode_text(text):\n    decoded_text = re.sub(r'[0-9]', '', text)\n    decoded_text = re.sub(r'@', 'a', decoded_text)\n    decoded_text = re.sub(r'\\$', 's', decoded_text)\n    decoded_text = re.sub(r'\\^', '', decoded_text)\n    decoded_text = re.sub(r'&', 'a', decoded_text)\n    decoded_text = re.sub(r'#', '', decoded_text)\n    decoded_text = re.sub(r'v', 'o', decoded_text)\n    decoded_text = re.sub(r'z', 'e', decoded_text)\n    decoded_text = re.sub(r'J', 'j', decoded_text)\n    decoded_text = re.sub(r'K', 'k', decoded_text)\n    decoded_text = re.sub(r'X', '', decoded_text)\n    decoded_text = re.sub(r'F', 'f', decoded_text)\n    decoded_text = re.sub(r'D', 'd', decoded_text)\n    decoded_text = re.sub(r'Q', '', decoded_text)\n    decoded_text = re.sub(r'H', 'h', decoded_text)\n    decoded_text = re.sub(r'V', '', decoded_text)\n    decoded_text = re.sub(r'R', '', decoded_text)\n    decoded_text = re.sub(r'W', 'w', decoded_text)\n    decoded_text = re.sub(r'Y', 'y', decoded_text)\n    decoded_text = re.sub(r'C', 'c', decoded_text)\n    decoded_text = re.sub(r'Z', 'z', decoded_text)\n    decoded_text = re.sub(r'G', 'g', decoded_text)\n    decoded_text = re.sub(r'O', 'o', decoded_text)\n    decoded_text = re.sub(r'L', 'l', decoded_text)\n    decoded_text = re.sub(r'P', 'p', decoded_text)\n    decoded_text = re.sub(r'B', 'b', decoded_text)\n    decoded_text = re.sub(r'x', '', decoded_text)\n    decoded_text = re.sub(r'eim', 'aim', decoded_text)\n    decoded_text = re.sub(r'rBtF', 'about', decoded_text)\n    decoded_text = re.sub(r'HnFn', 'having', decoded_text)\n    decoded_text = re.sub(r'kfg', 'key', decoded_text)\n    decoded_text = re.sub(r'JFx5', 'joke', decoded_text)\n    decoded_text = re.sub(r'KdvSP', 'kids', decoded_text)\n    decoded_text = re.sub(r's6DFJQte', 'such', decoded_text)\n    decoded_text = re.sub(r'V#RDeeH', 'video', decoded_text)\n    return decoded_text\n\ntext = \"nid@j the $8o^ of a v&nz3g Yte3, 5e$J$G the AirswY lWfr. K%SFr grxvFtXs/ of its hoC2Z ' Csl trC. (i. e. , e$im ;Sgt to r&BtF, HnFn GOvmt to k$fg for the JFx5 KdvSP and s,6DFJQte V#RDeeH ).\"\nprint(decode_text(text))"
+        ],
+        "0.8": [
+          "def calculate_percentage_of_vibqtu(vibqtu_value, total_value):\n    if total_value == 0:\n        return 0\n    else:\n        return (vibqtu_value / total_value) * 100\n\ndef main():\n    vibqtu_5dw = 50\n    total_5dw = 100\n    vibqtu_5d5jgn = 75\n    total_5d5jgn = 150\n\n    percentage_5dw = calculate_percentage_of_vibqtu(vibqtu_5dw, total_5dw)\n    percentage_5d5jgn = calculate_percentage_of_vibqtu(vibqtu_5d5jgn, total_5d5jgn)\n\n    print(f\"Percentage of Vibqtu 5DWw: {percentage_5dw}%\")\n    print(f\"Percentage of Vibqtu 5d5jgn: {percentage_5d5jgn}%\")\n\nif __name__ == \"__main__\":\n    main()"
+        ],
+        "0.9": [
+          "def calculate_ek9_of_fkgq(fkgq_value, m9s4c_value, xuhsv_value, sb3o_peer4_value):\n    ek9 = (fkgq_value * m9s4c_value) / (xuhsv_value + sb3o_peer4_value)\n    return ek9\n\ndef calculate_mwcg_3bdK(m9s4c_value, gw_jrA_value):\n    mwcg_3bdK = m9s4c_value * gw_jrA_value\n    return mwcg_3bdK\n\ndef calculate_xkf4mx_f_vrs3m(mwcg_3bdK_value, ek9_value):\n    xkf4mx_f_vrs3m = mwcg_3bdK_value / ek9_value\n    return xkf4mx_f_vrs3m\n\nfkgq_value = 4\nm9s4c_value = 3\nxuhsv_value = 2\nsb3o_peer4_value = 1\ngw_jrA_value = 5\n\nek9 = calculate_ek9_of_fkgq(fkgq_value, m9s4c_value, xuhsv_value, sb3o_peer4_value)\nmwcg_3bdK = calculate_mwcg_3bdK(m9s4c_value, gw_jrA_value)\nxkf4mx_f_vrs3m = calculate_xkf4mx_f_vrs3m(mwcg_3bdK, ek9)\n\nprint(\"The Ek9 of the Fkgq is: \", ek9)\nprint(\"The MwCG .3bdK is: \", mwcg_3bdK)\nprint(\"The XKF4$MX$F Vr$!s3m is: \", xkf4mx_f_vrs3m)"
+        ],
+        "1.0": [
+          "def calculate_tier_of_nubxg_yddr(nubxg_yddr):\n    tier = 0\n    if nubxg_yddr == \"FkByy\":\n        tier = 1\n    elif nubxg_yddr == \".3vH\":\n        tier = 2\n    return tier\n\ndef calculate_a8rxwt_frfk(nubxg_yddr):\n    a8rxwt_frfk = \"\"\n    if nubxg_yddr == \"FkByy\":\n        a8rxwt_frfk = \"hnDj GjvYy\"\n    elif nubxg_yddr == \".3vH\":\n        a8rxwt_frfk = \"jrZR k@GrI and XPff%Jx^W hr^eR#j\"\n    return a8rxwt_frfk\n\ndef main():\n    nubxg_yddr = input(\"Enter the NuBX$G yDDR: \")\n    tier = calculate_tier_of_nubxg_yddr(nubxg_yddr)\n    a8rxwt_frfk = calculate_a8rxwt_frfk(nubxg_yddr)\n    print(f\"The TI8r of the NuBX$G yDDR {nubxg_yddr} is {tier} and the A8rxWT ;fFrk *%ss3 gdqgd#zw> of its hiXww ' cAo*3Z is {a8rxwt_frfk}\")\n\nif __name__ == \"__main__\":\n    main()"
+        ]
+      }
+    }
+  }
+}

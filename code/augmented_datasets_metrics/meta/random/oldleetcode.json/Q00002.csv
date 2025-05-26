@@ -1,0 +1,12 @@
+model,method,dataset,task,augmentation_rate,eval_score
+meta,random,oldleetcode.json,Q00002,0.0,0
+meta,random,oldleetcode.json,Q00002,0.1,0
+meta,random,oldleetcode.json,Q00002,0.2,1
+meta,random,oldleetcode.json,Q00002,0.3,1
+meta,random,oldleetcode.json,Q00002,0.4,0
+meta,random,oldleetcode.json,Q00002,0.5,1
+meta,random,oldleetcode.json,Q00002,0.6,0
+meta,random,oldleetcode.json,Q00002,0.7,0
+meta,random,oldleetcode.json,Q00002,0.8,0
+meta,random,oldleetcode.json,Q00002,0.9,0
+meta,random,oldleetcode.json,Q00002,1.0,0
