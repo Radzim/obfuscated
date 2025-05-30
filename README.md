@@ -1,4 +1,4 @@
-# Too Good to Be True: LLM Performance on Obfuscated Tasks
+# LLM Performance on Obfuscated Tasks
 
 #### Anonymous Authors
 
